@@ -1,0 +1,43 @@
+﻿namespace DnD.Enums.Items
+{
+    /// <summary>
+    /// Represents the Trade goods of type Cloth.
+    /// </summary>
+    public enum Cloth
+    {
+        /// <summary>
+        /// Represents a Cloth of type Linen.
+        /// </summary>
+        Linen,
+
+        /// <summary>
+        /// Represents a Cloth of type Wool.
+        /// </summary>
+        Wool,
+
+        /// <summary>
+        /// Represents a Cloth of type Silk.
+        /// </summary>
+        Silk,
+
+        /// <summary>
+        /// Represents a Cloth of type MageWeave.
+        /// </summary>
+        MageWeave,
+
+        /// <summary>
+        /// Represents a Cloth of type Runic.
+        /// </summary>
+        Runic,
+
+        /// <summary>
+        /// Represents a Cloth of type NetherWeave.
+        /// </summary>
+        NetherWeave,
+
+        /// <summary>
+        /// Represents a Cloth of type Fel.
+        /// </summary>
+        Fel
+    }
+}

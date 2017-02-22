@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>7445c38e-b529-4473-9ce4-4eac956bbb56</ProjectGuid>
+    <ProjectGuid>{7445C38E-B529-4473-9CE4-4EAC956BBB56}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DnD</RootNamespace>
@@ -30,25 +30,42 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Enums\Items\Everything Else\AccessoryTypes.cs" />
+    <Compile Include="Enums\Items\Everything Else\ArmorTypes.cs" />
+    <Compile Include="Enums\Items\Everything Else\Books.cs" />
+    <Compile Include="Enums\Items\Everything Else\Coin.cs" />
+    <Compile Include="Enums\Items\Everything Else\Conjured.cs" />
+    <Compile Include="Enums\Items\Everything Else\KeyItems.cs" />
+    <Compile Include="Enums\Items\Everything Else\QuestItems.cs" />
+    <Compile Include="Enums\Items\Everything Else\Scrolls.cs" />
+    <Compile Include="Enums\Items\Trade Goods\Misc.cs" />
+    <Compile Include="Enums\Items\Trade Goods\Consumable.cs" />
+    <Compile Include="Enums\Items\Trade Goods\Cloths.cs" />
+    <Compile Include="Enums\Items\Trade Goods\Herbs.cs" />
+    <Compile Include="Enums\Items\Trade Goods\GemTypes.cs" />
+    <Compile Include="Enums\Items\ItemTypes.cs" />
+    <Compile Include="Enums\Items\Trade Goods\Leathers.cs" />
+    <Compile Include="Enums\Items\Trade Goods\Metals.cs" />
+    <Compile Include="Enums\Items\Trade Goods\Spices.cs" />
+    <Compile Include="Enums\Items\Everything Else\TradeGoods.cs" />
+    <Compile Include="Enums\Items\Everything Else\WeaponTypes.cs" />
+    <Compile Include="Enums\Items\Everything Else\Potions.cs" />
+    <Compile Include="Enums\Qualities\GemQualities.cs" />
+    <Compile Include="Enums\Qualities\ItemQualities.cs" />
+    <Compile Include="Enums\Qualities\PotionQualities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
@@ -57,5 +74,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
