@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using DnD;
 using DnD.Enums.Items;
 using DnD.Enums.Qualities;
 
