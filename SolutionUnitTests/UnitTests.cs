@@ -24,7 +24,6 @@ namespace SolutionUnitTests
             var second = ItemType.Book;
             Assert.AreNotEqual(first, second);
             Assert.AreEqual(first, ItemType.Weapon);
-            // Testing testing.
         }
     }
 }
