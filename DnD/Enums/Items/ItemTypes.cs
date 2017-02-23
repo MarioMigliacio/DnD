@@ -36,19 +36,9 @@
         Potion,
 
         /// <summary>
-        /// Represents items of type Key item.
-        /// </summary>
-        KeyItem,
-
-        /// <summary>
         /// Represents items of type Quest item.
         /// </summary>
         QuestItem,
-
-        /// <summary>
-        /// Represents items of type Conjured item.
-        /// </summary>
-        ConjuredItem,
 
         /// <summary>
         /// Represents items of type Trade good.

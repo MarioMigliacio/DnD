@@ -44,8 +44,6 @@
     <Compile Include="Enums\Items\Everything Else\ArmorTypes.cs" />
     <Compile Include="Enums\Items\Everything Else\Books.cs" />
     <Compile Include="Enums\Items\Everything Else\Coin.cs" />
-    <Compile Include="Enums\Items\Everything Else\Conjured.cs" />
-    <Compile Include="Enums\Items\Everything Else\KeyItems.cs" />
     <Compile Include="Enums\Items\Everything Else\QuestItems.cs" />
     <Compile Include="Enums\Items\Everything Else\Scrolls.cs" />
     <Compile Include="Enums\Items\Trade Goods\Misc.cs" />
@@ -63,6 +61,7 @@
     <Compile Include="Enums\Qualities\GemQualities.cs" />
     <Compile Include="Enums\Qualities\ItemQualities.cs" />
     <Compile Include="Enums\Qualities\PotionQualities.cs" />
+    <Compile Include="Enums\Qualities\ScrollQualities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

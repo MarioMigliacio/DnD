@@ -7,9 +7,9 @@
     {
         /// <summary>
         /// Represents an Item quality that is of type Dimensional.
-        /// (PLAN: dimensional objects are 50% more powerful than normal counterparts BUT cannot be repaired)
-        /// (When broken, the objects are forever destroyed and unusable) - NOT REPAIRABLE BY ANY MEANS!!!!!!!
         /// </summary>
+        // (PLAN: dimensional objects are 50% more powerful than normal counterparts BUT cannot be repaired)
+        // (When broken, the objects are forever destroyed and unusable) - NOT REPAIRABLE BY ANY MEANS!!!!!!!
         Dimensional,
 
         /// <summary>
