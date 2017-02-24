@@ -1,6 +1,7 @@
-﻿using DnD;
-using DnD.Dice;
+﻿using DnD.Dice;
 using DnD.Enums.Items;
+using DnD.Enums.Deities;
+using DnD.Enums.Alignment;
 using DnD.Enums.Qualities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -22,18 +23,18 @@ namespace SolutionUnitTests
         [TestMethod]
         public void EnumerateTheThings()
         {
-            // ItemType is the Generic Item to be enumerated across.
-            var first = ItemType.Weapon;
-            var second = ItemType.Book;
-            Assert.AreNotEqual(first, second);
-            Assert.AreEqual(first, ItemType.Weapon);
-
-            Dictionary<Scroll, ScrollQuality> pages = new Dictionary<Scroll, ScrollQuality>();
             Random rng = new Random();
+            Dictionary<Scroll, ScrollQuality> pages = new Dictionary<Scroll, ScrollQuality>();
+            List<Enum> theCollection = new List<Enum>();
             ScrollQuality theQuality;
             int minorDistribution = 0;
             int mediumDistribution = 0;
             int majorDistribution = 0;
+            int numEnums = 0;
+
+            //TODO
+            // add each and every enum type in the game into theCollection list and get the count. set numEnums = that count.
+            // do some rng stuff and distribute the enums and run tests against them.
 
             // The following loop populates the pages dictionary with spells and the following distributions of scroll qualities:
             // minor: ~60%, medium: ~30%, major: ~10%.
