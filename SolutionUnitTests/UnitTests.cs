@@ -1,5 +1,6 @@
 ﻿using DnD.Dice;
 using DnD.Enums.Items;
+using DnD.Enums.Money;
 using DnD.Enums.Deities;
 using DnD.Enums.Alignment;
 using DnD.Enums.Qualities;
@@ -26,26 +27,69 @@ namespace SolutionUnitTests
             Random rng = new Random();
             Dictionary<Scroll, ScrollQuality> pages = new Dictionary<Scroll, ScrollQuality>();
             List<Enum> theCollection = new List<Enum>();
-            List<Enum> godsNStuff = new List<Enum>();
             ScrollQuality theQuality;
             int minorDistribution = 0;
             int mediumDistribution = 0;
             int majorDistribution = 0;
             int numEnums = 0;
+                        
+            // --- Test1 --- //
+            // This massive portion of foreach loops is actually grabbing all these Enumeration types that belong to the ItemTypes group.
+            // including the sub Enums (TradeGoods). theCollection has all the basic items in the game after the loops concludes.
+            foreach (ItemType it in Enum.GetValues(typeof(ItemType)))
+            {
+                switch(it)
+                {
+                    case ItemType.Accessory:
+                        foreach (AccessoryType acc in Enum.GetValues(typeof(AccessoryType))) { theCollection.Add(acc); } break;
+                    case ItemType.Armor:
+                        foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); } break;
+                    case ItemType.Book:
+                        foreach (Book bk in Enum.GetValues(typeof(Book))) { theCollection.Add(bk); } break;
+                    case ItemType.Potion:
+                        foreach (Potion pot in Enum.GetValues(typeof(Potion))) { theCollection.Add(pot); } break;
+                    case ItemType.QuestItem:
+                        foreach (QuestItem que in Enum.GetValues(typeof(QuestItem))) { theCollection.Add(que); } break;
+                    case ItemType.Scroll:
+                        foreach (Scroll scr in Enum.GetValues(typeof(Scroll))) { theCollection.Add(scr); } break;
+                    case ItemType.Weapon:
+                        foreach (WeaponType wep in Enum.GetValues(typeof(WeaponType))) { theCollection.Add(wep); } break;
+                    case ItemType.TradeGood:
+                        foreach (TradeGood tg in Enum.GetValues(typeof(TradeGood)))
+                        {
+                            switch(tg)
+                            {
+                                case TradeGood.Cloth:
+                                    foreach (Cloth clo in Enum.GetValues(typeof(Cloth))) { theCollection.Add(clo); } break;
+                                case TradeGood.Consumable:
+                                    foreach (Consumable cons in Enum.GetValues(typeof(Consumable))) { theCollection.Add(cons); } break;
+                                case TradeGood.Gem:
+                                    foreach (GemType gem in Enum.GetValues(typeof(GemType))) { theCollection.Add(gem); } break;
+                                case TradeGood.Herb:
+                                    foreach (Herb her in Enum.GetValues(typeof(Herb))) { theCollection.Add(her); } break;
+                                case TradeGood.Leather:
+                                    foreach (Leather let in Enum.GetValues(typeof(Leather))) { theCollection.Add(let); } break;
+                                case TradeGood.Misc:
+                                    foreach (Misc mis in Enum.GetValues(typeof(Misc))) { theCollection.Add(mis); } break;
+                                case TradeGood.Ore:
+                                    foreach (Metal metaAF in Enum.GetValues(typeof(Metal))) { theCollection.Add(metaAF); } break;
+                                case TradeGood.Spice:
+                                    foreach (Spice spi in Enum.GetValues(typeof(Spice))) { theCollection.Add(spi); } break;
 
-            //TODO
-            // add each and every enum type in the game into theCollection list and get the count. set numEnums = that count.
-            // do some rng stuff and distribute the enums and run tests against them.
-            foreach (AccessoryType acc in Enum.GetValues(typeof(AccessoryType))) { theCollection.Add(acc); }
-            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
-            foreach (Book bk in Enum.GetValues(typeof(Book))) { theCollection.Add(bk); }
-            foreach (Money arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
-            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
-            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
-            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
-            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
-            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
+                                default: break;
+                            }
+                        }
 
+                        break;
+
+                    default: break;
+                }
+            }
+
+            numEnums = theCollection.Count;
+            // Test1 Results: Satisfactory.
+            
+            // --- Test2 --- //
             // The following loop populates the pages dictionary with spells and the following distributions of scroll qualities:
             // minor: ~60%, medium: ~30%, major: ~10%.
             foreach (Scroll spell in Enum.GetValues(typeof(Scroll)))
@@ -67,10 +111,10 @@ namespace SolutionUnitTests
                     theQuality = ScrollQuality.Minor;
                     minorDistribution++;
                 }
-
-
+                
                 pages.Add(spell, theQuality);
             }
+            // Test2 Results: Satisfactory.
         }
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿namespace DnD.Enums.Items
+﻿namespace DnD.Enums.Money
 {
     /// <summary>
     /// The range of supported types of Money.
