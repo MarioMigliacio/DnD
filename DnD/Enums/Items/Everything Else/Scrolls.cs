@@ -10,231 +10,231 @@
         /// <summary>
         /// Represents a Scroll which expends a FireBolt spell.
         /// </summary>
-        FireBolt,
+        ScrollOfFireBolt,
 
         /// <summary>
         /// Represents a Scroll which expends a FireBall spell.
         /// </summary>
-        FireBall,
+        ScrollOfFireBall,
 
         /// <summary>
         /// Represents a Scroll which expends a Meteor spell.
         /// </summary>
-        Meteor,
+        ScrollOfMeteor,
 
         /// <summary>
         /// Represents a Scroll which expends a FireWall spell.
         /// </summary>
-        FireWall,
+        ScrollOfFireWall,
 
         /// <summary>
         /// Represents a Scroll which expends a Hydra spell.
         /// </summary>
-        Hydra,
+        ScrollOfHydra,
 
         /// <summary>
         /// Represents a Scroll which expends a ChargedBolt spell.
         /// </summary>
-        ChargedBolt,
+        ScrollOfChargedBolt,
 
         /// <summary>
         /// Represents a Scroll which expends a Lightning spell.
         /// </summary>
-        Lightning,
+        ScrollOfLightning,
 
         /// <summary>
         /// Represents a Scroll which expends a ChainLightning spell.
         /// </summary>
-        ChainLightning,
+        ScrollOfChainLightning,
 
         /// <summary>
         /// Represents a Scroll which expends a Nova spell.
         /// </summary>
-        Nova,
+        ScrollOfNova,
 
         /// <summary>
         /// Represents a Scroll which expends a ThunderStorm spell.
         /// </summary>
-        ThunderStorm,
+        ScrollOfThunderStorm,
 
         /// <summary>
         /// Represents a Scroll which expends a FrostBolt spell.
         /// </summary>
-        FrostBolt,
+        ScrollOfFrostBolt,
 
         /// <summary>
         /// Represents a Scroll which expends a ConeOfCold spell.
         /// </summary>
-        ConeOfCold,
+        ScrollOfConeOfCold,
 
         /// <summary>
         /// Represents a Scroll which expends a FrostNova spell.
         /// </summary>
-        FrostNova,
+        ScrollOfFrostNova,
 
         /// <summary>
         /// Represents a Scroll which expends a Blizzard spell.
         /// </summary>
-        Blizzard,
+        ScrollOfBlizzard,
 
         /// <summary>
         /// Represents a Scroll which expends a FrozenOrb spell.
         /// </summary>
-        FrozenOrb,
+        ScrollOfFrozenOrb,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonRaven spell.
         /// </summary>
-        SummonRaven,
+        ScrollOfSummonRaven,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonDireWolf spell.
         /// </summary>
-        SummonDireWolf,
+        ScrollOfSummonDireWolf,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonOakSage spell.
         /// </summary>
-        SummonOakSage,
+        ScrollOfSummonOakSage,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonGrizzlyBear spell.
         /// </summary>
-        SummonGrizzlyBear,
+        ScrollOfSummonGrizzlyBear,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonPanther spell.
         /// </summary>
-        SummonPanther,
+        ScrollOfSummonPanther,
 
         /// <summary>
         /// Represents a Scroll which expends a FireStorm spell.
         /// </summary>
-        FireStorm,
+        ScrollOfFireStorm,
 
         /// <summary>
-        /// Represents a Scroll which expends a ArcticBlast spell.
+        /// Represents a Scroll which expends an ArcticBlast spell.
         /// </summary>
-        ArcticBlast,
+        ScrollOfArcticBlast,
 
         /// <summary>
         /// Represents a Scroll which expends a MoltenBoulder spell.
         /// </summary>
-        MoltenBoulder,
+        ScrollOfMoltenBoulder,
 
         /// <summary>
         /// Represents a Scroll which expends a Hurricane spell.
         /// </summary>
-        Hurricane,
+        ScrollOfHurricane,
 
         /// <summary>
-        /// Represents a Scroll which expends a Armageddon spell.
+        /// Represents a Scroll which expends an Armageddon spell.
         /// </summary>
-        Armageddon,
+        ScrollOfArmageddon,
 
         /// <summary>
         /// Represents a Scroll which expends a CycloneArmor spell.
         /// </summary>
-        CycloneArmor,
+        ScrollOfCycloneArmor,
 
         /// <summary>
         /// Represents a Scroll which expends a BoneSpear spell.
         /// </summary>
-        BoneSpear,
+        ScrollOfBoneSpear,
 
         /// <summary>
         /// Represents a Scroll which expends a BoneSpirit spell.
         /// </summary>
-        BoneSpirit,
+        ScrollOfBoneSpirit,
 
         /// <summary>
         /// Represents a Scroll which expends a PoisonNova spell.
         /// </summary>
-        PoisonNova,
+        ScrollOfPoisonNova,
 
         /// <summary>
-        /// Represents a Scroll which expends a AcidCloud spell.
+        /// Represents a Scroll which expends an AcidCloud spell.
         /// </summary>
-        AcidCloud,
+        ScrollOfAcidCloud,
 
         /// <summary>
         /// Represents a Scroll which expends a Teeth spell.
         /// </summary>
-        Teeth,
+        ScrollOfTeeth,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonSkeletonWarrior spell.
         /// </summary>
-        SummonSkeletonWarrior,
+        ScrollOfSummonSkeletonWarrior,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonClayGolem spell.
         /// </summary>
-        SummonClayGolem,
+        ScrollOfSummonClayGolem,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonSkeletonMage spell.
         /// </summary>
-        SummonSkeletonMage,
+        ScrollOfSummonSkeletonMage,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonIronGolem spell.
         /// </summary>
-        SummonIronGolem,
+        ScrollOfSummonIronGolem,
 
         /// <summary>
         /// Represents a Scroll which expends a SummonZombieDog spell.
         /// </summary>
-        SummonZombieDog,
+        ScrollOfSummonZombieDog,
 
         /// <summary>
         /// Represents a Scroll which expends a HolyFire spell.
         /// </summary>
-        HolyFire,
+        ScrollOfHolyFire,
 
         /// <summary>
         /// Represents a Scroll which expends a Prayer spell.
         /// </summary>
-        Prayer,
+        ScrollOfPrayer,
 
         /// <summary>
         /// Represents a Scroll which expends a Pennance spell.
         /// </summary>
-        Pennance,
+        ScrollOfPennance,
 
         /// <summary>
         /// Represents a Scroll which expends a HolyNova spell.
         /// </summary>
-        HolyNova,
+        ScrollOfHolyNova,
 
         /// <summary>
         /// Represents a Scroll which expends a Consecration spell.
         /// </summary>
-        Consecration,
+        ScrollOfConsecration,
 
         /// <summary>
         /// Represents a Scroll which expends a TurnEvil spell.
         /// </summary>
-        TurnEvil,
+        ScrollOfTurnEvil,
 
         /// <summary>
         /// Represents a Scroll which expends a HolyLight spell.
         /// </summary>
-        HolyLight,
+        ScrollOfHolyLight,
 
         /// <summary>
         /// Represents a Scroll which expends a ConjureWater spell.
         /// </summary>
-        ConjureWater,
+        ScrollOfConjureWater,
 
         /// <summary>
         /// Represents a Scroll which expends a ConjureFood spell.
         /// </summary>
-        ConjureFood,
+        ScrollOfConjureFood,
 
         /// <summary>
         /// Represents a Scroll which expends a PolyMorph spell.
         /// </summary>
-        PolyMorph
+        ScrollOfPolyMorph
     }
 }

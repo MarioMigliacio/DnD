@@ -43,11 +43,6 @@
         /// <summary>
         /// Represents items of type Trade good.
         /// </summary>
-        TradeGood,
-
-        /// <summary>
-        /// Represents items of type Coin.
-        /// </summary>
-        Coin
+        TradeGood
     }
 }

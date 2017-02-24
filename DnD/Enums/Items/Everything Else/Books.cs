@@ -9,231 +9,231 @@
         /// <summary>
         /// Represents a Book which teaches the FireBolt spell.
         /// </summary>
-        FireBolt,
+        BookOfFireBolt,
 
         /// <summary>
         /// Represents a Book which teaches the FireBall spell.
         /// </summary>
-        FireBall,
+        BookOfFireBall,
 
         /// <summary>
         /// Represents a Book which teaches the Meteor spell.
         /// </summary>
-        Meteor,
+        BookOfMeteor,
 
         /// <summary>
         /// Represents a Book which teaches the FireWall spell.
         /// </summary>
-        FireWall,
+        BookOfFireWall,
 
         /// <summary>
         /// Represents a Book which teaches the Hydra spell.
         /// </summary>
-        Hydra,
+        BookOfHydra,
 
         /// <summary>
         /// Represents a Book which teaches the ChargedBolt spell.
         /// </summary>
-        ChargedBolt,
+        BookOfChargedBolt,
 
         /// <summary>
         /// Represents a Book which teaches the Lightning spell.
         /// </summary>
-        Lightning,
+        BookOfLightning,
 
         /// <summary>
         /// Represents a Book which teaches the ChainLightning spell.
         /// </summary>
-        ChainLightning,
+        BookOfChainLightning,
 
         /// <summary>
         /// Represents a Book which teaches the Nova spell.
         /// </summary>
-        Nova,
+        BookOfNova,
 
         /// <summary>
         /// Represents a Book which teaches the ThunderStorm spell.
         /// </summary>
-        ThunderStorm,
+        BookOfThunderStorm,
 
         /// <summary>
         /// Represents a Book which teaches the FrostBolt spell.
         /// </summary>
-        FrostBolt,
+        BookOfFrostBolt,
 
         /// <summary>
         /// Represents a Book which teaches the ConeOfCold spell.
         /// </summary>
-        ConeOfCold,
+        BookOfConeOfCold,
 
         /// <summary>
         /// Represents a Book which teaches the FrostNova spell.
         /// </summary>
-        FrostNova,
+        BookOfFrostNova,
 
         /// <summary>
         /// Represents a Book which teaches the Blizzard spell.
         /// </summary>
-        Blizzard,
+        BookOfBlizzard,
 
         /// <summary>
         /// Represents a Book which teaches the FrozenOrb spell.
         /// </summary>
-        FrozenOrb,
+        BookOfFrozenOrb,
 
         /// <summary>
         /// Represents a Book which teaches the SummonRaven spell.
         /// </summary>
-        SummonRaven,
+        BookOfSummonRaven,
 
         /// <summary>
         /// Represents a Book which teaches the SummonDireWolf spell.
         /// </summary>
-        SummonDireWolf,
+        BookOfSummonDireWolf,
 
         /// <summary>
         /// Represents a Book which teaches the SummonOakSage spell.
         /// </summary>
-        SummonOakSage,
+        BookOfSummonOakSage,
 
         /// <summary>
         /// Represents a Book which teaches the SummonGrizzlyBear spell.
         /// </summary>
-        SummonGrizzlyBear,
+        BookOfSummonGrizzlyBear,
 
         /// <summary>
         /// Represents a Book which teaches the SummonPanther spell.
         /// </summary>
-        SummonPanther,
+        BookOfSummonPanther,
 
         /// <summary>
         /// Represents a Book which teaches the FireStorm spell.
         /// </summary>
-        FireStorm,
+        BookOfFireStorm,
 
         /// <summary>
         /// Represents a Book which teaches the ArcticBlast spell.
         /// </summary>
-        ArcticBlast,
+        BookOfArcticBlast,
 
         /// <summary>
         /// Represents a Book which teaches the MoltenBoulder spell.
         /// </summary>
-        MoltenBoulder,
+        BookOfMoltenBoulder,
 
         /// <summary>
         /// Represents a Book which teaches the Hurricane spell.
         /// </summary>
-        Hurricane,
+        BookOfHurricane,
 
         /// <summary>
         /// Represents a Book which teaches the Armageddon spell.
         /// </summary>
-        Armageddon,
+        BookOfArmageddon,
 
         /// <summary>
         /// Represents a Book which teaches the CycloneArmor spell.
         /// </summary>
-        CycloneArmor,
+        BookOfCycloneArmor,
 
         /// <summary>
         /// Represents a Book which teaches the BoneSpear spell.
         /// </summary>
-        BoneSpear,
+        BookOfBoneSpear,
 
         /// <summary>
         /// Represents a Book which teaches the BoneSpirit spell.
         /// </summary>
-        BoneSpirit,
+        BookOfBoneSpirit,
 
         /// <summary>
         /// Represents a Book which teaches the PoisonNova spell.
         /// </summary>
-        PoisonNova,
+        BookOfPoisonNova,
 
         /// <summary>
         /// Represents a Book which teaches the AcidCloud spell.
         /// </summary>
-        AcidCloud,
+        BookOfAcidCloud,
 
         /// <summary>
         /// Represents a Book which teaches the Teeth spell.
         /// </summary>
-        Teeth,
+        BookOfTeeth,
 
         /// <summary>
         /// Represents a Book which teaches the SummonSkeletonWarrior spell.
         /// </summary>
-        SummonSkeletonWarrior,
+        BookOfSummonSkeletonWarrior,
 
         /// <summary>
         /// Represents a Book which teaches the SummonClayGolem spell.
         /// </summary>
-        SummonClayGolem,
+        BookOfSummonClayGolem,
 
         /// <summary>
         /// Represents a Book which teaches the SummonSkeletonMage spell.
         /// </summary>
-        SummonSkeletonMage,
+        BookOfSummonSkeletonMage,
 
         /// <summary>
         /// Represents a Book which teaches the SummonIronGolem spell.
         /// </summary>
-        SummonIronGolem,
+        BookOfSummonIronGolem,
 
         /// <summary>
         /// Represents a Book which teaches the SummonZombieDog spell.
         /// </summary>
-        SummonZombieDog,
+        BookOfSummonZombieDog,
 
         /// <summary>
         /// Represents a Book which teaches the HolyFire spell.
         /// </summary>
-        HolyFire,
+        BookOfHolyFire,
 
         /// <summary>
         /// Represents a Book which teaches the Prayer spell.
         /// </summary>
-        Prayer,
+        BookOfPrayer,
 
         /// <summary>
         /// Represents a Book which teaches the Pennance spell.
         /// </summary>
-        Pennance,
+        BookOfPennance,
 
         /// <summary>
         /// Represents a Book which teaches the HolyNova spell.
         /// </summary>
-        HolyNova,
+        BookOfHolyNova,
 
         /// <summary>
         /// Represents a Book which teaches the Consecration spell.
         /// </summary>
-        Consecration,
+        BookOfConsecration,
 
         /// <summary>
         /// Represents a Book which teaches the TurnEvil spell.
         /// </summary>
-        TurnEvil,
+        BookOfTurnEvil,
 
         /// <summary>
         /// Represents a Book which teaches the HolyLight spell.
         /// </summary>
-        HolyLight,
+        BookOfHolyLight,
 
         /// <summary>
         /// Represents a Book which teaches the ConjureWater spell.
         /// </summary>
-        ConjureWater,
+        BookOfConjureWater,
 
         /// <summary>
         /// Represents a Book which teaches the ConjureFood spell.
         /// </summary>
-        ConjureFood,
+        BookOfConjureFood,
 
         /// <summary>
         /// Represents a Book which teaches the PolyMorph spell.
         /// </summary>
-        PolyMorph
+        BookOfPolyMorph
     }
 }

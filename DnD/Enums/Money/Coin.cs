@@ -1,9 +1,9 @@
 ﻿namespace DnD.Enums.Items
 {
     /// <summary>
-    /// The range of supported types of Coin.
+    /// The range of supported types of Money.
     /// </summary>
-    public enum Coin
+    public enum Money
     {
         /// <summary>
         /// Represents the Coin type that is of type copper piece.

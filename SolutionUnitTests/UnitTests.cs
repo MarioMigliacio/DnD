@@ -26,6 +26,7 @@ namespace SolutionUnitTests
             Random rng = new Random();
             Dictionary<Scroll, ScrollQuality> pages = new Dictionary<Scroll, ScrollQuality>();
             List<Enum> theCollection = new List<Enum>();
+            List<Enum> godsNStuff = new List<Enum>();
             ScrollQuality theQuality;
             int minorDistribution = 0;
             int mediumDistribution = 0;
@@ -35,10 +36,19 @@ namespace SolutionUnitTests
             //TODO
             // add each and every enum type in the game into theCollection list and get the count. set numEnums = that count.
             // do some rng stuff and distribute the enums and run tests against them.
+            foreach (AccessoryType acc in Enum.GetValues(typeof(AccessoryType))) { theCollection.Add(acc); }
+            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
+            foreach (Book bk in Enum.GetValues(typeof(Book))) { theCollection.Add(bk); }
+            foreach (Money arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
+            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
+            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
+            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
+            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
+            foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); }
 
             // The following loop populates the pages dictionary with spells and the following distributions of scroll qualities:
             // minor: ~60%, medium: ~30%, major: ~10%.
-            foreach(Scroll spell in Enum.GetValues(typeof(Scroll)))
+            foreach (Scroll spell in Enum.GetValues(typeof(Scroll)))
             {
                 int spawn = rng.Next(0, 101);
 
