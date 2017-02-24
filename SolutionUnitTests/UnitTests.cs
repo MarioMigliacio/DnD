@@ -4,6 +4,7 @@ using DnD.Enums.Money;
 using DnD.Enums.Deities;
 using DnD.Enums.Alignment;
 using DnD.Enums.Qualities;
+using DnD.Enums.Environments;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;

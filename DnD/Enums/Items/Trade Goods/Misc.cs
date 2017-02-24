@@ -45,6 +45,11 @@
         /// </summary>
         ChefsTools,
 
+        /// <summary>
+        /// Represents a Misc item of type PaperScribblings.
+        /// </summary>
+        PaperScribblings,
+
         // MANY MANY MORE PROBABLY TODO!!
     }
 }

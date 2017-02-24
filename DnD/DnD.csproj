@@ -43,8 +43,11 @@
     <Compile Include="Dice\Dice.cs" />
     <Compile Include="Enums\Alignment\Alignments.cs" />
     <Compile Include="Enums\Deities\Deities.cs" />
+    <Compile Include="Enums\Environments\CityFeatures.cs" />
     <Compile Include="Enums\Environments\DungeonRooms.cs" />
+    <Compile Include="Enums\Environments\Furnishings.cs" />
     <Compile Include="Enums\Environments\Terrains.cs" />
+    <Compile Include="Enums\Environments\UnderGroundFeatures.cs" />
     <Compile Include="Enums\Items\Everything Else\AccessoryTypes.cs" />
     <Compile Include="Enums\Items\Everything Else\ArmorTypes.cs" />
     <Compile Include="Enums\Items\Everything Else\Books.cs" />
