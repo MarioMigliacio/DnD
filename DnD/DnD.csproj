@@ -79,6 +79,7 @@
     <Compile Include="Enums\Qualities\ItemQualities.cs" />
     <Compile Include="Enums\Qualities\PotionQualities.cs" />
     <Compile Include="Enums\Qualities\ScrollQualities.cs" />
+    <Compile Include="Enums\Skills\Skills.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserStrings\FeatStrings.Designer.cs">
       <AutoGen>True</AutoGen>
