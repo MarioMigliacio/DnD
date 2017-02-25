@@ -1,10 +1,11 @@
-﻿using DnD.Dice;
+﻿using DnD;
+using DnD.Dice;
+using DnD.Enums.Alignment;
+using DnD.Enums.Deities;
+using DnD.Enums.Environments;
 using DnD.Enums.Items;
 using DnD.Enums.Money;
-using DnD.Enums.Deities;
-using DnD.Enums.Alignment;
 using DnD.Enums.Qualities;
-using DnD.Enums.Environments;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace SolutionUnitTests
             int mediumDistribution = 0;
             int majorDistribution = 0;
             int numEnums = 0;
-                        
+            
             // --- Test1 --- //
             // This massive portion of foreach loops is actually grabbing all these Enumeration types that belong to the ItemTypes group.
             // including the sub Enums (TradeGoods). theCollection has all the basic items in the game after the loops concludes.
