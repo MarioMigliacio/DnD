@@ -61,9 +61,9 @@
         CombatCasting,
 
         /// <summary>
-        /// The Combat Expertiese Feat.
+        /// The Combat Expertise Feat.
         /// </summary>
-        CombatExpertiese,
+        CombatExpertise,
 
         /// <summary>
         /// The Improved Disarm Feat.
@@ -159,6 +159,7 @@
         /// The Improved Critical Feat.
         /// </summary>
         ImprovedCritical,
+
         /// <summary>
         /// The Improved Initiative Feat.
         /// </summary>
@@ -355,9 +356,9 @@
         SelfSufficient,
 
         /// <summary>
-        /// The Shield Proficiecy Feat.
+        /// The Shield Proficiency Feat.
         /// </summary>
-        ShieldProficiecy,
+        ShieldProficiency,
 
         /// <summary>
         /// The Improved Shield Bash Feat.
