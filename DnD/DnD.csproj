@@ -40,6 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CharacterClass\BaseCharacterClass.cs" />
+    <Compile Include="Classes\CharacterClass\AllOtherClasses\Fighter.cs" />
+    <Compile Include="Classes\Feats\AllOtherFeats\Acrobatic.cs" />
+    <Compile Include="Classes\Feats\BaseFeat.cs" />
+    <Compile Include="Classes\Skills\BaseSkills.cs" />
     <Compile Include="Dice\Dice.cs" />
     <Compile Include="Enums\Alignment\Alignments.cs" />
     <Compile Include="Enums\Deities\Deities.cs" />
@@ -86,6 +91,16 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FeatStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\Items\Accessories\" />
+    <Folder Include="Classes\Items\Armors\" />
+    <Folder Include="Classes\Items\Books\" />
+    <Folder Include="Classes\Items\Potions\" />
+    <Folder Include="Classes\Items\QuestItems\" />
+    <Folder Include="Classes\Items\Scrolls\" />
+    <Folder Include="Classes\Items\TradeGoods\" />
+    <Folder Include="Classes\Items\Weapons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
