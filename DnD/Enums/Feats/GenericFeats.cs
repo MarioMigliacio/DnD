@@ -206,11 +206,6 @@
         IronWill,
 
         /// <summary>
-        /// The Leadership Feat.
-        /// </summary>
-        Leadership,
-
-        /// <summary>
         /// The Lightning Reflexes Feat.
         /// </summary>
         LightningReflexes,

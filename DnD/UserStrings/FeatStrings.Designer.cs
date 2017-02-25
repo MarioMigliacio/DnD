@@ -22,7 +22,7 @@ namespace DnD.UserStrings {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class FeatStrings {
+    public class FeatStrings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DnD.UserStrings {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DnD.UserStrings.FeatStrings", typeof(FeatStrings).Assembly);
@@ -51,7 +51,7 @@ namespace DnD.UserStrings {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,20 +61,1039 @@ namespace DnD.UserStrings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to What is my purpose?.
+        ///   Looks up a localized string similar to You get a +2 bonus on all Jump checks and Tumble checks..
         /// </summary>
-        internal static string ButterRobot {
+        public static string Acrobatic {
             get {
-                return ResourceManager.GetString("ButterRobot", resourceCulture);
+                return ResourceManager.GetString("Acrobatic", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You pass the butter..
+        ///   Looks up a localized string similar to You get a +2 bonus on all Balance checks and Escape Artist checks..
         /// </summary>
-        internal static string RicksResponse {
+        public static string Agile {
             get {
-                return ResourceManager.GetString("RicksResponse", resourceCulture);
+                return ResourceManager.GetString("Agile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Listen checks and Spot checks..
+        /// </summary>
+        public static string Alertness {
+            get {
+                return ResourceManager.GetString("Alertness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Handle Animal checks and Ride checks..
+        /// </summary>
+        public static string AnimalAffinity {
+            get {
+                return ResourceManager.GetString("AnimalAffinity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Climb checks and Swim checks..
+        /// </summary>
+        public static string Athletic {
+            get {
+                return ResourceManager.GetString("Athletic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Each creature you conjure with any summon spell gains a +4 enhancement bonus to Strength and Constitution for the duration of the spell that summoned it..
+        /// </summary>
+        public static string AugmentSummoning {
+            get {
+                return ResourceManager.GetString("AugmentSummoning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In melee, every time you miss because of concealment, you can reroll your miss chance percentile roll one time to see if you actually hit.
+        ///
+        ///An invisible attacker gets no advantages related to hitting you in melee. That is, you don’t lose your Dexterity bonus to Armor Class, and the attacker doesn’t get the usual +2 bonus for being invisible. The invisible attacker’s bonuses do still apply for ranged attacks, however.
+        ///
+        ///You take only half the usual penalty to speed for being unable to see. Darkness and po [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string BlindFight {
+            get {
+                return ResourceManager.GetString("BlindFight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can create a potion of any 3rd-level or lower spell that you know and that targets one or more creatures. Brewing a potion takes one day. When you create a potion, you set the caster level, which must be sufficient to cast the spell in question and no higher than your own level. The base price of a potion is its spell level × its caster level × 50 gp. To brew a potion, you must spend 1/25 of this base price in XP and use up raw materials costing one half this base price.
+        ///
+        ///When you create a potion, you [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string BrewPotion {
+            get {
+                return ResourceManager.GetString("BrewPotion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If you deal a creature enough damage to make it drop (typically by dropping it to below 0 hit points or killing it), you get an immediate, extra melee attack against another creature within reach. You cannot take a 5-foot step before making this extra attack. The extra attack is with the same weapon and at the same bonus as the attack that dropped the previous creature. You can use this ability once per round..
+        /// </summary>
+        public static string Cleave {
+            get {
+                return ResourceManager.GetString("Cleave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +4 bonus on Concentration checks made to cast a spell or use a spell-like ability while on the defensive or while you are grappling or pinned..
+        /// </summary>
+        public static string CombatCasting {
+            get {
+                return ResourceManager.GetString("CombatCasting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you use the attack action or the full attack action in melee, you can take a penalty of as much as –5 on your attack roll and add the same number (+5 or less) as a dodge bonus to your Armor Class. This number may not exceed your base attack bonus. The changes to attack rolls and Armor Class last until your next action..
+        /// </summary>
+        public static string CombatExpertise {
+            get {
+                return ResourceManager.GetString("CombatExpertise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You may make a number of additional attacks of opportunity equal to your Dexterity bonus.
+        ///
+        ///With this feat, you may also make attacks of opportunity while flat-footed..
+        /// </summary>
+        public static string CombatReflexes {
+            get {
+                return ResourceManager.GetString("CombatReflexes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can create any magic weapon, armor, or shield whose prerequisites you meet. Enhancing a weapon, suit of armor, or shield takes one day for each 1,000 gp in the price of its magical features. To enhance a weapon, suit of armor, or shield, you must spend 1/25 of its features’ total price in XP and use up raw materials costing one-half of this total price.
+        ///
+        ///The weapon, armor, or shield to be enhanced must be a masterwork item that you provide. Its cost is not included in the above cost.
+        ///
+        ///You can also m [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string CraftMagicArmsAndArmor {
+            get {
+                return ResourceManager.GetString("CraftMagicArmsAndArmor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can create any rod whose prerequisites you meet. Crafting a rod takes one day for each 1,000 gp in its base price. To craft a rod, you must spend 1/25 of its base price in XP and use up raw materials costing one-half of its base price.
+        ///
+        ///Some rods incur extra costs in material components or XP, as noted in their descriptions. These costs are in addition to those derived from the rod’s base price..
+        /// </summary>
+        public static string CraftRod {
+            get {
+                return ResourceManager.GetString("CraftRod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can create any staff whose prerequisites you meet.
+        ///
+        ///Crafting a staff takes one day for each 1,000 gp in its base price. To craft a staff, you must spend 1/25 of its base price in XP and use up raw materials costing one-half of its base price. A newly created staff has 50 charges.
+        ///
+        ///Some staffs incur extra costs in material components or XP, as noted in their descriptions. These costs are in addition to those derived from the staff ’s base price..
+        /// </summary>
+        public static string CraftStaff {
+            get {
+                return ResourceManager.GetString("CraftStaff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can create a wand of any 4th-level or lower spell that you know. Crafting a wand takes one day for each 1,000 gp in its base price. The base price of a wand is its caster level × the spell level × 750 gp. To craft a wand, you must spend 1/25 of this base price in XP and use up raw materials costing one-half of this base price. A newly created wand has 50 charges.
+        ///
+        ///Any wand that stores a spell with a costly material component or an XP cost also carries a commensurate cost. In addition to the cost deriv [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string CraftWand {
+            get {
+                return ResourceManager.GetString("CraftWand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can create any wondrous item whose prerequisites you meet. Enchanting a wondrous item takes one day for each 1,000 gp in its price. To enchant a wondrous item, you must spend 1/25 of the item’s price in XP and use up raw materials costing half of this price.
+        ///
+        ///You can also mend a broken wondrous item if it is one that you could make. Doing so costs half the XP, half the raw materials, and half the time it would take to craft that item in the first place.
+        ///
+        ///Some wondrous items incur extra costs in mate [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string CraftWondrousItem {
+            get {
+                return ResourceManager.GetString("CraftWondrousItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Disguise checks and Forgery checks..
+        /// </summary>
+        public static string Deceitful {
+            get {
+                return ResourceManager.GetString("Deceitful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must have at least one hand free (holding nothing) to use this feat. Once per round when you would normally be hit with a ranged weapon, you may deflect it so that you take no damage from it. You must be aware of the attack and not flatfooted.
+        ///
+        ///Attempting to deflect a ranged weapon doesn’t count as an action. Unusually massive ranged weapons and ranged attacks generated by spell effects can’t be deflected..
+        /// </summary>
+        public static string DeflectArrows {
+            get {
+                return ResourceManager.GetString("DeflectArrows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Sleight of Hand checks and Use Rope checks..
+        /// </summary>
+        public static string DeftHands {
+            get {
+                return ResourceManager.GetString("DeftHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When reduced to between –1 and –9 hit points, you automatically become stable. You don’t have to roll d% to see if you lose 1 hit point each round.
+        ///
+        ///When reduced to negative hit points, you may choose to act as if you were disabled, rather than dying. You must make this decision as soon as you are reduced to negative hit points (even if it isn’t your turn). If you do not choose to act as if you were disabled, you immediately fall unconscious.
+        ///
+        ///When using this feat, you can take either a single move or s [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Diehard {
+            get {
+                return ResourceManager.GetString("Diehard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Appraise checks and Decipher Script checks..
+        /// </summary>
+        public static string Diligent {
+            get {
+                return ResourceManager.GetString("Diligent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to During your action, you designate an opponent and receive a +1 dodge bonus to Armor Class against attacks from that opponent. You can select a new opponent on any action.
+        ///
+        ///A condition that makes you lose your Dexterity bonus to Armor Class (if any) also makes you lose dodge bonuses. Also, dodge bonuses stack with each other, unlike most other types of bonuses..
+        /// </summary>
+        public static string Dodge {
+            get {
+                return ResourceManager.GetString("Dodge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All variable, numeric effects of an empowered spell are increased by one-half.
+        ///
+        ///Saving throws and opposed rolls are not affected, nor are spells without random variables. An empowered spell uses up a spell slot two levels higher than the spell’s actual level..
+        /// </summary>
+        public static string EmpowerSpell {
+            get {
+                return ResourceManager.GetString("EmpowerSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You gain a +4 bonus on the following checks and saves: Swim checks made to resist nonlethal damage, Constitution checks made to continue running, Constitution checks made to avoid nonlethal damage from a forced march, Constitution checks made to hold your breath, Constitution checks made to avoid nonlethal damage from starvation or thirst, Fortitude saves made to avoid nonlethal damage from hot or cold environments, and Fortitude saves made to resist damage from suffocation. Also, you may sleep in light or  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Endurance {
+            get {
+                return ResourceManager.GetString("Endurance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can alter a spell with a range of close, medium, or long to increase its range by 100%. An enlarged spell with a range of close now has a range of 50 ft. + 5 ft./level, while medium-range spells have a range of 200 ft. + 20 ft./level and long-range spells have a range of 800 ft. + 80 ft./level. An enlarged spell uses up a spell slot one level higher than the spell’s actual level.
+        ///
+        ///Spells whose ranges are not defined by distance, as well as spells whose ranges are not close, medium, or long, do not hav [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string EnlargeSpell {
+            get {
+                return ResourceManager.GetString("EnlargeSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can cast any spell that has a material component costing 1 gp or less without needing that component. (The casting of the spell still provokes attacks of opportunity as normal.) If the spell requires a material component that costs more than 1 gp, you must have the material component at hand to cast the spell, just as normal..
+        /// </summary>
+        public static string EschewMaterials {
+            get {
+                return ResourceManager.GetString("EschewMaterials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You make attack rolls with the weapon normally..
+        /// </summary>
+        public static string ExoticWeaponProficiency {
+            get {
+                return ResourceManager.GetString("ExoticWeaponProficiency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An extended spell lasts twice as long as normal. A spell with a duration of concentration, instantaneous, or permanent is not affected by this feat. An extended spell uses up a spell slot one level higher than the spell’s actual level..
+        /// </summary>
+        public static string ExtendSpell {
+            get {
+                return ResourceManager.GetString("ExtendSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Each time you take this feat, you can use your ability to turn or rebuke creatures four more times per day than normal.
+        ///
+        ///If you have the ability to turn or rebuke more than one kind of creature each of your turning or rebuking abilities gains four additional uses per day..
+        /// </summary>
+        public static string ExtraTurning {
+            get {
+                return ResourceManager.GetString("ExtraTurning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you use a projectile weapon, such as a bow, its range increment increases by one-half (multiply by 1-1/2). When you use a thrown weapon, its range increment is doubled..
+        /// </summary>
+        public static string FarShot {
+            get {
+                return ResourceManager.GetString("FarShot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can create any ring whose prerequisites you meet. Crafting a ring takes one day for each 1,000 gp in its base price. To craft a ring, you must spend 1/25 of its base price in XP and use up raw materials costing one-half of its base price.
+        ///
+        ///You can also mend a broken ring if it is one that you could make. Doing so costs half the XP, half the raw materials, and half the time it would take to forge that ring in the first place.
+        ///
+        ///Some magic rings incur extra costs in material components or XP, as noted  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string ForgeRing {
+            get {
+                return ResourceManager.GetString("ForgeRing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This feat works like Cleave, except that there is no limit to the number of times you can use it per round..
+        /// </summary>
+        public static string GreatCleave {
+            get {
+                return ResourceManager.GetString("GreatCleave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select. This bonus stacks with the bonus from Spell Focus..
+        /// </summary>
+        public static string GreaterSpellFocus {
+            get {
+                return ResourceManager.GetString("GreaterSpellFocus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature’s spell resistance. This bonus stacks with the one from Spell Penetration..
+        /// </summary>
+        public static string GreaterSpellPenetration {
+            get {
+                return ResourceManager.GetString("GreaterSpellPenetration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a third attack with your off-hand weapon, albeit at a –10 penalty..
+        /// </summary>
+        public static string GreaterTwoWeaponFighting {
+            get {
+                return ResourceManager.GetString("GreaterTwoWeaponFighting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You gain a +1 bonus on all attack rolls you make using the selected weapon. This bonus stacks with other bonuses on attack rolls, including the one from Weapon Focus..
+        /// </summary>
+        public static string GreaterWeaponFocus {
+            get {
+                return ResourceManager.GetString("GreaterWeaponFocus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You gain a +2 bonus on all damage rolls you make using the selected weapon. This bonus stacks with other bonuses on damage rolls, including the one from Weapon Specialization..
+        /// </summary>
+        public static string GreaterWeaponSpecialization {
+            get {
+                return ResourceManager.GetString("GreaterWeaponSpecialization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Fortitude saving throws..
+        /// </summary>
+        public static string GreatFortitude {
+            get {
+                return ResourceManager.GetString("GreatFortitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Balance, Climb, Escape Artist, Hide, Jump, Move Silently, Sleight of Hand, and Tumble checks..
+        /// </summary>
+        public static string HeavyArmorProficiency {
+            get {
+                return ResourceManager.GetString("HeavyArmorProficiency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A heightened spell has a higher spell level than normal (up to a maximum of 9th level). Unlike other metamagic feats, Heighten Spell actually increases the effective level of the spell that it modifies. All effects dependent on spell level (such as saving throw DCs and ability to penetrate a lesser globe of invulnerability) are calculated according to the heightened level. The heightened spell is as difficult to prepare and cast as a spell of its effective level..
+        /// </summary>
+        public static string HeightenSpell {
+            get {
+                return ResourceManager.GetString("HeightenSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you perform a bull rush you do not provoke an attack of opportunity from the defender. You also gain a +4 bonus on the opposed Strength check you make to push back the defender..
+        /// </summary>
+        public static string ImprovedBullRush {
+            get {
+                return ResourceManager.GetString("ImprovedBullRush", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When counterspelling, you may use a spell of the same school that is one or more spell levels higher than the target spell..
+        /// </summary>
+        public static string ImprovedCounterspell {
+            get {
+                return ResourceManager.GetString("ImprovedCounterspell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When using the weapon you selected, your threat range is doubled..
+        /// </summary>
+        public static string ImprovedCritical {
+            get {
+                return ResourceManager.GetString("ImprovedCritical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You do not provoke an attack of opportunity when you attempt to disarm an opponent, nor does the opponent have a chance to disarm you. You also gain a +4 bonus on the opposed attack roll you make to disarm your opponent..
+        /// </summary>
+        public static string ImprovedDisarm {
+            get {
+                return ResourceManager.GetString("ImprovedDisarm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can make a Bluff check to feint in combat as a move action..
+        /// </summary>
+        public static string ImprovedFeint {
+            get {
+                return ResourceManager.GetString("ImprovedFeint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You do not provoke an attack of opportunity when you make a touch attack to start a grapple. You also gain a +4 bonus on all grapple checks, regardless of whether you started the grapple..
+        /// </summary>
+        public static string ImprovedGrapple {
+            get {
+                return ResourceManager.GetString("ImprovedGrapple", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +4 bonus on initiative checks..
+        /// </summary>
+        public static string ImprovedInitiative {
+            get {
+                return ResourceManager.GetString("ImprovedInitiative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you attempt to overrun an opponent, the target may not choose to avoid you. You also gain a +4 bonus on your Strength check to knock down your opponent..
+        /// </summary>
+        public static string ImprovedOverrun {
+            get {
+                return ResourceManager.GetString("ImprovedOverrun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your ranged attacks ignore the AC bonus granted to targets by anything less than total cover, and the miss chance granted to targets by anything less than total concealment. Total cover and total concealment provide their normal benefits against your ranged attacks.
+        ///
+        ///In addition, when you shoot or throw ranged weapons at a grappling opponent, you automatically strike at the opponent you have chosen..
+        /// </summary>
+        public static string ImprovedPreciseShot {
+            get {
+                return ResourceManager.GetString("ImprovedPreciseShot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you perform a shield bash, you may still apply the shield’s shield bonus to your AC..
+        /// </summary>
+        public static string ImprovedShieldBash {
+            get {
+                return ResourceManager.GetString("ImprovedShieldBash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you strike at an object held or carried by an opponent (such as a weapon or shield), you do not provoke an attack of opportunity.
+        ///
+        ///You also gain a +4 bonus on any attack roll made to attack an object held or carried by another character..
+        /// </summary>
+        public static string ImprovedSunder {
+            get {
+                return ResourceManager.GetString("ImprovedSunder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You do not provoke an attack of opportunity when you attempt to trip an opponent while you are unarmed. You also gain a +4 bonus on your Strength check to trip your opponent.
+        ///
+        ///If you trip an opponent in melee combat, you immediately get a melee attack against that opponent as if you hadn’t used your attack for the trip attempt..
+        /// </summary>
+        public static string ImprovedTrip {
+            get {
+                return ResourceManager.GetString("ImprovedTrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You turn or rebuke creatures as if you were one level higher than you are in the class that grants you the ability..
+        /// </summary>
+        public static string ImprovedTurning {
+            get {
+                return ResourceManager.GetString("ImprovedTurning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to In addition to the standard single extra attack you get with an off-hand weapon, you get a second attack with it, albeit at a –5 penalty..
+        /// </summary>
+        public static string ImprovedTwoWeaponFighting {
+            get {
+                return ResourceManager.GetString("ImprovedTwoWeaponFighting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are considered to be armed even when unarmed—that is, you do not provoke attacks of opportunity from armed opponents when you attack them while unarmed. However, you still get an attack of opportunity against any opponent who makes an unarmed attack on you.
+        ///
+        ///In addition, your unarmed strikes can deal lethal or nonlethal damage, at your option..
+        /// </summary>
+        public static string ImprovedUnarmedStrike {
+            get {
+                return ResourceManager.GetString("ImprovedUnarmedStrike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Gather Information checks and Search checks..
+        /// </summary>
+        public static string Investigator {
+            get {
+                return ResourceManager.GetString("Investigator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Will saving throws..
+        /// </summary>
+        public static string IronWill {
+            get {
+                return ResourceManager.GetString("IronWill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Balance, Climb, Escape Artist, Hide, Jump, Move Silently, Sleight of Hand, and Tumble checks..
+        /// </summary>
+        public static string LightArmorProficiency {
+            get {
+                return ResourceManager.GetString("LightArmorProficiency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Reflex saving throws..
+        /// </summary>
+        public static string LightningReflexes {
+            get {
+                return ResourceManager.GetString("LightningReflexes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Spellcraft checks and Use Magic Device checks..
+        /// </summary>
+        public static string MagicalAptitude {
+            get {
+                return ResourceManager.GetString("MagicalAptitude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As a standard action, you may fire two arrows at a single opponent within 30 feet. Both arrows use the same attack roll (with a –4 penalty) to determine success and deal damage normally (but see Special).
+        ///
+        ///For every five points of base attack bonus you have above +6, you may add one additional arrow to this attack, to a maximum of four arrows at a base attack bonus of +16. However, each arrow after the second adds a cumulative –2 penalty on the attack roll (for a total penalty of –6 for three arrows and – [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Manyshot {
+            get {
+                return ResourceManager.GetString("Manyshot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You make attack rolls with the selected weapon normally..
+        /// </summary>
+        public static string MartialWeaponProficiency {
+            get {
+                return ResourceManager.GetString("MartialWeaponProficiency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All variable, numeric effects of a spell modified by this feat are maximized. Saving throws and opposed rolls are not affected, nor are spells without random variables. A maximized spell uses up a spell slot three levels higher than the spell’s actual level.
+        ///
+        ///An empowered, maximized spell gains the separate benefits of each feat: the maximum result plus one-half the normally rolled result..
+        /// </summary>
+        public static string MaximizeSpell {
+            get {
+                return ResourceManager.GetString("MaximizeSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Balance, Climb, Escape Artist, Hide, Jump, Move Silently, Sleight of Hand, and Tumble checks..
+        /// </summary>
+        public static string MediumArmorProficiency {
+            get {
+                return ResourceManager.GetString("MediumArmorProficiency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +4 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a threatened area. A condition that makes you lose your Dexterity bonus to Armor Class (if any) also makes you lose dodge bonuses.
+        ///
+        ///Dodge bonuses stack with each other, unlike most types of bonuses..
+        /// </summary>
+        public static string Mobility {
+            get {
+                return ResourceManager.GetString("Mobility", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The penalty you take when using a ranged weapon while mounted is halved: –2 instead of –4 if your mount is taking a double move, and –4 instead of –8 if your mount is running..
+        /// </summary>
+        public static string MountedArchery {
+            get {
+                return ResourceManager.GetString("MountedArchery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Once per round when your mount is hit in combat, you may attempt a Ride check (as a reaction) to negate the hit. The hit is negated if your Ride check result is greater than the opponent’s attack roll. (Essentially, the Ride check result becomes the mount’s Armor Class if it’s higher than the mount’s regular AC.).
+        /// </summary>
+        public static string MountedCombat {
+            get {
+                return ResourceManager.GetString("MountedCombat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can complete the verbal and somatic components of spells while in a wild shape. You substitute various noises and gestures for the normal verbal and somatic components of a spell.
+        ///
+        ///You can also use any material components or focuses you possess, even if such items are melded within your current form. This feat does not permit the use of magic items while you are in a form that could not ordinarily use them, and you do not gain the ability to speak while in a wild shape..
+        /// </summary>
+        public static string NaturalSpell {
+            get {
+                return ResourceManager.GetString("NaturalSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Diplomacy checks and Sense Motive checks..
+        /// </summary>
+        public static string Negotiator {
+            get {
+                return ResourceManager.GetString("Negotiator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Disable Device checks and Open Lock checks..
+        /// </summary>
+        public static string NimbleFingers {
+            get {
+                return ResourceManager.GetString("NimbleFingers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Bluff checks and Intimidate checks..
+        /// </summary>
+        public static string Persuasive {
+            get {
+                return ResourceManager.GetString("Persuasive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +1 bonus on attack and damage rolls with ranged weapons at ranges of up to 30 feet..
+        /// </summary>
+        public static string PointBlankShot {
+            get {
+                return ResourceManager.GetString("PointBlankShot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to On your action, before making attack rolls for a round, you may choose to subtract a number from all melee attack rolls and add the same number to all melee damage rolls. This number may not exceed your base attack bonus. The penalty on attacks and bonus on damage apply until your next turn..
+        /// </summary>
+        public static string PowerAttack {
+            get {
+                return ResourceManager.GetString("PowerAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can shoot or throw ranged weapons at an opponent engaged in melee without taking the standard –4 penalty on your attack roll..
+        /// </summary>
+        public static string PreciseShot {
+            get {
+                return ResourceManager.GetString("PreciseShot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can draw a weapon as a free action instead of as a move action. You can draw a hidden weapon (see the Sleight of Hand skill) as a move action.
+        ///
+        ///A character who has selected this feat may throw weapons at his full normal rate of attacks (much like a character with a bow)..
+        /// </summary>
+        public static string Quickdraw {
+            get {
+                return ResourceManager.GetString("Quickdraw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Casting a quickened spell is a free action. You can perform another action, even casting another spell, in the same round as you cast a quickened spell. You may cast only one quickened spell per round. A spell whose casting time is more than 1 full round action cannot be quickened. A quickened spell uses up a spell slot four levels higher than the spell’s actual level. Casting a quickened spell doesn’t provoke an attack of opportunity..
+        /// </summary>
+        public static string QuickenSpell {
+            get {
+                return ResourceManager.GetString("QuickenSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The time required for you to reload your chosen type of crossbow is reduced to a free action (for a hand or light crossbow) or a move action (for a heavy crossbow). Reloading a crossbow still provokes an attack of opportunity.
+        ///
+        ///If you have selected this feat for hand crossbow or light crossbow, you may fire that weapon as many times in a full attack action as you could attack if you were using a bow..
+        /// </summary>
+        public static string RapidReload {
+            get {
+                return ResourceManager.GetString("RapidReload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can get one extra attack per round with a ranged weapon. The attack is at your highest base attack bonus, but each attack you make in that round (the extra one and the normal ones) takes a –2 penalty. You must use the full attack action to use this feat..
+        /// </summary>
+        public static string RapidShot {
+            get {
+                return ResourceManager.GetString("RapidShot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you are mounted and use the charge action, you may move and attack as if with a standard charge and then move again (continuing the straight line of the charge). Your total movement for the round can’t exceed double your mounted speed. You and your mount do not provoke an attack of opportunity from the opponent that you attack..
+        /// </summary>
+        public static string RideByAttack {
+            get {
+                return ResourceManager.GetString("RideByAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When running, you move five times your normal speed (if wearing medium, light, or no armor and carrying no more than a medium load) or four times your speed (if wearing heavy armor or carrying a heavy load). If you make a jump after a running start (see the Jump skill description), you gain a +4 bonus on your Jump check. While running, you retain your Dexterity bonus to AC..
+        /// </summary>
+        public static string Run {
+            get {
+                return ResourceManager.GetString("Run", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can create a scroll of any spell that you know. Scribing a scroll takes one day for each 1,000 gp in its base price. The base price of a scroll is its spell level × its caster level × 25 gp. To scribe a scroll, you must spend 1/25 of this base price in XP and use up raw materials costing one-half of this base price.
+        ///
+        ///Any scroll that stores a spell with a costly material component or an XP cost also carries a commensurate cost. In addition to the costs derived from the base price, you must expend the m [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string ScribeScroll {
+            get {
+                return ResourceManager.GetString("ScribeScroll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Heal checks and Survival checks..
+        /// </summary>
+        public static string SelfSufficient {
+            get {
+                return ResourceManager.GetString("SelfSufficient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can use a shield and take only the standard penalties..
+        /// </summary>
+        public static string ShieldProficiency {
+            get {
+                return ResourceManager.GetString("ShieldProficiency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When using the attack action with a ranged weapon, you can move both before and after the attack, provided that your total distance moved is not greater than your speed..
+        /// </summary>
+        public static string ShotOnTheRun {
+            get {
+                return ResourceManager.GetString("ShotOnTheRun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A silent spell can be cast with no verbal components. Spells without verbal components are not affected. A silent spell uses up a spell slot one level higher than the spell’s actual level..
+        /// </summary>
+        public static string SilentSpell {
+            get {
+                return ResourceManager.GetString("SilentSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You make attack rolls with simple weapons normally..
+        /// </summary>
+        public static string SimpleWeaponProficiency {
+            get {
+                return ResourceManager.GetString("SimpleWeaponProficiency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +3 bonus on all checks involving that skill..
+        /// </summary>
+        public static string SkillFocus {
+            get {
+                return ResourceManager.GetString("SkillFocus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When using the Deflect Arrows feat you may catch the weapon instead of just deflecting it. Thrown weapons can immediately be thrown back at the original attacker (even though it isn’t your turn) or kept for later use.
+        ///
+        ///You must have at least one hand free (holding nothing) to use this feat..
+        /// </summary>
+        public static string SnatchArrows {
+            get {
+                return ResourceManager.GetString("SnatchArrows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select..
+        /// </summary>
+        public static string SpellFocus {
+            get {
+                return ResourceManager.GetString("SpellFocus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Each time you take this feat, choose a number of spells equal to your Intelligence modifier that you already know. From that point on, you can prepare these spells without referring to a spellbook..
+        /// </summary>
+        public static string SpellMastery {
+            get {
+                return ResourceManager.GetString("SpellMastery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on caster level checks (1d20 + caster level) made to overcome a creature’s spell resistance..
+        /// </summary>
+        public static string SpellPenetration {
+            get {
+                return ResourceManager.GetString("SpellPenetration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When mounted and using the charge action, you deal double damage with a melee weapon (or triple damage with a lance)..
+        /// </summary>
+        public static string SpiritedCharge {
+            get {
+                return ResourceManager.GetString("SpiritedCharge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When using the attack action with a melee weapon, you can move both before and after the attack, provided that your total distance moved is not greater than your speed. Moving in this way does not provoke an attack of opportunity from the defender you attack, though it might provoke attacks of opportunity from other creatures, if appropriate. You can’t use this feat if you are wearing heavy armor.
+        ///
+        ///You must move at least 5 feet both before and after you make your attack in order to utilize the benefits of [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string SpringAttack {
+            get {
+                return ResourceManager.GetString("SpringAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You get a +2 bonus on all Hide checks and Move Silently checks..
+        /// </summary>
+        public static string Stealthy {
+            get {
+                return ResourceManager.GetString("Stealthy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A stilled spell can be cast with no somatic components.
+        ///
+        ///Spells without somatic components are not affected. A stilled spell uses up a spell slot one level higher than the spell’s actual level..
+        /// </summary>
+        public static string StillSpell {
+            get {
+                return ResourceManager.GetString("StillSpell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must declare that you are using this feat before you make your attack roll (thus, a failed attack roll ruins the attempt). Stunning Fist forces a foe damaged by your unarmed attack to make a Fortitude saving throw (DC 10 + 1/2 your character level + your Wis modifier), in addition to dealing damage normally. A defender who fails this saving throw is stunned for 1 round (until just before your next action). A stunned character can’t act, loses any Dexterity bonus to AC, and takes a –2 penalty to AC. You  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string StunningFist {
+            get {
+                return ResourceManager.GetString("StunningFist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You gain +3 hit points..
+        /// </summary>
+        public static string Toughness {
+            get {
+                return ResourceManager.GetString("Toughness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can use a tower shield and suffer only the standard penalties..
+        /// </summary>
+        public static string TowerShieldProficiency {
+            get {
+                return ResourceManager.GetString("TowerShieldProficiency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To find tracks or to follow them for 1 mile requires a successful Survival check. You must make another Survival check every time the tracks become difficult to follow.
+        ///
+        ///You move at half your normal speed (or at your normal speed with a –5 penalty on the check, or at up to twice your normal speed with a –20 penalty on the check)..
+        /// </summary>
+        public static string Track {
+            get {
+                return ResourceManager.GetString("Track", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you attempt to overrun an opponent while mounted, your target may not choose to avoid you. Your mount may make one hoof attack against any target you knock down, gaining the standard +4 bonus on attack rolls against prone targets..
+        /// </summary>
+        public static string Trample {
+            get {
+                return ResourceManager.GetString("Trample", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your penalties on attack rolls for fighting with two weapons are reduced. The penalty for your primary hand lessens by 2 and the one for your off hand lessens by 6..
+        /// </summary>
+        public static string TwoWeaponFighting {
+            get {
+                return ResourceManager.GetString("TwoWeaponFighting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to With a light weapon, rapier, whip, or spiked chain made for a creature of your size category, you may use your Dexterity modifier instead of your Strength modifier on attack rolls. If you carry a shield, its armor check penalty applies to your attack rolls..
+        /// </summary>
+        public static string WeaponFinesse {
+            get {
+                return ResourceManager.GetString("WeaponFinesse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You gain a +1 bonus on all attack rolls you make using the selected weapon..
+        /// </summary>
+        public static string WeaponFocus {
+            get {
+                return ResourceManager.GetString("WeaponFocus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You gain a +2 bonus on all damage rolls you make using the selected weapon..
+        /// </summary>
+        public static string WeaponSpecialization {
+            get {
+                return ResourceManager.GetString("WeaponSpecialization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When you use the full attack action, you can give up your regular attacks and instead make one melee attack at your full base attack bonus against each opponent within reach..
+        /// </summary>
+        public static string WhirlwindAttack {
+            get {
+                return ResourceManager.GetString("WhirlwindAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can alter a burst, emanation, line, or spread shaped spell to increase its area. Any numeric measurements of the spell’s area increase by 100%. A widened spell uses up a spell slot three levels higher than the spell’s actual level.
+        ///
+        ///Spells that do not have an area of one of these four sorts are not affected by this feat..
+        /// </summary>
+        public static string WidenSpell {
+            get {
+                return ResourceManager.GetString("WidenSpell", resourceCulture);
             }
         }
     }
