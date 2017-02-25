@@ -6,6 +6,16 @@
     public enum QuestItem
     {
         /// <summary>
+        /// Represents the quest item Robe of Fuck Off which makes all NPCs ignore you.
+        /// </summary>
+        RobeOfFuckOff,
+
+        /// <summary>
+        /// Represents the quest item Shoes of Speed which allows you to use the drug of choice, speed.
+        /// </summary>
+        ShoesOfSpeed,
+        
+        /// <summary>
         /// Represents the Quest item that is of type Cursed Necklace.
         /// </summary>
         CursedNecklace,
