@@ -1,7 +1,7 @@
 ﻿using DnD.Enums.Skills;
 using DnD.Enums.Stats;
 
-namespace DnD.Classes
+namespace DnD.Classes.HeroSkills
 {
     /// <summary>
     /// The Base Skills class is an abstract entity which represents the generic type of skill.    

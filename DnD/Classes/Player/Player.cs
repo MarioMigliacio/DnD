@@ -1,5 +1,5 @@
 ﻿
-namespace DnD.Classes
+namespace DnD.Classes.Player
 {
     /// <summary>
     /// Represents the main player character that is to be created and utilized.

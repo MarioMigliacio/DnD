@@ -1,7 +1,7 @@
 ﻿using DnD.Enums.Skills;
 using DnD.Enums.Stats;
 
-namespace DnD.Classes
+namespace DnD.Classes.HeroSkills
 {
     /// <summary>
     /// The Appraise Skill.
@@ -11,12 +11,12 @@ namespace DnD.Classes
         /// <summary>
         /// Returns the type of <see cref="Stats"/> that helps boost this Appraise.
         /// </summary>
-        public override Stats BenefitsFrom { get { return Stats.Intellect; } }
+        public override Stats BenefitsFrom => Stats.Intellect;
 
         /// <summary>
         /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for Appraise.
         /// </summary>  
-        public override string Description { get { return UserStrings.SkillStrings.Appraise; } }
+        public override string Description => UserStrings.SkillStrings.Appraise;
 
         /// <summary>
         /// Represents the number of ranks the player has alloted into Appraise.
@@ -26,6 +26,6 @@ namespace DnD.Classes
         /// <summary>
         /// Returns the associated <see cref="Skills"/> Appriase is.
         /// </summary>
-        public override Skills SkillType { get { return Skills.Appraise; } }
+        public override Skills SkillType => Skills.Appraise;
     }
 }

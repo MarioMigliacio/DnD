@@ -11,7 +11,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using DnD.Enums.Skills;
-using DnD.Classes;
+using DnD.Classes.Player;
+using DnD.Classes.HeroSkills;
+using DnD.Classes.HeroFeats;
 
 namespace SolutionUnitTests
 {
@@ -180,11 +182,19 @@ namespace SolutionUnitTests
         [TestMethod]
         public void TestSkillsObjects()
         {
-            Player me = new Player();
-            me.Level = 3;
+            Player me = new Player {Level = 3};
+
+            // we can do this all day long. How many Skills verify that it works correct?! 2. stop doing it after 2 lol.
             var checkThisFuckinShitOut = SkillFactory.Create(Skills.Appraise);
             var omgItsAnotherSkill = SkillFactory.Create(Skills.Balance);
+
+            // this sanity check checks that an enum from Skills = 40 (there is none) is indeed null. GOOD!
+            var sanityCheck = SkillFactory.Create((Skills)40);
+            Assert.AreEqual(null, sanityCheck);
+
+            // does the abstract MaxRanksPossible member function work?!
             int cap = checkThisFuckinShitOut.MaxRanksPossible(me.Level);
+            // yes!
 
             // Test conclusion: Works.
         }

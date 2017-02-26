@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using DnD.Classes.CharacterClass;
 
-namespace DnD.Classes
+namespace DnD.Classes.HeroFeats
 {
     /// <summary>
     /// The Base Feat class is an abstract entity which satisfies the required generic prerequisites for any type of feat.

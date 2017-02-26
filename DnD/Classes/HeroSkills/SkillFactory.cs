@@ -1,6 +1,6 @@
 ﻿using DnD.Enums.Skills;
 
-namespace DnD.Classes
+namespace DnD.Classes.HeroSkills
 {
     /// <summary>
     /// A useful factory tool which needs not be constructed. Simply pass in the Enum which corresponds to a skill, 
