@@ -10,6 +10,8 @@ using DnD.Enums.Qualities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using DnD.Enums.Skills;
+using DnD.Classes;
 
 namespace SolutionUnitTests
 {
@@ -170,6 +172,20 @@ namespace SolutionUnitTests
             var sleight = SkillStrings.SleightOfHand;
 
             // Test conclusion: Works! Dont forget that when you want to use these strings in a textbox, to include the WRAP settings, so it does new lines correctly.
+        }
+
+        /// <summary>
+        /// Test that skills are working ok. And the expected strings are correct.
+        /// </summary>
+        [TestMethod]
+        public void TestSkillsObjects()
+        {
+            Player me = new Player();
+            me.Level = 3;
+            var checkThisFuckinShitOut = SkillFactory.Create(Skills.Appraise);
+            int cap = checkThisFuckinShitOut.MaxRanksPossible(me.Level);
+
+            // Test conclusion: Works.
         }
     }
 }

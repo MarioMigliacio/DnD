@@ -1,4 +1,4 @@
-﻿namespace DnD.Classes.CharacterClass
+﻿namespace DnD.Classes
 {
     /// <summary>
     /// The very essential Abstract base entity for what describes a Character class.

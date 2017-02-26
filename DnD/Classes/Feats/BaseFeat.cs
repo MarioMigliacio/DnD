@@ -1,8 +1,7 @@
 ﻿using System;
-using DnD.Classes.CharacterClass;
 using System.Collections.Generic;
 
-namespace DnD.Classes.Feats
+namespace DnD.Classes
 {
     /// <summary>
     /// The Base Feat class is an abstract entity which satisfies the required generic prerequisites for any type of feat.
@@ -12,7 +11,7 @@ namespace DnD.Classes.Feats
     public abstract class BaseFeat
     {
         /// <summary>
-        /// Returns the associated UserStrings.FeatStrings description tag for the particular feat in question.
+        /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for the particular feat in question.
         /// </summary>
         public abstract string Description { get; }
 

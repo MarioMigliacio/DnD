@@ -44,6 +44,9 @@
     <Compile Include="Classes\CharacterClass\AllOtherClasses\Fighter.cs" />
     <Compile Include="Classes\Feats\AllOtherFeats\Acrobatic.cs" />
     <Compile Include="Classes\Feats\BaseFeat.cs" />
+    <Compile Include="Classes\Player\Player.cs" />
+    <Compile Include="Classes\Skills\All The Other Skills\Appraise.cs" />
+    <Compile Include="Classes\Skills\SkillFactory.cs" />
     <Compile Include="Classes\Skills\BaseSkills.cs" />
     <Compile Include="Dice\Dice.cs" />
     <Compile Include="Enums\Alignment\Alignments.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Enums\Qualities\PotionQualities.cs" />
     <Compile Include="Enums\Qualities\ScrollQualities.cs" />
     <Compile Include="Enums\Skills\Skills.cs" />
+    <Compile Include="Enums\Stats\Stats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserStrings\FeatStrings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -91,6 +95,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SkillStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="UserStrings\StatStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatStrings.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UserStrings\FeatStrings.resx">
@@ -100,6 +109,10 @@
     <EmbeddedResource Include="UserStrings\SkillStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>SkillStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserStrings\StatStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StatStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
