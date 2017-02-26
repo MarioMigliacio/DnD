@@ -72,7 +72,7 @@
     <Compile Include="Enums\Items\Everything Else\AccessoryTypes.cs" />
     <Compile Include="Enums\Items\Everything Else\ArmorTypes.cs" />
     <Compile Include="Enums\Items\Everything Else\Books.cs" />
-    <Compile Include="Enums\Currencies\Money.cs" />
+    <Compile Include="Enums\Currencies\Currency.cs" />
     <Compile Include="Enums\Items\Everything Else\QuestItems.cs" />
     <Compile Include="Enums\Items\Everything Else\Scrolls.cs" />
     <Compile Include="Enums\Items\Trade Goods\Misc.cs" />
@@ -125,14 +125,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\Items\Accessories\" />
-    <Folder Include="Classes\Items\Armors\" />
-    <Folder Include="Classes\Items\Books\" />
-    <Folder Include="Classes\Items\Potions\" />
-    <Folder Include="Classes\Items\QuestItems\" />
-    <Folder Include="Classes\Items\Scrolls\" />
-    <Folder Include="Classes\Items\TradeGoods\" />
-    <Folder Include="Classes\Items\Weapons\" />
+    <Folder Include="Classes\HeroItems\Accessories\" />
+    <Folder Include="Classes\HeroItems\Armors\" />
+    <Folder Include="Classes\HeroItems\Books\" />
+    <Folder Include="Classes\HeroItems\Potions\" />
+    <Folder Include="Classes\HeroItems\QuestItems\" />
+    <Folder Include="Classes\HeroItems\Scrolls\" />
+    <Folder Include="Classes\HeroItems\TradeGoods\" />
+    <Folder Include="Classes\HeroItems\Weapons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

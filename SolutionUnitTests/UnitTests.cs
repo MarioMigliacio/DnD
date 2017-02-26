@@ -1,19 +1,19 @@
 ﻿using DnD;
+using DnD.Classes.HeroFeats;
+using DnD.Classes.HeroSkills;
+using DnD.Classes.Player;
 using DnD.Dice;
 using DnD.Enums.Alignment;
+using DnD.Enums.Currencies;
 using DnD.Enums.Deities;
 using DnD.Enums.Environments;
 using DnD.Enums.Items;
-using DnD.Enums.Money;
-using DnD.UserStrings;
 using DnD.Enums.Qualities;
+using DnD.Enums.Skills;
+using DnD.UserStrings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using DnD.Enums.Skills;
-using DnD.Classes.Player;
-using DnD.Classes.HeroSkills;
-using DnD.Classes.HeroFeats;
 
 namespace SolutionUnitTests
 {
@@ -79,7 +79,7 @@ namespace SolutionUnitTests
                                 case TradeGood.Misc:
                                     foreach (Misc mis in Enum.GetValues(typeof(Misc))) { theCollection.Add(mis); } break;
                                 case TradeGood.Ore:
-                                    foreach (Metal metaAF in Enum.GetValues(typeof(Metal))) { theCollection.Add(metaAF); } break;
+                                    foreach (Metal metaAf in Enum.GetValues(typeof(Metal))) { theCollection.Add(metaAf); } break;
                                 case TradeGood.Spice:
                                     foreach (Spice spi in Enum.GetValues(typeof(Spice))) { theCollection.Add(spi); } break;
 
@@ -182,7 +182,7 @@ namespace SolutionUnitTests
         [TestMethod]
         public void TestSkillsObjects()
         {
-            Player me = new Player {Level = 3};
+            Hero me = new Hero {Level = 3};
 
             // we can do this all day long. How many Skills verify that it works correct?! 2. stop doing it after 2 lol.
             var checkThisFuckinShitOut = SkillFactory.Create(Skills.Appraise);

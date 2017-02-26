@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DnD.Classes.CharacterClass;
+using DnD.Classes.Player;
 
 namespace DnD.Classes.HeroFeats
 {
@@ -29,8 +30,13 @@ namespace DnD.Classes.HeroFeats
         public abstract Dictionary<BaseCharacterClass, int> ClassLevelPrerequisites { get; }
 
         /// <summary>
+        /// Returns the value of required base attack that this particular feat requires.
+        /// </summary>
+        public abstract int AttackBonusPrerequisites { get; }
+
+        /// <summary>
         /// Returns true if the character meets the minimum required stat restriction for the talent, or false otherwise.
         /// </summary>
-        public abstract bool MeetsPlayerStatPrerequisites { get; }
+        public abstract bool MeetsPlayerStatPrerequisites(Hero hero);
     }
 }

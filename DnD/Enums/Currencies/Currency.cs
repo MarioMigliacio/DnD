@@ -1,38 +1,38 @@
-﻿namespace DnD.Enums.Money
+﻿namespace DnD.Enums.Currencies
 {
     /// <summary>
     /// The range of supported types of Money.
     /// </summary>
-    public enum Money
+    public enum Currency
     {
         /// <summary>
         /// Represents the Coin type that is of type copper piece.
         /// (1)
         /// </summary>
-        CP,
+        Cp,
 
         /// <summary>
         /// Represents the Coin type that is of type silver piece.
         /// (10)
         /// </summary>
-        SP,
+        Sp,
 
         /// <summary>
         /// Represents the Coin type that is of type gold piece.
         /// (100)
         /// </summary>
-        GP,
+        Gp,
 
         /// <summary>
         /// Represents the Coin type that is of type platinum piece.
         /// (1000)
         /// </summary>
-        PP,
+        Pp,
 
         /// <summary>
-        /// Represents the Coin type that is of type diamond piece.
+        /// Represents the Currency that is of type diamond.
         /// (10000)
         /// </summary>
-        DIA
+        Dia
     }
 }
