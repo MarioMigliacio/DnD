@@ -1,6 +1,4 @@
 ﻿using DnD.Enums.Skills;
-using DnD.Enums.Stats;
-using System;
 
 namespace DnD.Classes
 {
@@ -19,8 +17,16 @@ namespace DnD.Classes
         {
             switch (which)
             {
-                case Skills.Appraise:
-                    return new Appraise();
+                case Skills.Appraise: return new Appraise();
+                case Skills.Balance: return new Balance();
+                case Skills.Bluff: return new Bluff();
+                case Skills.Climb: return new Climb();
+                case Skills.Concentration: return new Concentration();
+                case Skills.Craft: return new Craft();
+                case Skills.DecipherScript: return new DecipherScript();
+                case Skills.Diplomacy: return new Diplomacy();
+                case Skills.DisableDevice: return new DisableDevice();
+                case Skills.Disguise: return new Disguise();
                 default: return null;
             }
         }

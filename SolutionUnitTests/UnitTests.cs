@@ -183,6 +183,7 @@ namespace SolutionUnitTests
             Player me = new Player();
             me.Level = 3;
             var checkThisFuckinShitOut = SkillFactory.Create(Skills.Appraise);
+            var omgItsAnotherSkill = SkillFactory.Create(Skills.Balance);
             int cap = checkThisFuckinShitOut.MaxRanksPossible(me.Level);
 
             // Test conclusion: Works.
