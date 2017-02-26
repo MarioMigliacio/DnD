@@ -165,6 +165,10 @@ namespace SolutionUnitTests
             var empowerSpell = FeatStrings.EmpowerSpell;
             var powerAttack = FeatStrings.PowerAttack;
 
+            var appraise = SkillStrings.Appraise;
+            var climb = SkillStrings.Climb;
+            var sleight = SkillStrings.SleightOfHand;
+
             // Test conclusion: Works! Dont forget that when you want to use these strings in a textbox, to include the WRAP settings, so it does new lines correctly.
         }
     }

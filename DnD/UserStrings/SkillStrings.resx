@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Appraise" xml:space="preserve">
+    <value>You can appraise common or well-known objects with a DC 12 Appraise check. Failure means that you estimate the value at 50% to 150% (2d6+3 times 10%,) of its actual value.
+
+Appraising a rare or exotic item requires a successful check against DC 15, 20, or higher. If the check is successful, you estimate the value correctly; failure means you cannot estimate the item’s value.
+
+A magnifying glass gives you a +2 circumstance bonus on Appraise checks involving any item that is small or highly detailed, such as a gem. A merchant’s scale gives you a +2 circumstance bonus on Appraise checks involving any items that are valued by weight, including anything made of precious metals.
+
+These bonuses stack.</value>
+    <comment>Benefits from Int.</comment>
+  </data>
+  <data name="Balance" xml:space="preserve">
+    <value>You can walk on a precarious surface. A successful check lets you move at half your speed along the surface for 1 round. A failure by 4 or less means you can’t move for 1 round. A failure by 5 or more means you fall. (Armor Check Penalty)</value>
+    <comment>Benefits from Dex.</comment>
+  </data>
+  <data name="Bluff" xml:space="preserve">
+    <value>A Bluff check is opposed by the target’s Sense Motive check. See the accompanying table for examples of different kinds of bluffs and the modifier to the target’s Sense Motive check for each one.
+
+Favorable and unfavorable circumstances weigh heavily on the outcome of a bluff. Two circumstances can weigh against you: The bluff is hard to believe, or the action that the target is asked to take goes against its self-interest, nature, personality, orders, or the like. If it’s important, you can distinguish between a bluff that fails because the target doesn’t believe it and one that fails because it just asks too much of the target. For instance, if the target gets a +10 bonus on its Sense Motive check because the bluff demands something risky, and the Sense Motive check succeeds by 10 or less, then the target didn’t so much see through the bluff as prove reluctant to go along with it. A target that succeeds by 11 or more has seen through the bluff.
+
+A successful Bluff check indicates that the target reacts as you wish, at least for a short time (usually 1 round or less) or believes something that you want it to believe. Bluff, however, is not a suggestion spell.
+
+A bluff requires interaction between you and the target. Creatures unaware of you cannot be bluffed.</value>
+    <comment>Benefits from Cha.</comment>
+  </data>
+  <data name="Climb" xml:space="preserve">
+    <value>With a successful Climb check, you can advance up, down, or across a slope, a wall, or some other steep incline (or even a ceiling with handholds) at one-quarter your normal speed. A slope is considered to be any incline at an angle measuring less than 60 degrees; a wall is any incline at an angle measuring 60 degrees or more.
+
+A Climb check that fails by 4 or less means that you make no progress, and one that fails by 5 or more means that you fall from whatever height you have already attained.
+
+A climber’s kit gives you a +2 circumstance bonus on Climb checks.</value>
+    <comment>Benefits from Str.</comment>
+  </data>
+  <data name="Concentration" xml:space="preserve">
+    <value>You must make a Concentration check whenever you might potentially be distracted (by taking damage, by harsh weather, and so on) while engaged in some action that requires your full attention. Such actions include casting a spell, manifesting a power, concentrating on an active spell or power, directing a spell or power, using a spell-like or psi-like ability, or using a skill that would provoke an attack of opportunity. In general, if an action wouldn’t normally provoke an attack of opportunity, you need not make a Concentration check to avoid being distracted.
+
+If the Concentration check succeeds, you may continue with the action as normal. If the check fails, the action automatically fails and is wasted. If you were in the process of casting a spell, the spell is lost. If you were in the process of manifesting a power, the power points are lost. If you were concentrating on an active spell or power, the spell or power ends as if you had ceased concentrating on it. If you were directing a spell or power, the direction fails but the spell or power remains active. If you were using a spell- or psi-like ability, that use of the ability is lost. A skill use also fails, and in some cases a failed skill check may have other ramifications as well.</value>
+    <comment>Benefits from Con.</comment>
+  </data>
+  <data name="Craft" xml:space="preserve">
+    <value>Like Knowledge, Perform, and Profession, Craft is actually a number of separate skills. You could have several Craft skills, each with its own ranks, each purchased as a separate skill.
+
+A Craft skill is specifically focused on creating something. If nothing is created by the endeavor, it probably falls under the heading of a Profession skill.</value>
+    <comment>Benefits from Int.</comment>
+  </data>
+  <data name="DecipherScript" xml:space="preserve">
+    <value>You can decipher writing in an unfamiliar language or a message written in an incomplete or archaic form. The base DC is 20 for the simplest messages, 25 for standard texts, and 30 or higher for intricate, exotic, or very old writing.
+
+If the check succeeds, you understand the general content of a piece of writing about one page long (or the equivalent). If the check fails, make a DC 5 Wisdom check to see if you avoid drawing a false conclusion about the text. (Success means that you do not draw a false conclusion; failure means that you do.)
+
+Both the Decipher Script check and (if necessary) the Wisdom check are made secretly, so that you can’t tell whether the conclusion you draw is true or false.</value>
+    <comment>Benefits from Int.</comment>
+  </data>
+  <data name="Diplomacy" xml:space="preserve">
+    <value>You can change the attitudes of others (nonplayer characters) with a successful Diplomacy check; see the Influencing NPC Attitudes sidebar, below, for basic DCs. In negotiations, participants roll opposed Diplomacy checks, and the winner gains the advantage. Opposed checks also resolve situations when two advocates or diplomats plead opposite cases in a hearing before a third party.</value>
+    <comment>Benefits from Cha.</comment>
+  </data>
+  <data name="DisableDevice" xml:space="preserve">
+    <value>The Disable Device check is made secretly, so that you don’t necessarily know whether you’ve succeeded.
+
+The DC depends on how tricky the device is. Disabling (or rigging or jamming) a fairly simple device has a DC of 10; more intricate and complex devices have higher DCs.
+
+If the check succeeds, you disable the device. If it fails by 4 or less, you have failed but can try again. If you fail by 5 or more, something goes wrong. If the device is a trap, you spring it. If you’re attempting some sort of sabotage, you think the device is disabled, but it still works normally.</value>
+    <comment>Benefits from Int.</comment>
+  </data>
+  <data name="Disguise" xml:space="preserve">
+    <value>Your Disguise check result determines how good the disguise is, and it is opposed by others’ Spot check results. If you don’t draw any attention to yourself, others do not get to make Spot checks. If you come to the attention of people who are suspicious (such as a guard who is watching commoners walking through a city gate), it can be assumed that such observers are taking 10 on their Spot checks.
+
+You get only one Disguise check per use of the skill, even if several people are making Spot checks against it. The Disguise check is made secretly, so that you can’t be sure how good the result is.</value>
+    <comment>Benefits from Cha.</comment>
+  </data>
+  <data name="EscapeArtist" xml:space="preserve">
+    <value>Your Escape Artist check is opposed by the binder’s Use Rope check. Since it’s easier to tie someone up than to escape from being tied up, the binder gets a +10 bonus on his or her check. (Armor Check Penalty)</value>
+    <comment>Benefits from Dex.</comment>
+  </data>
+  <data name="Forgery" xml:space="preserve">
+    <value>Forgery requires writing materials appropriate to the document being forged, enough light or sufficient visual acuity to see the details of what you’re writing, wax for seals (if appropriate), and some time. To forge a document on which the handwriting is not specific to a person (military orders, a government decree, a business ledger, or the like), you need only to have seen a similar document before, and you gain a +8 bonus on your check. To forge a signature, you need an autograph of that person to copy, and you gain a +4 bonus on the check. To forge a longer document written in the hand of some particular person, a large sample of that person’s handwriting is needed.
+
+The Forgery check is made secretly, so that you’re not sure how good your forgery is. As with Disguise, you don’t even need to make a check until someone examines the work. Your Forgery check is opposed by the Forgery check of the person who examines the document to check its authenticity.</value>
+    <comment>Benefits from Int.</comment>
+  </data>
+  <data name="GatherInformation" xml:space="preserve">
+    <value>An evening’s time, a few gold pieces for buying drinks and making friends, and a DC 10 Gather Information check get you a general idea of a city’s major news items, assuming there are no obvious reasons why the information would be withheld. The higher your check result, the better the information.
+
+If you want to find out about a specific rumor, or a specific item, or obtain a map, or do something else along those lines, the DC for the check is 15 to 25, or even higher.</value>
+    <comment>Benefits from Cha.</comment>
+  </data>
+  <data name="HandleAnimal" xml:space="preserve">
+    <value>An evening’s time, a few gold pieces for buying drinks and making friends, and a DC 10 Gather Information check get you a general idea of a city’s major news items, assuming there are no obvious reasons why the information would be withheld. The higher your check result, the better the information.
+
+If you want to find out about a specific rumor, or a specific item, or obtain a map, or do something else along those lines, the DC for the check is 15 to 25, or even higher.</value>
+    <comment>Benefits from Cha.</comment>
+  </data>
+  <data name="Heal" xml:space="preserve">
+    <value>You usually use first aid to save a dying character. If a character has negative hit points and is losing hit points (at the rate of 1 per round, 1 per hour, or 1 per day), you can make him or her stable. A stable character regains no hit points but stops losing them.</value>
+    <comment>Benefits from Wis.</comment>
+  </data>
+  <data name="Hide" xml:space="preserve">
+    <value>Your Hide check is opposed by the Spot check of anyone who might see you. You can move up to one-half your normal speed and hide at no penalty. When moving at a speed greater than one-half but less than your normal speed, you take a –5 penalty. It’s practically impossible (–20 penalty) to hide while attacking, running or charging.
+
+A creature larger or smaller than Medium takes a size bonus or penalty on Hide checks depending on its size category: Fine +16, Diminutive +12, Tiny +8, Small +4, Large –4, Huge –8, Gargantuan –12, Colossal –16.
+
+You need cover or concealment in order to attempt a Hide check. Total cover or total concealment usually (but not always; see Special, below) obviates the need for a Hide check, since nothing can see you anyway. (Armor Check Penalty)</value>
+    <comment>Benefits from Dex.</comment>
+  </data>
+  <data name="Intimidate" xml:space="preserve">
+    <value>You can change another’s behavior with a successful check. Your Intimidate check is opposed by the target’s modified level check (1d20 + character level or Hit Dice + target’s Wisdom bonus [if any] + target’s modifiers on saves against fear). If you beat your target’s check result, you may treat the target as friendly, but only for the purpose of actions taken while it remains intimidated. (That is, the target retains its normal attitude, but will chat, advise, offer limited help, or advocate on your behalf while intimidated. See the Diplomacy skill, above, for additional details.) The effect lasts as long as the target remains in your presence, and for 1d6×10 minutes afterward. After this time, the target’s default attitude toward you shifts to unfriendly (or, if normally unfriendly, to hostile).</value>
+    <comment>Benefits from Cha.</comment>
+  </data>
+  <data name="Jump" xml:space="preserve">
+    <value>The DC and the distance you can cover vary according to the type of jump you are attempting (see below).
+
+Your Jump check is modified by your speed. If your speed is 30 feet then no modifier based on speed applies to the check. If your speed is less than 30 feet, you take a –6 penalty for every 10 feet of speed less than 30 feet. If your speed is greater than 30 feet, you gain a +4 bonus for every 10 feet beyond 30 feet.
+
+All Jump DCs given here assume that you get a running start, which requires that you move at least 20 feet in a straight line before attempting the jump. If you do not get a running start, the DC for the jump is doubled.
+
+Distance moved by jumping is counted against your normal maximum movement in a round.
+
+If you have ranks in Jump and you succeed on a Jump check, you land on your feet (when appropriate). If you attempt a Jump check untrained, you land prone unless you beat the DC by 5 or more. (Armor Check Penalty)</value>
+    <comment>Benefits from Str.</comment>
+  </data>
+  <data name="Knowledge" xml:space="preserve">
+    <value>Like the Craft and Profession skills, Knowledge actually encompasses a number of unrelated skills. Knowledge represents a study of some body of lore, possibly an academic or even scientific discipline.
+
+Below are listed typical fields of study.
+
+Arcana (ancient mysteries, magic traditions, arcane symbols, cryptic phrases, constructs, dragons, magical beasts)
+Architecture and engineering (buildings, aqueducts, bridges, fortifications)
+Dungeoneering (aberrations, caverns, oozes, spelunking)
+Geography (lands, terrain, climate, people)
+History (royalty, wars, colonies, migrations, founding of cities)
+Local (legends, personalities, inhabitants, laws, customs, traditions, humanoids)
+Nature (animals, fey, giants, monstrous humanoids, plants, seasons and cycles, weather, vermin)
+Nobility and royalty (lineages, heraldry, family trees, mottoes, personalities)
+Psionics (ancient mysteries, psionic traditions, psychic symbols, cryptic phrases, astral constructs, psionic races, and psionic monsters)
+Religion (gods and goddesses, mythic history, ecclesiastic tradition, holy symbols, undead)
+The planes (the Inner Planes, the Outer Planes, the Astral Plane, the Ethereal Plane, outsiders, elementals, magic related to the planes)</value>
+    <comment>Benefits from Int.</comment>
+  </data>
+  <data name="Listen" xml:space="preserve">
+    <value>Your Listen check is either made against a DC that reflects how quiet the noise is that you might hear, or it is opposed by your target’s Move Silently check.</value>
+    <comment>Benefits from Wis.</comment>
+  </data>
+  <data name="MoveSilently" xml:space="preserve">
+    <value>Your Move Silently check is opposed by the Listen check of anyone who might hear you. You can move up to one-half your normal speed at no penalty. When moving at a speed greater than one-half but less than your full speed, you take a –5 penalty. It’s practically impossible (–20 penalty) to move silently while running or charging.
+
+Noisy surfaces, such as bogs or undergrowth, are tough to move silently across. When you try to sneak across such a surface, you take a penalty on your Move Silently check. (Armor Check Penalty)</value>
+    <comment>Benefits from Dex.</comment>
+  </data>
+  <data name="OpenLock" xml:space="preserve">
+    <value>Attempting an Open Lock check without a set of thieves’ tools imposes a –2 circumstance penalty on the check, even if a simple tool is employed. If you use masterwork thieves’ tools, you gain a +2 circumstance bonus on the check. The DC for opening a lock varies from 20 to 40, depending on the quality of the lock</value>
+    <comment>Benefits from Dex.</comment>
+  </data>
+  <data name="Perform" xml:space="preserve">
+    <value>Like Craft, Knowledge, and Profession, Perform is actually a number of separate skills.
+
+You could have several Perform skills, each with its own ranks, each purchased as a separate skill.
+
+Each of the nine categories of the Perform skill includes a variety of methods, instruments, or techniques, a small list of which is provided for each category below.
+
+Act (comedy, drama, mime)
+Comedy (buffoonery, limericks, joke-telling)
+Dance (ballet, waltz, jig)
+Keyboard instruments (harpsichord, piano, pipe organ)
+Oratory (epic, ode, storytelling)
+Percussion instruments (bells, chimes, drums, gong)
+String instruments (fiddle, harp, lute, mandolin)
+Wind instruments (flute, pan pipes, recorder, shawm, trumpet)
+Sing (ballad, chant, melody)</value>
+    <comment>Benefits from Cha.</comment>
+  </data>
+  <data name="Profession" xml:space="preserve">
+    <value>Like Craft, Knowledge, and Perform, Profession is actually a number of separate skills. You could have several Profession skills, each with its own ranks, each purchased as a separate skill. While a Craft skill represents ability in creating or making an item, a Profession skill represents an aptitude in a vocation requiring a broader range of less specific knowledge.
+
+You can practice your trade and make a decent living, earning about half your Profession check result in gold pieces per week of dedicated work. You know how to use the tools of your trade, how to perform the profession’s daily tasks, how to supervise helpers, and how to handle common problems.</value>
+    <comment>Benefits from Wis.</comment>
+  </data>
+  <data name="Ride" xml:space="preserve">
+    <value>If you attempt to ride a creature that is ill suited as a mount, you take a –5 penalty on your Ride checks. See the manual for more specific details. (Armor Check Penalty)</value>
+    <comment>Benefits from Dex.</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>You generally must be within 10 feet of the object or surface to be searched. The table below gives DCs for typical tasks involving the Search skill. See the manual for more specific details.</value>
+    <comment>Benefits from Int.</comment>
+  </data>
+  <data name="SenseMotive" xml:space="preserve">
+    <value>A successful check lets you avoid being bluffed (see the Bluff skill). You can also use this skill to determine when “something is up” (that is, something odd is going on) or to assess someone’s trustworthiness. See the manual for more specific details.</value>
+    <comment>Benefits from Wis.</comment>
+  </data>
+  <data name="SleightOfHand" xml:space="preserve">
+    <value>A DC 10 Sleight of Hand check lets you palm a coin-sized, unattended object. Performing a minor feat of legerdemain, such as making a coin disappear, also has a DC of 10 unless an observer is determined to note where the item went.
+
+When you use this skill under close observation, your skill check is opposed by the observer’s Spot check. The observer’s success doesn’t prevent you from performing the action, just from doing it unnoticed.
+
+You can hide a small object (including a light weapon or an easily concealed ranged weapon, such as a dart, sling, or hand crossbow) on your body. Your Sleight of Hand check is opposed by the Spot check of anyone observing you or the Search check of anyone frisking you. In the latter case, the searcher gains a +4 bonus on the Search check, since it’s generally easier to find such an object than to hide it. A dagger is easier to hide than most light weapons, and grants you a +2 bonus on your Sleight of Hand check to conceal it. An extraordinarily small object, such as a coin, shuriken, or ring, grants you a +4 bonus on your Sleight of Hand check to conceal it, and heavy or baggy clothing (such as a cloak) grants you a +2 bonus on the check.
+
+Drawing a hidden weapon is a standard action and doesn’t provoke an attack of opportunity.
+
+If you try to take something from another creature, you must make a DC 20 Sleight of Hand check to obtain it. The opponent makes a Spot check to detect the attempt, opposed by the same Sleight of Hand check result you achieved when you tried to grab the item. An opponent who succeeds on this check notices the attempt, regardless of whether you got the item. (Armor Check Penalty)</value>
+    <comment>Benefits from Dex.</comment>
+  </data>
+  <data name="SpeakLanguage" xml:space="preserve">
+    <value>Learn a specific languauge.</value>
+  </data>
+  <data name="Spellcraft" xml:space="preserve">
+    <value>Use this skill to identify spells as they are cast or spells already in place. See the manual for more details.</value>
+    <comment>Benefits from Int.</comment>
+  </data>
+  <data name="Spot" xml:space="preserve">
+    <value>The Spot skill is used primarily to detect characters or creatures who are hiding. Typically, your Spot check is opposed by the Hide check of the creature trying not to be seen. Sometimes a creature isn’t intentionally hiding but is still difficult to see, so a successful Spot check is necessary to notice it.
+
+A Spot check result higher than 20 generally lets you become aware of an invisible creature near you, though you can’t actually see it.
+
+Spot is also used to detect someone in disguise (see the Disguise skill), and to read lips when you can’t hear or understand what someone is saying.
+
+Spot checks may be called for to determine the distance at which an encounter begins. A penalty applies on such checks, depending on the distance between the two individuals or groups, and an additional penalty may apply if the character making the Spot check is distracted (not concentrating on being observant).</value>
+    <comment>Benefits from Wis.</comment>
+  </data>
+  <data name="Survival" xml:space="preserve">
+    <value>You can keep yourself and others safe and fed in the wild. The table below gives the DCs for various tasks that require Survival checks.
+
+Survival does not allow you to follow difficult tracks unless you are a ranger or have the Track feat</value>
+    <comment>Benefits from Wis.</comment>
+  </data>
+  <data name="Swim" xml:space="preserve">
+    <value>Make a Swim check once per round while you are in the water. Success means you may swim at up to one-half your speed (as a full-round action) or at one-quarter your speed (as a move action). If you fail by 4 or less, you make no progress through the water. If you fail by 5 or more, you go underwater.
+
+If you are underwater, either because you failed a Swim check or because you are swimming underwater intentionally, you must hold your breath. You can hold your breath for a number of rounds equal to your Constitution score, but only if you do nothing other than take move actions or free actions. If you take a standard action or a full-round action (such as making an attack), the remainder of the duration for which you can hold your breath is reduced by 1 round. (Effectively, a character in combat can hold his or her breath only half as long as normal.) After that period of time, you must make a DC 10 Constitution check every round to continue holding your breath. Each round, the DC for that check increases by 1. If you fail the Constitution check, you begin to drown. (Armor Check Penalty)</value>
+    <comment>Benefits from Str.</comment>
+  </data>
+  <data name="Tumble" xml:space="preserve">
+    <value>You can’t use this skill if your speed has been reduced by armor, excess equipment, or loot. You can land softly when you fall or tumble past opponents. You can also tumble to entertain an audience (as though using the Perform skill). (Armor Check Penalty)</value>
+    <comment>Benefits from Dex.</comment>
+  </data>
+  <data name="UseMagicDevice" xml:space="preserve">
+    <value>You can use this skill to read a spell or to activate a magic item. Use Magic Device lets you use a magic item as if you had the spell ability or class features of another class, as if you were a different race, or as if you were of a different alignment.
+
+You make a Use Magic Device check each time you activate a device such as a wand. If you are using the check to emulate an alignment or some other quality in an ongoing manner, you need to make the relevant Use Magic Device check once per hour.
+
+You must consciously choose which requirement to emulate. That is, you must know what you are trying to emulate when you make a Use Magic Device check for that purpose.</value>
+    <comment>Benefits from Cha.</comment>
+  </data>
+  <data name="UseRope" xml:space="preserve">
+    <value>See the manual for the detailed list of rope checks.</value>
+    <comment>Benefits from Dex.</comment>
+  </data>
+</root>
