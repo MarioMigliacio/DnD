@@ -32,7 +32,7 @@ namespace DnD.Classes.HeroSkills
         /// Helper function which can quickly return to the caller the maximum allowed number of ranks that can be in this skill
         /// based on the Players level.
         /// </summary>
-        /// <param name="characterLevel">Represents the <see cref="Player.Level"/>property.</param>
+        /// <param name="characterLevel">Represents the <see cref="Player.Hero.Level"/>property.</param>
         /// <returns>The maximum number of allowed ranks that can be placed into this skill.</returns>
         public int MaxRanksPossible(int characterLevel)
         {

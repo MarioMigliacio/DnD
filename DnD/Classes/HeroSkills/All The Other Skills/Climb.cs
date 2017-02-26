@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class Climb : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this Climb.
+        /// Returns the type of <see cref="Stats"/> that helps boost Climb.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Strength;
 

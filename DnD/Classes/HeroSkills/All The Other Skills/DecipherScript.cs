@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class DecipherScript : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this DecipherScript.
+        /// Returns the type of <see cref="Stats"/> that helps boost DecipherScript.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Intellect;
 

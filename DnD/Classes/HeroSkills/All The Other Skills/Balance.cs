@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class Balance : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this Balance.
+        /// Returns the type of <see cref="Stats"/> that helps boost Balance.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Dexterity;
 

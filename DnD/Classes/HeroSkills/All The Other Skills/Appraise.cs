@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class Appraise : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this Appraise.
+        /// Returns the type of <see cref="Stats"/> that helps boost Appraise.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Intellect;
 

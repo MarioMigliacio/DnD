@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class Bluff : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this Bluff.
+        /// Returns the type of <see cref="Stats"/> that helps boost Bluff.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Charisma;
 

@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class Craft : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this Craft.
+        /// Returns the type of <see cref="Stats"/> that helps boost Craft.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Intellect;
 

@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class Diplomacy : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this Diplomacy.
+        /// Returns the type of <see cref="Stats"/> that helps boost Diplomacy.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Charisma;
 

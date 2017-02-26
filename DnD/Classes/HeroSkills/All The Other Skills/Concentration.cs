@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class Concentration : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this Concentration.
+        /// Returns the type of <see cref="Stats"/> that helps boost Concentration.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Constitution;
 

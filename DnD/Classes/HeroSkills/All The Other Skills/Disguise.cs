@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class Disguise : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this Disguise.
+        /// Returns the type of <see cref="Stats"/> that helps boost Disguise.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Charisma;
 

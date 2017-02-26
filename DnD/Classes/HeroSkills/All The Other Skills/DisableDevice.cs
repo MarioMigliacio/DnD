@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public class DisableDevice : BaseSkill
     {
         /// <summary>
-        /// Returns the type of <see cref="Stats"/> that helps boost this DisableDevice.
+        /// Returns the type of <see cref="Stats"/> that helps boost DisableDevice.
         /// </summary>
         public override Stats BenefitsFrom => Stats.Intellect;
 
