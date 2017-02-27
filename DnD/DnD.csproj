@@ -84,6 +84,7 @@
     <Compile Include="Classes\HeroSkills\SkillFactory.cs" />
     <Compile Include="Classes\HeroSkills\BaseSkills.cs" />
     <Compile Include="Enums\Pets\AnimalCompanionTypes.cs" />
+    <Compile Include="Enums\Races\RaceTypes.cs" />
     <Compile Include="Enums\SavingThrows\SavingThrowType.cs" />
     <Compile Include="Dice\Dice.cs" />
     <Compile Include="Enums\Alignment\Alignments.cs" />

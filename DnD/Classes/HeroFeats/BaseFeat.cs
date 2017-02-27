@@ -41,21 +41,6 @@ namespace DnD.Classes.HeroFeats
         public abstract FeatType TypeOfFeat { get; }
 
         /// <summary>
-        /// Returns true if this Feat is of type <see cref="GenericFeat"/>, false otherwise.
-        /// </summary>
-        public abstract bool IsGenericFeatType { get; }
-
-        /// <summary>
-        /// Returns true if this Feat is of type <see cref="ItemCreationFeat"/>, false otherwise.
-        /// </summary>
-        public abstract bool IsCreationFeatType { get; }
-
-        /// <summary>
-        /// Returns true if this Feat is of type <see cref="MetaMagicFeat"/>, false otherwise.
-        /// </summary>
-        public abstract bool IsMetaMagicFeatType { get; }
-
-        /// <summary>
         /// Returns true if the character meets the minimum required stat restriction for the talent, or false otherwise.
         /// </summary>
         public abstract bool MeetsPlayerStatPrerequisites(Hero hero);

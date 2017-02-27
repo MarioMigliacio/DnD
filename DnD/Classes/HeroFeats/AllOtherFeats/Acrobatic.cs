@@ -54,30 +54,6 @@ namespace DnD.Classes.HeroFeats
         }
 
         /// <summary>
-        /// Returns true if this Feat is of type <see cref="GenericFeat"/>, false otherwise.
-        /// </summary>
-        public override bool IsGenericFeatType
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// Returns true if this Feat is of type <see cref="ItemCreationFeat"/>, false otherwise.
-        /// </summary>
-        public override bool IsCreationFeatType
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
-        /// Returns true if this Feat is of type <see cref="MetaMagicFeat"/>, false otherwise.
-        /// </summary>
-        public override bool IsMetaMagicFeatType
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        /// <summary>
         /// Returns true if the character meets the minimum required stat restriction for the talent, or false otherwise.
         /// </summary>
         public override bool MeetsPlayerStatPrerequisites(Hero hero)
