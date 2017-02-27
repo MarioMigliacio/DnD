@@ -27,6 +27,32 @@ namespace DnD.Classes.HeroSkills
                 case Skills.Diplomacy: return new Diplomacy();
                 case Skills.DisableDevice: return new DisableDevice();
                 case Skills.Disguise: return new Disguise();
+                case Skills.EscapeArtist: return new EscapeArtist();
+                case Skills.Forgery: return new Forgery();
+                case Skills.GatherInformation: return new GatherInformation();
+                case Skills.HandleAnimal: return new HandleAnimal();
+                case Skills.Heal: return new Heal();
+                case Skills.Hide: return new Hide();
+                case Skills.Intimidate: return  new Intimidate();
+                case Skills.Jump: return new Jump();
+                case Skills.Knowledge: return new Knowledge();
+                case Skills.Listen: return new Listen();
+                case Skills.MoveSilently: return new MoveSilently();
+                case Skills.OpenLock: return new OpenLock();
+                case Skills.Perform: return new Perform();
+                case Skills.Profession: return new Profession();
+                case Skills.Ride: return new Ride();
+                case Skills.Search: return new Search();
+                case Skills.SenseMotive: return new SenseMotive();
+                case Skills.SleightOfHand: return new SleightOfHand();
+                case Skills.SpeakLanguage: return new SpeakLanguage();
+                case Skills.Spellcraft: return new Spellcraft();
+                case Skills.Spot: return new Spot();
+                case Skills.Survival: return new Survival();
+                case Skills.Swim: return new Swim();
+                case Skills.Tumble: return new Tumble();
+                case Skills.UseMagicDevice: return new UseMagicDevice();
+                case Skills.UseRope: return  new UseRope();
                 default: return null;
             }
         }

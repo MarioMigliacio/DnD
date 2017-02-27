@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using DnD.Classes.CharacterClass;
+﻿using DnD.Classes.CharacterClass;
 using DnD.Classes.Player;
+using DnD.Enums.Feats;
+using System;
+using System.Collections.Generic;
 
 namespace DnD.Classes.HeroFeats
 {
@@ -18,8 +19,8 @@ namespace DnD.Classes.HeroFeats
         public abstract string Description { get; }
 
         /// <summary>
-        /// Returns the associated List of required <see cref="DnD.Enums.Feats.FeatType"/> that this particular feat requires.
-        /// Null if no required <see cref="DnD.Enums.Feats.FeatType"/>.
+        /// Returns the associated List of required <see cref="FeatType"/> that this particular feat requires.
+        /// Null if no required <see cref="FeatType"/>.
         /// </summary>
         public abstract List<Enum> FeatPrerequisites { get; }
 
@@ -33,6 +34,26 @@ namespace DnD.Classes.HeroFeats
         /// Returns the value of required base attack that this particular feat requires.
         /// </summary>
         public abstract int AttackBonusPrerequisites { get; }
+
+        /// <summary>
+        /// Returns the type of Feat this object is: Either Generic, ItemCreation, or MetaMagic.
+        /// </summary>
+        public abstract FeatType TypeOfFeat { get; }
+
+        /// <summary>
+        /// Returns true if this Feat is of type <see cref="GenericFeat"/>, false otherwise.
+        /// </summary>
+        public abstract bool IsGenericFeatType { get; }
+
+        /// <summary>
+        /// Returns true if this Feat is of type <see cref="ItemCreationFeat"/>, false otherwise.
+        /// </summary>
+        public abstract bool IsCreationFeatType { get; }
+
+        /// <summary>
+        /// Returns true if this Feat is of type <see cref="MetaMagicFeat"/>, false otherwise.
+        /// </summary>
+        public abstract bool IsMetaMagicFeatType { get; }
 
         /// <summary>
         /// Returns true if the character meets the minimum required stat restriction for the talent, or false otherwise.

@@ -101,6 +101,11 @@
         Knowledge,
 
         /// <summary>
+        /// The Listen Skill.
+        /// </summary>
+        Listen,
+
+        /// <summary>
         /// The MoveSilently Skill.
         /// </summary>
         MoveSilently,

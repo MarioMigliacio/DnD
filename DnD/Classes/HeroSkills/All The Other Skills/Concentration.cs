@@ -10,8 +10,9 @@ namespace DnD.Classes.HeroSkills
     {
         /// <summary>
         /// Returns the type of <see cref="Stats"/> that helps boost Concentration.
+        /// Null, if no actual stat benefits the skill.
         /// </summary>
-        public override Stats BenefitsFrom => Stats.Constitution;
+        public override Stats? BenefitsFrom => Stats.Constitution;
 
         /// <summary>
         /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for Concentration.

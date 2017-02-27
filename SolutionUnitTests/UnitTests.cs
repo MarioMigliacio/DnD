@@ -182,19 +182,19 @@ namespace SolutionUnitTests
         [TestMethod]
         public void TestSkillsObjects()
         {
-            Hero me = new Hero {Level = 3};
+            Hero me = new Hero {Level = 1};
 
-            // we can do this all day long. How many Skills verify that it works correct?! 2. stop doing it after 2 lol.
-            var checkThisFuckinShitOut = SkillFactory.Create(Skills.Appraise);
-            var omgItsAnotherSkill = SkillFactory.Create(Skills.Balance);
+            foreach (Skills skillz in Enum.GetValues(typeof (Skills)))
+            {
+                me.PlayerSkills.Add(SkillFactory.Create(skillz));
+            }
 
             // this sanity check checks that an enum from Skills = 40 (there is none) is indeed null. GOOD!
             var sanityCheck = SkillFactory.Create((Skills)40);
             Assert.AreEqual(null, sanityCheck);
 
             // does the abstract MaxRanksPossible member function work?!
-            int cap = checkThisFuckinShitOut.MaxRanksPossible(me.Level);
-            // yes!
+            int cap = me.SkillCap;
 
             // Test conclusion: Works.
         }

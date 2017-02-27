@@ -10,8 +10,9 @@ namespace DnD.Classes.HeroSkills
     {
         /// <summary>
         /// Returns the type of <see cref="Stats"/> that helps boost Balance.
+        /// Null, if no actual stat benefits the skill.
         /// </summary>
-        public override Stats BenefitsFrom => Stats.Dexterity;
+        public override Stats? BenefitsFrom => Stats.Dexterity;
 
         /// <summary>
         /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for Balance.
