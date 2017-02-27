@@ -83,14 +83,19 @@
     <Compile Include="Classes\HeroSkills\All The Other Skills\Disguise.cs" />
     <Compile Include="Classes\HeroSkills\SkillFactory.cs" />
     <Compile Include="Classes\HeroSkills\BaseSkills.cs" />
+    <Compile Include="Enums\Pets\AnimalCompanionTypes.cs" />
+    <Compile Include="Enums\SavingThrows\SavingThrowType.cs" />
     <Compile Include="Dice\Dice.cs" />
     <Compile Include="Enums\Alignment\Alignments.cs" />
+    <Compile Include="Enums\ClassSpecials\ClassSpecial.cs" />
+    <Compile Include="Enums\ClassTypes\ClassType.cs" />
     <Compile Include="Enums\Deities\Deities.cs" />
     <Compile Include="Enums\Environments\CityFeatures.cs" />
     <Compile Include="Enums\Environments\DungeonRooms.cs" />
     <Compile Include="Enums\Environments\Furnishings.cs" />
     <Compile Include="Enums\Environments\Terrains.cs" />
     <Compile Include="Enums\Environments\UnderGroundFeatures.cs" />
+    <Compile Include="Enums\Pets\FamiliarType.cs" />
     <Compile Include="Enums\Feats\FeatTypes.cs" />
     <Compile Include="Enums\Feats\GenericFeats.cs" />
     <Compile Include="Enums\Feats\ItemCreationFeats.cs" />
@@ -130,6 +135,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SkillStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="UserStrings\SpecialStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecialStrings.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserStrings\StatStrings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +154,10 @@
     <EmbeddedResource Include="UserStrings\SkillStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>SkillStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserStrings\SpecialStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SpecialStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserStrings\StatStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

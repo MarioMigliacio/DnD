@@ -6,6 +6,11 @@
     public enum Misc
     {
         /// <summary>
+        /// Represents a Misc item of type SpellBook.
+        /// </summary>
+        SpellBook,
+
+        /// <summary>
         /// Represents a Misc item of type MiningPick.
         /// </summary>
         MiningPick,
