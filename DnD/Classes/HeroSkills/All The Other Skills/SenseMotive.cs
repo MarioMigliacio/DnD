@@ -1,12 +1,15 @@
-﻿using DnD.Enums.ClassSkills;
+﻿using DnD.Enums.ClassFeats;
+using DnD.Enums.ClassSkills;
+using DnD.Enums.ClassSpecials;
 using DnD.Enums.Stats;
+using DnD.Interfaces;
 
 namespace DnD.Classes.HeroSkills
 {
     /// <summary>
     /// The SenseMotive Skill.
     /// </summary>
-    public class SenseMotive : BaseSkill
+    public class SenseMotive : BaseSkill, IHeroSpecialSkillFeats
     {
         /// <summary>
         /// Returns the type of <see cref="Stats"/> that helps boost SenseMotive.
@@ -17,16 +20,24 @@ namespace DnD.Classes.HeroSkills
         /// <summary>
         /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for SenseMotive.
         /// </summary>  
-        public override string Description => UserStrings.SkillStrings.SenseMotive;
+        public string Description => UserStrings.SkillStrings.SenseMotive;
 
         /// <summary>
-        /// Represents the number of ranks the player has alloted into SenseMotive.
+        /// Nullable Skill type enumerator value. If the inheriting object is of type Skill, which one it belongs to is acquired.
+        /// Null if not compatable.
         /// </summary>
-        public override int NumberOfRanks { get; set; }
+        public ClassSkills? SkillType => ClassSkills.SenseMotive;
 
         /// <summary>
-        /// Returns the associated <see cref="ClassSkills"/> SenseMotive is.
+        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
+        /// Null if not compatable.
         /// </summary>
-        public override ClassSkills SkillType => ClassSkills.SenseMotive;
+        public ClassFeats? FeatType => null;
+
+        /// <summary>
+        /// Nullable SpecialType enumerator value. If the inheriting object is of type SpecialType, which one it belongs to is acquired.
+        /// Null if not compatable.
+        /// </summary>
+        public ClassSpecial? SpecialType => null;
     }
 }

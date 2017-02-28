@@ -193,6 +193,15 @@ namespace SolutionUnitTests
             var sanityCheck = SkillFactory.Create((ClassSkills)40);
             Assert.AreEqual(null, sanityCheck);
 
+            // this will be the preferred method of incrementing ranks of skills! It works very nicely.
+            foreach (BaseSkill bs in me.PlayerSkills)
+            {
+                if (bs is Bluff)
+                {
+                    bs.NumberOfRanks = 3;
+                }
+            }
+
             // does the abstract MaxRanksPossible member function work?!
             int cap = me.SkillCap;
 

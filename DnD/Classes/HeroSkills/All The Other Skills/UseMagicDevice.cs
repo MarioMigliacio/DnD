@@ -1,12 +1,15 @@
-﻿using DnD.Enums.ClassSkills;
+﻿using DnD.Enums.ClassFeats;
+using DnD.Enums.ClassSkills;
+using DnD.Enums.ClassSpecials;
 using DnD.Enums.Stats;
+using DnD.Interfaces;
 
 namespace DnD.Classes.HeroSkills
 {
     /// <summary>
     /// The UseMagicDevice Skill.
     /// </summary>
-    public class UseMagicDevice : BaseSkill
+    public class UseMagicDevice : BaseSkill, IHeroSpecialSkillFeats
     {
         /// <summary>
         /// Returns the type of <see cref="Stats"/> that helps boost UseMagicDevice.
@@ -17,16 +20,24 @@ namespace DnD.Classes.HeroSkills
         /// <summary>
         /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for UseMagicDevice.
         /// </summary>  
-        public override string Description => UserStrings.SkillStrings.UseMagicDevice;
+        public string Description => UserStrings.SkillStrings.UseMagicDevice;
 
         /// <summary>
-        /// Represents the number of ranks the player has alloted into UseMagicDevice.
+        /// Nullable Skill type enumerator value. If the inheriting object is of type Skill, which one it belongs to is acquired.
+        /// Null if not compatable.
         /// </summary>
-        public override int NumberOfRanks { get; set; }
+        public ClassSkills? SkillType => ClassSkills.UseMagicDevice;
 
         /// <summary>
-        /// Returns the associated <see cref="ClassSkills"/> UseMagicDevice is.
+        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
+        /// Null if not compatable.
         /// </summary>
-        public override ClassSkills SkillType => ClassSkills.UseMagicDevice;
+        public ClassFeats? FeatType => null;
+
+        /// <summary>
+        /// Nullable SpecialType enumerator value. If the inheriting object is of type SpecialType, which one it belongs to is acquired.
+        /// Null if not compatable.
+        /// </summary>
+        public ClassSpecial? SpecialType => null;
     }
 }

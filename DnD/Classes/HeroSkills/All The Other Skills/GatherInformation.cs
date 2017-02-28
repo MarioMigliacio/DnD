@@ -1,12 +1,15 @@
-﻿using DnD.Enums.ClassSkills;
+﻿using DnD.Enums.ClassFeats;
+using DnD.Enums.ClassSkills;
+using DnD.Enums.ClassSpecials;
 using DnD.Enums.Stats;
+using DnD.Interfaces;
 
 namespace DnD.Classes.HeroSkills
 {
     /// <summary>
     /// The GatherInformation Skill.
     /// </summary>
-    public class GatherInformation : BaseSkill
+    public class GatherInformation : BaseSkill, IHeroSpecialSkillFeats
     {
         /// <summary>
         /// Returns the type of <see cref="Stats"/> that helps boost GatherInformation.
@@ -17,16 +20,24 @@ namespace DnD.Classes.HeroSkills
         /// <summary>
         /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for GatherInformation.
         /// </summary>  
-        public override string Description => UserStrings.SkillStrings.GatherInformation;
+        public string Description => UserStrings.SkillStrings.GatherInformation;
 
         /// <summary>
-        /// Represents the number of ranks the player has alloted into GatherInformation.
+        /// Nullable Skill type enumerator value. If the inheriting object is of type Skill, which one it belongs to is acquired.
+        /// Null if not compatable.
         /// </summary>
-        public override int NumberOfRanks { get; set; }
+        public ClassSkills? SkillType => ClassSkills.GatherInformation;
 
         /// <summary>
-        /// Returns the associated <see cref="ClassSkills"/> GatherInformation is.
+        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
+        /// Null if not compatable.
         /// </summary>
-        public override ClassSkills SkillType => ClassSkills.GatherInformation;
+        public ClassFeats? FeatType => null;
+
+        /// <summary>
+        /// Nullable SpecialType enumerator value. If the inheriting object is of type SpecialType, which one it belongs to is acquired.
+        /// Null if not compatable.
+        /// </summary>
+        public ClassSpecial? SpecialType => null;
     }
 }

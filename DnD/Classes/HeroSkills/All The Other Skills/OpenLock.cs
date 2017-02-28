@@ -1,12 +1,15 @@
-﻿using DnD.Enums.ClassSkills;
+﻿using DnD.Enums.ClassFeats;
+using DnD.Enums.ClassSkills;
+using DnD.Enums.ClassSpecials;
 using DnD.Enums.Stats;
+using DnD.Interfaces;
 
 namespace DnD.Classes.HeroSkills
 {
     /// <summary>
     /// The OpenLock Skill.
     /// </summary>
-    public class OpenLock : BaseSkill
+    public class OpenLock : BaseSkill, IHeroSpecialSkillFeats
     {
         /// <summary>
         /// Returns the type of <see cref="Stats"/> that helps boost OpenLock.
@@ -17,16 +20,24 @@ namespace DnD.Classes.HeroSkills
         /// <summary>
         /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for OpenLock.
         /// </summary>  
-        public override string Description => UserStrings.SkillStrings.OpenLock;
+        public string Description => UserStrings.SkillStrings.OpenLock;
 
         /// <summary>
-        /// Represents the number of ranks the player has alloted into OpenLock.
+        /// Nullable Skill type enumerator value. If the inheriting object is of type Skill, which one it belongs to is acquired.
+        /// Null if not compatable.
         /// </summary>
-        public override int NumberOfRanks { get; set; }
+        public ClassSkills? SkillType => ClassSkills.OpenLock;
 
         /// <summary>
-        /// Returns the associated <see cref="ClassSkills"/> OpenLock is.
+        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
+        /// Null if not compatable.
         /// </summary>
-        public override ClassSkills SkillType => ClassSkills.OpenLock;
+        public ClassFeats? FeatType => null;
+
+        /// <summary>
+        /// Nullable SpecialType enumerator value. If the inheriting object is of type SpecialType, which one it belongs to is acquired.
+        /// Null if not compatable.
+        /// </summary>
+        public ClassSpecial? SpecialType => null;
     }
 }

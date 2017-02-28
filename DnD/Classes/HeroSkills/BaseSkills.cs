@@ -15,18 +15,8 @@ namespace DnD.Classes.HeroSkills
         public abstract Stats? BenefitsFrom { get; }
 
         /// <summary>
-        /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for the particular feat in question.
-        /// </summary>        
-        public abstract string Description { get; }
-
-        /// <summary>
-        /// Represents the number of ranks the player has alloted into this particular skill.
+        /// Exposes the number of ranks the player has alloted into this particular skill.
         /// </summary>
-        public abstract int NumberOfRanks { get; set; }
-
-        /// <summary>
-        /// Returns the associated <see cref="ClassSkills"/> Enumeration type that this skill is.
-        /// </summary>
-        public abstract ClassSkills SkillType { get; }
+        public int NumberOfRanks { get; set; } = 0;
     }
 }

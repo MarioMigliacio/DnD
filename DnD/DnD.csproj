@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Classes\CharacterClass\BaseCharacterClass.cs" />
     <Compile Include="Classes\CharacterClass\AllOtherClasses\Fighter.cs" />
-    <Compile Include="Interfaces\HeroComponent.cs" />
+    <Compile Include="Interfaces\IHeroSpecialSkillFeats.cs" />
     <Compile Include="Classes\HeroFeats\AllOtherFeats\Acrobatic.cs" />
     <Compile Include="Classes\HeroFeats\BaseFeat.cs" />
     <Compile Include="Classes\HeroSkills\All The Other Skills\EscapeArtist.cs" />
