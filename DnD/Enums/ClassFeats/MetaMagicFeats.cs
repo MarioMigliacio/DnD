@@ -1,4 +1,4 @@
-﻿namespace DnD.Enums.Feats
+﻿namespace DnD.Enums.ClassFeats
 {
     /// <summary>
     /// The types of feats that bolster Magical spells.

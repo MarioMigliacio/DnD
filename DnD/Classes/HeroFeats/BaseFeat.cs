@@ -1,8 +1,9 @@
 ﻿using DnD.Classes.CharacterClass;
 using DnD.Classes.Player;
-using DnD.Enums.Feats;
+using DnD.Enums.ClassFeats;
 using System;
 using System.Collections.Generic;
+using DnD.Enums.ClassFeats;
 
 namespace DnD.Classes.HeroFeats
 {
@@ -19,8 +20,8 @@ namespace DnD.Classes.HeroFeats
         public abstract string Description { get; }
 
         /// <summary>
-        /// Returns the associated List of required <see cref="FeatType"/> that this particular feat requires.
-        /// Null if no required <see cref="FeatType"/>.
+        /// Returns the associated List of required <see cref="ClassFeats"/> that this particular feat requires.
+        /// Null if no required <see cref="ClassFeats"/>.
         /// </summary>
         public abstract List<Enum> FeatPrerequisites { get; }
 
@@ -38,7 +39,7 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns the type of Feat this object is: Either Generic, ItemCreation, or MetaMagic.
         /// </summary>
-        public abstract FeatType TypeOfFeat { get; }
+        public abstract ClassFeats TypeOfFeat { get; }
 
         /// <summary>
         /// Returns true if the character meets the minimum required stat restriction for the talent, or false otherwise.

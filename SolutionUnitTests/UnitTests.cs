@@ -4,12 +4,12 @@ using DnD.Classes.HeroSkills;
 using DnD.Classes.Player;
 using DnD.Dice;
 using DnD.Enums.Alignment;
+using DnD.Enums.ClassSkills;
 using DnD.Enums.Currencies;
 using DnD.Enums.Deities;
 using DnD.Enums.Environments;
 using DnD.Enums.Items;
 using DnD.Enums.Qualities;
-using DnD.Enums.Skills;
 using DnD.UserStrings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -184,13 +184,13 @@ namespace SolutionUnitTests
         {
             Hero me = new Hero {Level = 1};
 
-            foreach (Skills skillz in Enum.GetValues(typeof (Skills)))
+            foreach (ClassSkills skillz in Enum.GetValues(typeof (ClassSkills)))
             {
                 me.PlayerSkills.Add(SkillFactory.Create(skillz));
             }
 
             // this sanity check checks that an enum from Skills = 40 (there is none) is indeed null. GOOD!
-            var sanityCheck = SkillFactory.Create((Skills)40);
+            var sanityCheck = SkillFactory.Create((ClassSkills)40);
             Assert.AreEqual(null, sanityCheck);
 
             // does the abstract MaxRanksPossible member function work?!

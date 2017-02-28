@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DnD.Classes.CharacterClass;
 using DnD.Classes.Player;
-using DnD.Enums.Feats;
+using DnD.Enums.ClassFeats;
 
 namespace DnD.Classes.HeroFeats
 {
@@ -20,8 +20,8 @@ namespace DnD.Classes.HeroFeats
         }
 
         /// <summary>
-        /// Returns the associated List of required <see cref="FeatType"/> that this particular feat requires.
-        /// Null if no required <see cref="FeatType"/>.
+        /// Returns the associated List of required <see cref="ClassFeats"/> that this particular feat requires.
+        /// Null if no required <see cref="ClassFeats"/>.
         /// </summary>
         public override List<Enum> FeatPrerequisites
         {
@@ -48,7 +48,7 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns the type of Feat this object is: Either Generic, ItemCreation, or MetaMagic.
         /// </summary>
-        public override FeatType TypeOfFeat
+        public override ClassFeats TypeOfFeat
         {
             get { throw new NotImplementedException(); }
         }

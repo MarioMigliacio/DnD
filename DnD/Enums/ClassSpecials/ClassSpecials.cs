@@ -5,7 +5,7 @@
     /// favored enemies, or various enhancements that are similar to feats - but vary slightly enough to need 
     /// a new classification altogether.
     /// </summary>
-    public enum ClassSpecials
+    public enum ClassSpecial
     {
         // The Barbarian's specials:
 
@@ -96,6 +96,11 @@
         InspireCourage,
 
         /// <summary>
+        /// Represents the Inspire Competence Special.
+        /// </summary>
+        InspireCompetence,
+
+        /// <summary>
         /// Represents the Suggestion Special.
         /// </summary>
         Suggestion,
@@ -119,6 +124,11 @@
         /// Represents the Mass Suggestion Special.
         /// </summary>
         MassSuggestion,
+
+        /// <summary>
+        /// Represents the Bonus Feat Special
+        /// </summary>
+        BonusFeat,
 
         // The Cleric's specials:
 
@@ -214,6 +224,11 @@
         SlowFall,
 
         /// <summary>
+        /// Represents the Purity of Body Special.
+        /// </summary>
+        PurityOfBody,
+
+        /// <summary>
         /// Represents the Wholeness of Body Special.
         /// </summary>
         WholenessOfBody,
@@ -247,7 +262,7 @@
         /// Represents the Quivering Palm Special.
         /// </summary>
         QuiveringPalm,
-
+        
         /// <summary>
         /// Represents the Tongue of the Sun and Moon Special.
         /// </summary>
@@ -302,6 +317,12 @@
         DivineHealth,
 
         /// <summary>
+        /// Represents the Turn Undead Special.
+        /// Slight variation to the Cleric version.
+        /// </summary>
+        TurnUndead,
+
+        /// <summary>
         /// Represents the Special Mount Special.
         /// </summary>
         SpecialMount,
@@ -329,6 +350,11 @@
         /// Represents the Combat Style Special.
         /// </summary>
         CombatStyle,
+
+        /// <summary>
+        /// Represents the Endurance Special.
+        /// </summary>
+        Endurance,
 
         /// <summary>
         /// Represents the Improved Combat Style Special.

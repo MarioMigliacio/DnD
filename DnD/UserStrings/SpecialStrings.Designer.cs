@@ -61,11 +61,767 @@ namespace DnD.UserStrings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to At 12th level or higher, a monk can slip magically between spaces, as if using the spell dimension door, once per day. Her caster level for this effect is one-half her monk level (rounded down)..
+        /// </summary>
+        public static string AbundantStep {
+            get {
+                return ResourceManager.GetString("AbundantStep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A druid/ranger may begin play with an animal companion selected from the following list: badger, camel, dire rat, dog, riding dog, eagle, hawk, horse (light or heavy), owl, pony, snake (Small or Medium viper), or wolf. This animal is a loyal companion that accompanies the druid/ranger on her adventures as appropriate for its kind.
+        ///
+        ///A 1st-level druid/ranger&apos;s companion is completely typical for its kind except as noted below. As a druid/ranger advances in level, the animal’s power increases as shown on the [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string AnimalCompanion {
+            get {
+                return ResourceManager.GetString("AnimalCompanion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beginning at 3rd level, a paladin is immune to fear (magical or otherwise). Each ally within 10 feet of her gains a +4 morale bonus on saving throws against fear effects.
+        ///
+        ///This ability functions while the paladin is conscious, but not if she is unconscious or dead..
+        /// </summary>
+        public static string AuraOfCourage {
+            get {
+                return ResourceManager.GetString("AuraOfCourage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can sense the presence of good. The amount of information revealed depends on how long you study a particular area or subject..
+        /// </summary>
+        public static string AuraOfGood {
+            get {
+                return ResourceManager.GetString("AuraOfGood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A bard may make a special bardic knowledge check with a bonus equal to his bard level + his Intelligence modifier to see whether he knows some relevant information about local notable people, legendary items, or noteworthy places. (If the bard has 5 or more ranks in Knowledge (history), he gains a +2 bonus on this check.)
+        ///
+        ///A successful bardic knowledge check will not reveal the powers of a magic item but may give a hint as to its general function..
+        /// </summary>
+        public static string BardicKnowledge {
+            get {
+                return ResourceManager.GetString("BardicKnowledge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Once per day per bard level, a bard can use his song or poetics to produce magical effects on those around him (usually including himself, if desired). While these abilities fall under the category of bardic music and the descriptions discuss singing or playing instruments, they can all be activated by reciting poetry, chanting, singing lyrical songs, singing melodies, whistling, playing an instrument, or playing an instrument in combination with some spoken performance. Each ability requires both a minimum [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string BardicMusic {
+            get {
+                return ResourceManager.GetString("BardicMusic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acquire a Bonus Feat of your choosing. If certain requirements must be upheld, refer to the dungeons and dragons manual..
+        /// </summary>
+        public static string BonusFeat {
+            get {
+                return ResourceManager.GetString("BonusFeat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A ranger of 13th level or higher can use the Hide skill in any sort of natural terrain, even if the terrain doesn’t grant cover or concealment..
+        /// </summary>
+        public static string Camouflage {
+            get {
+                return ResourceManager.GetString("Camouflage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 2nd level, a ranger must select one of two combat styles to pursue: archery or two-weapon combat. This choice affects the character’s class features but does not restrict his selection of feats or special abilities in any way.
+        ///
+        ///If the ranger selects archery, he is treated as having the Rapid Shot feat, even if he does not have the normal prerequisites for that feat.
+        ///
+        ///If the ranger selects two-weapon combat, he is treated as having the Two-Weapon Fighting feat, even if he does not have the normal prer [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string CombatStyle {
+            get {
+                return ResourceManager.GetString("CombatStyle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 11th level, a ranger’s aptitude in his chosen combat style (archery or two-weapon combat) improves again. If he selected archery at 2nd level, he is treated as having the Improved Precise Shot feat, even if he does not have the normal prerequisites for that feat.
+        ///
+        ///If the ranger selected two-weapon combat at 2nd level, he is treated as having the Greater Two-Weapon Fighting feat, even if he does not have the normal prerequisites for that feat.
+        ///
+        ///As before, the benefits of the ranger’s chosen style appl [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string CombatStyleMastery {
+            get {
+                return ResourceManager.GetString("CombatStyleMastery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A bard with 3 or more ranks in a Perform skill can use his music or poetics to counter magical effects that depend on sound (but not spells that simply have verbal components). Each round of the countersong, he makes a Perform check. Any creature within 30 feet of the bard (including the bard himself) that is affected by a sonic or language-dependent magical attack may use the bard’s Perform check result in place of its saving throw if, after the saving throw is rolled, the Perform check result proves to be [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string CounterSong {
+            get {
+                return ResourceManager.GetString("CounterSong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A rogue with this ability can sneak attack opponents with such precision that her blows weaken and hamper them. An opponent damaged by one of her sneak attacks also takes 2 points of Strength damage. Ability points lost to damage return on their own at the rate of 1 point per day for each damaged ability..
+        /// </summary>
+        public static string CripplingStrike {
+            get {
+                return ResourceManager.GetString("CripplingStrike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 7th level, a barbarian gains Damage Reduction. Subtract 1 from the damage the barbarian takes each time he is dealt damage from a weapon or a natural attack. At 10th level, and every three barbarian levels thereafter (13th, 16th, and 19th level), this damage reduction rises by 1 point. Damage reduction can reduce damage to 0 but not below 0..
+        /// </summary>
+        public static string DamageReduction {
+            get {
+                return ResourceManager.GetString("DamageReduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The rogue can roll with a potentially lethal blow to take less damage from it than she otherwise would. Once per day, when she would be reduced to 0 or fewer hit points by damage in combat (from a weapon or other blow, not a spell or special ability), the rogue can attempt to roll with the damage. To use this ability, the rogue must attempt a Reflex saving throw (DC=damage dealt). If the save succeeds, she takes only half damage from the blow; if it fails, she takes full damage. She must be aware of the att [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string DefensiveRoll {
+            get {
+                return ResourceManager.GetString("DefensiveRoll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At will, a paladin can use detect evil, as the spell..
+        /// </summary>
+        public static string DetectEvil {
+            get {
+                return ResourceManager.GetString("DetectEvil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 11th level, a monk gains immunity to poisons of all kinds..
+        /// </summary>
+        public static string DiamondBody {
+            get {
+                return ResourceManager.GetString("DiamondBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 13th level, a monk gains spell resistance equal to her current monk level + 10. In order to affect the monk with a spell, a spellcaster must get a result on a caster level check (1d20 + caster level) that equals or exceeds the monk’s spell resistance..
+        /// </summary>
+        public static string DiamondSoul {
+            get {
+                return ResourceManager.GetString("DiamondSoul", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 2nd level, a paladin gains a bonus equal to her Charisma bonus (if any) on all saving throws..
+        /// </summary>
+        public static string DivineGrace {
+            get {
+                return ResourceManager.GetString("DivineGrace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 3rd level, a paladin gains immunity to all diseases, including supernatural and magical diseases..
+        /// </summary>
+        public static string DivineHealth {
+            get {
+                return ResourceManager.GetString("DivineHealth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 19th level, a monk gains the ability to assume an ethereal state for 1 round per monk level per day, as though using the spell etherealness. She may go ethereal on a number of different occasions during any single day, as long as the total number of rounds spent in an ethereal state does not exceed her monk level..
+        /// </summary>
+        public static string EmptyBody {
+            get {
+                return ResourceManager.GetString("EmptyBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A ranger gains Endurance as a bonus feat at 3rd level..
+        /// </summary>
+        public static string Endurance {
+            get {
+                return ResourceManager.GetString("Endurance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 2nd level or higher if a monk/rogue makes a successful Reflex saving throw against an attack that normally deals half damage on a successful save, she instead takes no damage. Evasion can be used only if a monk/rogue is wearing light armor or no armor. A helpless monk/rogue does not gain the benefit of evasion..
+        /// </summary>
+        public static string Evasion {
+            get {
+                return ResourceManager.GetString("Evasion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A bard with 3 or more ranks in a Perform skill can use his music or poetics to cause one or more creatures to become fascinated with him. Each creature to be fascinated must be within 90 feet, able to see and hear the bard, and able to pay attention to him. The bard must also be able to see the creature. The distraction of a nearby combat or other dangers prevents the ability from working. For every three levels a bard attains beyond 1st, he can target one additional creature with a single use of this abili [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Fascinate {
+            get {
+                return ResourceManager.GetString("Fascinate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A barbarian’s land speed is faster than the norm for his race by +10 feet. This benefit applies only when he is wearing no armor, light armor, or medium armor and not carrying a heavy load. Apply this bonus before modifying the barbarian’s speed because of any load carried or armor worn..
         /// </summary>
         public static string FastMovement {
             get {
                 return ResourceManager.GetString("FastMovement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 1st level, a ranger may select a type of creature from among those given on Table: Ranger Favored Enemies. The ranger gains a +2 bonus on Bluff, Listen, Sense Motive, Spot, and Survival checks when using these skills against creatures of this type. Likewise, he gets a +2 bonus on weapon damage rolls against such creatures.
+        ///
+        ///At 5th level and every five levels thereafter (10th, 15th, and 20th level), the ranger may select an additional favored enemy from those given on the table. In addition, at each suc [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string FavoredEnemy {
+            get {
+                return ResourceManager.GetString("FavoredEnemy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When unarmored, a monk may strike with a flurry of blows at the expense of accuracy. When doing so, she may make one extra attack in a round at her highest base attack bonus, but this attack takes a –2 penalty, as does each other attack made that round. The resulting modified base attack bonuses are shown in the Flurry of Blows Attack Bonus column on Table: The Monk. This penalty applies for 1 round, so it also affects attacks of opportunity the monk might make before her next action. When a monk reaches 5t [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string FlurryOfBlows {
+            get {
+                return ResourceManager.GetString("FlurryOfBlows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See FlurryOfBlows..
+        /// </summary>
+        public static string GreaterFlurry {
+            get {
+                return ResourceManager.GetString("GreaterFlurry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 11th level, a barbarian’s bonuses to Strength and Constitution during his rage each increase to +6, and his morale bonus on Will saves increases to +3. The penalty to AC remains at –2..
+        /// </summary>
+        public static string GreaterRage {
+            get {
+                return ResourceManager.GetString("GreaterRage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to While in any sort of natural terrain, a ranger of 17th level or higher can use the Hide skill even while being observed..
+        /// </summary>
+        public static string HideInPlainSight {
+            get {
+                return ResourceManager.GetString("HideInPlainSight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Barbarians are the only characters who do not automatically know how to read and write. A barbarian may spend 2 skill points to gain the ability to read and write all languages he is able to speak..
+        /// </summary>
+        public static string Illiteracy {
+            get {
+                return ResourceManager.GetString("Illiteracy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 6th level, a ranger’s aptitude in his chosen combat style (archery or two-weapon combat) improves. If he selected archery at 2nd level, he is treated as having the Manyshot feat, even if he does not have the normal prerequisites for that feat.
+        ///
+        ///If the ranger selected two-weapon combat at 2nd level, he is treated as having the Improved Two-Weapon Fighting feat, even if he does not have the normal prerequisites for that feat.
+        ///
+        ///As before, the benefits of the ranger’s chosen style apply only when he wear [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string ImprovedCombatStyle {
+            get {
+                return ResourceManager.GetString("ImprovedCombatStyle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 9th level, a monk’s(and possibly a rogue taking this as a special circumstance) evasion ability improves. She still takes no damage on a successful Reflex saving throw against attacks, but henceforth she takes only half damage on a failed save. A helpless monk/rogue does not gain the benefit of improved evasion..
+        /// </summary>
+        public static string ImprovedEvasion {
+            get {
+                return ResourceManager.GetString("ImprovedEvasion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 5th level and higher, a barbarian can no longer be flanked. This defense denies a rogue the ability to sneak attack the barbarian by flanking him, unless the attacker has at least four more rogue levels than the target has barbarian levels. If a character already has uncanny dodge (see above) from a second class, the character automatically gains improved uncanny dodge instead, and the levels from the classes that grant uncanny dodge stack to determine the minimum level a rogue must be to flank the chara [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string ImprovedUncannyDodge {
+            get {
+                return ResourceManager.GetString("ImprovedUncannyDodge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to While in a rage, a barbarian of 14th level or higher gains a +4 bonus on Will saves to resist enchantment spells. This bonus stacks with all other modifiers, including the morale bonus on Will saves he also receives during his rage..
+        /// </summary>
+        public static string IndomitableWill {
+            get {
+                return ResourceManager.GetString("IndomitableWill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A bard of 3rd level or higher with 6 or more ranks in a Perform skill can use his music or poetics to help an ally succeed at a task. The ally must be within 30 feet and able to see and hear the bard. The bard must also be able to see the ally.
+        ///
+        ///The ally gets a +2 competence bonus on skill checks with a particular skill as long as he or she continues to hear the bard’s music. Certain uses of this ability are infeasible. The effect lasts as long as the bard concentrates, up to a maximum of 2 minutes. A bar [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string InspireCompetence {
+            get {
+                return ResourceManager.GetString("InspireCompetence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A bard with 3 or more ranks in a Perform skill can use song or poetics to inspire courage in his allies (including himself), bolstering them against fear and improving their combat abilities. To be affected, an ally must be able to hear the bard sing. The effect lasts for as long as the ally hears the bard sing and for 5 rounds thereafter. An affected ally receives a +1 morale bonus on saving throws against charm and fear effects and a +1 morale bonus on attack and weapon damage rolls. At 8th level, and eve [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string InspireCourage {
+            get {
+                return ResourceManager.GetString("InspireCourage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A bard of 9th level or higher with 12 or more ranks in a Perform skill can use music or poetics to inspire greatness in himself or a single willing ally within 30 feet, granting him or her extra fighting capability. For every three levels a bard attains beyond 9th, he can target one additional ally with a single use of this ability (two at 12th level, three at 15th, four at 18th). To inspire greatness, a bard must sing and an ally must hear him sing. The effect lasts for as long as the ally hears the bard s [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string InspireGreatness {
+            get {
+                return ResourceManager.GetString("InspireGreatness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A bard of 15th level or higher with 18 or more ranks in a Perform skill can use music or poetics to inspire tremendous heroism in himself or a single willing ally within 30 feet. For every three bard levels the character attains beyond 15th, he can inspire heroics in one additional creature. To inspire heroics, a bard must sing and an ally must hear the bard sing for a full round. A creature so inspired gains a +4 morale bonus on saving throws and a +4 dodge bonus to AC. The effect lasts for as long as the  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string InspireHeroics {
+            get {
+                return ResourceManager.GetString("InspireHeroics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 4th level, a monk’s unarmed attacks are empowered with ki. Her unarmed attacks are treated as magic weapons for the purpose of dealing damage to creatures with damage reduction. Ki strike improves with the character’s monk level. At 10th level, her unarmed attacks are also treated as lawful weapons for the purpose of dealing damage to creatures with damage reduction. At 16th level, her unarmed attacks are treated as adamantine weapons for the purpose of dealing damage to creatures with damage reduction a [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string KiStrike {
+            get {
+                return ResourceManager.GetString("KiStrike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beginning at 2nd level, a paladin with a Charisma score of 12 or higher can heal wounds (her own or those of others) by touch. Each day she can heal a total number of hit points of damage equal to her paladin level × her Charisma bonus. A paladin may choose to divide her healing among multiple recipients, and she doesn’t have to use it all at once. Using lay on hands is a standard action.
+        ///
+        ///Alternatively, a paladin can use any or all of this healing power to deal damage to undead creatures. Using lay on ha [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string LayOnHands {
+            get {
+                return ResourceManager.GetString("LayOnHands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This ability functions like suggestion, above, except that a bard of 18th level or higher with 21 or more ranks in a Perform skill can make the suggestion simultaneously to any number of creatures that he has already fascinated (see above). mass suggestion is an enchantment (compulsion), mind-affecting, language-dependent ability..
+        /// </summary>
+        public static string MassSuggestion {
+            get {
+                return ResourceManager.GetString("MassSuggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 20th level, a barbarian’s bonuses to Strength and Constitution during his rage each increase to +8, and his morale bonus on Will saves increases to +4. The penalty to AC remains at –2..
+        /// </summary>
+        public static string MightyRage {
+            get {
+                return ResourceManager.GetString("MightyRage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A druid gains a +2 bonus on Knowledge (nature) and Survival checks..
+        /// </summary>
+        public static string NatureSense {
+            get {
+                return ResourceManager.GetString("NatureSense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Once per round, the rogue can make an attack of opportunity against an opponent who has just been struck for damage in melee by another character. This attack counts as the rogue’s attack of opportunity for that round. Even a rogue with the Combat Reflexes feat can’t use the opportunist ability more than once per round..
+        /// </summary>
+        public static string Opportunist {
+            get {
+                return ResourceManager.GetString("Opportunist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 20th level, a monk becomes a magical creature. She is forevermore treated as an outsider rather than as a humanoid (or whatever the monk’s creature type was) for the purpose of spells and magical effects. Additionally, the monk gains damage reduction 10/magic, which allows her to ignore the first 10 points of damage from any attack made by a nonmagical weapon or by any natural attack made by a creature that doesn’t have similar damage reduction. Unlike other outsiders, the monk can still be brought back  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string PerfectSelf {
+            get {
+                return ResourceManager.GetString("PerfectSelf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 5th level, a monk gains immunity to all diseases except for supernatural and magical diseases..
+        /// </summary>
+        public static string PurityOfBody {
+            get {
+                return ResourceManager.GetString("PurityOfBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting at 15th level, a monk can set up vibrations within the body of another creature that can thereafter be fatal if the monk so desires. She can use this quivering palm attack once a week, and she must announce her intent before making her attack roll. Constructs, oozes, plants, undead, incorporeal creatures, and creatures immune to critical hits cannot be affected. Otherwise, if the monk strikes successfully and the target takes damage from the blow, the quivering palm attack succeeds. Thereafter the  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string QuiveringPalm {
+            get {
+                return ResourceManager.GetString("QuiveringPalm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A barbarian can fly into a rage a certain number of times per day. In a rage, a barbarian temporarily gains a +4 bonus to Strength, a +4 bonus to Constitution, and a +2 morale bonus on Will saves, but he takes a –2 penalty to Armor Class. The increase in Constitution increases the barbarian’s hit points by 2 points per level, but these hit points go away at the end of the rage when his Constitution score drops back to normal. (These extra hit points are not lost first the way temporary hit points are.) Whil [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Rage {
+            get {
+                return ResourceManager.GetString("Rage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 6th level, a paladin can produce a remove disease effect, as the spell, once per week. She can use this ability one additional time per week for every three levels after 6th (twice per week at 9th, three times at 12th, and so forth)..
+        /// </summary>
+        public static string RemoveDisease {
+            get {
+                return ResourceManager.GetString("RemoveDisease", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting at 4th level, a druid gains a +4 bonus on saving throws against the spell-like abilities of fey..
+        /// </summary>
+        public static string ResistNaturesLure {
+            get {
+                return ResourceManager.GetString("ResistNaturesLure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 1st level, a wizard gains Scribe Scroll as a bonus feat..
+        /// </summary>
+        public static string ScribeScroll {
+            get {
+                return ResourceManager.GetString("ScribeScroll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The rogue becomes so certain in the use of certain skills that she can use them reliably even under adverse conditions. Upon gaining this ability, she selects a number of skills equal to 3 + her Intelligence modifier. When making a skill check with one of these skills, she may take 10 even if stress and distractions would normally prevent her from doing so. A rogue may gain this special ability multiple times, selecting additional skills for it to apply to each time..
+        /// </summary>
+        public static string SkillMastery {
+            get {
+                return ResourceManager.GetString("SkillMastery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This ability represents the rogue’s ability to wriggle free from magical effects that would otherwise control or compel her. If a rogue with slippery mind is affected by an enchantment spell or effect and fails her saving throw, she can attempt it again 1 round later at the same DC. She gets only this one extra chance to succeed on her saving throw..
+        /// </summary>
+        public static string SlipperyMind {
+            get {
+                return ResourceManager.GetString("SlipperyMind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 4th level or higher, a monk within arm’s reach of a wall can use it to slow her descent. When first using this ability, she takes damage as if the fall were 20 feet shorter than it actually is. The monk’s ability to slow her fall (that is, to reduce the effective distance of the fall when next to a wall) improves with her monk level until at 20th level she can use a nearby wall to slow her descent and fall any distance without harm..
+        /// </summary>
+        public static string SlowFall {
+            get {
+                return ResourceManager.GetString("SlowFall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Once per day, a paladin may attempt to smite evil with one normal melee attack. She adds her Charisma bonus (if any) to her attack roll and deals 1 extra point of damage per paladin level. If the paladin accidentally smites a creature that is not evil, the smite has no effect, but the ability is still used up for that day.
+        ///
+        ///At 5th level, and at every five levels thereafter, the paladin may smite evil one additional time per day, as indicated on Table: The Paladin, to a maximum of five times per day at 20t [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string SmiteEvil {
+            get {
+                return ResourceManager.GetString("SmiteEvil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If a rogue can catch an opponent when he is unable to defend himself effectively from her attack, she can strike a vital spot for extra damage.
+        ///
+        ///The rogue’s attack deals extra damage any time her target would be denied a Dexterity bonus to AC (whether the target actually has a Dexterity bonus or not), or when the rogue flanks her target. This extra damage is 1d6 at 1st level, and it increases by 1d6 every two rogue levels thereafter. Should the rogue score a critical hit with a sneak attack, this extra da [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string SneakAttack {
+            get {
+                return ResourceManager.GetString("SneakAttack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A bard of 12th level or higher with 15 or more ranks in a Perform skill can use music or poetics to create an effect equivalent to the break enchantment spell (caster level equals the character’s bard level). Using this ability requires 1 minute of uninterrupted concentration and music, and it functions on a single target within 30 feet. A bard can’t use song of freedom on himself..
+        /// </summary>
+        public static string SongOfFreedom {
+            get {
+                return ResourceManager.GetString("SongOfFreedom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upon reaching 5th level, a paladin gains the service of an unusually intelligent, strong, and loyal steed to serve her in her crusade against evil (see below). This mount is usually a heavy warhorse (for a Medium paladin) or a warpony (for a Small paladin).
+        ///
+        ///Once per day, as a full-round action, a paladin may magically call her mount from the celestial realms in which it resides. This ability is the equivalent of a spell of a level equal to one-third the paladin’s level. The mount immediately appears adja [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string SpecialMount {
+            get {
+                return ResourceManager.GetString("SpecialMount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A monk of 3rd level or higher gains a +2 bonus on saving throws against spells and effects from the school of enchantment..
+        /// </summary>
+        public static string StillMind {
+            get {
+                return ResourceManager.GetString("StillMind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A bard of 6th level or higher with 9 or more ranks in a Perform skill can make a suggestion (as the spell) to a creature that he has already fascinated (see above). Using this ability does not break the bard’s concentration on the fascinate effect, nor does it allow a second saving throw against the fascinate effect..
+        /// </summary>
+        public static string Suggestion {
+            get {
+                return ResourceManager.GetString("Suggestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A sorcerer/wizard can obtain a familiar (see below). Doing so takes 24 hours and uses up magical materials that cost 100 gp. A familiar is a magical beast that resembles a small animal and is unusually tough and intelligent. The creature serves as a companion and servant.
+        ///
+        ///The sorcerer/wizard chooses the kind of familiar he gets. As the sorcerer/wizard advances in level, his familiar also increases in power.
+        ///
+        ///If the familiar dies or is dismissed by the sorcerer/wizard, the sorcerer/wizard must attempt a [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string SummonFamiliar {
+            get {
+                return ResourceManager.GetString("SummonFamiliar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Beginning at 8th level, a ranger can move at his normal speed while following tracks without taking the normal –5 penalty. He takes only a –10 penalty (instead of the normal –20) when moving at up to twice normal speed while tracking..
+        /// </summary>
+        public static string SwiftTracker {
+            get {
+                return ResourceManager.GetString("SwiftTracker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 13th level, a druid gains the ability to change her appearance at will, as if using the disguise self spell, but only while in her normal form. This affects the druid’s body but not her possessions. It is not an illusory effect, but a minor physical alteration of the druid’s appearance, within the limits described for the spell..
+        /// </summary>
+        public static string ThousandFaces {
+            get {
+                return ResourceManager.GetString("ThousandFaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to After attaining 15th level, a druid no longer takes ability score penalties for aging and cannot be magically aged. Any penalties she may have already incurred, however, remain in place.
+        ///
+        ///Bonuses still accrue, and the druid still dies of old age when her time is up..
+        /// </summary>
+        public static string TimelessBody {
+            get {
+                return ResourceManager.GetString("TimelessBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 17th level and higher, a barbarian no longer becomes fatigued at the end of his rage..
+        /// </summary>
+        public static string TirelessRage {
+            get {
+                return ResourceManager.GetString("TirelessRage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A monk of 17th level or higher can speak with any living creature..
+        /// </summary>
+        public static string TongueOfTheSunAndMoon {
+            get {
+                return ResourceManager.GetString("TongueOfTheSunAndMoon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A ranger gains Track as a bonus feat..
+        /// </summary>
+        public static string Track {
+            get {
+                return ResourceManager.GetString("Track", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting at 3rd level, a druid leaves no trail in natural surroundings and cannot be tracked. She may choose to leave a trail if so desired..
+        /// </summary>
+        public static string TracklessStep {
+            get {
+                return ResourceManager.GetString("TracklessStep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rogues (and only rogues) can use the Search skill to locate traps when the task has a Difficulty Class higher than 20.
+        ///
+        ///Finding a nonmagical traps has a DC of at least 20, or higher if it is well hidden. Finding a magic traps has a DC of 25 + the level of the spell used to create it.
+        ///
+        ///Rogues (and only rogues) can use the Disable Device skill to disarm magic traps. A magic traps generally has a DC of 25 + the level of the spell used to create it.
+        ///
+        ///A rogue who beats a trap’s DC by 10 or more with a Disa [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string TrapFinding {
+            get {
+                return ResourceManager.GetString("TrapFinding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting at 3rd level, a barbarian/rogue gains a +1 bonus on Reflex saves made to avoid traps and a +1 dodge bonus to AC against attacks made by traps. These bonuses rise by +1 every three barbarian/rogue levels thereafter (6th, 9th, 12th, 15th, and 18th level). Trap sense bonuses gained from multiple classes stack..
+        /// </summary>
+        public static string TrapSense {
+            get {
+                return ResourceManager.GetString("TrapSense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Any cleric, regardless of alignment, has the power to affect undead creatures by channeling the power of his faith through his holy (or unholy) symbol.
+        ///
+        ///A good cleric (or a neutral cleric who worships a good deity) can turn or destroy undead creatures. An evil cleric (or a neutral cleric who worships an evil deity) instead rebukes or commands such creatures. A neutral cleric of a neutral deity must choose whether his turning ability functions as that of a good cleric or an evil cleric. Once this choice is [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string TurnOrRebukeUndead {
+            get {
+                return ResourceManager.GetString("TurnOrRebukeUndead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When a paladin reaches 4th level, she gains the supernatural ability to turn undead. She may use this ability a number of times per day equal to 3 + her Charisma modifier. She turns undead as a cleric of three levels lower would.
+        ///
+        ///Spells: Beginning at 4th level, a paladin gains the ability to cast a small number of divine spells, which are drawn from the paladin spell list. A paladin must choose and prepare her spells in advance.
+        ///
+        ///To prepare or cast a spell, a paladin must have a Wisdom score equal to a [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string TurnUndead {
+            get {
+                return ResourceManager.GetString("TurnUndead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 1st level, a monk gains Improved Unarmed Strike as a bonus feat. A monk’s attacks may be with either fist interchangeably or even from elbows, knees, and feet. This means that a monk may even make unarmed strikes with her hands full. There is no such thing as an off-hand attack for a monk striking unarmed. A monk may thus apply her full Strength bonus on damage rolls for all her unarmed strikes.
+        ///
+        ///Usually a monk’s unarmed strikes deal lethal damage, but she can choose to deal nonlethal damage instead wi [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string UnarmedStrike {
+            get {
+                return ResourceManager.GetString("UnarmedStrike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 2nd level, a barbarian(rogue acquires this special at 4th level) retains his Dexterity bonus to AC (if any) even if he is caught flat-footed or struck by an invisible attacker. However, he still loses his Dexterity bonus to AC if immobilized. If a barbarian/rogue already has uncanny dodge from a different class, he automatically gains improved uncanny dodge.
+        /// </summary>
+        public static string UncannyDodge {
+            get {
+                return ResourceManager.GetString("UncannyDodge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 9th level, a druid gains immunity to all poisons..
+        /// </summary>
+        public static string VenomImmunity {
+            get {
+                return ResourceManager.GetString("VenomImmunity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 7th level or higher, a monk can heal her own wounds. She can heal a number of hit points of damage equal to twice her current monk level each day, and she can spread this healing out among several uses..
+        /// </summary>
+        public static string WholenessOfBody {
+            get {
+                return ResourceManager.GetString("WholenessOfBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A druid/ranger can improve the attitude of an animal. This ability functions just like a Diplomacy check made to improve the attitude of a person. The druid/ranger rolls 1d20 and adds her druid level and her Charisma modifier to determine the wild empathy check result.
+        ///
+        ///The typical domestic animal has a starting attitude of indifferent, while wild animals are usually unfriendly.
+        ///
+        ///To use wild empathy, the druid/ranger and the animal must be able to study each other, which means that they must be within 3 [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string WildEmpathy {
+            get {
+                return ResourceManager.GetString("WildEmpathy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to At 5th level, a druid gains the ability to turn herself into any Small or Medium animal and back again once per day. Her options for new forms include all creatures with the animal type. This ability functions like the alternate form special ability spell, except as noted here. The effect lasts for 1 hour per druid level, or until she changes back. Changing form (to animal or back) is a standard action and doesn’t provoke an attack of opportunity. Each time you use wild shape, you regain lost hit points as  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string WildShape {
+            get {
+                return ResourceManager.GetString("WildShape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting at 2nd level, a druid may move through any sort of undergrowth (such as natural thorns, briars, overgrown areas, and similar terrain) at her normal speed and without taking damage or suffering any other impairment. However, thorns, briars, and overgrown areas that have been magically manipulated to impede motion still affect her..
+        /// </summary>
+        public static string WoodlandStride {
+            get {
+                return ResourceManager.GetString("WoodlandStride", resourceCulture);
             }
         }
     }

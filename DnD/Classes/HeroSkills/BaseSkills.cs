@@ -1,4 +1,4 @@
-﻿using DnD.Enums.Skills;
+﻿using DnD.Enums.ClassSkills;
 using DnD.Enums.Stats;
 
 namespace DnD.Classes.HeroSkills
@@ -25,8 +25,8 @@ namespace DnD.Classes.HeroSkills
         public abstract int NumberOfRanks { get; set; }
 
         /// <summary>
-        /// Returns the associated <see cref="Skills"/> Enumeration type that this skill is.
+        /// Returns the associated <see cref="ClassSkills"/> Enumeration type that this skill is.
         /// </summary>
-        public abstract Skills SkillType { get; }
+        public abstract ClassSkills SkillType { get; }
     }
 }

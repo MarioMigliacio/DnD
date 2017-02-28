@@ -1,5 +1,4 @@
-﻿using DnD.Enums.Skills;
-using DnD.Enums.SavingThrows;
+﻿using DnD.Enums.SavingThrows;
 
 namespace DnD.Enums.Pets
 {

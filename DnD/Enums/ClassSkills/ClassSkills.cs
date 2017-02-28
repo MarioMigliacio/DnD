@@ -1,9 +1,9 @@
-﻿namespace DnD.Enums.Skills
+﻿namespace DnD.Enums.ClassSkills
 {
     /// <summary>
     /// The Skills in the game increase a players chance at success on certain roll checks.
     /// </summary>
-    public enum Skills
+    public enum ClassSkills
     {
         /// <summary>
         /// The Appraise Skill.

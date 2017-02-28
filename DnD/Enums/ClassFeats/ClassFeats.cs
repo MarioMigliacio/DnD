@@ -1,9 +1,9 @@
-﻿namespace DnD.Enums.Feats
+﻿namespace DnD.Enums.ClassFeats
 {
     /// <summary>
     /// Feats are unique and boost character individuality, they bolster some aspect to a hero in various ways.
     /// </summary>
-    public enum FeatType
+    public enum ClassFeats
     {
         /// <summary>
         /// The Generic type of feats.

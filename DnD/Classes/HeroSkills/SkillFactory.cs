@@ -1,4 +1,4 @@
-﻿using DnD.Enums.Skills;
+﻿using DnD.Enums.ClassSkills;
 
 namespace DnD.Classes.HeroSkills
 {
@@ -11,48 +11,48 @@ namespace DnD.Classes.HeroSkills
         /// <summary>
         /// The interface usage of the Factory. Creates a new skill and returns it to the caller.
         /// </summary>
-        /// <param name="which">Represents the <see cref="Skills"/>enum.</param>
+        /// <param name="which">Represents the <see cref="ClassSkills"/>enum.</param>
         /// <returns>The particular Skill object which is represented by that enum.</returns>
-        public static BaseSkill Create(Skills which)
+        public static BaseSkill Create(ClassSkills which)
         {
             switch (which)
             {
-                case Skills.Appraise: return new Appraise();
-                case Skills.Balance: return new Balance();
-                case Skills.Bluff: return new Bluff();
-                case Skills.Climb: return new Climb();
-                case Skills.Concentration: return new Concentration();
-                case Skills.Craft: return new Craft();
-                case Skills.DecipherScript: return new DecipherScript();
-                case Skills.Diplomacy: return new Diplomacy();
-                case Skills.DisableDevice: return new DisableDevice();
-                case Skills.Disguise: return new Disguise();
-                case Skills.EscapeArtist: return new EscapeArtist();
-                case Skills.Forgery: return new Forgery();
-                case Skills.GatherInformation: return new GatherInformation();
-                case Skills.HandleAnimal: return new HandleAnimal();
-                case Skills.Heal: return new Heal();
-                case Skills.Hide: return new Hide();
-                case Skills.Intimidate: return  new Intimidate();
-                case Skills.Jump: return new Jump();
-                case Skills.Knowledge: return new Knowledge();
-                case Skills.Listen: return new Listen();
-                case Skills.MoveSilently: return new MoveSilently();
-                case Skills.OpenLock: return new OpenLock();
-                case Skills.Perform: return new Perform();
-                case Skills.Profession: return new Profession();
-                case Skills.Ride: return new Ride();
-                case Skills.Search: return new Search();
-                case Skills.SenseMotive: return new SenseMotive();
-                case Skills.SleightOfHand: return new SleightOfHand();
-                case Skills.SpeakLanguage: return new SpeakLanguage();
-                case Skills.Spellcraft: return new Spellcraft();
-                case Skills.Spot: return new Spot();
-                case Skills.Survival: return new Survival();
-                case Skills.Swim: return new Swim();
-                case Skills.Tumble: return new Tumble();
-                case Skills.UseMagicDevice: return new UseMagicDevice();
-                case Skills.UseRope: return  new UseRope();
+                case ClassSkills.Appraise: return new Appraise();
+                case ClassSkills.Balance: return new Balance();
+                case ClassSkills.Bluff: return new Bluff();
+                case ClassSkills.Climb: return new Climb();
+                case ClassSkills.Concentration: return new Concentration();
+                case ClassSkills.Craft: return new Craft();
+                case ClassSkills.DecipherScript: return new DecipherScript();
+                case ClassSkills.Diplomacy: return new Diplomacy();
+                case ClassSkills.DisableDevice: return new DisableDevice();
+                case ClassSkills.Disguise: return new Disguise();
+                case ClassSkills.EscapeArtist: return new EscapeArtist();
+                case ClassSkills.Forgery: return new Forgery();
+                case ClassSkills.GatherInformation: return new GatherInformation();
+                case ClassSkills.HandleAnimal: return new HandleAnimal();
+                case ClassSkills.Heal: return new Heal();
+                case ClassSkills.Hide: return new Hide();
+                case ClassSkills.Intimidate: return  new Intimidate();
+                case ClassSkills.Jump: return new Jump();
+                case ClassSkills.Knowledge: return new Knowledge();
+                case ClassSkills.Listen: return new Listen();
+                case ClassSkills.MoveSilently: return new MoveSilently();
+                case ClassSkills.OpenLock: return new OpenLock();
+                case ClassSkills.Perform: return new Perform();
+                case ClassSkills.Profession: return new Profession();
+                case ClassSkills.Ride: return new Ride();
+                case ClassSkills.Search: return new Search();
+                case ClassSkills.SenseMotive: return new SenseMotive();
+                case ClassSkills.SleightOfHand: return new SleightOfHand();
+                case ClassSkills.SpeakLanguage: return new SpeakLanguage();
+                case ClassSkills.Spellcraft: return new Spellcraft();
+                case ClassSkills.Spot: return new Spot();
+                case ClassSkills.Survival: return new Survival();
+                case ClassSkills.Swim: return new Swim();
+                case ClassSkills.Tumble: return new Tumble();
+                case ClassSkills.UseMagicDevice: return new UseMagicDevice();
+                case ClassSkills.UseRope: return  new UseRope();
                 default: return null;
             }
         }

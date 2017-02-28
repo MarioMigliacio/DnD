@@ -1,4 +1,4 @@
-﻿using DnD.Enums.Skills;
+﻿using DnD.Enums.ClassSkills;
 using DnD.Enums.Stats;
 
 namespace DnD.Classes.HeroSkills
@@ -25,8 +25,8 @@ namespace DnD.Classes.HeroSkills
         public override int NumberOfRanks { get; set; }
 
         /// <summary>
-        /// Returns the associated <see cref="Skills"/> UseRope is.
+        /// Returns the associated <see cref="ClassSkills"/> UseRope is.
         /// </summary>
-        public override Skills SkillType => Skills.UseRope;
+        public override ClassSkills SkillType => ClassSkills.UseRope;
     }
 }
