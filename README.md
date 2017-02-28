@@ -11,3 +11,5 @@ The Project is currently contained in a Visual C# environment. Creating and link
 
 Ideas and Goals: Monster spawning factories, Item generation, Character development, Adventure Plans. External .exe tools that make
 a Dungeon master's life a little easier. External .exe game project to enjoy a randomly created engine with Text based user control.
+
+A highly utilized resource in the making of this project has been: http://www.dandwiki.com/wiki/3.5e_Homebrew
