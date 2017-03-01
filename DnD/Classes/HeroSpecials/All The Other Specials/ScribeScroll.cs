@@ -6,19 +6,19 @@ using DnD.Interfaces;
 namespace DnD.Classes.HeroSpecials
 {
     /// <summary>
-    /// The AbundantStep Special.
+    /// The ScribeScroll Special.
     /// </summary>
-    public class AbundantStep : BaseSpecial, IHeroSpecialSkillFeats
+    public class ScribeScroll : BaseSpecial, IHeroSpecialSkillFeats
     {
         /// <summary>
-        /// The minimum class level required for the ability to acquire AbundantStep.
+        /// The minimum class level required for the ability to acquire ScribeScroll.
         /// </summary>
-        public override int? MinimumLevelRequirement => 12;
+        public override int? MinimumLevelRequirement => 1;
 
         /// <summary>
         /// The associated Description tag for the string, found within the respective UserStrings files.
         /// </summary>
-        public string Description => UserStrings.SpecialStrings.AbundantStep;
+        public string Description => UserStrings.SpecialStrings.ScribeScroll;
 
         /// <summary>
         /// Nullable Skill type enumerator value. If the inheriting object is of type Skill, which one it belongs to is acquired.
@@ -36,6 +36,6 @@ namespace DnD.Classes.HeroSpecials
         /// Nullable SpecialType enumerator value. If the inheriting object is of type SpecialType, which one it belongs to is acquired.
         /// Null if not compatable.
         /// </summary>
-        public ClassSpecial? SpecialType => ClassSpecial.AbundantStep;
+        public ClassSpecial? SpecialType => ClassSpecial.ScribeScroll;
     }
 }
