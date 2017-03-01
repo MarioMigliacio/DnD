@@ -235,13 +235,11 @@ namespace SolutionUnitTests
             // this will be the preferred method of acquiring specials as we level up! It works very nicely.
             foreach (BaseSpecial bs in me.PlayerSpecials)
             {
-                if (bs is AbundantStep)
+                if (bs.MinimumLevelRequirement <= me.Level)
                 {
-                    if (bs.MinimumLevelRequirement <= me.Level)
-                    {
-                        bs.IsAcquired = true;
-                    }
+                    bs.IsAcquired = true;
                 }
+                
             }
 
             // Test conclusion: Works.

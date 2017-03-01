@@ -69,6 +69,7 @@
     <Compile Include="Classes\HeroSpecials\All The Other Specials\FavoredEnemy.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\FlurryOfBlows.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\GreaterFlurry.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\GreaterRage.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\HideInPlainSight.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\Illiteracy.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\ImprovedCombatStyle.cs" />
