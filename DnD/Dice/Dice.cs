@@ -11,46 +11,46 @@ namespace DnD.Dice
         /// <summary>
         /// Random seeded engine internal to a Dice object.
         /// </summary>
-        private static Random rng = new Random();
+        private static readonly Random Rng = new Random();
 
         /// <summary>
         /// Returns to the caller a randomly generated number ranging from 1-2.
         /// </summary>
-        public static int D2 { get { return rng.Next(1, 3); } }
+        public static int D2 => Rng.Next(1, 3);
 
         /// <summary>
         /// Return to the caller a randomly generated number ranging from 1-3.
         /// </summary>
-        public static int D3 { get { return rng.Next(1, 4); } }
+        public static int D3 => Rng.Next(1, 4);
 
         /// <summary>
         /// Returns to the caller a randomly generated number ranging from 1-4.
         /// </summary>
-        public static int D4 { get { return rng.Next(1, 5); } }
+        public static int D4 => Rng.Next(1, 5);
 
         /// <summary>
         /// Returns to the caller a randomly generated number ranging from 1-6.
         /// </summary>
-        public static int D6 { get { return rng.Next(1, 7); } }
+        public static int D6 => Rng.Next(1, 7);
 
         /// <summary>
         /// Returns to the caller a randomly generated number ranging from 1-8.
         /// </summary>
-        public static int D8 { get { return rng.Next(1, 9); } }
+        public static int D8 => Rng.Next(1, 9);
 
         /// <summary>
         /// Returns to the caller a randomly generated number ranging from 1-10.
         /// </summary>
-        public static int D10 { get { return rng.Next(1, 11); } }
+        public static int D10 => Rng.Next(1, 11);
 
         /// <summary>
         /// Returns to the caller a randomly generated number ranging from 1-12.
         /// </summary>
-        public static int D12 { get { return rng.Next(1, 13); } }
+        public static int D12 => Rng.Next(1, 13);
 
         /// <summary>
         /// Returns to the caller a randomly generated number ranging from 1-20.
         /// </summary>
-        public static int D20 { get { return rng.Next(1, 21); } }
+        public static int D20 => Rng.Next(1, 21);
     }
 }

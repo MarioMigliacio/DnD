@@ -40,18 +40,153 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\CharacterClass\BaseCharacterClass.cs" />
+    <Compile Include="Classes\CharacterClass\AllOtherClasses\Fighter.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\AbundantStep.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\AnimalCompanion.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\AuraOfCourage.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\AuraOfGood.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\BardicKnowledge.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\BardicMusic.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\BonusFeat.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Camouflage.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\CombatStyle.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\CombatStyleMastery.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\CounterSong.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\CripplingStrike.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\DamageReduction.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\DefensiveRoll.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\DetectEvil.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\DiamondBody.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\DiamondSoul.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\DivineGrace.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\DivineHealth.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\EmptyBody.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Endurance.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Evasion.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Fascinate.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\FastMovement.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\FavoredEnemy.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\FlurryOfBlows.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\GreaterFlurry.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\GreaterRage.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\HideInPlainSight.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Illiteracy.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\ImprovedCombatStyle.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\ImprovedEvasion.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\ImprovedUncannyDodge.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\IndomitableWill.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\InspireCompetence.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\InspireCourage.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\InspireGreatness.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\InspireHeroics.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\KiStrike.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\LayOnHands.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\MassSuggestion.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\MightyRage.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\NatureSense.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Opportunist.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\PerfectSelf.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\PurityOfBody.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\QuiveringPalm.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Rage.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\RemoveDisease.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\ResistNaturesLure.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\ScribeScroll.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\SkillMastery.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\SlipperyMind.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\SlowFall.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\SmiteEvil.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\SneakAttack.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\SongOfFreedom.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\SpecialMount.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\StillMind.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Suggestion.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\SummonFamiliar.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\SwiftTracker.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\ThousandFaces.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\TimelessBody.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\TirelessRage.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\TongueOfTheSunAndMoon.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Track.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\TracklessStep.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\TrapFinding.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\TrapSense.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\TurnOrRebukeUndead.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\TurnUndead.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\UnarmedStrike.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\UncannyDodge.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\VenomImmunity.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\WholenessOfBody.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\WildEmpathy.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\WildShape.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\WoodlandStride.cs" />
+    <Compile Include="Classes\HeroSpecials\SpecialFactory.cs" />
+    <Compile Include="Classes\HeroSpecials\BaseSpecial.cs" />
+    <Compile Include="Interfaces\IHeroSpecialSkillFeats.cs" />
+    <Compile Include="Classes\HeroFeats\AllOtherFeats\Acrobatic.cs" />
+    <Compile Include="Classes\HeroFeats\BaseFeat.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\EscapeArtist.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Forgery.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\GatherInformation.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\HandleAnimal.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Heal.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Hide.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Intimidate.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Jump.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Knowledge.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Listen.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\MoveSilently.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\OpenLock.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Perform.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Profession.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Ride.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Search.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\SenseMotive.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\SleightOfHand.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\SpeakLanguage.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Spellcraft.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Spot.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Survival.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Swim.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Tumble.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\UseMagicDevice.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\UseRope.cs" />
+    <Compile Include="Classes\Player\Player.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Appraise.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Balance.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Bluff.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Climb.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Concentration.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Craft.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\DecipherScript.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Diplomacy.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\DisableDevice.cs" />
+    <Compile Include="Classes\HeroSkills\All The Other Skills\Disguise.cs" />
+    <Compile Include="Classes\HeroSkills\SkillFactory.cs" />
+    <Compile Include="Classes\HeroSkills\BaseSkills.cs" />
+    <Compile Include="Enums\Pets\AnimalCompanionTypes.cs" />
+    <Compile Include="Enums\Races\RaceTypes.cs" />
+    <Compile Include="Enums\SavingThrows\SavingThrowType.cs" />
     <Compile Include="Dice\Dice.cs" />
     <Compile Include="Enums\Alignment\Alignments.cs" />
+    <Compile Include="Enums\ClassSpecials\ClassSpecials.cs" />
+    <Compile Include="Enums\ClassTypes\ClassType.cs" />
     <Compile Include="Enums\Deities\Deities.cs" />
     <Compile Include="Enums\Environments\CityFeatures.cs" />
     <Compile Include="Enums\Environments\DungeonRooms.cs" />
     <Compile Include="Enums\Environments\Furnishings.cs" />
     <Compile Include="Enums\Environments\Terrains.cs" />
     <Compile Include="Enums\Environments\UnderGroundFeatures.cs" />
+    <Compile Include="Enums\Pets\FamiliarType.cs" />
+    <Compile Include="Enums\ClassFeats\ClassFeats.cs" />
+    <Compile Include="Enums\ClassFeats\GenericFeats.cs" />
+    <Compile Include="Enums\ClassFeats\ItemCreationFeats.cs" />
+    <Compile Include="Enums\ClassFeats\MetaMagicFeats.cs" />
     <Compile Include="Enums\Items\Everything Else\AccessoryTypes.cs" />
     <Compile Include="Enums\Items\Everything Else\ArmorTypes.cs" />
     <Compile Include="Enums\Items\Everything Else\Books.cs" />
-    <Compile Include="Enums\Currencies\Money.cs" />
+    <Compile Include="Enums\Currencies\Currency.cs" />
     <Compile Include="Enums\Items\Everything Else\QuestItems.cs" />
     <Compile Include="Enums\Items\Everything Else\Scrolls.cs" />
     <Compile Include="Enums\Items\Trade Goods\Misc.cs" />
@@ -70,9 +205,58 @@
     <Compile Include="Enums\Qualities\ItemQualities.cs" />
     <Compile Include="Enums\Qualities\PotionQualities.cs" />
     <Compile Include="Enums\Qualities\ScrollQualities.cs" />
+    <Compile Include="Enums\ClassSkills\ClassSkills.cs" />
+    <Compile Include="Enums\Stats\Stats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserStrings\FeatStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeatStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserStrings\SkillStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkillStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserStrings\SpecialStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecialStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserStrings\StatStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatStrings.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="UserStrings\FeatStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FeatStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserStrings\SkillStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkillStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserStrings\SpecialStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SpecialStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserStrings\StatStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>StatStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\HeroItems\Accessories\" />
+    <Folder Include="Classes\HeroItems\Armors\" />
+    <Folder Include="Classes\HeroItems\Books\" />
+    <Folder Include="Classes\HeroItems\Potions\" />
+    <Folder Include="Classes\HeroItems\QuestItems\" />
+    <Folder Include="Classes\HeroItems\Scrolls\" />
+    <Folder Include="Classes\HeroItems\TradeGoods\" />
+    <Folder Include="Classes\HeroItems\Weapons\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

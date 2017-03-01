@@ -6,6 +6,11 @@
     public enum Misc
     {
         /// <summary>
+        /// Represents a Misc item of type SpellBook.
+        /// </summary>
+        SpellBook,
+
+        /// <summary>
         /// Represents a Misc item of type MiningPick.
         /// </summary>
         MiningPick,
@@ -44,6 +49,36 @@
         /// Represents a Misc item of type ChefsTools.
         /// </summary>
         ChefsTools,
+
+        /// <summary>
+        /// Represents a Misc item of type MagnifyingGlass.
+        /// </summary>
+        MagnifyingGlass,
+
+        /// <summary>
+        /// Represents a Misc item of type FlintAndTinder.
+        /// </summary>
+        FlintAndTinder,
+
+        /// <summary>
+        /// Represents a Misc item of type ClimbersKit.
+        /// </summary>
+        ClimbersKit,
+
+        /// <summary>
+        /// Represents a Misc item of type ArtisansTools.
+        /// </summary>
+        ArtisansTools,
+
+        /// <summary>
+        /// Represents a Misc item of type ThickRope.
+        /// </summary>
+        ThickRope,
+
+        /// <summary>
+        /// Represents a Misc item of type FrayedRope.
+        /// </summary>
+        FrayedRope,
 
         /// <summary>
         /// Represents a Misc item of type PaperScribblings.
