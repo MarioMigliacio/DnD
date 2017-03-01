@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using DnD.Classes.HeroSkills;
+using DnD.Classes.HeroSpecials;
 using DnD.Enums.Stats;
 
 namespace DnD.Classes.Player
@@ -11,12 +12,14 @@ namespace DnD.Classes.Player
     {
         public int Level { get; set; }
         public List<BaseSkill> PlayerSkills { get; }
+        public List<BaseSpecial> PlayerSpecials { get; } 
         public Dictionary<Stats, int> PlayerStats { get; }
         public int SkillCap => Level + 3;
 
         public Hero()
         {
             PlayerSkills = new List<BaseSkill>();
+            PlayerSpecials = new List<BaseSpecial>();
             PlayerStats = new Dictionary<Stats, int>();
         }
     }

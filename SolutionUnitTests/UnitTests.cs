@@ -1,5 +1,4 @@
-﻿using DnD;
-using DnD.Classes.HeroFeats;
+﻿using DnD.Classes.HeroFeats;
 using DnD.Classes.HeroSkills;
 using DnD.Classes.Player;
 using DnD.Dice;
@@ -14,6 +13,8 @@ using DnD.UserStrings;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using DnD.Classes.HeroSpecials;
+using DnD.Enums.ClassSpecials;
 
 namespace SolutionUnitTests
 {
@@ -33,7 +34,7 @@ namespace SolutionUnitTests
         {
             Random rng = new Random();
             Dictionary<Scroll, ScrollQuality> pages = new Dictionary<Scroll, ScrollQuality>();
-            List<Enum> theCollection = new List<Enum>();
+            List<Enum> inventory = new List<Enum>();
             ScrollQuality theQuality;
             int minorDistribution = 0;
             int mediumDistribution = 0;
@@ -42,46 +43,46 @@ namespace SolutionUnitTests
 
             // --- Test1 --- //
             // This massive portion of foreach loops is actually grabbing all these Enumeration types that belong to the ItemTypes group.
-            // including the sub Enums (TradeGoods). theCollection has all the basic items in the game after the loops concludes.
+            // including the sub Enums (TradeGoods). Inventory has all the basic items in the game after the loops concludes.
             foreach (ItemType it in Enum.GetValues(typeof(ItemType)))
             {
                 switch(it)
                 {
                     case ItemType.Accessory:
-                        foreach (AccessoryType acc in Enum.GetValues(typeof(AccessoryType))) { theCollection.Add(acc); } break;
+                        foreach (AccessoryType acc in Enum.GetValues(typeof(AccessoryType))) { inventory.Add(acc); } break;
                     case ItemType.Armor:
-                        foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { theCollection.Add(arm); } break;
+                        foreach (ArmorType arm in Enum.GetValues(typeof(ArmorType))) { inventory.Add(arm); } break;
                     case ItemType.Book:
-                        foreach (Book bk in Enum.GetValues(typeof(Book))) { theCollection.Add(bk); } break;
+                        foreach (Book bk in Enum.GetValues(typeof(Book))) { inventory.Add(bk); } break;
                     case ItemType.Potion:
-                        foreach (Potion pot in Enum.GetValues(typeof(Potion))) { theCollection.Add(pot); } break;
+                        foreach (Potion pot in Enum.GetValues(typeof(Potion))) { inventory.Add(pot); } break;
                     case ItemType.QuestItem:
-                        foreach (QuestItem que in Enum.GetValues(typeof(QuestItem))) { theCollection.Add(que); } break;
+                        foreach (QuestItem que in Enum.GetValues(typeof(QuestItem))) { inventory.Add(que); } break;
                     case ItemType.Scroll:
-                        foreach (Scroll scr in Enum.GetValues(typeof(Scroll))) { theCollection.Add(scr); } break;
+                        foreach (Scroll scr in Enum.GetValues(typeof(Scroll))) { inventory.Add(scr); } break;
                     case ItemType.Weapon:
-                        foreach (WeaponType wep in Enum.GetValues(typeof(WeaponType))) { theCollection.Add(wep); } break;
+                        foreach (WeaponType wep in Enum.GetValues(typeof(WeaponType))) { inventory.Add(wep); } break;
                     case ItemType.TradeGood:
                         foreach (TradeGood tg in Enum.GetValues(typeof(TradeGood)))
                         {
                             switch(tg)
                             {
                                 case TradeGood.Cloth:
-                                    foreach (Cloth clo in Enum.GetValues(typeof(Cloth))) { theCollection.Add(clo); } break;
+                                    foreach (Cloth clo in Enum.GetValues(typeof(Cloth))) { inventory.Add(clo); } break;
                                 case TradeGood.Consumable:
-                                    foreach (Consumable cons in Enum.GetValues(typeof(Consumable))) { theCollection.Add(cons); } break;
+                                    foreach (Consumable cons in Enum.GetValues(typeof(Consumable))) { inventory.Add(cons); } break;
                                 case TradeGood.Gem:
-                                    foreach (GemType gem in Enum.GetValues(typeof(GemType))) { theCollection.Add(gem); } break;
+                                    foreach (GemType gem in Enum.GetValues(typeof(GemType))) { inventory.Add(gem); } break;
                                 case TradeGood.Herb:
-                                    foreach (Herb her in Enum.GetValues(typeof(Herb))) { theCollection.Add(her); } break;
+                                    foreach (Herb her in Enum.GetValues(typeof(Herb))) { inventory.Add(her); } break;
                                 case TradeGood.Leather:
-                                    foreach (Leather let in Enum.GetValues(typeof(Leather))) { theCollection.Add(let); } break;
+                                    foreach (Leather let in Enum.GetValues(typeof(Leather))) { inventory.Add(let); } break;
                                 case TradeGood.Misc:
-                                    foreach (Misc mis in Enum.GetValues(typeof(Misc))) { theCollection.Add(mis); } break;
+                                    foreach (Misc mis in Enum.GetValues(typeof(Misc))) { inventory.Add(mis); } break;
                                 case TradeGood.Ore:
-                                    foreach (Metal metaAf in Enum.GetValues(typeof(Metal))) { theCollection.Add(metaAf); } break;
+                                    foreach (Metal metaAf in Enum.GetValues(typeof(Metal))) { inventory.Add(metaAf); } break;
                                 case TradeGood.Spice:
-                                    foreach (Spice spi in Enum.GetValues(typeof(Spice))) { theCollection.Add(spi); } break;
+                                    foreach (Spice spi in Enum.GetValues(typeof(Spice))) { inventory.Add(spi); } break;
 
                                 default: break;
                             }
@@ -93,7 +94,7 @@ namespace SolutionUnitTests
                 }
             }
 
-            numEnums = theCollection.Count;
+            numEnums = inventory.Count;
             // Test1 Results: Satisfactory.
             
             // --- Test2 --- //
@@ -186,7 +187,10 @@ namespace SolutionUnitTests
 
             foreach (ClassSkills skillz in Enum.GetValues(typeof (ClassSkills)))
             {
-                me.PlayerSkills.Add(SkillFactory.Create(skillz));
+                if (SkillFactory.Create(skillz) != null)
+                {
+                    me.PlayerSkills.Add(SkillFactory.Create(skillz));
+                }
             }
 
             // this sanity check checks that an enum from Skills = 40 (there is none) is indeed null. GOOD!
@@ -204,6 +208,41 @@ namespace SolutionUnitTests
 
             // does the abstract MaxRanksPossible member function work?!
             int cap = me.SkillCap;
+
+            // Test conclusion: Works.
+        }
+
+        /// <summary>
+        /// Test that specials are working ok. And the expected strings are correct.
+        /// </summary>
+        [TestMethod]
+        public void TestSpecialsObject()
+        {
+            Hero me = new Hero { Level = 13 };
+
+            foreach (ClassSpecial specz in Enum.GetValues(typeof(ClassSpecial)))
+            {
+                if (SpecialFactory.Create(specz) != null)
+                {
+                    me.PlayerSpecials.Add(SpecialFactory.Create(specz));
+                }
+            }
+
+            // this sanity check checks that an enum from Specials = 90 (there is none) is indeed null. GOOD!
+            var sanityCheck = SpecialFactory.Create((ClassSpecial)90);
+            Assert.AreEqual(null, sanityCheck);
+
+            // this will be the preferred method of acquiring specials as we level up! It works very nicely.
+            foreach (BaseSpecial bs in me.PlayerSpecials)
+            {
+                if (bs is AbundantStep)
+                {
+                    if (bs.MinimumLevelRequirement <= me.Level)
+                    {
+                        bs.IsAcquired = true;
+                    }
+                }
+            }
 
             // Test conclusion: Works.
         }

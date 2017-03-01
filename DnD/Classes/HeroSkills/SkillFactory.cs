@@ -9,7 +9,7 @@ namespace DnD.Classes.HeroSkills
     public static class SkillFactory
     {
         /// <summary>
-        /// The interface usage of the Factory. Creates a new skill and returns it to the caller.
+        /// The design pattern of the Factory. Creates a new skill and returns it to the caller.
         /// </summary>
         /// <param name="which">Represents the <see cref="ClassSkills"/>enum.</param>
         /// <returns>The particular Skill object which is represented by that enum.</returns>

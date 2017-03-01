@@ -1,5 +1,4 @@
-﻿using DnD.Enums.ClassSkills;
-using DnD.Enums.Stats;
+﻿using DnD.Enums.Stats;
 
 namespace DnD.Classes.HeroSkills
 {

@@ -42,6 +42,9 @@
   <ItemGroup>
     <Compile Include="Classes\CharacterClass\BaseCharacterClass.cs" />
     <Compile Include="Classes\CharacterClass\AllOtherClasses\Fighter.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\AbundantStep.cs" />
+    <Compile Include="Classes\HeroSpecials\SpecialFactory.cs" />
+    <Compile Include="Classes\HeroSpecials\BaseSpecial.cs" />
     <Compile Include="Interfaces\IHeroSpecialSkillFeats.cs" />
     <Compile Include="Classes\HeroFeats\AllOtherFeats\Acrobatic.cs" />
     <Compile Include="Classes\HeroFeats\BaseFeat.cs" />
@@ -175,7 +178,6 @@
     <Folder Include="Classes\HeroItems\Scrolls\" />
     <Folder Include="Classes\HeroItems\TradeGoods\" />
     <Folder Include="Classes\HeroItems\Weapons\" />
-    <Folder Include="Classes\HeroSpecials\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
