@@ -14,6 +14,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using DnD.Classes.HeroSpecials;
+using DnD.Enums.ClassFeats;
 using DnD.Enums.ClassSpecials;
 
 namespace SolutionUnitTests
@@ -241,6 +242,30 @@ namespace SolutionUnitTests
                 }
                 
             }
+
+            // Test conclusion: Works.
+        }
+
+        /// <summary>
+        /// Test that feats are working ok. And the expected strings are correct.
+        /// </summary>
+        [TestMethod]
+        public void TestFeatsObject()
+        {
+            Hero me = new Hero { Level = 13 };
+
+            foreach (ClassFeats featz in Enum.GetValues(typeof(ClassFeats)))
+            {
+                if (FeatFactory.Create(featz) != null)
+                {
+                    me.PlayerFeats.Add(FeatFactory.Create(featz));
+                }
+            }
+
+            // this sanity check checks that an enum from Feats = 150 (there is none) is indeed null. GOOD!
+            var sanityCheck = FeatFactory.Create((ClassFeats)150);
+            Assert.AreEqual(null, sanityCheck);
+            
 
             // Test conclusion: Works.
         }

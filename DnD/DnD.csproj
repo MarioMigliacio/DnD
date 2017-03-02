@@ -40,8 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\CharacterClass\BaseCharacterClass.cs" />
-    <Compile Include="Classes\CharacterClass\AllOtherClasses\Fighter.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Barbarian.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Bard.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Cleric.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Druid.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Monk.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Paladin.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Ranger.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Rogue.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Sorcerer.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Wizard.cs" />
+    <Compile Include="Classes\CharacterClasses\BaseCharacterClass.cs" />
+    <Compile Include="Classes\CharacterClasses\All The Other Classes\Fighter.cs" />
+    <Compile Include="Classes\HeroFeats\FeatFactory.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\AbundantStep.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\AnimalCompanion.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\AuraOfCourage.cs" />
@@ -124,7 +135,7 @@
     <Compile Include="Classes\HeroSpecials\SpecialFactory.cs" />
     <Compile Include="Classes\HeroSpecials\BaseSpecial.cs" />
     <Compile Include="Interfaces\IHeroSpecialSkillFeats.cs" />
-    <Compile Include="Classes\HeroFeats\AllOtherFeats\Acrobatic.cs" />
+    <Compile Include="Classes\HeroFeats\All The Other Feats\Acrobatic.cs" />
     <Compile Include="Classes\HeroFeats\BaseFeat.cs" />
     <Compile Include="Classes\HeroSkills\All The Other Skills\EscapeArtist.cs" />
     <Compile Include="Classes\HeroSkills\All The Other Skills\Forgery.cs" />
@@ -180,9 +191,6 @@
     <Compile Include="Enums\Environments\UnderGroundFeatures.cs" />
     <Compile Include="Enums\Pets\FamiliarType.cs" />
     <Compile Include="Enums\ClassFeats\ClassFeats.cs" />
-    <Compile Include="Enums\ClassFeats\GenericFeats.cs" />
-    <Compile Include="Enums\ClassFeats\ItemCreationFeats.cs" />
-    <Compile Include="Enums\ClassFeats\MetaMagicFeats.cs" />
     <Compile Include="Enums\Items\Everything Else\AccessoryTypes.cs" />
     <Compile Include="Enums\Items\Everything Else\ArmorTypes.cs" />
     <Compile Include="Enums\Items\Everything Else\Books.cs" />
