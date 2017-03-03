@@ -16,6 +16,6 @@ namespace DnD.Classes.CharacterClasses
         /// <summary>
         /// Represents the highest Level earned in the particular type of class.
         /// </summary>
-        public int ClassLevel { get; }
+        public int ClassLevel { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DnD.Classes.CharacterClasses;
 using DnD.Enums.Stats;
 using System.Collections.Generic;
+using DnD.Enums.ClassFeats;
 
 namespace DnD.Classes.HeroFeats
 {
@@ -23,14 +24,24 @@ namespace DnD.Classes.HeroFeats
         public abstract List<BaseFeat> FeatPrerequisites { get; }
 
         /// <summary>
-        /// Returns a key value pair which corresponds to KEY = <see cref="BaseCharacterClass"/> and VALUE = the level of that class.
-        /// Null if no required KEY/VALUE pair.
+        /// Returns a Class type with a Level if there is a required Class restriction on this feat.
         /// </summary>
-        public abstract KeyValuePair<BaseCharacterClass, int>? ClassLevelPrerequisites { get; }
+        public abstract BaseCharacterClass ClassLevelPrerequisites { get; }
 
         /// <summary>
         /// Returns a key value pair which corresponds to KEY = <see cref="Stats"/> and VALUE = the value of that stat.
         /// </summary>
-        public abstract KeyValuePair<Stats, int>? MinimumRequiredStat { get; }        
+        public abstract KeyValuePair<Stats, int>? MinimumRequiredStat { get; }
+
+        /// <summary>
+        /// The associated Description tag for the string, found within the respective UserStrings files.
+        /// </summary>
+        public abstract string Description { get; }
+
+        /// <summary>
+        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
+        /// Null if not compatable.
+        /// </summary>
+        public abstract ClassFeats? FeatType { get; }
     }
 }

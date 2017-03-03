@@ -58,6 +58,11 @@
         /// <summary>
         /// Represents the Wizard Class Type.
         /// </summary>
-        Wizard
+        Wizard,
+
+        /// <summary>
+        /// Representative of all characters requiring a particular caster level.
+        /// </summary>
+        Caster
     }
 }
