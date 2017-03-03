@@ -280,6 +280,7 @@
     <Compile Include="Classes\HeroSkills\All The Other Skills\Disguise.cs" />
     <Compile Include="Classes\HeroSkills\SkillFactory.cs" />
     <Compile Include="Classes\HeroSkills\BaseSkills.cs" />
+    <Compile Include="Enums\NpcMerchants\NpcMerchant.cs" />
     <Compile Include="Enums\Pets\AnimalCompanionTypes.cs" />
     <Compile Include="Enums\Races\RaceTypes.cs" />
     <Compile Include="Enums\SavingThrows\SavingThrowType.cs" />
