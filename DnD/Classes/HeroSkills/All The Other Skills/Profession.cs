@@ -1,15 +1,12 @@
-﻿using DnD.Enums.ClassFeats;
-using DnD.Enums.ClassSkills;
-using DnD.Enums.ClassSpecials;
+﻿using DnD.Enums.ClassSkills;
 using DnD.Enums.Stats;
-using DnD.Interfaces;
 
 namespace DnD.Classes.HeroSkills
 {
     /// <summary>
     /// The Profession Skill.
     /// </summary>
-    public class Profession : BaseSkill, IHeroSpecialSkillFeats
+    public class Profession : BaseSkill
     {
         /// <summary>
         /// Returns the type of <see cref="Stats"/> that helps boost Profession.
@@ -20,24 +17,11 @@ namespace DnD.Classes.HeroSkills
         /// <summary>
         /// Returns the associated <see cref="UserStrings.FeatStrings"/> description tag for Profession.
         /// </summary>  
-        public string Description => UserStrings.SkillStrings.Profession;
+        public override string Description => UserStrings.SkillStrings.Profession;
 
         /// <summary>
-        /// Nullable Skill type enumerator value. If the inheriting object is of type Skill, which one it belongs to is acquired.
-        /// Null if not compatable.
+        /// Returns the SkillType Enumeration value that represents this Skill.
         /// </summary>
-        public ClassSkills? SkillType => ClassSkills.Profession;
-
-        /// <summary>
-        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
-        /// Null if not compatable.
-        /// </summary>
-        public ClassFeats? FeatType => null;
-
-        /// <summary>
-        /// Nullable SpecialType enumerator value. If the inheriting object is of type SpecialType, which one it belongs to is acquired.
-        /// Null if not compatable.
-        /// </summary>
-        public ClassSpecial? SpecialType => null;
+        public override ClassSkills SkillType => ClassSkills.Profession;
     }
 }

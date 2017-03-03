@@ -1,18 +1,14 @@
 ﻿using DnD.Classes.CharacterClasses;
 using DnD.Enums.ClassFeats;
-using DnD.Enums.ClassSkills;
-using DnD.Enums.ClassSpecials;
 using DnD.Enums.Stats;
-using DnD.Interfaces;
 using System.Collections.Generic;
-using DnD.Classes.HeroSpecials;
 
 namespace DnD.Classes.HeroFeats
 {
     /// <summary>
     /// The DeflectArrows Feat.
     /// </summary>
-    public class DeflectArrows : BaseFeat, IHeroSpecialSkillFeats
+    public class DeflectArrows : BaseFeat
     {
         /// <summary>
         /// Returns the value of required base attack for the DeflectArrows feat.
@@ -31,31 +27,18 @@ namespace DnD.Classes.HeroFeats
         public override BaseCharacterClass ClassLevelPrerequisites => null;
 
         /// <summary>
-        /// Returns a key value pair which corresponds to KEY = <see cref="Stats"/> and VALUE = the value of that stat.
+        /// Returns a dictionary where KEY represents the required stat and VALUE = the value of that stat.
         /// </summary>
-        public override KeyValuePair<Stats, int>? MinimumRequiredStat => null;
+        public override Dictionary<Stats, int> MinimumRequiredStat => null;
 
         /// <summary>
         /// The associated Description tag for the string, found within the respective UserStrings files.
         /// </summary>
-        public string Description => UserStrings.FeatStrings.DeflectArrows;
+        public override string Description => UserStrings.FeatStrings.DeflectArrows;
 
         /// <summary>
-        /// Nullable Skill type enumerator value. If the inheriting object is of type Skill, which one it belongs to is acquired.
-        /// Null if not compatable.
+        /// Returns the enumeration type of Feat this particular Feat represents.
         /// </summary>
-        public ClassSkills? SkillType => null;
-
-        /// <summary>
-        /// Nullable SpecialType enumerator value. If the inheriting object is of type SpecialType, which one it belongs to is acquired.
-        /// Null if not compatable.
-        /// </summary>
-        public ClassSpecial? SpecialType => null;
-
-        /// <summary>
-        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
-        /// Null if not compatable.
-        /// </summary>
-        public ClassFeats? FeatType => ClassFeats.DeflectArrows;
+        public override ClassFeats FeatType => ClassFeats.DeflectArrows;
     }
 }

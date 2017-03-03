@@ -1,9 +1,6 @@
 ﻿using DnD.Classes.CharacterClasses;
 using DnD.Enums.ClassFeats;
-using DnD.Enums.ClassSkills;
-using DnD.Enums.ClassSpecials;
 using DnD.Enums.Stats;
-using DnD.Interfaces;
 using System.Collections.Generic;
 
 namespace DnD.Classes.HeroFeats
@@ -11,7 +8,7 @@ namespace DnD.Classes.HeroFeats
     /// <summary>
     /// The SelfSufficient Feat.
     /// </summary>
-    public class SelfSufficient : BaseFeat, IHeroSpecialSkillFeats
+    public class SelfSufficient : BaseFeat
     {
         /// <summary>
         /// Returns the value of required base attack for the SelfSufficient feat.
@@ -30,31 +27,18 @@ namespace DnD.Classes.HeroFeats
         public override BaseCharacterClass ClassLevelPrerequisites => null;
 
         /// <summary>
-        /// Returns a key value pair which corresponds to KEY = <see cref="Stats"/> and VALUE = the value of that stat.
+        /// Returns a dictionary where KEY represents the required stat and VALUE = the value of that stat.
         /// </summary>
-        public override KeyValuePair<Stats, int>? MinimumRequiredStat => null;
+        public override Dictionary<Stats, int> MinimumRequiredStat => null;
 
         /// <summary>
         /// The associated Description tag for the string, found within the respective UserStrings files.
         /// </summary>
-        public string Description => UserStrings.FeatStrings.SelfSufficient;
+        public override string Description => UserStrings.FeatStrings.SelfSufficient;
 
         /// <summary>
-        /// Nullable Skill type enumerator value. If the inheriting object is of type Skill, which one it belongs to is acquired.
-        /// Null if not compatable.
+        /// Returns the enumeration type of Feat this particular Feat represents.
         /// </summary>
-        public ClassSkills? SkillType => null;
-
-        /// <summary>
-        /// Nullable SpecialType enumerator value. If the inheriting object is of type SpecialType, which one it belongs to is acquired.
-        /// Null if not compatable.
-        /// </summary>
-        public ClassSpecial? SpecialType => null;
-
-        /// <summary>
-        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
-        /// Null if not compatable.
-        /// </summary>
-        public ClassFeats? FeatType => ClassFeats.SelfSufficient;
+        public override ClassFeats FeatType => ClassFeats.SelfSufficient;
     }
 }

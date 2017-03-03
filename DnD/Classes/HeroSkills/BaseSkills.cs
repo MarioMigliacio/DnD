@@ -1,4 +1,5 @@
-﻿using DnD.Enums.Stats;
+﻿using DnD.Enums.ClassSkills;
+using DnD.Enums.Stats;
 
 namespace DnD.Classes.HeroSkills
 {
@@ -17,5 +18,15 @@ namespace DnD.Classes.HeroSkills
         /// Exposes the number of ranks the player has alloted into this particular skill.
         /// </summary>
         public int NumberOfRanks { get; set; } = 0;
+
+        /// <summary>
+        /// Returns the associated description tag for this particular skill.
+        /// </summary>  
+        public abstract string Description { get; }
+
+        /// <summary>
+        /// Returns the SkillType Enumeration value that represents this Skill.
+        /// </summary>
+        public abstract ClassSkills SkillType { get; }
     }
 }

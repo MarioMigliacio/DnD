@@ -1,9 +1,6 @@
 ﻿using DnD.Classes.CharacterClasses;
 using DnD.Enums.ClassFeats;
-using DnD.Enums.ClassSkills;
-using DnD.Enums.ClassSpecials;
 using DnD.Enums.Stats;
-using DnD.Interfaces;
 using System.Collections.Generic;
 
 namespace DnD.Classes.HeroFeats
@@ -30,19 +27,18 @@ namespace DnD.Classes.HeroFeats
         public override BaseCharacterClass ClassLevelPrerequisites => null;
 
         /// <summary>
-        /// Returns a key value pair which corresponds to KEY = <see cref="Stats"/> and VALUE = the value of that stat.
+        /// Returns a dictionary where KEY represents the required stat and VALUE = the value of that stat.
         /// </summary>
-        public override KeyValuePair<Stats, int>? MinimumRequiredStat => null;
+        public override Dictionary<Stats, int> MinimumRequiredStat => null;
 
         /// <summary>
         /// The associated Description tag for the string, found within the respective UserStrings files.
         /// </summary>
         public override string Description => UserStrings.FeatStrings.Acrobatic;
-
+        
         /// <summary>
-        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
-        /// Null if not compatable.
+        /// Returns the enumeration type of Feat this particular Feat represents.
         /// </summary>
-        public override ClassFeats? FeatType => ClassFeats.Acrobatic;
+        public override ClassFeats FeatType => ClassFeats.Acrobatic;
     }
 }

@@ -29,9 +29,9 @@ namespace DnD.Classes.HeroFeats
         public abstract BaseCharacterClass ClassLevelPrerequisites { get; }
 
         /// <summary>
-        /// Returns a key value pair which corresponds to KEY = <see cref="Stats"/> and VALUE = the value of that stat.
+        /// Returns a dictionary where KEY represents the required stat and VALUE = the value of that stat.
         /// </summary>
-        public abstract KeyValuePair<Stats, int>? MinimumRequiredStat { get; }
+        public abstract Dictionary<Stats, int> MinimumRequiredStat { get; }
 
         /// <summary>
         /// The associated Description tag for the string, found within the respective UserStrings files.
@@ -39,9 +39,8 @@ namespace DnD.Classes.HeroFeats
         public abstract string Description { get; }
 
         /// <summary>
-        /// Nullable FeatType enumerator value. If the inheriting object is of type FeatType, which one it belongs to is acquired.
-        /// Null if not compatable.
+        /// Returns the enumeration type of Feat this particular Feat represents.
         /// </summary>
-        public abstract ClassFeats? FeatType { get; }
+        public abstract ClassFeats FeatType { get; }
     }
 }
