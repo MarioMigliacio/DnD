@@ -2,7 +2,7 @@ Special thanks to Dungeons and Dragons, Diablo, World of Warcraft, and more to b
 off this software. It is merely academic and for pure personal enjoyment and experience.
 
 Creation and development date: February, 2017. 
-Collaborators: Mario Migliacio, Nehemiah Salo.
+Collaborators: Mario Migliacio.
 
 A Dungeon Master and user's dream Tool. Aspire towards the development of a real expansive random item generator tool.
 Or even the implementation of an adventure generating platform. Whats limiting this project? Your imagination!
