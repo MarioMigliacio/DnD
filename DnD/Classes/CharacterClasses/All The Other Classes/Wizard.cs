@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Wizard : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Wizard Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Wizard;
+        public Wizard()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Wizard;
+        }
     }
 }

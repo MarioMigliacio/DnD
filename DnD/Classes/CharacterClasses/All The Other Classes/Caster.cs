@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Caster : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Caster Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Caster;
+        public Caster()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Caster;
+        }
     }
 }

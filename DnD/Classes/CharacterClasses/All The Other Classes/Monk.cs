@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Monk : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Monk Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Monk;
+        public Monk()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Monk;
+        }
     }
 }

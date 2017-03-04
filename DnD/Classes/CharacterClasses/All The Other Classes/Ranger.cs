@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Ranger : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Ranger Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Ranger;
+        public Ranger()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Ranger;
+        }
     }
 }

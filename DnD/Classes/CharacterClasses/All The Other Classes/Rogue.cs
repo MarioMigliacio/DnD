@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Rogue : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Rogue Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Rogue;
+        public Rogue()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Rogue;
+        }
     }
 }

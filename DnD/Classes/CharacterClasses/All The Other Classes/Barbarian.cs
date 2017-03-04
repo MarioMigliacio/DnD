@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Barbarian : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Barbarian Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Barbarian;
+        public Barbarian()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Barbarian;
+        }
     }
 }

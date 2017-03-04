@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Fighter : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Fighter Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Fighter;
+        public Fighter()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Fighter;
+        }
     }
 }

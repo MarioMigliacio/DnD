@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Bard : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Bard Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Bard;
+        public Bard()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Bard;
+        }
     }
 }

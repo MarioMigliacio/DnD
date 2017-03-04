@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Druid : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Druid Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Druid;
+        public Druid()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Druid;
+        }
     }
 }

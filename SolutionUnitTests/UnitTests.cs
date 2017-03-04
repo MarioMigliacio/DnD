@@ -184,7 +184,8 @@ namespace SolutionUnitTests
         [TestMethod]
         public void TestSkillsObjects()
         {
-            Hero me = new Hero {Level = 1};
+            Hero me = new Hero();
+            int w = me.Level;
 
             foreach (ClassSkills skillz in Enum.GetValues(typeof (ClassSkills)))
             {
@@ -219,7 +220,7 @@ namespace SolutionUnitTests
         [TestMethod]
         public void TestSpecialsObject()
         {
-            Hero me = new Hero { Level = 13 };
+            Hero me = new Hero();
 
             foreach (ClassSpecial specz in Enum.GetValues(typeof(ClassSpecial)))
             {
@@ -252,7 +253,7 @@ namespace SolutionUnitTests
         [TestMethod]
         public void TestFeatsObject()
         {
-            Hero me = new Hero { Level = 13 };
+            Hero me = new Hero();
 
             foreach (ClassFeats featz in Enum.GetValues(typeof(ClassFeats)))
             {

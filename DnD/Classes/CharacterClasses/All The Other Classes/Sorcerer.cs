@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Sorcerer : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Sorcerer Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Sorcerer;
+        public Sorcerer()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Sorcerer;
+        }
     }
 }

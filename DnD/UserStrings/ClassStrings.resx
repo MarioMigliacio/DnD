@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Barbarian" xml:space="preserve">
+    <value>From the frozen wastes of the north and hellish jungles of the south come brave, even reckless, warriors. Civilized people call them barbarians or berserkers and suspect them of mayhem, impiety, and atrocities. These "barbarians," however, have proven their mettle and their value to those who would be their allies. To enemies who enderestimated them, they have proved their cunning, resourcefulness, persistence, and mercilessness.</value>
+    <comment>Use for the creation of the Barbarian class.</comment>
+  </data>
+  <data name="Bard" xml:space="preserve">
+    <value>It is said that music has a special magic, and the bard proves that saying true. Wandering across the land, gathering lore, telling stories, working magic with his music, and living on the gratitude of his audience--such is the life of a bard. When chance or opportunity draws them into a conflict, bards serve as diplomats, negotiators, messengers, scouts and spies.</value>
+    <comment>Use for the creation of the Bard class.</comment>
+  </data>
+  <data name="Cleric" xml:space="preserve">
+    <value>The handiwork of the gods is everywhere--in places of natural beauty, in mighty crusades, in soaring temples, and in the hearts of worshipers. Like people, gods run the gamut from benevolent to malicious, reserved to intrusive, simple to inscrutable. The gods, however, work mostly through intermediaries--their clerics. Good clerics heal, protect, and avenge. Evil clerics pillage, destroy, and sabotage. A cleric uses the power of his god to make the god's will manifest. And if a cleric uses his god's power to imporve his own lot, that's to be expected, too.</value>
+    <comment>Use for the creation of the Cleric class.</comment>
+  </data>
+  <data name="Druid" xml:space="preserve">
+    <value>The fury of a storm, the gentle strength of the morning sun, the cunning of the fox, the power of the bear--all these and more are at the druid's command. The druid, however, claims no mastery over nature. That claim, she says, is the empy boast of a city dweller. The druid gains her power not by ruling nature but by being at one with it. To trespassers in a druid's sacred grove, and to those who feel her wrath, the distinction is overly fine.</value>
+    <comment>Use for the creation of the Druid class.</comment>
+  </data>
+  <data name="Fighter" xml:space="preserve">
+    <value>The questing knight, the conquering overlord, the king's champion, the elite foot soldier, the hardened mercenary, and the bandit king--all are fighters. Fighters can be stalwart defenders of those in need, cruel marauders, or gutsy adventurers. Some are among the land's best souls, willing to face death for the greater good. Others are among the worst, with no qualms about killing for private gain, or even for sport. Fighters who are not actively adventrueing may be soldiers, guards, bodyguards, champions, or criminal enforcers. An adventuring fighter might call himself a warrior, a mercenary, a thug, or simply an adventurer.</value>
+    <comment>Use for the creation of the Fighter class.</comment>
+  </data>
+  <data name="Monk" xml:space="preserve">
+    <value>Dotted across the landscape are monasteries--small, walled cloisters inhabited by monks who pursue personal perfection through action as well as contemplation. They train themselves to be versatile warriors skilled at fighting without weapons or armor. The inhabitants of monasteries headed by good masters serve as protectors of the people. Ready for battle even when barefoot and dressed in peasant clothes, monks can travel unnoticed among the populace, catching bandits, warlords, and corrupt nobles unaware. In contrast, the residents of monasteries headed by evil masters rule the surrounding lands through fear, as an evil warlord and his entourage might. Evil monk make ideal spies, infiltrators, and assassins.</value>
+    <comment>Use for the creation of the Monk class.</comment>
+  </data>
+  <data name="Paladin" xml:space="preserve">
+    <value>The compassion to pursue good, the will to uphold law, and the power to defeat evil--these are the three weapons of the paladin. Few have the purity and devotion that it takes to walk the paladin's path but those few are rewarded with the power to protect, to heal and to smite. In a land of scheming wizards, unholy priests, and bloodthirsty dragons, and infernal fiends, the paladin is the final hope that cannot be extinguished.</value>
+    <comment>Use for the creation of the Paladin class.</comment>
+  </data>
+  <data name="Ranger" xml:space="preserve">
+    <value>The forests and hills are home to fierce and cunning creatures, such as blood-thirsty owlbears and malicious displacer beasts. But more cunning and powerful than these monsters is the ranger, a skilled hunter and stalker. He knows the woods as if they were his home (as indeed they are), and he knows his prey in deadly detail.</value>
+    <comment>Use for the creation of the Ranger class.</comment>
+  </data>
+  <data name="Rogue" xml:space="preserve">
+    <value>Rogues have little in common with one another. Some are stealthy theives. Others are silver-tongued tricksters. Still others are scouts, infiltrators, spies, diplomats, or thugs. What they do share is versatility, adaptability, and resourcefulness. In general, rogues are skilled at getting what others don't want them to get: entrance into a locked treasure vault, safe passage past a deadly trap, secret battle plans, a guard's trust, or some random person's pocket money.</value>
+    <comment>Use for the creation of the Rogue class.</comment>
+  </data>
+  <data name="Sorcerer" xml:space="preserve">
+    <value>Sorcerers create magic the way a poet creates poems, with inborn talent honed by practice. They have no books, no mentors, no theories--just raw power that they direct at will. Some sorcerers claim that the blood of dragons courses through their veins. Although this claim demands proof, the mere demonstation of their raw power supports this claim and would be foolish to argue otherwise.</value>
+    <comment>Use for the creation of the Sorcerer class.</comment>
+  </data>
+  <data name="Wizard" xml:space="preserve">
+    <value>A few unintelligible words and fleeting gestures carry more power than a battleaxe, when they are the words and gestures of a wizard. These simple acts make magic seem easy, but they only hint at the time the wizard must spend pouring over her spellbook preparing each spell for casting, and the years before that spent in apprenticeship to learn the arts of magic. Wizards depend on intensive study to create their magic. They examine musty old tomes, debate magical theory with their peers, and practice minor magics whenever they can. For a wizard, magic is not a talent but a diffuctult, rewarding art.</value>
+    <comment>Use for the creation of the Wizard class.</comment>
+  </data>
+</root>

@@ -8,8 +8,12 @@ namespace DnD.Classes.CharacterClasses
     public class Paladin : BaseCharacterClass
     {
         /// <summary>
-        /// Represents which type of <see cref="ClassType"/> this class represents.
+        /// The defualt Paladin Constructor.
         /// </summary>
-        public override ClassType CharacterClassType => ClassType.Paladin;
+        public Paladin()
+        {
+            ClassLevel = 1;
+            CharacterClassType = ClassType.Paladin;
+        }
     }
 }
