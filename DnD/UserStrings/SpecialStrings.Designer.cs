@@ -264,6 +264,15 @@ namespace DnD.UserStrings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to At 1st level, a wizard gains Scribe Scroll as a bonus feat..
+        /// </summary>
+        public static string EnscribeScroll {
+            get {
+                return ResourceManager.GetString("EnscribeScroll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to At 2nd level or higher if a monk/rogue makes a successful Reflex saving throw against an attack that normally deals half damage on a successful save, she instead takes no damage. Evasion can be used only if a monk/rogue is wearing light armor or no armor. A helpless monk/rogue does not gain the benefit of evasion..
         /// </summary>
         public static string Evasion {
@@ -535,15 +544,6 @@ namespace DnD.UserStrings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to At 1st level, a wizard gains Scribe Scroll as a bonus feat..
-        /// </summary>
-        public static string ScribeScroll {
-            get {
-                return ResourceManager.GetString("ScribeScroll", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The rogue becomes so certain in the use of certain skills that she can use them reliably even under adverse conditions. Upon gaining this ability, she selects a number of skills equal to 3 + her Intelligence modifier. When making a skill check with one of these skills, she may take 10 even if stress and distractions would normally prevent her from doing so. A rogue may gain this special ability multiple times, selecting additional skills for it to apply to each time..
         /// </summary>
         public static string SkillMastery {
@@ -693,9 +693,9 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to A ranger gains Track as a bonus feat..
         /// </summary>
-        public static string Track {
+        public static string Tracking {
             get {
-                return ResourceManager.GetString("Track", resourceCulture);
+                return ResourceManager.GetString("Tracking", resourceCulture);
             }
         }
         

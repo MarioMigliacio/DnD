@@ -144,15 +144,16 @@ namespace DnD.Classes.Player
         /// <param name="fromBase">The Hero object we build off of.</param>
         /// <param name="which">The Class type the person has chosen for this hero.</param>
         /// <param name="what">The Race type the person has chosen for this hero.</param>
-        public Hero(Hero fromBase, ClassType which, RaceType what)
+        /// <param name="givenStats">The supplied stats that were rolled for this hero.</param>
+        public Hero(Hero fromBase, ClassType which, RaceType what, Dictionary<Stats, int> givenStats)
         {
             Level = fromBase.Level;
             PlayerSkills = fromBase.PlayerSkills;
             PlayerSpecials = fromBase.PlayerSpecials;
             PlayerFeats = fromBase.PlayerFeats;
             PlayerModifiers = fromBase.PlayerModifiers;
-            PlayerStats = fromBase.PlayerStats;
             PlayerSavingThrows = fromBase.PlayerSavingThrows;
+            PlayerStats = givenStats;
 
             switch (which)
             {
@@ -184,35 +185,10 @@ namespace DnD.Classes.Player
 
             MaxHp = HitDie;
             CurrentHp = MaxHp;
-        }
 
-        /// <summary>
-        /// The third stage of character creation. This constructor must accept the previous forms of the Hero. 
-        /// And then beyond that, this constructor prepares the Stats and stat modifiers, as well as the racial bonuses (if applicable) towards the hero.
-        /// </summary>
-        /// <param name="fromBase">The Hero object we build off of.</param>
-        /// <param name="givenStats">The supplied information of stats we will build this hero from.</param>
-        public Hero(Hero fromBase, Dictionary<Stats, int> givenStats)
-        {
-            Level = fromBase.Level;
-            MaxHp = fromBase.MaxHp;
-            CurrentHp = fromBase.CurrentHp;
-            HitDie = fromBase.HitDie;
-            BaseAttackBonus = fromBase.BaseAttackBonus;
-            Currency = fromBase.Currency;
-            PlayerRace = fromBase.PlayerRace;
-            TypeOfCharacter = fromBase.TypeOfCharacter;
-
-            PlayerSkills = fromBase.PlayerSkills;
-            PlayerSpecials = fromBase.PlayerSpecials;
-            PlayerFeats = fromBase.PlayerFeats;
-            PlayerSavingThrows = fromBase.PlayerSavingThrows;
-            PlayerModifiers = fromBase.PlayerModifiers;
-            PlayerStats = givenStats;
-
-            // use the helper methods for the next stage.
-            DetermineStatModifiers(givenStats);
-            ApplyRacialBonusToStats(PlayerRace);
+            DetermineStatModifiers();
+            ApplyRacialBonus();
+            SkillRanksAvailable = DetermineSkillRanks();
         }
 
         #endregion
@@ -244,7 +220,19 @@ namespace DnD.Classes.Player
         private void CreateBard()
         {
             HitDie = 6;
+            BaseAttackBonus = 0;
+            Currency = Dice.Dice.D4 + Dice.Dice.D4;
             TypeOfCharacter = new Bard();
+
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 2);
+
+            PlayerSpecials.Add(new BardicMusic());
+            PlayerSpecials.Add(new BardicKnowledge());
+            PlayerSpecials.Add(new CounterSong());
+            PlayerSpecials.Add(new Fascinate());
+            PlayerSpecials.Add(new InspireCourage());
         }
 
         /// <summary>
@@ -252,7 +240,16 @@ namespace DnD.Classes.Player
         /// </summary>
         private void CreateCleric()
         {
+            HitDie = 8;
+            BaseAttackBonus = 0;
+            Currency = Dice.Dice.D4;
+            TypeOfCharacter = new Cleric();
 
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 2);
+
+            PlayerSpecials.Add(new TurnOrRebukeUndead());
         }
 
         /// <summary>
@@ -260,7 +257,18 @@ namespace DnD.Classes.Player
         /// </summary>
         private void CreateDruid()
         {
+            HitDie = 8;
+            BaseAttackBonus = 0;
+            Currency = Dice.Dice.D6;
+            TypeOfCharacter = new Druid();
 
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 2);
+
+            PlayerSpecials.Add(new AnimalCompanion());
+            PlayerSpecials.Add(new NatureSense());
+            PlayerSpecials.Add(new WildEmpathy());
         }
 
         /// <summary>
@@ -268,7 +276,17 @@ namespace DnD.Classes.Player
         /// </summary>
         private void CreateFighter()
         {
+            HitDie = 10;
+            BaseAttackBonus = 1;
+            Currency = Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4;
+            TypeOfCharacter = new Fighter();
 
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 0);
+
+            // this bonus feat must be selected from the specific fighter bonus feats.
+            PlayerSpecials.Add(new BonusFeat());
         }
 
         /// <summary>
@@ -276,7 +294,20 @@ namespace DnD.Classes.Player
         /// </summary>
         private void CreateMonk()
         {
+            HitDie = 8;
+            BaseAttackBonus = 0;
+            Currency = Dice.Dice.D4 + Dice.Dice.D4;
+            TypeOfCharacter = new Monk();
 
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 2);
+
+            PlayerSpecials.Add(new FlurryOfBlows());
+            PlayerSpecials.Add(new UnarmedStrike());
+
+            // this bonus feat must either be improved grapple or stunning fist!
+            PlayerSpecials.Add(new BonusFeat());
         }
 
         /// <summary>
@@ -284,7 +315,18 @@ namespace DnD.Classes.Player
         /// </summary>
         private void CreatePaladin()
         {
+            HitDie = 10;
+            BaseAttackBonus = 1;
+            Currency = Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4;
+            TypeOfCharacter = new Paladin();
 
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 0);
+
+            PlayerSpecials.Add(new AuraOfGood());
+            PlayerSpecials.Add(new DetectEvil());
+            PlayerSpecials.Add(new SmiteEvil());
         }
 
         /// <summary>
@@ -292,7 +334,18 @@ namespace DnD.Classes.Player
         /// </summary>
         private void CreateRanger()
         {
+            HitDie = 8;
+            BaseAttackBonus = 1;
+            Currency = Dice.Dice.D4 + Dice.Dice.D4;
+            TypeOfCharacter = new Ranger();
 
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 0);
+
+            PlayerSpecials.Add(new FavoredEnemy());
+            PlayerSpecials.Add(new Tracking());
+            PlayerSpecials.Add(new WildEmpathy());
         }
 
         /// <summary>
@@ -300,7 +353,17 @@ namespace DnD.Classes.Player
         /// </summary>
         private void CreateRogue()
         {
+            HitDie = 6;
+            BaseAttackBonus = 0;
+            Currency = Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4;
+            TypeOfCharacter = new Rogue();
 
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 2);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 0);
+
+            PlayerSpecials.Add(new SneakAttack());
+            PlayerSpecials.Add(new TrapFinding());
         }
 
         /// <summary>
@@ -308,7 +371,16 @@ namespace DnD.Classes.Player
         /// </summary>
         private void CreateSorcerer()
         {
+            HitDie = 4;
+            BaseAttackBonus = 0;
+            Currency = Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4;
+            TypeOfCharacter = new Sorcerer();
 
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 2);
+
+            PlayerSpecials.Add(new SummonFamiliar());
         }
 
         /// <summary>
@@ -316,7 +388,17 @@ namespace DnD.Classes.Player
         /// </summary>
         private void CreateWizard()
         {
-            
+            HitDie = 4;
+            BaseAttackBonus = 0;
+            Currency = Dice.Dice.D6 + Dice.Dice.D6 + Dice.Dice.D6;
+            TypeOfCharacter = new Wizard();
+
+            PlayerSavingThrows.Add(SavingThrowType.Fortitude, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
+            PlayerSavingThrows.Add(SavingThrowType.Will, 2);
+
+            PlayerSpecials.Add(new SummonFamiliar());
+            PlayerSpecials.Add(new EnscribeScroll());
         }
 
         /// <summary>
@@ -324,14 +406,20 @@ namespace DnD.Classes.Player
         /// </summary>
         private void MakeElf()
         {
-            Listen listen = new Listen {NumberOfRanks = 2};
-            PlayerSkills.Add(listen);
+            if (!PlayerSkills.Contains(new Listen()))
+            {
+                PlayerSkills.Add(new Listen {NumberOfRanks = 2});
+            }
 
-            Search search = new Search {NumberOfRanks = 2};
-            PlayerSkills.Add(search);
+            if (!PlayerSkills.Contains(new Search()))
+            {
+                PlayerSkills.Add(new Search {NumberOfRanks = 2});
+            }
 
-            Spot spot = new Spot {NumberOfRanks = 2};
-            PlayerSkills.Add(spot);
+            if (!PlayerSkills.Contains(new Spot()))
+            {
+                PlayerSkills.Add(new Spot {NumberOfRanks = 2});
+            }
         }
 
         /// <summary>
@@ -339,11 +427,15 @@ namespace DnD.Classes.Player
         /// </summary>
         private void MakeGnome()
         {
-            Listen listen = new Listen { NumberOfRanks = 2 };
-            PlayerSkills.Add(listen);
+            if (!PlayerSkills.Contains(new Listen()))
+            {
+                PlayerSkills.Add(new Listen {NumberOfRanks = 2});
+            }
 
-            Craft craft = new Craft() {NumberOfRanks = 2};
-            PlayerSkills.Add(craft);
+            if (!PlayerSkills.Contains(new Craft()))
+            {
+                PlayerSkills.Add(new Craft {NumberOfRanks = 2});
+            }
         }
 
         /// <summary>
@@ -351,20 +443,30 @@ namespace DnD.Classes.Player
         /// </summary>
         private void MakeHalfElf()
         {
-            Listen listen = new Listen {NumberOfRanks = 1};
-            PlayerSkills.Add(listen);
+            if (!PlayerSkills.Contains(new Listen()))
+            {
+                PlayerSkills.Add(new Listen {NumberOfRanks = 1});
+            }
 
-            Search search = new Search {NumberOfRanks = 1};
-            PlayerSkills.Add(search);
+            if (!PlayerSkills.Contains(new Search()))
+            {
+                PlayerSkills.Add(new Search {NumberOfRanks = 1});
+            }
 
-            Spot spot = new Spot {NumberOfRanks = 1};
-            PlayerSkills.Add(spot);
+            if (!PlayerSkills.Contains(new Spot()))
+            {
+                PlayerSkills.Add(new Spot {NumberOfRanks = 1});
+            }
 
-            Diplomacy diplomacy = new Diplomacy {NumberOfRanks = 2};
-            PlayerSkills.Add(diplomacy);
+            if (!PlayerSkills.Contains(new Diplomacy()))
+            {
+                PlayerSkills.Add(new Diplomacy {NumberOfRanks = 2});
+            }
 
-            GatherInformation gatherInformation = new GatherInformation {NumberOfRanks = 2};
-            PlayerSkills.Add(gatherInformation);
+            if (!PlayerSkills.Contains(new GatherInformation()))
+            {
+                PlayerSkills.Add(new GatherInformation {NumberOfRanks = 2});
+            }
         }
 
         /// <summary>
@@ -372,11 +474,15 @@ namespace DnD.Classes.Player
         /// </summary>
         private void MakeHalfOrc()
         {
-            Climb climb = new Climb {NumberOfRanks = 1};
-            PlayerSkills.Add(climb);
+            if (!PlayerSkills.Contains(new Listen()))
+            {
+                PlayerSkills.Add(new Climb {NumberOfRanks = 1});
+            }
 
-            Swim swim = new Swim() {NumberOfRanks = 1};
-            PlayerSkills.Add(swim);
+            if (!PlayerSkills.Contains(new Swim()))
+            {
+                PlayerSkills.Add(new Swim {NumberOfRanks = 1});
+            }
         }
 
         /// <summary>
@@ -384,18 +490,24 @@ namespace DnD.Classes.Player
         /// </summary>
         private void MakeHalfling()
         {
-            Climb climb = new Climb {NumberOfRanks = 2};
-            PlayerSkills.Add(climb);
+            if (!PlayerSkills.Contains(new Climb()))
+            {
+                PlayerSkills.Add(new Climb {NumberOfRanks = 2});
+            }
 
-            Jump jump = new Jump {NumberOfRanks = 2};
-            PlayerSkills.Add(jump);
+            if (!PlayerSkills.Contains(new Jump()))
+            {
+                PlayerSkills.Add(new Jump {NumberOfRanks = 2});
+            }
 
-            MoveSilently moveSilently = new MoveSilently {NumberOfRanks = 2};
-            PlayerSkills.Add(moveSilently);
+            if (!PlayerSkills.Contains(new MoveSilently()))
+            {
+                PlayerSkills.Add(new MoveSilently {NumberOfRanks = 2});
+            }
         }
 
         /// <summary>
-        /// Humans are the youngest species of the races, and therefore have the most to prove. Their ability to learn fast is unparalleled.
+        /// Humans are the youngest species of the races, and therefore have the most to prove. Their ability to learn fast is unparalelled.
         /// </summary>
         private void MakeHuman()
         {
@@ -404,12 +516,37 @@ namespace DnD.Classes.Player
         }
 
         /// <summary>
+        /// The number of available skill ranks depends on the rolled intellect for the hero as well as the class of hero.
+        /// </summary>
+        /// <returns>Returns the value which should be set for SkillRanksAvailable.</returns>
+        private int DetermineSkillRanks()
+        {
+            int retval = 0;
+
+            switch (TypeOfCharacter.CharacterClassType)
+            {
+                case ClassType.Barbarian: retval = (PlayerModifiers[Stats.Intellect] + 4) * 4; break;
+                case ClassType.Bard: retval = (PlayerModifiers[Stats.Intellect] + 6) * 4; break;
+                case ClassType.Cleric: retval = (PlayerModifiers[Stats.Intellect] + 2) * 4; break;
+                case ClassType.Druid: retval = (PlayerModifiers[Stats.Intellect] + 4) * 4; break;
+                case ClassType.Fighter: retval = (PlayerModifiers[Stats.Intellect] + 2) * 4; break;
+                case ClassType.Monk: retval = (PlayerModifiers[Stats.Intellect] + 4) * 4; break;
+                case ClassType.Paladin: retval = (PlayerModifiers[Stats.Intellect] + 2) * 4; break;
+                case ClassType.Ranger: retval = (PlayerModifiers[Stats.Intellect] + 6) * 4; break;
+                case ClassType.Rogue: retval = (PlayerModifiers[Stats.Intellect] + 8) * 4; break;
+                case ClassType.Sorcerer: retval = (PlayerModifiers[Stats.Intellect] + 2) * 4; break;
+                case ClassType.Wizard: retval = (PlayerModifiers[Stats.Intellect] + 2) * 4; break;
+            }
+
+            return retval;
+        }
+
+        /// <summary>
         /// A helper method that Populates the heros PlayerModifiers property to the expected value.
         /// </summary>
-        /// <param name="givenStats">A dictionary where the KEY = the Stat type, and the VAL = integer value at index.</param>
-        private void DetermineStatModifiers(Dictionary<Stats, int> givenStats)
+        private void DetermineStatModifiers()
         {
-            foreach (var stat in givenStats)
+            foreach (var stat in PlayerStats)
             {
                 int theValue = 0;
 
@@ -437,10 +574,9 @@ namespace DnD.Classes.Player
         /// <summary>
         /// A helper method that directly influences the PlayerStats property based on the influence of the PlayerRace selected.
         /// </summary>
-        /// <param name="which">The race which is to incluence the PlayerStats property.</param>
-        private void ApplyRacialBonusToStats(RaceType which)
+        private void ApplyRacialBonus()
         {
-            switch (which)
+            switch (PlayerRace)
             {
                 case RaceType.Dwarf:
                     PlayerStats[Stats.Constitution] += 2;
@@ -449,19 +585,29 @@ namespace DnD.Classes.Player
                 case RaceType.Elf:
                     PlayerStats[Stats.Dexterity] += 2;
                     PlayerStats[Stats.Constitution] -= 2;
+                    MakeElf();
                     break;
                 case RaceType.Gnome:
                     PlayerStats[Stats.Constitution] += 2;
                     PlayerStats[Stats.Strength] -= 2;
+                    MakeGnome();
                     break;
                 case RaceType.HalfOrc:
                     PlayerStats[Stats.Strength] += 3;
                     PlayerStats[Stats.Intellect] -= 2;
                     PlayerStats[Stats.Charisma] -= 2;
+                    MakeHalfOrc();
                     break;
                 case RaceType.Halfling:
                     PlayerStats[Stats.Dexterity] += 2;
                     PlayerStats[Stats.Strength] -= 2;
+                    MakeHalfling();
+                    break;
+                case RaceType.Human:
+                    MakeHuman();
+                    break;
+                case RaceType.HalfElf:
+                    MakeHalfElf();
                     break;
                 default: break;
             }

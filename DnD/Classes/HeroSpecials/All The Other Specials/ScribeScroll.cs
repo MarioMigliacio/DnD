@@ -3,23 +3,23 @@
 namespace DnD.Classes.HeroSpecials
 {
     /// <summary>
-    /// The ScribeScroll Special.
+    /// The EnscribeScroll Special.
     /// </summary>
-    public class ScribeScroll : BaseSpecial
+    public class EnscribeScroll : BaseSpecial
     {
         /// <summary>
-        /// The minimum class level required for the ability to acquire ScribeScroll.
+        /// The minimum class level required for the ability to acquire EnscribeScroll.
         /// </summary>
         public override int? MinimumLevelRequirement => 1;
 
         /// <summary>
         /// The associated Description tag for the string, found within the respective UserStrings files.
         /// </summary>
-        public override string Description => UserStrings.SpecialStrings.ScribeScroll;
+        public override string Description => UserStrings.SpecialStrings.EnscribeScroll;
 
         /// <summary>
         /// Returns the ClassSpecial Enumeration type represented by this Special.
         /// </summary>
-        public override ClassSpecial SpecialType => ClassSpecial.ScribeScroll;
+        public override ClassSpecial SpecialType => ClassSpecial.EnscribeScroll;
     }
 }

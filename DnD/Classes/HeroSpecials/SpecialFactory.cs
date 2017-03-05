@@ -67,7 +67,7 @@ namespace DnD.Classes.HeroSpecials
                 case ClassSpecial.Rage: return new Rage();
                 case ClassSpecial.RemoveDisease: return new RemoveDisease();
                 case ClassSpecial.ResistNaturesLure: return new ResistNaturesLure();
-                case ClassSpecial.ScribeScroll: return new ScribeScroll();
+                case ClassSpecial.EnscribeScroll: return new EnscribeScroll();
                 case ClassSpecial.SkillMastery: return new SkillMastery();
                 case ClassSpecial.SlipperyMind: return new SlipperyMind();
                 case ClassSpecial.SlowFall: return new SlowFall();
@@ -83,7 +83,7 @@ namespace DnD.Classes.HeroSpecials
                 case ClassSpecial.TimelessBody: return new TimelessBody();
                 case ClassSpecial.TirelessRage: return new TirelessRage();
                 case ClassSpecial.TongueOfTheSunAndMoon: return new TongueOfTheSunAndMoon();
-                case ClassSpecial.Track: return new Track();
+                case ClassSpecial.Tracking: return new Tracking();
                 case ClassSpecial.TracklessStep: return new TracklessStep();
                 case ClassSpecial.TrapFinding: return new TrapFinding();
                 case ClassSpecial.TrapSense: return new TrapSense();

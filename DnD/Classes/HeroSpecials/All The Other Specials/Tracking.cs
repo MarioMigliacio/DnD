@@ -3,23 +3,23 @@
 namespace DnD.Classes.HeroSpecials
 {
     /// <summary>
-    /// The Track Special.
+    /// The Tracking Special.
     /// </summary>
-    public class Track : BaseSpecial
+    public class Tracking : BaseSpecial
     {
         /// <summary>
-        /// The minimum class level required for the ability to acquire Track.
+        /// The minimum class level required for the ability to acquire Tracking.
         /// </summary>
         public override int? MinimumLevelRequirement => 1;
 
         /// <summary>
         /// The associated Description tag for the string, found within the respective UserStrings files.
         /// </summary>
-        public override string Description => UserStrings.SpecialStrings.Track;
+        public override string Description => UserStrings.SpecialStrings.Tracking;
 
         /// <summary>
         /// Returns the ClassSpecial Enumeration type represented by this Special.
         /// </summary>
-        public override ClassSpecial SpecialType => ClassSpecial.Track;
+        public override ClassSpecial SpecialType => ClassSpecial.Tracking;
     }
 }

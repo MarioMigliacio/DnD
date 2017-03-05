@@ -344,7 +344,7 @@
         /// <summary>
         /// Represents the Track Special.
         /// </summary>
-        Track,
+        Tracking,
 
         /// <summary>
         /// Represents the Combat Style Special.
@@ -441,6 +441,6 @@
         /// <summary>
         /// Represents the Scribe Scroll Special.
         /// </summary>
-        ScribeScroll
+        EnscribeScroll
     }
 }

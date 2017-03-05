@@ -221,6 +221,10 @@ As before, the benefits of the ranger’s chosen style apply only when he wears 
     <value>A ranger gains Endurance as a bonus feat at 3rd level.</value>
     <comment>Acquired at level 3.</comment>
   </data>
+  <data name="EnscribeScroll" xml:space="preserve">
+    <value>At 1st level, a wizard gains Scribe Scroll as a bonus feat.</value>
+    <comment>Acquired at level 1.</comment>
+  </data>
   <data name="Evasion" xml:space="preserve">
     <value>At 2nd level or higher if a monk/rogue makes a successful Reflex saving throw against an attack that normally deals half damage on a successful save, she instead takes no damage. Evasion can be used only if a monk/rogue is wearing light armor or no armor. A helpless monk/rogue does not gain the benefit of evasion.</value>
     <comment>Acquired at level 2.</comment>
@@ -359,10 +363,6 @@ Alternatively, a paladin can use any or all of this healing power to deal damage
     <value>Starting at 4th level, a druid gains a +4 bonus on saving throws against the spell-like abilities of fey.</value>
     <comment>Acquired at level 4.</comment>
   </data>
-  <data name="ScribeScroll" xml:space="preserve">
-    <value>At 1st level, a wizard gains Scribe Scroll as a bonus feat.</value>
-    <comment>Acquired at level 1.</comment>
-  </data>
   <data name="SkillMastery" xml:space="preserve">
     <value>The rogue becomes so certain in the use of certain skills that she can use them reliably even under adverse conditions. Upon gaining this ability, she selects a number of skills equal to 3 + her Intelligence modifier. When making a skill check with one of these skills, she may take 10 even if stress and distractions would normally prevent her from doing so. A rogue may gain this special ability multiple times, selecting additional skills for it to apply to each time.</value>
     <comment>Acquired at level 10, 13, 16, or 19 (chosen).</comment>
@@ -447,7 +447,7 @@ Bonuses still accrue, and the druid still dies of old age when her time is up.</
     <value>A monk of 17th level or higher can speak with any living creature.</value>
     <comment>Acquired at level 17.</comment>
   </data>
-  <data name="Track" xml:space="preserve">
+  <data name="Tracking" xml:space="preserve">
     <value>A ranger gains Track as a bonus feat.</value>
     <comment>Acquired at level 1.</comment>
   </data>

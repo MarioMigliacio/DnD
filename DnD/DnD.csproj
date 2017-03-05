@@ -224,7 +224,7 @@
     <Compile Include="Classes\HeroSpecials\All The Other Specials\TimelessBody.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\TirelessRage.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\TongueOfTheSunAndMoon.cs" />
-    <Compile Include="Classes\HeroSpecials\All The Other Specials\Track.cs" />
+    <Compile Include="Classes\HeroSpecials\All The Other Specials\Tracking.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\TracklessStep.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\TrapFinding.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\TrapSense.cs" />
