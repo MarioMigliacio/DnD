@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using HeroMaker.Enums;
 
-namespace HeroMaker
+namespace HeroMaker.Forms
 {
     /// <summary>
     /// The initial form for the character creation application.

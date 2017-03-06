@@ -1,4 +1,4 @@
-﻿namespace HeroMaker
+﻿namespace HeroMaker.Forms
 {
     partial class Init
     {
@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Init));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Create = new System.Windows.Forms.Button();
+            this.createButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,15 +44,15 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Create
+            // createButton
             // 
-            this.Create.Location = new System.Drawing.Point(834, 12);
-            this.Create.Name = "Create";
-            this.Create.Size = new System.Drawing.Size(138, 38);
-            this.Create.TabIndex = 2;
-            this.Create.Text = "CREATE!";
-            this.Create.UseVisualStyleBackColor = true;
-            this.Create.Click += new System.EventHandler(this.create_Click);
+            this.createButton.Location = new System.Drawing.Point(834, 12);
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(138, 38);
+            this.createButton.TabIndex = 2;
+            this.createButton.Text = "CREATE!";
+            this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.create_Click);
             // 
             // textBox1
             // 
@@ -73,7 +73,7 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Create);
+            this.Controls.Add(this.createButton);
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Init";
@@ -88,7 +88,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Create;
+        private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

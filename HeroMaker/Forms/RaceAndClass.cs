@@ -56,11 +56,11 @@ namespace HeroMaker.Forms
                 DesiredRaceType.DesiredRace == RaceType.None ||
                 DesiredClassType.DesiredClass == ClassType.None)
             {
-                saveChanges.Enabled = false;
+                saveChangesButton.Enabled = false;
             }
             else
             {
-                saveChanges.Enabled = true;
+                saveChangesButton.Enabled = true;
             }
         }
 

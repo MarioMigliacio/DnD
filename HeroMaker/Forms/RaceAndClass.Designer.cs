@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.saveChanges = new System.Windows.Forms.Button();
+            this.saveChangesButton = new System.Windows.Forms.Button();
             this.verticalBar = new System.Windows.Forms.Label();
             this.suggestedNamesGroupBox = new System.Windows.Forms.GroupBox();
             this.randomNameButton = new System.Windows.Forms.Button();
@@ -60,8 +60,8 @@
             this.halflingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.humanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classDescriptionGroupBox = new System.Windows.Forms.GroupBox();
-            this.raceDescriptionGroupBox = new System.Windows.Forms.GroupBox();
             this.classDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.raceDescriptionGroupBox = new System.Windows.Forms.GroupBox();
             this.raceDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.errorGroupBox = new System.Windows.Forms.GroupBox();
             this.errorMessageTextBox = new System.Windows.Forms.TextBox();
@@ -73,16 +73,16 @@
             this.errorGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // saveChanges
+            // saveChangesButton
             // 
-            this.saveChanges.Enabled = false;
-            this.saveChanges.Location = new System.Drawing.Point(550, 550);
-            this.saveChanges.Name = "saveChanges";
-            this.saveChanges.Size = new System.Drawing.Size(200, 50);
-            this.saveChanges.TabIndex = 0;
-            this.saveChanges.Text = "Save Changes";
-            this.saveChanges.UseVisualStyleBackColor = true;
-            this.saveChanges.Click += new System.EventHandler(this.TestState_Click);
+            this.saveChangesButton.Enabled = false;
+            this.saveChangesButton.Location = new System.Drawing.Point(550, 550);
+            this.saveChangesButton.Name = "saveChangesButton";
+            this.saveChangesButton.Size = new System.Drawing.Size(200, 50);
+            this.saveChangesButton.TabIndex = 0;
+            this.saveChangesButton.Text = "Save Changes";
+            this.saveChangesButton.UseVisualStyleBackColor = true;
+            this.saveChangesButton.Click += new System.EventHandler(this.TestState_Click);
             // 
             // verticalBar
             // 
@@ -163,14 +163,14 @@
             // maleToolStripMenuItem
             // 
             this.maleToolStripMenuItem.Name = "maleToolStripMenuItem";
-            this.maleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.maleToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.maleToolStripMenuItem.Text = "Male";
             this.maleToolStripMenuItem.Click += new System.EventHandler(this.maleToolStripMenuItem_Click);
             // 
             // femaleToolStripMenuItem
             // 
             this.femaleToolStripMenuItem.Name = "femaleToolStripMenuItem";
-            this.femaleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.femaleToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.femaleToolStripMenuItem.Text = "Female";
             this.femaleToolStripMenuItem.Click += new System.EventHandler(this.femaleToolStripMenuItem_Click);
             // 
@@ -195,77 +195,77 @@
             // barbarianToolStripMenuItem
             // 
             this.barbarianToolStripMenuItem.Name = "barbarianToolStripMenuItem";
-            this.barbarianToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.barbarianToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.barbarianToolStripMenuItem.Text = "Barbarian";
             this.barbarianToolStripMenuItem.Click += new System.EventHandler(this.barbarianToolStripMenuItem_Click);
             // 
             // bardToolStripMenuItem
             // 
             this.bardToolStripMenuItem.Name = "bardToolStripMenuItem";
-            this.bardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bardToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.bardToolStripMenuItem.Text = "Bard";
             this.bardToolStripMenuItem.Click += new System.EventHandler(this.bardToolStripMenuItem_Click);
             // 
             // clericToolStripMenuItem
             // 
             this.clericToolStripMenuItem.Name = "clericToolStripMenuItem";
-            this.clericToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clericToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.clericToolStripMenuItem.Text = "Cleric";
             this.clericToolStripMenuItem.Click += new System.EventHandler(this.clericToolStripMenuItem_Click);
             // 
             // druidToolStripMenuItem
             // 
             this.druidToolStripMenuItem.Name = "druidToolStripMenuItem";
-            this.druidToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.druidToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.druidToolStripMenuItem.Text = "Druid";
             this.druidToolStripMenuItem.Click += new System.EventHandler(this.druidToolStripMenuItem_Click);
             // 
             // fighterToolStripMenuItem
             // 
             this.fighterToolStripMenuItem.Name = "fighterToolStripMenuItem";
-            this.fighterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fighterToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.fighterToolStripMenuItem.Text = "Fighter";
             this.fighterToolStripMenuItem.Click += new System.EventHandler(this.fighterToolStripMenuItem_Click);
             // 
             // monkToolStripMenuItem
             // 
             this.monkToolStripMenuItem.Name = "monkToolStripMenuItem";
-            this.monkToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.monkToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.monkToolStripMenuItem.Text = "Monk";
             this.monkToolStripMenuItem.Click += new System.EventHandler(this.monkToolStripMenuItem_Click);
             // 
             // paladinToolStripMenuItem
             // 
             this.paladinToolStripMenuItem.Name = "paladinToolStripMenuItem";
-            this.paladinToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.paladinToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.paladinToolStripMenuItem.Text = "Paladin";
             this.paladinToolStripMenuItem.Click += new System.EventHandler(this.paladinToolStripMenuItem_Click);
             // 
             // rangerToolStripMenuItem
             // 
             this.rangerToolStripMenuItem.Name = "rangerToolStripMenuItem";
-            this.rangerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rangerToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.rangerToolStripMenuItem.Text = "Ranger";
             this.rangerToolStripMenuItem.Click += new System.EventHandler(this.rangerToolStripMenuItem_Click);
             // 
             // rogueToolStripMenuItem
             // 
             this.rogueToolStripMenuItem.Name = "rogueToolStripMenuItem";
-            this.rogueToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rogueToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.rogueToolStripMenuItem.Text = "Rogue";
             this.rogueToolStripMenuItem.Click += new System.EventHandler(this.rogueToolStripMenuItem_Click);
             // 
             // sorcererToolStripMenuItem
             // 
             this.sorcererToolStripMenuItem.Name = "sorcererToolStripMenuItem";
-            this.sorcererToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sorcererToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.sorcererToolStripMenuItem.Text = "Sorcerer";
             this.sorcererToolStripMenuItem.Click += new System.EventHandler(this.sorcererToolStripMenuItem_Click);
             // 
             // wizardToolStripMenuItem
             // 
             this.wizardToolStripMenuItem.Name = "wizardToolStripMenuItem";
-            this.wizardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.wizardToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.wizardToolStripMenuItem.Text = "Wizard";
             this.wizardToolStripMenuItem.Click += new System.EventHandler(this.wizardToolStripMenuItem_Click);
             // 
@@ -286,49 +286,49 @@
             // dwarfToolStripMenuItem
             // 
             this.dwarfToolStripMenuItem.Name = "dwarfToolStripMenuItem";
-            this.dwarfToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dwarfToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.dwarfToolStripMenuItem.Text = "Dwarf";
             this.dwarfToolStripMenuItem.Click += new System.EventHandler(this.dwarfToolStripMenuItem_Click);
             // 
             // elfToolStripMenuItem
             // 
             this.elfToolStripMenuItem.Name = "elfToolStripMenuItem";
-            this.elfToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.elfToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.elfToolStripMenuItem.Text = "Elf";
             this.elfToolStripMenuItem.Click += new System.EventHandler(this.elfToolStripMenuItem_Click);
             // 
             // gnomeToolStripMenuItem
             // 
             this.gnomeToolStripMenuItem.Name = "gnomeToolStripMenuItem";
-            this.gnomeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gnomeToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.gnomeToolStripMenuItem.Text = "Gnome";
             this.gnomeToolStripMenuItem.Click += new System.EventHandler(this.gnomeToolStripMenuItem_Click);
             // 
             // halfElfToolStripMenuItem
             // 
             this.halfElfToolStripMenuItem.Name = "halfElfToolStripMenuItem";
-            this.halfElfToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.halfElfToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.halfElfToolStripMenuItem.Text = "HalfElf";
             this.halfElfToolStripMenuItem.Click += new System.EventHandler(this.halfElfToolStripMenuItem_Click);
             // 
             // halfOrcToolStripMenuItem
             // 
             this.halfOrcToolStripMenuItem.Name = "halfOrcToolStripMenuItem";
-            this.halfOrcToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.halfOrcToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.halfOrcToolStripMenuItem.Text = "HalfOrc";
             this.halfOrcToolStripMenuItem.Click += new System.EventHandler(this.halfOrcToolStripMenuItem_Click);
             // 
             // halflingToolStripMenuItem
             // 
             this.halflingToolStripMenuItem.Name = "halflingToolStripMenuItem";
-            this.halflingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.halflingToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.halflingToolStripMenuItem.Text = "Halfling";
             this.halflingToolStripMenuItem.Click += new System.EventHandler(this.halflingToolStripMenuItem_Click);
             // 
             // humanToolStripMenuItem
             // 
             this.humanToolStripMenuItem.Name = "humanToolStripMenuItem";
-            this.humanToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.humanToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.humanToolStripMenuItem.Text = "Human";
             this.humanToolStripMenuItem.Click += new System.EventHandler(this.humanToolStripMenuItem_Click);
             // 
@@ -342,16 +342,6 @@
             this.classDescriptionGroupBox.TabStop = false;
             this.classDescriptionGroupBox.Text = "Class Description";
             // 
-            // raceDescriptionGroupBox
-            // 
-            this.raceDescriptionGroupBox.Controls.Add(this.raceDescriptionTextBox);
-            this.raceDescriptionGroupBox.Location = new System.Drawing.Point(509, 35);
-            this.raceDescriptionGroupBox.Name = "raceDescriptionGroupBox";
-            this.raceDescriptionGroupBox.Size = new System.Drawing.Size(463, 444);
-            this.raceDescriptionGroupBox.TabIndex = 10;
-            this.raceDescriptionGroupBox.TabStop = false;
-            this.raceDescriptionGroupBox.Text = "Race Description";
-            // 
             // classDescriptionTextBox
             // 
             this.classDescriptionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -362,6 +352,16 @@
             this.classDescriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.classDescriptionTextBox.Size = new System.Drawing.Size(468, 418);
             this.classDescriptionTextBox.TabIndex = 0;
+            // 
+            // raceDescriptionGroupBox
+            // 
+            this.raceDescriptionGroupBox.Controls.Add(this.raceDescriptionTextBox);
+            this.raceDescriptionGroupBox.Location = new System.Drawing.Point(509, 35);
+            this.raceDescriptionGroupBox.Name = "raceDescriptionGroupBox";
+            this.raceDescriptionGroupBox.Size = new System.Drawing.Size(463, 444);
+            this.raceDescriptionGroupBox.TabIndex = 10;
+            this.raceDescriptionGroupBox.TabStop = false;
+            this.raceDescriptionGroupBox.Text = "Race Description";
             // 
             // raceDescriptionTextBox
             // 
@@ -406,7 +406,7 @@
             this.Controls.Add(this.heroNameBox);
             this.Controls.Add(this.suggestedNamesGroupBox);
             this.Controls.Add(this.verticalBar);
-            this.Controls.Add(this.saveChanges);
+            this.Controls.Add(this.saveChangesButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "RaceAndClass";
@@ -431,7 +431,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button saveChanges;
+        private System.Windows.Forms.Button saveChangesButton;
         private System.Windows.Forms.Label verticalBar;
         private System.Windows.Forms.GroupBox suggestedNamesGroupBox;
         private System.Windows.Forms.Button randomNameButton;

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HeroMaker.Enums
+﻿namespace HeroMaker.Enums
 {
     /// <summary>
     /// GameState enumeration type to control which type of form we need to transition into.
