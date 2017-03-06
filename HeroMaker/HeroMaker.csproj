@@ -60,6 +60,12 @@
     <Compile Include="Forms\RaceAndClass.Designer.cs">
       <DependentUpon>RaceAndClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Stat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stat.Designer.cs">
+      <DependentUpon>Stat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Static Information Containers\DesiredClassType.cs" />
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RaceAndClass.resx">
       <DependentUpon>RaceAndClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stat.resx">
+      <DependentUpon>Stat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -24,6 +24,7 @@ namespace HeroMaker
             {
                 case GameState.Init: return new Init();
                 case GameState.RaceAndClass: return new RaceAndClass();
+                case GameState.Stat: return new Stat();
                 default: return null;
             }
         }
