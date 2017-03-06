@@ -6,6 +6,11 @@
     public enum RaceType
     {
         /// <summary>
+        /// Defaulting purposes.
+        /// </summary>
+        None,
+
+        /// <summary>
         /// Represents the Race Type Dwarf.
         /// </summary>
         Dwarf,

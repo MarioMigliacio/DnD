@@ -6,6 +6,11 @@
     public enum ClassType
     {
         /// <summary>
+        /// Defaulting purposes.
+        /// </summary>
+        None,
+
+        /// <summary>
         /// Represents the Barbarian Class Type.
         /// </summary>
         Barbarian,

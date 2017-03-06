@@ -22,7 +22,7 @@ namespace DnD.UserStrings {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ClassStrings {
+    public class ClassStrings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace DnD.UserStrings {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DnD.UserStrings.ClassStrings", typeof(ClassStrings).Assembly);
@@ -51,7 +51,7 @@ namespace DnD.UserStrings {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to From the frozen wastes of the north and hellish jungles of the south come brave, even reckless, warriors. Civilized people call them barbarians or berserkers and suspect them of mayhem, impiety, and atrocities. These &quot;barbarians,&quot; however, have proven their mettle and their value to those who would be their allies. To enemies who enderestimated them, they have proved their cunning, resourcefulness, persistence, and mercilessness..
         /// </summary>
-        internal static string Barbarian {
+        public static string Barbarian {
             get {
                 return ResourceManager.GetString("Barbarian", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to It is said that music has a special magic, and the bard proves that saying true. Wandering across the land, gathering lore, telling stories, working magic with his music, and living on the gratitude of his audience--such is the life of a bard. When chance or opportunity draws them into a conflict, bards serve as diplomats, negotiators, messengers, scouts and spies..
         /// </summary>
-        internal static string Bard {
+        public static string Bard {
             get {
                 return ResourceManager.GetString("Bard", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to The handiwork of the gods is everywhere--in places of natural beauty, in mighty crusades, in soaring temples, and in the hearts of worshipers. Like people, gods run the gamut from benevolent to malicious, reserved to intrusive, simple to inscrutable. The gods, however, work mostly through intermediaries--their clerics. Good clerics heal, protect, and avenge. Evil clerics pillage, destroy, and sabotage. A cleric uses the power of his god to make the god&apos;s will manifest. And if a cleric uses his god&apos;s power t [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Cleric {
+        public static string Cleric {
             get {
                 return ResourceManager.GetString("Cleric", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to The fury of a storm, the gentle strength of the morning sun, the cunning of the fox, the power of the bear--all these and more are at the druid&apos;s command. The druid, however, claims no mastery over nature. That claim, she says, is the empy boast of a city dweller. The druid gains her power not by ruling nature but by being at one with it. To trespassers in a druid&apos;s sacred grove, and to those who feel her wrath, the distinction is overly fine..
         /// </summary>
-        internal static string Druid {
+        public static string Druid {
             get {
                 return ResourceManager.GetString("Druid", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to The questing knight, the conquering overlord, the king&apos;s champion, the elite foot soldier, the hardened mercenary, and the bandit king--all are fighters. Fighters can be stalwart defenders of those in need, cruel marauders, or gutsy adventurers. Some are among the land&apos;s best souls, willing to face death for the greater good. Others are among the worst, with no qualms about killing for private gain, or even for sport. Fighters who are not actively adventrueing may be soldiers, guards, bodyguards, champions, [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Fighter {
+        public static string Fighter {
             get {
                 return ResourceManager.GetString("Fighter", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to Dotted across the landscape are monasteries--small, walled cloisters inhabited by monks who pursue personal perfection through action as well as contemplation. They train themselves to be versatile warriors skilled at fighting without weapons or armor. The inhabitants of monasteries headed by good masters serve as protectors of the people. Ready for battle even when barefoot and dressed in peasant clothes, monks can travel unnoticed among the populace, catching bandits, warlords, and corrupt nobles unaware. [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Monk {
+        public static string Monk {
             get {
                 return ResourceManager.GetString("Monk", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to The compassion to pursue good, the will to uphold law, and the power to defeat evil--these are the three weapons of the paladin. Few have the purity and devotion that it takes to walk the paladin&apos;s path but those few are rewarded with the power to protect, to heal and to smite. In a land of scheming wizards, unholy priests, and bloodthirsty dragons, and infernal fiends, the paladin is the final hope that cannot be extinguished..
         /// </summary>
-        internal static string Paladin {
+        public static string Paladin {
             get {
                 return ResourceManager.GetString("Paladin", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to The forests and hills are home to fierce and cunning creatures, such as blood-thirsty owlbears and malicious displacer beasts. But more cunning and powerful than these monsters is the ranger, a skilled hunter and stalker. He knows the woods as if they were his home (as indeed they are), and he knows his prey in deadly detail..
         /// </summary>
-        internal static string Ranger {
+        public static string Ranger {
             get {
                 return ResourceManager.GetString("Ranger", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to Rogues have little in common with one another. Some are stealthy theives. Others are silver-tongued tricksters. Still others are scouts, infiltrators, spies, diplomats, or thugs. What they do share is versatility, adaptability, and resourcefulness. In general, rogues are skilled at getting what others don&apos;t want them to get: entrance into a locked treasure vault, safe passage past a deadly trap, secret battle plans, a guard&apos;s trust, or some random person&apos;s pocket money..
         /// </summary>
-        internal static string Rogue {
+        public static string Rogue {
             get {
                 return ResourceManager.GetString("Rogue", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to Sorcerers create magic the way a poet creates poems, with inborn talent honed by practice. They have no books, no mentors, no theories--just raw power that they direct at will. Some sorcerers claim that the blood of dragons courses through their veins. Although this claim demands proof, the mere demonstation of their raw power supports this claim and would be foolish to argue otherwise..
         /// </summary>
-        internal static string Sorcerer {
+        public static string Sorcerer {
             get {
                 return ResourceManager.GetString("Sorcerer", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace DnD.UserStrings {
         /// <summary>
         ///   Looks up a localized string similar to A few unintelligible words and fleeting gestures carry more power than a battleaxe, when they are the words and gestures of a wizard. These simple acts make magic seem easy, but they only hint at the time the wizard must spend pouring over her spellbook preparing each spell for casting, and the years before that spent in apprenticeship to learn the arts of magic. Wizards depend on intensive study to create their magic. They examine musty old tomes, debate magical theory with their peers, and practice minor  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Wizard {
+        public static string Wizard {
             get {
                 return ResourceManager.GetString("Wizard", resourceCulture);
             }

@@ -16,6 +16,9 @@ using System.Collections.Generic;
 using DnD.Classes.HeroSpecials;
 using DnD.Enums.ClassFeats;
 using DnD.Enums.ClassSpecials;
+using DnD.Enums.ClassTypes;
+using DnD.Enums.Races;
+using DnD.Enums.Stats;
 
 namespace SolutionUnitTests
 {
@@ -184,7 +187,7 @@ namespace SolutionUnitTests
         [TestMethod]
         public void TestSkillsObjects()
         {
-            Hero me = new Hero();
+            Hero me = Hero.GetInitialHero();
             int w = me.Level;
 
             foreach (ClassSkills skillz in Enum.GetValues(typeof (ClassSkills)))
@@ -220,7 +223,7 @@ namespace SolutionUnitTests
         [TestMethod]
         public void TestSpecialsObject()
         {
-            Hero me = new Hero();
+            Hero me = Hero.GetInitialHero();
 
             foreach (ClassSpecial specz in Enum.GetValues(typeof(ClassSpecial)))
             {
@@ -234,6 +237,8 @@ namespace SolutionUnitTests
             var sanityCheck = SpecialFactory.Create((ClassSpecial)90);
             Assert.AreEqual(null, sanityCheck);
 
+            List<BaseSpecial> toRemove = new List<BaseSpecial>();
+
             // this will be the preferred method of acquiring specials as we level up! It works very nicely.
             foreach (BaseSpecial bs in me.PlayerSpecials)
             {
@@ -241,7 +246,16 @@ namespace SolutionUnitTests
                 {
                     bs.IsAcquired = true;
                 }
-                
+                if (bs.IsAcquired == false)
+                {
+                    toRemove.Add(bs);
+                }
+            }
+
+            // this foreach loop checks the list of specials where IsAcquired is false, and attempts to remove them from the players list of acquired specials. Works.
+            foreach (BaseSpecial bs in toRemove)
+            {
+                me.PlayerSpecials.Remove(bs);
             }
 
             // Test conclusion: Works.
@@ -253,7 +267,7 @@ namespace SolutionUnitTests
         [TestMethod]
         public void TestFeatsObject()
         {
-            Hero me = new Hero();
+            Hero me = Hero.GetInitialHero();
 
             foreach (ClassFeats featz in Enum.GetValues(typeof(ClassFeats)))
             {
@@ -267,8 +281,29 @@ namespace SolutionUnitTests
             var sanityCheck = FeatFactory.Create((ClassFeats)150);
             Assert.AreEqual(null, sanityCheck);
             
-
             // Test conclusion: Works.
+        }
+
+        /// <summary>
+        /// This test is in place to ensure that if we feed a Hero a List of stats, a race, and a class type it will generate the appropriate hero.
+        /// </summary>
+        [TestMethod]
+        public void TestStageTwoHero()
+        {
+            Dictionary<Stats, int> stats = new Dictionary<Stats, int>
+            {
+                { Stats.Charisma, 10 },
+                { Stats.Constitution, 11 },
+                { Stats.Dexterity, 12 },
+                { Stats.Intellect, 11 },
+                { Stats.Strength, 14 },
+                { Stats.Wisdom, 9 }
+            };
+
+            ClassType thisdude = ClassType.Barbarian;
+            RaceType isaRaceType = RaceType.HalfOrc;
+
+            Hero me = Hero.GetStageTwoHero(thisdude, isaRaceType, stats);
         }
     }
 }

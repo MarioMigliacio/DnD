@@ -6,6 +6,11 @@
     public enum Alignment
     {
         /// <summary>
+        /// Defaulting purposes.
+        /// </summary>
+        None,
+
+        /// <summary>
         /// Represents the Alignment status Good.
         /// </summary>
         Good,

@@ -280,6 +280,18 @@
     <Compile Include="Classes\HeroSkills\All The Other Skills\Disguise.cs" />
     <Compile Include="Classes\HeroSkills\SkillFactory.cs" />
     <Compile Include="Classes\HeroSkills\BaseSkills.cs" />
+    <Compile Include="Enums\NamesByRace\NamesDwarfFemale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesDwarfMale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesElfFemale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesElfMale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesGnomeFemale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesGnomeMale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesHalflingFemale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesHalflingMale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesHalfOrcFemale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesHalfOrcMale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesHumanFemale.cs" />
+    <Compile Include="Enums\NamesByRace\NamesHumanMale.cs" />
     <Compile Include="Enums\NpcMerchants\NpcMerchant.cs" />
     <Compile Include="Enums\Pets\AnimalCompanionTypes.cs" />
     <Compile Include="Enums\Races\RaceTypes.cs" />
@@ -356,7 +368,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UserStrings\ClassStrings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ClassStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserStrings\FeatStrings.resx">
@@ -364,7 +376,7 @@
       <LastGenOutput>FeatStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserStrings\RaceStrings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RaceStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserStrings\SkillStrings.resx">
