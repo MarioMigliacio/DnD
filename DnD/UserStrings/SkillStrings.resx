@@ -204,9 +204,33 @@ If you want to find out about a specific rumor, or a specific item, or obtain a 
     <comment>Benefits from Cha.</comment>
   </data>
   <data name="HandleAnimal" xml:space="preserve">
-    <value>An evening’s time, a few gold pieces for buying drinks and making friends, and a DC 10 Gather Information check get you a general idea of a city’s major news items, assuming there are no obvious reasons why the information would be withheld. The higher your check result, the better the information.
+    <value>This task involves commanding an animal to perform a task or trick that it knows. If the animal is wounded or has taken any nonlethal damage or ability score damage, the DC increases by 2. If your check succeeds, the animal performs the task or trick on its next action.
 
-If you want to find out about a specific rumor, or a specific item, or obtain a map, or do something else along those lines, the DC for the check is 15 to 25, or even higher.</value>
+You can teach an animal a specific trick with one week of work and a successful Handle Animal check against the indicated DC. An animal with an Intelligence score of 1 can learn a maximum of three tricks, while an animal with an Intelligence score of 2 can learn a maximum of six tricks. Possible tricks (and their associated DCs) include, but are not necessarily limited to, the following.
+
+Attack (DC 20): The animal attacks apparent enemies. You may point to a particular creature that you wish the animal to attack, and it will comply if able. Normally, an animal will attack only humanoids, monstrous humanoids, giants, or other animals. Teaching an animal to attack all creatures (including such unnatural creatures as undead and aberrations) counts as two tricks.
+
+Come (DC 15): The animal comes to you, even if it normally would not do so.
+
+Defend (DC 20): The animal defends you (or is ready to defend you if no threat is present), even without any command being given. Alternatively, you can command the animal to defend a specific other character.
+
+Down (DC 15): The animal breaks off from combat or otherwise backs down. An animal that doesn’t know this trick continues to fight until it must flee (due to injury, a fear effect, or the like) or its opponent is defeated.
+
+Fetch (DC 15): The animal goes and gets something. If you do not point out a specific item, the animal fetches some random object.
+
+Guard (DC 20): The animal stays in place and prevents others from approaching.
+
+Heel (DC 15): The animal follows you closely, even to places where it normally wouldn’t go.
+
+Perform (DC 15): The animal performs a variety of simple tricks, such as sitting up, rolling over, roaring or barking, and so on.
+
+Seek (DC 15): The animal moves into an area and looks around for anything that is obviously alive or animate.
+
+Stay (DC 15): The animal stays in place, waiting for you to return. It does not challenge other creatures that come by, though it still defends itself if it needs to.
+
+Track (DC 20): The animal tracks the scent presented to it. (This requires the animal to have the scent ability)
+
+Work (DC 15): The animal pulls or pushes a medium or heavy load.</value>
     <comment>Benefits from Cha.</comment>
   </data>
   <data name="Heal" xml:space="preserve">
@@ -359,7 +383,16 @@ You must consciously choose which requirement to emulate. That is, you must know
     <comment>Benefits from Cha.</comment>
   </data>
   <data name="UseRope" xml:space="preserve">
-    <value>See the manual for the detailed list of rope checks.</value>
+    <value>See the manual for the detailed list of rope checks.
+10	Tie a firm knot.
+10	Secure a grappling hook.
+15	Tie a special knot.
+15	Tie a rope around yourself one-handed.
+15	Splice two ropes together.
+Varies	Bind a character.
+50	Quick splicing.
+60	Tie unique knot.
+80	Animate held rope.</value>
     <comment>Benefits from Dex.</comment>
   </data>
 </root>

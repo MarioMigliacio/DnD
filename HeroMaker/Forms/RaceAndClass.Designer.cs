@@ -134,6 +134,7 @@
             // herosNameTextBox
             // 
             this.herosNameTextBox.Location = new System.Drawing.Point(7, 20);
+            this.herosNameTextBox.MaxLength = 30;
             this.herosNameTextBox.Name = "herosNameTextBox";
             this.herosNameTextBox.Size = new System.Drawing.Size(281, 20);
             this.herosNameTextBox.TabIndex = 0;

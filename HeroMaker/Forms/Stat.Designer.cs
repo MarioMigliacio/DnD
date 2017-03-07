@@ -30,29 +30,31 @@
         {
             this.saveChangesButton = new System.Windows.Forms.Button();
             this.rollStatButton = new System.Windows.Forms.Button();
-            this.rerollLastStatButton = new System.Windows.Forms.Button();
+            this.rerollLastRollButton = new System.Windows.Forms.Button();
             this.rerollAllStatsButton = new System.Windows.Forms.Button();
             this.rerollsGroupBox = new System.Windows.Forms.GroupBox();
-            this.currentDiceRollTextBox = new System.Windows.Forms.TextBox();
             this.statRerollTextBox = new System.Windows.Forms.TextBox();
+            this.currentDiceRollTextBox = new System.Windows.Forms.TextBox();
             this.charismaGroupBox = new System.Windows.Forms.GroupBox();
-            this.constitutionGroupBox = new System.Windows.Forms.GroupBox();
-            this.dexterityGroupBox = new System.Windows.Forms.GroupBox();
-            this.intellectGroupBox = new System.Windows.Forms.GroupBox();
-            this.strengthGroupBox = new System.Windows.Forms.GroupBox();
-            this.wisdomGroupBox = new System.Windows.Forms.GroupBox();
-            this.charismaValueTextBox = new System.Windows.Forms.TextBox();
-            this.constitutionValueTextBox = new System.Windows.Forms.TextBox();
-            this.dexterityValueTextBox = new System.Windows.Forms.TextBox();
-            this.intellectValueTextBox = new System.Windows.Forms.TextBox();
-            this.strengthValueTextBox = new System.Windows.Forms.TextBox();
-            this.wisdomValueTextBox = new System.Windows.Forms.TextBox();
-            this.intellectLockInButton = new System.Windows.Forms.Button();
             this.charismaLockInButton = new System.Windows.Forms.Button();
+            this.charismaValueTextBox = new System.Windows.Forms.TextBox();
+            this.constitutionGroupBox = new System.Windows.Forms.GroupBox();
             this.constitutionLockInButton = new System.Windows.Forms.Button();
-            this.strengthLockInButton = new System.Windows.Forms.Button();
+            this.constitutionValueTextBox = new System.Windows.Forms.TextBox();
+            this.dexterityGroupBox = new System.Windows.Forms.GroupBox();
             this.dexterityLockInButton = new System.Windows.Forms.Button();
+            this.dexterityValueTextBox = new System.Windows.Forms.TextBox();
+            this.intellectGroupBox = new System.Windows.Forms.GroupBox();
+            this.intellectLockInButton = new System.Windows.Forms.Button();
+            this.intellectValueTextBox = new System.Windows.Forms.TextBox();
+            this.strengthGroupBox = new System.Windows.Forms.GroupBox();
+            this.strengthLockInButton = new System.Windows.Forms.Button();
+            this.strengthValueTextBox = new System.Windows.Forms.TextBox();
+            this.wisdomGroupBox = new System.Windows.Forms.GroupBox();
             this.wisdomLockInButton = new System.Windows.Forms.Button();
+            this.wisdomValueTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rerollCountTextBox = new System.Windows.Forms.TextBox();
             this.rerollsGroupBox.SuspendLayout();
             this.charismaGroupBox.SuspendLayout();
             this.constitutionGroupBox.SuspendLayout();
@@ -60,6 +62,7 @@
             this.intellectGroupBox.SuspendLayout();
             this.strengthGroupBox.SuspendLayout();
             this.wisdomGroupBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // saveChangesButton
@@ -85,18 +88,20 @@
             this.rollStatButton.TabIndex = 1;
             this.rollStatButton.Text = "Roll Stat";
             this.rollStatButton.UseVisualStyleBackColor = false;
+            this.rollStatButton.Click += new System.EventHandler(this.rollStatButton_Click);
             // 
-            // rerollLastStatButton
+            // rerollLastRollButton
             // 
-            this.rerollLastStatButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rerollLastStatButton.Enabled = false;
-            this.rerollLastStatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rerollLastStatButton.Location = new System.Drawing.Point(334, 12);
-            this.rerollLastStatButton.Name = "rerollLastStatButton";
-            this.rerollLastStatButton.Size = new System.Drawing.Size(316, 48);
-            this.rerollLastStatButton.TabIndex = 2;
-            this.rerollLastStatButton.Text = "Reroll Last Stat";
-            this.rerollLastStatButton.UseVisualStyleBackColor = false;
+            this.rerollLastRollButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rerollLastRollButton.Enabled = false;
+            this.rerollLastRollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rerollLastRollButton.Location = new System.Drawing.Point(334, 12);
+            this.rerollLastRollButton.Name = "rerollLastRollButton";
+            this.rerollLastRollButton.Size = new System.Drawing.Size(316, 48);
+            this.rerollLastRollButton.TabIndex = 2;
+            this.rerollLastRollButton.Text = "Reroll Last Roll";
+            this.rerollLastRollButton.UseVisualStyleBackColor = false;
+            this.rerollLastRollButton.Click += new System.EventHandler(this.rerollLastRollButton_Click);
             // 
             // rerollAllStatsButton
             // 
@@ -109,6 +114,7 @@
             this.rerollAllStatsButton.TabIndex = 3;
             this.rerollAllStatsButton.Text = "Reroll All Stats";
             this.rerollAllStatsButton.UseVisualStyleBackColor = false;
+            this.rerollAllStatsButton.Click += new System.EventHandler(this.rerollAllStatsButton_Click);
             // 
             // rerollsGroupBox
             // 
@@ -122,20 +128,24 @@
             this.rerollsGroupBox.TabStop = false;
             this.rerollsGroupBox.Text = "Current Dice Rolls";
             // 
-            // currentDiceRollTextBox
-            // 
-            this.currentDiceRollTextBox.Location = new System.Drawing.Point(7, 26);
-            this.currentDiceRollTextBox.Name = "currentDiceRollTextBox";
-            this.currentDiceRollTextBox.Size = new System.Drawing.Size(303, 26);
-            this.currentDiceRollTextBox.TabIndex = 0;
-            // 
             // statRerollTextBox
             // 
+            this.statRerollTextBox.Enabled = false;
             this.statRerollTextBox.Location = new System.Drawing.Point(7, 58);
             this.statRerollTextBox.Multiline = true;
             this.statRerollTextBox.Name = "statRerollTextBox";
+            this.statRerollTextBox.ReadOnly = true;
             this.statRerollTextBox.Size = new System.Drawing.Size(303, 423);
             this.statRerollTextBox.TabIndex = 1;
+            // 
+            // currentDiceRollTextBox
+            // 
+            this.currentDiceRollTextBox.Enabled = false;
+            this.currentDiceRollTextBox.Location = new System.Drawing.Point(7, 26);
+            this.currentDiceRollTextBox.Name = "currentDiceRollTextBox";
+            this.currentDiceRollTextBox.ReadOnly = true;
+            this.currentDiceRollTextBox.Size = new System.Drawing.Size(303, 26);
+            this.currentDiceRollTextBox.TabIndex = 0;
             // 
             // charismaGroupBox
             // 
@@ -149,6 +159,26 @@
             this.charismaGroupBox.TabStop = false;
             this.charismaGroupBox.Text = "CHARISMA";
             // 
+            // charismaLockInButton
+            // 
+            this.charismaLockInButton.Enabled = false;
+            this.charismaLockInButton.Location = new System.Drawing.Point(76, 78);
+            this.charismaLockInButton.Name = "charismaLockInButton";
+            this.charismaLockInButton.Size = new System.Drawing.Size(158, 48);
+            this.charismaLockInButton.TabIndex = 5;
+            this.charismaLockInButton.Text = "Lock In";
+            this.charismaLockInButton.UseVisualStyleBackColor = true;
+            this.charismaLockInButton.Click += new System.EventHandler(this.charismaLockInButton_Click);
+            // 
+            // charismaValueTextBox
+            // 
+            this.charismaValueTextBox.Enabled = false;
+            this.charismaValueTextBox.Location = new System.Drawing.Point(7, 26);
+            this.charismaValueTextBox.Name = "charismaValueTextBox";
+            this.charismaValueTextBox.ReadOnly = true;
+            this.charismaValueTextBox.Size = new System.Drawing.Size(303, 26);
+            this.charismaValueTextBox.TabIndex = 0;
+            // 
             // constitutionGroupBox
             // 
             this.constitutionGroupBox.Controls.Add(this.constitutionLockInButton);
@@ -160,6 +190,26 @@
             this.constitutionGroupBox.TabIndex = 6;
             this.constitutionGroupBox.TabStop = false;
             this.constitutionGroupBox.Text = "CONSTITUTION";
+            // 
+            // constitutionLockInButton
+            // 
+            this.constitutionLockInButton.Enabled = false;
+            this.constitutionLockInButton.Location = new System.Drawing.Point(76, 80);
+            this.constitutionLockInButton.Name = "constitutionLockInButton";
+            this.constitutionLockInButton.Size = new System.Drawing.Size(158, 48);
+            this.constitutionLockInButton.TabIndex = 5;
+            this.constitutionLockInButton.Text = "Lock In";
+            this.constitutionLockInButton.UseVisualStyleBackColor = true;
+            this.constitutionLockInButton.Click += new System.EventHandler(this.constitutionLockInButton_Click);
+            // 
+            // constitutionValueTextBox
+            // 
+            this.constitutionValueTextBox.Enabled = false;
+            this.constitutionValueTextBox.Location = new System.Drawing.Point(7, 26);
+            this.constitutionValueTextBox.Name = "constitutionValueTextBox";
+            this.constitutionValueTextBox.ReadOnly = true;
+            this.constitutionValueTextBox.Size = new System.Drawing.Size(303, 26);
+            this.constitutionValueTextBox.TabIndex = 0;
             // 
             // dexterityGroupBox
             // 
@@ -173,6 +223,26 @@
             this.dexterityGroupBox.TabStop = false;
             this.dexterityGroupBox.Text = "DEXTERITY";
             // 
+            // dexterityLockInButton
+            // 
+            this.dexterityLockInButton.Enabled = false;
+            this.dexterityLockInButton.Location = new System.Drawing.Point(76, 84);
+            this.dexterityLockInButton.Name = "dexterityLockInButton";
+            this.dexterityLockInButton.Size = new System.Drawing.Size(158, 48);
+            this.dexterityLockInButton.TabIndex = 6;
+            this.dexterityLockInButton.Text = "Lock In";
+            this.dexterityLockInButton.UseVisualStyleBackColor = true;
+            this.dexterityLockInButton.Click += new System.EventHandler(this.dexterityLockInButton_Click);
+            // 
+            // dexterityValueTextBox
+            // 
+            this.dexterityValueTextBox.Enabled = false;
+            this.dexterityValueTextBox.Location = new System.Drawing.Point(7, 26);
+            this.dexterityValueTextBox.Name = "dexterityValueTextBox";
+            this.dexterityValueTextBox.ReadOnly = true;
+            this.dexterityValueTextBox.Size = new System.Drawing.Size(303, 26);
+            this.dexterityValueTextBox.TabIndex = 0;
+            // 
             // intellectGroupBox
             // 
             this.intellectGroupBox.Controls.Add(this.intellectLockInButton);
@@ -184,6 +254,26 @@
             this.intellectGroupBox.TabIndex = 6;
             this.intellectGroupBox.TabStop = false;
             this.intellectGroupBox.Text = "INTELLECT";
+            // 
+            // intellectLockInButton
+            // 
+            this.intellectLockInButton.Enabled = false;
+            this.intellectLockInButton.Location = new System.Drawing.Point(79, 78);
+            this.intellectLockInButton.Name = "intellectLockInButton";
+            this.intellectLockInButton.Size = new System.Drawing.Size(158, 48);
+            this.intellectLockInButton.TabIndex = 4;
+            this.intellectLockInButton.Text = "Lock In";
+            this.intellectLockInButton.UseVisualStyleBackColor = true;
+            this.intellectLockInButton.Click += new System.EventHandler(this.intellectLockInButton_Click);
+            // 
+            // intellectValueTextBox
+            // 
+            this.intellectValueTextBox.Enabled = false;
+            this.intellectValueTextBox.Location = new System.Drawing.Point(7, 26);
+            this.intellectValueTextBox.Name = "intellectValueTextBox";
+            this.intellectValueTextBox.ReadOnly = true;
+            this.intellectValueTextBox.Size = new System.Drawing.Size(303, 26);
+            this.intellectValueTextBox.TabIndex = 0;
             // 
             // strengthGroupBox
             // 
@@ -197,6 +287,26 @@
             this.strengthGroupBox.TabStop = false;
             this.strengthGroupBox.Text = "STRENGTH";
             // 
+            // strengthLockInButton
+            // 
+            this.strengthLockInButton.Enabled = false;
+            this.strengthLockInButton.Location = new System.Drawing.Point(79, 80);
+            this.strengthLockInButton.Name = "strengthLockInButton";
+            this.strengthLockInButton.Size = new System.Drawing.Size(158, 48);
+            this.strengthLockInButton.TabIndex = 6;
+            this.strengthLockInButton.Text = "Lock In";
+            this.strengthLockInButton.UseVisualStyleBackColor = true;
+            this.strengthLockInButton.Click += new System.EventHandler(this.strengthLockInButton_Click);
+            // 
+            // strengthValueTextBox
+            // 
+            this.strengthValueTextBox.Enabled = false;
+            this.strengthValueTextBox.Location = new System.Drawing.Point(7, 26);
+            this.strengthValueTextBox.Name = "strengthValueTextBox";
+            this.strengthValueTextBox.ReadOnly = true;
+            this.strengthValueTextBox.Size = new System.Drawing.Size(303, 26);
+            this.strengthValueTextBox.TabIndex = 0;
+            // 
             // wisdomGroupBox
             // 
             this.wisdomGroupBox.Controls.Add(this.wisdomLockInButton);
@@ -209,101 +319,45 @@
             this.wisdomGroupBox.TabStop = false;
             this.wisdomGroupBox.Text = "WISDOM";
             // 
-            // charismaValueTextBox
-            // 
-            this.charismaValueTextBox.Location = new System.Drawing.Point(7, 26);
-            this.charismaValueTextBox.Name = "charismaValueTextBox";
-            this.charismaValueTextBox.Size = new System.Drawing.Size(303, 26);
-            this.charismaValueTextBox.TabIndex = 0;
-            // 
-            // constitutionValueTextBox
-            // 
-            this.constitutionValueTextBox.Location = new System.Drawing.Point(7, 26);
-            this.constitutionValueTextBox.Name = "constitutionValueTextBox";
-            this.constitutionValueTextBox.Size = new System.Drawing.Size(303, 26);
-            this.constitutionValueTextBox.TabIndex = 0;
-            // 
-            // dexterityValueTextBox
-            // 
-            this.dexterityValueTextBox.Location = new System.Drawing.Point(7, 26);
-            this.dexterityValueTextBox.Name = "dexterityValueTextBox";
-            this.dexterityValueTextBox.Size = new System.Drawing.Size(303, 26);
-            this.dexterityValueTextBox.TabIndex = 0;
-            // 
-            // intellectValueTextBox
-            // 
-            this.intellectValueTextBox.Location = new System.Drawing.Point(7, 26);
-            this.intellectValueTextBox.Name = "intellectValueTextBox";
-            this.intellectValueTextBox.Size = new System.Drawing.Size(303, 26);
-            this.intellectValueTextBox.TabIndex = 0;
-            // 
-            // strengthValueTextBox
-            // 
-            this.strengthValueTextBox.Location = new System.Drawing.Point(7, 26);
-            this.strengthValueTextBox.Name = "strengthValueTextBox";
-            this.strengthValueTextBox.Size = new System.Drawing.Size(303, 26);
-            this.strengthValueTextBox.TabIndex = 0;
-            // 
-            // wisdomValueTextBox
-            // 
-            this.wisdomValueTextBox.Location = new System.Drawing.Point(7, 26);
-            this.wisdomValueTextBox.Name = "wisdomValueTextBox";
-            this.wisdomValueTextBox.Size = new System.Drawing.Size(303, 26);
-            this.wisdomValueTextBox.TabIndex = 0;
-            // 
-            // intellectLockInButton
-            // 
-            this.intellectLockInButton.Location = new System.Drawing.Point(79, 78);
-            this.intellectLockInButton.Name = "intellectLockInButton";
-            this.intellectLockInButton.Size = new System.Drawing.Size(158, 48);
-            this.intellectLockInButton.TabIndex = 4;
-            this.intellectLockInButton.Text = "Lock In";
-            this.intellectLockInButton.UseVisualStyleBackColor = true;
-            // 
-            // charismaLockInButton
-            // 
-            this.charismaLockInButton.Location = new System.Drawing.Point(76, 78);
-            this.charismaLockInButton.Name = "charismaLockInButton";
-            this.charismaLockInButton.Size = new System.Drawing.Size(158, 48);
-            this.charismaLockInButton.TabIndex = 5;
-            this.charismaLockInButton.Text = "Lock In";
-            this.charismaLockInButton.UseVisualStyleBackColor = true;
-            // 
-            // constitutionLockInButton
-            // 
-            this.constitutionLockInButton.Location = new System.Drawing.Point(76, 80);
-            this.constitutionLockInButton.Name = "constitutionLockInButton";
-            this.constitutionLockInButton.Size = new System.Drawing.Size(158, 48);
-            this.constitutionLockInButton.TabIndex = 5;
-            this.constitutionLockInButton.Text = "Lock In";
-            this.constitutionLockInButton.UseVisualStyleBackColor = true;
-            // 
-            // strengthLockInButton
-            // 
-            this.strengthLockInButton.Location = new System.Drawing.Point(79, 80);
-            this.strengthLockInButton.Name = "strengthLockInButton";
-            this.strengthLockInButton.Size = new System.Drawing.Size(158, 48);
-            this.strengthLockInButton.TabIndex = 6;
-            this.strengthLockInButton.Text = "Lock In";
-            this.strengthLockInButton.UseVisualStyleBackColor = true;
-            // 
-            // dexterityLockInButton
-            // 
-            this.dexterityLockInButton.Location = new System.Drawing.Point(76, 84);
-            this.dexterityLockInButton.Name = "dexterityLockInButton";
-            this.dexterityLockInButton.Size = new System.Drawing.Size(158, 48);
-            this.dexterityLockInButton.TabIndex = 6;
-            this.dexterityLockInButton.Text = "Lock In";
-            this.dexterityLockInButton.UseVisualStyleBackColor = true;
-            // 
             // wisdomLockInButton
             // 
+            this.wisdomLockInButton.Enabled = false;
             this.wisdomLockInButton.Location = new System.Drawing.Point(79, 84);
             this.wisdomLockInButton.Name = "wisdomLockInButton";
             this.wisdomLockInButton.Size = new System.Drawing.Size(158, 48);
             this.wisdomLockInButton.TabIndex = 7;
             this.wisdomLockInButton.Text = "Lock In";
             this.wisdomLockInButton.UseVisualStyleBackColor = true;
+            this.wisdomLockInButton.Click += new System.EventHandler(this.wisdomLockInButton_Click);
+            // 
+            // wisdomValueTextBox
+            // 
+            this.wisdomValueTextBox.Enabled = false;
+            this.wisdomValueTextBox.Location = new System.Drawing.Point(7, 26);
+            this.wisdomValueTextBox.Name = "wisdomValueTextBox";
+            this.wisdomValueTextBox.ReadOnly = true;
+            this.wisdomValueTextBox.Size = new System.Drawing.Size(303, 26);
+            this.wisdomValueTextBox.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rerollCountTextBox);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(415, 58);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(152, 48);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Rerolls Remaining";
+            // 
+            // rerollCountTextBox
+            // 
+            this.rerollCountTextBox.Enabled = false;
+            this.rerollCountTextBox.Location = new System.Drawing.Point(6, 20);
+            this.rerollCountTextBox.Name = "rerollCountTextBox";
+            this.rerollCountTextBox.ReadOnly = true;
+            this.rerollCountTextBox.Size = new System.Drawing.Size(140, 22);
+            this.rerollCountTextBox.TabIndex = 0;
             // 
             // Stat
             // 
@@ -311,6 +365,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(984, 611);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.wisdomGroupBox);
             this.Controls.Add(this.strengthGroupBox);
             this.Controls.Add(this.intellectGroupBox);
@@ -319,13 +374,12 @@
             this.Controls.Add(this.charismaGroupBox);
             this.Controls.Add(this.rerollsGroupBox);
             this.Controls.Add(this.rerollAllStatsButton);
-            this.Controls.Add(this.rerollLastStatButton);
+            this.Controls.Add(this.rerollLastRollButton);
             this.Controls.Add(this.rollStatButton);
             this.Controls.Add(this.saveChangesButton);
             this.Name = "Stat";
             this.Text = "Stat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Stat_FormClosing);
-            this.Load += new System.EventHandler(this.Stat_Load);
             this.rerollsGroupBox.ResumeLayout(false);
             this.rerollsGroupBox.PerformLayout();
             this.charismaGroupBox.ResumeLayout(false);
@@ -340,6 +394,8 @@
             this.strengthGroupBox.PerformLayout();
             this.wisdomGroupBox.ResumeLayout(false);
             this.wisdomGroupBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -348,7 +404,7 @@
 
         private System.Windows.Forms.Button saveChangesButton;
         private System.Windows.Forms.Button rollStatButton;
-        private System.Windows.Forms.Button rerollLastStatButton;
+        private System.Windows.Forms.Button rerollLastRollButton;
         private System.Windows.Forms.Button rerollAllStatsButton;
         private System.Windows.Forms.GroupBox rerollsGroupBox;
         private System.Windows.Forms.TextBox statRerollTextBox;
@@ -371,5 +427,7 @@
         private System.Windows.Forms.TextBox strengthValueTextBox;
         private System.Windows.Forms.Button wisdomLockInButton;
         private System.Windows.Forms.TextBox wisdomValueTextBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox rerollCountTextBox;
     }
 }

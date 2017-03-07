@@ -13,6 +13,11 @@ namespace HeroMaker.Forms
     /// </summary>
     public partial class RaceAndClass : Form
     {
+        private bool _hasName = false;
+        private bool _hasGender = false;
+        private bool _hasRace = false;
+        private bool _hasClass = false;
+
         #region Form Essentials
 
         /// <summary>
@@ -51,16 +56,14 @@ namespace HeroMaker.Forms
         /// </summary>
         private void CheckNextStatus()
         {
-            if (string.IsNullOrEmpty(PlayerNameAndGender.Name) ||
-                string.IsNullOrEmpty(PlayerNameAndGender.Gender) ||
-                DesiredRaceType.DesiredRace == RaceType.None ||
-                DesiredClassType.DesiredClass == ClassType.None)
-            {
-                saveChangesButton.Enabled = false;
-            }
-            else
+            if (_hasName && _hasGender && _hasRace && _hasClass)
             {
                 saveChangesButton.Enabled = true;
+            }
+            
+            else
+            {
+                saveChangesButton.Enabled = false;
             }
         }
 
@@ -76,6 +79,8 @@ namespace HeroMaker.Forms
         {
             PlayerNameAndGender.Gender = "Male";
             chooseGenderToolStripMenuItem.Text = "Male";
+            _hasGender = true;
+            CheckNextStatus();
         }
 
         /// <summary>
@@ -86,6 +91,8 @@ namespace HeroMaker.Forms
         {
             PlayerNameAndGender.Gender = "Female";
             chooseGenderToolStripMenuItem.Text = "Female";
+            _hasGender = true;
+            CheckNextStatus();
         }
 
         #endregion
@@ -101,6 +108,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Barbarian;
             chooseClassToolStripMenuItem.Text = "Barbarian";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Barbarian;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -113,6 +121,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Bard;
             chooseClassToolStripMenuItem.Text = "Bard";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Bard;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -125,6 +134,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Cleric;
             chooseClassToolStripMenuItem.Text = "Cleric";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Cleric;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -137,6 +147,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Druid;
             chooseClassToolStripMenuItem.Text = "Druid";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Druid;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -149,6 +160,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Fighter;
             chooseClassToolStripMenuItem.Text = "Fighter";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Fighter;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -161,6 +173,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Monk;
             chooseClassToolStripMenuItem.Text = "Monk";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Monk;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -173,6 +186,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Paladin;
             chooseClassToolStripMenuItem.Text = "Paladin";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Paladin;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -185,6 +199,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Ranger;
             chooseClassToolStripMenuItem.Text = "Ranger";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Ranger;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -197,6 +212,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Rogue;
             chooseClassToolStripMenuItem.Text = "Rogue";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Rogue;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -209,6 +225,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Sorcerer;
             chooseClassToolStripMenuItem.Text = "Sorcerer";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Sorcerer;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -221,6 +238,7 @@ namespace HeroMaker.Forms
             DesiredClassType.DesiredClass = ClassType.Wizard;
             chooseClassToolStripMenuItem.Text = "Wizard";
             classDescriptionTextBox.Text = DnD.UserStrings.ClassStrings.Wizard;
+            _hasClass = true;
             CheckNextStatus();
         }
 
@@ -237,6 +255,8 @@ namespace HeroMaker.Forms
             DesiredRaceType.DesiredRace = RaceType.Dwarf;
             chooseRaceToolStripMenuItem.Text = "Dwarf";
             raceDescriptionTextBox.Text = DnD.UserStrings.RaceStrings.Dwarf;
+            _hasRace = true;
+            CheckNextStatus();
         }
 
         /// <summary>
@@ -248,6 +268,8 @@ namespace HeroMaker.Forms
             DesiredRaceType.DesiredRace = RaceType.Elf;
             chooseRaceToolStripMenuItem.Text = "Elf";
             raceDescriptionTextBox.Text = DnD.UserStrings.RaceStrings.Elf;
+            _hasRace = true;
+            CheckNextStatus();
         }
 
         /// <summary>
@@ -259,6 +281,8 @@ namespace HeroMaker.Forms
             DesiredRaceType.DesiredRace = RaceType.Gnome;
             chooseRaceToolStripMenuItem.Text = "Gnome";
             raceDescriptionTextBox.Text = DnD.UserStrings.RaceStrings.Gnome;
+            _hasRace = true;
+            CheckNextStatus();
         }
 
         /// <summary>
@@ -270,6 +294,8 @@ namespace HeroMaker.Forms
             DesiredRaceType.DesiredRace = RaceType.HalfElf;
             chooseRaceToolStripMenuItem.Text = "HalfElf";
             raceDescriptionTextBox.Text = DnD.UserStrings.RaceStrings.HalfElf;
+            _hasRace = true;
+            CheckNextStatus();
         }
 
         /// <summary>
@@ -281,6 +307,8 @@ namespace HeroMaker.Forms
             DesiredRaceType.DesiredRace = RaceType.HalfOrc;
             chooseRaceToolStripMenuItem.Text = "HalfOrc";
             raceDescriptionTextBox.Text = DnD.UserStrings.RaceStrings.HalfOrc;
+            _hasRace = true;
+            CheckNextStatus();
         }
 
         /// <summary>
@@ -292,6 +320,8 @@ namespace HeroMaker.Forms
             DesiredRaceType.DesiredRace = RaceType.Halfling;
             chooseRaceToolStripMenuItem.Text = "Halfling";
             raceDescriptionTextBox.Text = DnD.UserStrings.RaceStrings.Halfling;
+            _hasRace = true;
+            CheckNextStatus();
         }
 
         /// <summary>
@@ -303,6 +333,8 @@ namespace HeroMaker.Forms
             DesiredRaceType.DesiredRace = RaceType.Human;
             chooseRaceToolStripMenuItem.Text = "Human";
             raceDescriptionTextBox.Text = DnD.UserStrings.RaceStrings.Human;
+            _hasRace = true;
+            CheckNextStatus();
         }
 
         #endregion
@@ -495,6 +527,18 @@ namespace HeroMaker.Forms
         private void herosNameTextBox_TextChanged(object sender, EventArgs e)
         {
             PlayerNameAndGender.Name = herosNameTextBox.Text;
+
+            if (string.IsNullOrEmpty(PlayerNameAndGender.Name))
+            {
+                _hasName = false;
+            }
+
+            else
+            {
+                _hasName = true;
+            }
+
+            CheckNextStatus();
         }
 
         #endregion

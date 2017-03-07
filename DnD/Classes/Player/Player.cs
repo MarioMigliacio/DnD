@@ -637,7 +637,7 @@ namespace DnD.Classes.Player
             
             ApplyRacialBonus(thisHero);
             DetermineStatModifiers(thisHero);
-            thisHero.SkillRanksAvailable = DetermineSkillRanks(thisHero);
+            thisHero.SkillRanksAvailable += DetermineSkillRanks(thisHero);
 
             return thisHero;
         }

@@ -25,6 +25,7 @@ namespace HeroMaker
                 case GameState.Init: return new Init();
                 case GameState.RaceAndClass: return new RaceAndClass();
                 case GameState.Stat: return new Stat();
+                case GameState.Skill: return new Skill();
                 default: return null;
             }
         }
@@ -39,9 +40,10 @@ namespace HeroMaker
             {
                 case GameState.Init: return GameState.RaceAndClass;
                 case GameState.RaceAndClass: return GameState.Stat;
-                case GameState.Stat: return GameState.Feat;
-                case GameState.Feat: return GameState.Skill;
-                case GameState.Skill: return GameState.Final;
+                case GameState.Stat: return GameState.Skill;
+                case GameState.Skill: return GameState.Feat;
+                case GameState.Feat: return GameState.Final;
+                case GameState.Detail: return GameState.Detail;
                 case GameState.Final: return GameState.Final;
                 default: return GameState.Init;
             }

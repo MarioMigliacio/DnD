@@ -60,6 +60,12 @@
     <Compile Include="Forms\RaceAndClass.Designer.cs">
       <DependentUpon>RaceAndClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Skill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Skill.Designer.cs">
+      <DependentUpon>Skill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Stat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,12 +77,16 @@
     <Compile Include="Static Information Containers\DesiredClassType.cs" />
     <Compile Include="Static Information Containers\DesiredRaceType.cs" />
     <Compile Include="Static Information Containers\PlayerNameAndGender.cs" />
+    <Compile Include="Static Information Containers\PlayerSkills.cs" />
     <Compile Include="Static Information Containers\PlayerStats.cs" />
     <EmbeddedResource Include="Forms\Init.resx">
       <DependentUpon>Init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RaceAndClass.resx">
       <DependentUpon>RaceAndClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Skill.resx">
+      <DependentUpon>Skill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stat.resx">
       <DependentUpon>Stat.cs</DependentUpon>

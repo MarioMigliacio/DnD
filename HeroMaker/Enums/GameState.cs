@@ -31,6 +31,11 @@
         Feat,
 
         /// <summary>
+        /// The Detailed analysis form should be displayed.
+        /// </summary>
+        Detail,
+
+        /// <summary>
         /// The Last form should be displayed.
         /// </summary>
         Final

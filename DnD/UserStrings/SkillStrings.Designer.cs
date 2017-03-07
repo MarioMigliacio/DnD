@@ -200,9 +200,9 @@ namespace DnD.UserStrings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An evening’s time, a few gold pieces for buying drinks and making friends, and a DC 10 Gather Information check get you a general idea of a city’s major news items, assuming there are no obvious reasons why the information would be withheld. The higher your check result, the better the information.
+        ///   Looks up a localized string similar to This task involves commanding an animal to perform a task or trick that it knows. If the animal is wounded or has taken any nonlethal damage or ability score damage, the DC increases by 2. If your check succeeds, the animal performs the task or trick on its next action.
         ///
-        ///If you want to find out about a specific rumor, or a specific item, or obtain a map, or do something else along those lines, the DC for the check is 15 to 25, or even higher..
+        ///You can teach an animal a specific trick with one week of work and a successful Handle Animal check against the indicated DC. An animal with an Intelligence score of 1 can learn a maximum of three tricks, while an animal with an Intellige [rest of string was truncated]&quot;;.
         /// </summary>
         public static string HandleAnimal {
             get {
@@ -442,7 +442,16 @@ namespace DnD.UserStrings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to See the manual for the detailed list of rope checks..
+        ///   Looks up a localized string similar to See the manual for the detailed list of rope checks.
+        ///10	Tie a firm knot.
+        ///10	Secure a grappling hook.
+        ///15	Tie a special knot.
+        ///15	Tie a rope around yourself one-handed.
+        ///15	Splice two ropes together.
+        ///Varies	Bind a character.
+        ///50	Quick splicing.
+        ///60	Tie unique knot.
+        ///80	Animate held rope..
         /// </summary>
         public static string UseRope {
             get {
