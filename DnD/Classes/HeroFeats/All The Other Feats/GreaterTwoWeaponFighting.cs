@@ -13,7 +13,7 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns the value of required base attack for the GreaterTwoWeaponFighting feat.
         /// </summary>
-        public override int? AttackBonusPrerequisites => 11;
+        public override int AttackBonusPrerequisites => 11;
 
         /// <summary>
         /// Returns the associated List of required Feats that the GreaterTwoWeaponFighting feat requires.

@@ -13,7 +13,7 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns the value of required base attack for the Quickdraw feat.
         /// </summary>
-        public override int? AttackBonusPrerequisites => 1;
+        public override int AttackBonusPrerequisites => 1;
 
         /// <summary>
         /// Returns the associated List of required Feats that the Quickdraw feat requires.

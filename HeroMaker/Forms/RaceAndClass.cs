@@ -33,7 +33,7 @@ namespace HeroMaker.Forms
         /// </summary>
         private void TestState_Click(object sender, EventArgs e)
         {
-            FormControl.GS = FormControl.GetNextState();
+            FormControl.Gs = FormControl.GetNextState();
             this.Dispose();
         }
 
@@ -43,7 +43,7 @@ namespace HeroMaker.Forms
         /// </summary>
         private void RaceAndClass_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FormControl.GS = GameState.Final;
+            FormControl.Gs = GameState.Final;
             this.Dispose();
         }
 

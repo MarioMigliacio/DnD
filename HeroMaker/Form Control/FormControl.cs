@@ -13,19 +13,20 @@ namespace HeroMaker
         /// <summary>
         /// The GameState enumeration which is handled by this object.
         /// </summary>
-        public static GameState GS { get; set; }
+        public static GameState Gs { get; set; }
         
         /// <summary>
         /// Returns which Form object should be run, based on the current GameState enumeration.
         /// </summary>
         public static Form RunForm()
         {
-            switch (GS)
+            switch (Gs)
             {
                 case GameState.Init: return new Init();
                 case GameState.RaceAndClass: return new RaceAndClass();
                 case GameState.Stat: return new Stat();
                 case GameState.Skill: return new Skill();
+                case GameState.Feat: return new Feat();
                 default: return null;
             }
         }
@@ -36,14 +37,14 @@ namespace HeroMaker
         /// <returns></returns>
         public static GameState GetNextState()
         {
-            switch (GS)
+            switch (Gs)
             {
                 case GameState.Init: return GameState.RaceAndClass;
                 case GameState.RaceAndClass: return GameState.Stat;
                 case GameState.Stat: return GameState.Skill;
                 case GameState.Skill: return GameState.Feat;
-                case GameState.Feat: return GameState.Final;
-                case GameState.Detail: return GameState.Detail;
+                case GameState.Feat: return GameState.Detail;
+                case GameState.Detail: return GameState.Final;
                 case GameState.Final: return GameState.Final;
                 default: return GameState.Init;
             }

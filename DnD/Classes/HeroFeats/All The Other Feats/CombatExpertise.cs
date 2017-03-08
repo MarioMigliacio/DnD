@@ -13,7 +13,7 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns the value of required base attack for the CombatExpertise feat.
         /// </summary>
-        public override int? AttackBonusPrerequisites => null;
+        public override int AttackBonusPrerequisites => 0;
 
         /// <summary>
         /// Returns the associated List of required Feats that the CombatExpertise feat requires.

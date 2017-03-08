@@ -13,7 +13,7 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns the value of required base attack for the StunningFist feat.
         /// </summary>
-        public override int? AttackBonusPrerequisites => 8;
+        public override int AttackBonusPrerequisites => 8;
 
         /// <summary>
         /// Returns the associated List of required Feats that the StunningFist feat requires.

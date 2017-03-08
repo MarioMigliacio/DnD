@@ -56,6 +56,12 @@ namespace DnD.Classes.Player
         public int FeatsAvailable { get; set; } = 0;
 
         /// <summary>
+        /// The fact that a ton of bonus feats make the game more complex is both a good and bad thing.
+        /// This represents true if the Hero can acquire a certain bonus feat.
+        /// </summary>
+        public bool BonusFeatsAvailable { get; set; } = false;
+
+        /// <summary>
         /// The amount of currency held by the hero.
         /// </summary>
         public int Currency { get; set; } = 0;
@@ -223,8 +229,7 @@ namespace DnD.Classes.Player
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Will, 0);
 
-            // this bonus feat must be selected from the specific fighter bonus feats.
-            thisHero.PlayerSpecials.Add(new BonusFeat());
+            thisHero.BonusFeatsAvailable = true;
         }
 
         /// <summary>
@@ -244,9 +249,8 @@ namespace DnD.Classes.Player
 
             thisHero.PlayerSpecials.Add(new FlurryOfBlows());
             thisHero.PlayerSpecials.Add(new UnarmedStrike());
-
-            // this bonus feat must either be improved grapple or stunning fist!
-            thisHero.PlayerSpecials.Add(new BonusFeat());
+            
+            thisHero.BonusFeatsAvailable = true;
         }
 
         /// <summary>
@@ -638,6 +642,7 @@ namespace DnD.Classes.Player
             ApplyRacialBonus(thisHero);
             DetermineStatModifiers(thisHero);
             thisHero.SkillRanksAvailable += DetermineSkillRanks(thisHero);
+            thisHero.FeatsAvailable += 1;
 
             return thisHero;
         }

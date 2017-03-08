@@ -37,8 +37,8 @@
             this.rankCountGroupBox = new System.Windows.Forms.GroupBox();
             this.rankCountTextBox = new System.Windows.Forms.TextBox();
             this.addRankGroupBox = new System.Windows.Forms.GroupBox();
-            this.removeRankGroupBox = new System.Windows.Forms.GroupBox();
             this.addRankButton = new System.Windows.Forms.Button();
+            this.removeRankGroupBox = new System.Windows.Forms.GroupBox();
             this.removeRankButton = new System.Windows.Forms.Button();
             this.descriptionGroupBox.SuspendLayout();
             this.skillsRemainingGroupBox.SuspendLayout();
@@ -50,7 +50,7 @@
             // saveChangesButton
             // 
             this.saveChangesButton.Enabled = false;
-            this.saveChangesButton.Location = new System.Drawing.Point(838, 4);
+            this.saveChangesButton.Location = new System.Drawing.Point(838, 10);
             this.saveChangesButton.Name = "saveChangesButton";
             this.saveChangesButton.Size = new System.Drawing.Size(134, 31);
             this.saveChangesButton.TabIndex = 0;
@@ -98,7 +98,7 @@
             "Tumble",
             "UseMagicDevice",
             "UseRope"});
-            this.skillsMenuBox.Location = new System.Drawing.Point(13, 13);
+            this.skillsMenuBox.Location = new System.Drawing.Point(13, 10);
             this.skillsMenuBox.Name = "skillsMenuBox";
             this.skillsMenuBox.Size = new System.Drawing.Size(196, 21);
             this.skillsMenuBox.TabIndex = 1;
@@ -130,9 +130,9 @@
             // 
             this.skillsRemainingGroupBox.Controls.Add(this.skillCountTextBox);
             this.skillsRemainingGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skillsRemainingGroupBox.Location = new System.Drawing.Point(448, 12);
+            this.skillsRemainingGroupBox.Location = new System.Drawing.Point(441, 10);
             this.skillsRemainingGroupBox.Name = "skillsRemainingGroupBox";
-            this.skillsRemainingGroupBox.Size = new System.Drawing.Size(142, 54);
+            this.skillsRemainingGroupBox.Size = new System.Drawing.Size(149, 54);
             this.skillsRemainingGroupBox.TabIndex = 3;
             this.skillsRemainingGroupBox.TabStop = false;
             this.skillsRemainingGroupBox.Text = "Skills Remaining";
@@ -176,16 +176,6 @@
             this.addRankGroupBox.TabIndex = 5;
             this.addRankGroupBox.TabStop = false;
             // 
-            // removeRankGroupBox
-            // 
-            this.removeRankGroupBox.Controls.Add(this.removeRankButton);
-            this.removeRankGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeRankGroupBox.Location = new System.Drawing.Point(838, 182);
-            this.removeRankGroupBox.Name = "removeRankGroupBox";
-            this.removeRankGroupBox.Size = new System.Drawing.Size(142, 54);
-            this.removeRankGroupBox.TabIndex = 4;
-            this.removeRankGroupBox.TabStop = false;
-            // 
             // addRankButton
             // 
             this.addRankButton.Enabled = false;
@@ -196,6 +186,16 @@
             this.addRankButton.Text = "add rank";
             this.addRankButton.UseVisualStyleBackColor = true;
             this.addRankButton.Click += new System.EventHandler(this.addRankButton_Click);
+            // 
+            // removeRankGroupBox
+            // 
+            this.removeRankGroupBox.Controls.Add(this.removeRankButton);
+            this.removeRankGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeRankGroupBox.Location = new System.Drawing.Point(838, 182);
+            this.removeRankGroupBox.Name = "removeRankGroupBox";
+            this.removeRankGroupBox.Size = new System.Drawing.Size(142, 54);
+            this.removeRankGroupBox.TabIndex = 4;
+            this.removeRankGroupBox.TabStop = false;
             // 
             // removeRankButton
             // 

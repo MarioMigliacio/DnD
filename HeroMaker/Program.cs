@@ -13,18 +13,18 @@ namespace HeroMaker
         static void Main()
         {
             bool running = true;
-            FormControl.GS = GameState.Init;
+            FormControl.Gs = GameState.Init;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             while (running)
             {
-                if (FormControl.GS != GameState.Final)
+                if (FormControl.Gs != GameState.Final)
                 {
                     Application.Run(FormControl.RunForm());
                 }
 
-                if (FormControl.GS == GameState.Final)
+                if (FormControl.Gs == GameState.Final)
                 {
                     running = false;
                 }

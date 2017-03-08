@@ -13,7 +13,7 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns the value of required base attack for the WhirlwindAttack feat.
         /// </summary>
-        public override int? AttackBonusPrerequisites => 4;
+        public override int AttackBonusPrerequisites => 4;
 
         /// <summary>
         /// Returns the associated List of required Feats that the WhirlwindAttack feat requires.

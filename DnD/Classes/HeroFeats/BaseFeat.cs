@@ -1,6 +1,7 @@
 ﻿using DnD.Classes.CharacterClasses;
 using DnD.Enums.Stats;
 using System.Collections.Generic;
+using System.Text;
 using DnD.Enums.ClassFeats;
 
 namespace DnD.Classes.HeroFeats
@@ -15,7 +16,7 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns the value of required base attack that this particular feat requires.
         /// </summary>
-        public abstract int? AttackBonusPrerequisites { get; }
+        public abstract int AttackBonusPrerequisites { get; }
 
         /// <summary>
         /// Returns the associated List of required feats that this particular feat requires.
@@ -42,5 +43,62 @@ namespace DnD.Classes.HeroFeats
         /// Returns the enumeration type of Feat this particular Feat represents.
         /// </summary>
         public abstract ClassFeats FeatType { get; }
+
+        /// <summary>
+        /// Returns whether or not the Feat can be Acquired.
+        /// </summary>
+        public bool CanAcquire { get; set; } = false;
+
+        /// <summary>
+        /// Returns whether or not the Feat has been Acquired.
+        /// </summary>
+        public bool IsAcquired { get; set; } = false;
+
+        /// <summary>
+        /// In the event we need to look at the details of the requirements for the Feat, this method returns the appropriate string.
+        /// </summary>
+        /// <returns>The string description of what is a requirement for the Feat.</returns>
+        public string RequirementsString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("Base Attack Bonus: " + AttackBonusPrerequisites + ".");
+
+            if (FeatPrerequisites != null)
+            {
+                foreach (BaseFeat bf in FeatPrerequisites)
+                {
+                    sb.AppendLine("Requires Feat: " + bf.FeatType + ".");
+                }
+            }
+            else
+            {
+                sb.AppendLine("No required Feats.");
+            }
+
+            if (ClassLevelPrerequisites != null)
+            {
+                sb.AppendLine("Requires a " + ClassLevelPrerequisites.CharacterClassType + " Level of: " +
+                              ClassLevelPrerequisites.ClassLevel + ".");
+            }
+            else
+            {
+                sb.AppendLine("No required levels.");
+            }
+
+            if (MinimumRequiredStat != null)
+            {
+                foreach (var item in  MinimumRequiredStat)
+                {
+                    sb.AppendLine("Requires " + item.Value + " " + item.Key + ".");
+                }
+            }
+            else
+            {
+                sb.AppendLine("No required stats.");
+            }
+
+            return sb.ToString();
+        }
     }
 }
