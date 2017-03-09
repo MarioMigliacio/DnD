@@ -254,7 +254,7 @@ namespace DnD.Classes.HeroFeats
         /// </summary>
         /// <param name="hwat">DAMNIT BOBBEH!!!</param>
         /// <returns>The correct ClassFeats enumeration field according to the string passed in.</returns>
-        public static ClassFeats GetEnumFromString(string hwat)
+        public static ClassFeats? GetEnumFromString(string hwat)
         {
             switch (hwat)
             {
@@ -365,7 +365,7 @@ namespace DnD.Classes.HeroFeats
                 case "WeaponSpecialization": return ClassFeats.WeaponSpecialization;
                 case "WhirlwindAttack": return ClassFeats.WhirlwindAttack;
                 case "WidenSpell": return ClassFeats.WidenSpell;
-                default: return ClassFeats.Acrobatic;
+                default: return null;
             }
         }
     }

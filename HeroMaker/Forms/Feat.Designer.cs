@@ -36,25 +36,26 @@
             this.bonusMonkFeatsMenuBox = new System.Windows.Forms.ComboBox();
             this.featsRemainingGroupBox = new System.Windows.Forms.GroupBox();
             this.featCountTextBox = new System.Windows.Forms.TextBox();
-            this.isAcquiredGroupBox = new System.Windows.Forms.GroupBox();
-            this.isAcquiredTextBox = new System.Windows.Forms.TextBox();
-            this.addRankGroupBox = new System.Windows.Forms.GroupBox();
-            this.learnFeatButton = new System.Windows.Forms.Button();
-            this.removeRankGroupBox = new System.Windows.Forms.GroupBox();
-            this.removeFeatButton = new System.Windows.Forms.Button();
+            this.learnMonkFeatButton = new System.Windows.Forms.Button();
+            this.removeMonkFeatButton = new System.Windows.Forms.Button();
             this.fighterBonusLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.knownFeatsGroupBox = new System.Windows.Forms.GroupBox();
+            this.knownFeatsTextBox = new System.Windows.Forms.TextBox();
+            this.learnFighterFeatButton = new System.Windows.Forms.Button();
+            this.removeFighterFeatButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.learnFeatButton = new System.Windows.Forms.Button();
+            this.removeFeatButton = new System.Windows.Forms.Button();
             this.descriptionGroupBox.SuspendLayout();
             this.featsRemainingGroupBox.SuspendLayout();
-            this.isAcquiredGroupBox.SuspendLayout();
-            this.addRankGroupBox.SuspendLayout();
-            this.removeRankGroupBox.SuspendLayout();
+            this.knownFeatsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // saveChangesButton
             // 
             this.saveChangesButton.Enabled = false;
-            this.saveChangesButton.Location = new System.Drawing.Point(838, 10);
+            this.saveChangesButton.Location = new System.Drawing.Point(838, 21);
             this.saveChangesButton.Name = "saveChangesButton";
             this.saveChangesButton.Size = new System.Drawing.Size(134, 31);
             this.saveChangesButton.TabIndex = 1;
@@ -173,9 +174,9 @@
             "SilentSpell",
             "StillSpell",
             "WidenSpell"});
-            this.featsMenuBox.Location = new System.Drawing.Point(13, 10);
+            this.featsMenuBox.Location = new System.Drawing.Point(12, 76);
             this.featsMenuBox.Name = "featsMenuBox";
-            this.featsMenuBox.Size = new System.Drawing.Size(196, 21);
+            this.featsMenuBox.Size = new System.Drawing.Size(160, 21);
             this.featsMenuBox.TabIndex = 2;
             this.featsMenuBox.SelectedIndexChanged += new System.EventHandler(this.featsMenuBox_SelectedIndexChanged);
             // 
@@ -183,7 +184,7 @@
             // 
             this.descriptionGroupBox.Controls.Add(this.descriptionTextBox);
             this.descriptionGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionGroupBox.Location = new System.Drawing.Point(215, 62);
+            this.descriptionGroupBox.Location = new System.Drawing.Point(355, 66);
             this.descriptionGroupBox.Name = "descriptionGroupBox";
             this.descriptionGroupBox.Size = new System.Drawing.Size(617, 537);
             this.descriptionGroupBox.TabIndex = 3;
@@ -242,7 +243,7 @@
             "ImprovedBullRush",
             "ImprovedOverrun",
             "ImprovedSunder",
-            "QuickDraw",
+            "Quickdraw",
             "RapidReload",
             "TwoWeaponFighting",
             "ImprovedTwoWeaponFighting",
@@ -252,9 +253,9 @@
             "GreaterWeaponFocus",
             "WeaponSpecialization",
             "GreaterWeaponSpecialization"});
-            this.bonusFighterFeatsMenuBox.Location = new System.Drawing.Point(13, 110);
+            this.bonusFighterFeatsMenuBox.Location = new System.Drawing.Point(12, 211);
             this.bonusFighterFeatsMenuBox.Name = "bonusFighterFeatsMenuBox";
-            this.bonusFighterFeatsMenuBox.Size = new System.Drawing.Size(196, 21);
+            this.bonusFighterFeatsMenuBox.Size = new System.Drawing.Size(159, 21);
             this.bonusFighterFeatsMenuBox.TabIndex = 4;
             this.bonusFighterFeatsMenuBox.SelectedIndexChanged += new System.EventHandler(this.bonusFighterFeatsMenuBox_SelectedIndexChanged);
             // 
@@ -265,9 +266,9 @@
             this.bonusMonkFeatsMenuBox.Items.AddRange(new object[] {
             "ImprovedGrapple",
             "StunningFist"});
-            this.bonusMonkFeatsMenuBox.Location = new System.Drawing.Point(13, 210);
+            this.bonusMonkFeatsMenuBox.Location = new System.Drawing.Point(12, 344);
             this.bonusMonkFeatsMenuBox.Name = "bonusMonkFeatsMenuBox";
-            this.bonusMonkFeatsMenuBox.Size = new System.Drawing.Size(196, 21);
+            this.bonusMonkFeatsMenuBox.Size = new System.Drawing.Size(159, 21);
             this.bonusMonkFeatsMenuBox.TabIndex = 5;
             this.bonusMonkFeatsMenuBox.SelectedIndexChanged += new System.EventHandler(this.bonusMonkFeatsMenuBox_SelectedIndexChanged);
             // 
@@ -275,7 +276,7 @@
             // 
             this.featsRemainingGroupBox.Controls.Add(this.featCountTextBox);
             this.featsRemainingGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.featsRemainingGroupBox.Location = new System.Drawing.Point(441, 10);
+            this.featsRemainingGroupBox.Location = new System.Drawing.Point(683, 6);
             this.featsRemainingGroupBox.Name = "featsRemainingGroupBox";
             this.featsRemainingGroupBox.Size = new System.Drawing.Size(149, 54);
             this.featsRemainingGroupBox.TabIndex = 4;
@@ -291,85 +292,121 @@
             this.featCountTextBox.Size = new System.Drawing.Size(129, 26);
             this.featCountTextBox.TabIndex = 0;
             // 
-            // isAcquiredGroupBox
+            // learnMonkFeatButton
             // 
-            this.isAcquiredGroupBox.Controls.Add(this.isAcquiredTextBox);
-            this.isAcquiredGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isAcquiredGroupBox.Location = new System.Drawing.Point(838, 62);
-            this.isAcquiredGroupBox.Name = "isAcquiredGroupBox";
-            this.isAcquiredGroupBox.Size = new System.Drawing.Size(142, 54);
-            this.isAcquiredGroupBox.TabIndex = 5;
-            this.isAcquiredGroupBox.TabStop = false;
-            this.isAcquiredGroupBox.Text = "Known?";
+            this.learnMonkFeatButton.Enabled = false;
+            this.learnMonkFeatButton.Location = new System.Drawing.Point(177, 344);
+            this.learnMonkFeatButton.Name = "learnMonkFeatButton";
+            this.learnMonkFeatButton.Size = new System.Drawing.Size(83, 33);
+            this.learnMonkFeatButton.TabIndex = 0;
+            this.learnMonkFeatButton.Text = "Learn";
+            this.learnMonkFeatButton.UseVisualStyleBackColor = true;
+            this.learnMonkFeatButton.Click += new System.EventHandler(this.learnMonkFeatButton_Click);
             // 
-            // isAcquiredTextBox
+            // removeMonkFeatButton
             // 
-            this.isAcquiredTextBox.Enabled = false;
-            this.isAcquiredTextBox.Location = new System.Drawing.Point(7, 20);
-            this.isAcquiredTextBox.Name = "isAcquiredTextBox";
-            this.isAcquiredTextBox.ReadOnly = true;
-            this.isAcquiredTextBox.Size = new System.Drawing.Size(129, 26);
-            this.isAcquiredTextBox.TabIndex = 0;
-            // 
-            // addRankGroupBox
-            // 
-            this.addRankGroupBox.Controls.Add(this.learnFeatButton);
-            this.addRankGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addRankGroupBox.Location = new System.Drawing.Point(838, 122);
-            this.addRankGroupBox.Name = "addRankGroupBox";
-            this.addRankGroupBox.Size = new System.Drawing.Size(142, 54);
-            this.addRankGroupBox.TabIndex = 6;
-            this.addRankGroupBox.TabStop = false;
-            // 
-            // learnFeatButton
-            // 
-            this.learnFeatButton.Enabled = false;
-            this.learnFeatButton.Location = new System.Drawing.Point(6, 15);
-            this.learnFeatButton.Name = "learnFeatButton";
-            this.learnFeatButton.Size = new System.Drawing.Size(130, 33);
-            this.learnFeatButton.TabIndex = 0;
-            this.learnFeatButton.Text = "Learn Feat";
-            this.learnFeatButton.UseVisualStyleBackColor = true;
-            // 
-            // removeRankGroupBox
-            // 
-            this.removeRankGroupBox.Controls.Add(this.removeFeatButton);
-            this.removeRankGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeRankGroupBox.Location = new System.Drawing.Point(838, 182);
-            this.removeRankGroupBox.Name = "removeRankGroupBox";
-            this.removeRankGroupBox.Size = new System.Drawing.Size(142, 54);
-            this.removeRankGroupBox.TabIndex = 7;
-            this.removeRankGroupBox.TabStop = false;
-            // 
-            // removeFeatButton
-            // 
-            this.removeFeatButton.Enabled = false;
-            this.removeFeatButton.Location = new System.Drawing.Point(6, 15);
-            this.removeFeatButton.Name = "removeFeatButton";
-            this.removeFeatButton.Size = new System.Drawing.Size(130, 33);
-            this.removeFeatButton.TabIndex = 1;
-            this.removeFeatButton.Text = "Remove Feat";
-            this.removeFeatButton.UseVisualStyleBackColor = true;
+            this.removeMonkFeatButton.Enabled = false;
+            this.removeMonkFeatButton.Location = new System.Drawing.Point(177, 383);
+            this.removeMonkFeatButton.Name = "removeMonkFeatButton";
+            this.removeMonkFeatButton.Size = new System.Drawing.Size(83, 33);
+            this.removeMonkFeatButton.TabIndex = 1;
+            this.removeMonkFeatButton.Text = "Remove";
+            this.removeMonkFeatButton.UseVisualStyleBackColor = true;
+            this.removeMonkFeatButton.Click += new System.EventHandler(this.removeMonkFeatButton_Click);
             // 
             // fighterBonusLabel
             // 
             this.fighterBonusLabel.AutoSize = true;
-            this.fighterBonusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fighterBonusLabel.Location = new System.Drawing.Point(9, 88);
+            this.fighterBonusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fighterBonusLabel.Location = new System.Drawing.Point(8, 188);
             this.fighterBonusLabel.Name = "fighterBonusLabel";
-            this.fighterBonusLabel.Size = new System.Drawing.Size(177, 20);
+            this.fighterBonusLabel.Size = new System.Drawing.Size(164, 18);
             this.fighterBonusLabel.TabIndex = 8;
             this.fighterBonusLabel.Text = "Fighter\'s Bonus Feat";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 187);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 321);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 20);
+            this.label1.Size = new System.Drawing.Size(154, 18);
             this.label1.TabIndex = 9;
             this.label1.Text = "Monk\'s Bonus Feat";
+            // 
+            // knownFeatsGroupBox
+            // 
+            this.knownFeatsGroupBox.Controls.Add(this.knownFeatsTextBox);
+            this.knownFeatsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.knownFeatsGroupBox.Location = new System.Drawing.Point(12, 441);
+            this.knownFeatsGroupBox.Name = "knownFeatsGroupBox";
+            this.knownFeatsGroupBox.Size = new System.Drawing.Size(337, 162);
+            this.knownFeatsGroupBox.TabIndex = 10;
+            this.knownFeatsGroupBox.TabStop = false;
+            this.knownFeatsGroupBox.Text = "Known Feats";
+            // 
+            // knownFeatsTextBox
+            // 
+            this.knownFeatsTextBox.Location = new System.Drawing.Point(6, 25);
+            this.knownFeatsTextBox.Multiline = true;
+            this.knownFeatsTextBox.Name = "knownFeatsTextBox";
+            this.knownFeatsTextBox.ReadOnly = true;
+            this.knownFeatsTextBox.Size = new System.Drawing.Size(325, 131);
+            this.knownFeatsTextBox.TabIndex = 0;
+            // 
+            // learnFighterFeatButton
+            // 
+            this.learnFighterFeatButton.Enabled = false;
+            this.learnFighterFeatButton.Location = new System.Drawing.Point(177, 211);
+            this.learnFighterFeatButton.Name = "learnFighterFeatButton";
+            this.learnFighterFeatButton.Size = new System.Drawing.Size(83, 33);
+            this.learnFighterFeatButton.TabIndex = 11;
+            this.learnFighterFeatButton.Text = "Learn";
+            this.learnFighterFeatButton.UseVisualStyleBackColor = true;
+            this.learnFighterFeatButton.Click += new System.EventHandler(this.learnFighterFeatButton_Click);
+            // 
+            // removeFighterFeatButton
+            // 
+            this.removeFighterFeatButton.Enabled = false;
+            this.removeFighterFeatButton.Location = new System.Drawing.Point(177, 250);
+            this.removeFighterFeatButton.Name = "removeFighterFeatButton";
+            this.removeFighterFeatButton.Size = new System.Drawing.Size(83, 33);
+            this.removeFighterFeatButton.TabIndex = 12;
+            this.removeFighterFeatButton.Text = "Remove";
+            this.removeFighterFeatButton.UseVisualStyleBackColor = true;
+            this.removeFighterFeatButton.Click += new System.EventHandler(this.removeFighterFeatButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 18);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Standard Feat";
+            // 
+            // learnFeatButton
+            // 
+            this.learnFeatButton.Enabled = false;
+            this.learnFeatButton.Location = new System.Drawing.Point(178, 76);
+            this.learnFeatButton.Name = "learnFeatButton";
+            this.learnFeatButton.Size = new System.Drawing.Size(83, 33);
+            this.learnFeatButton.TabIndex = 14;
+            this.learnFeatButton.Text = "Learn";
+            this.learnFeatButton.UseVisualStyleBackColor = true;
+            this.learnFeatButton.Click += new System.EventHandler(this.learnFeatButton_Click);
+            // 
+            // removeFeatButton
+            // 
+            this.removeFeatButton.Enabled = false;
+            this.removeFeatButton.Location = new System.Drawing.Point(177, 115);
+            this.removeFeatButton.Name = "removeFeatButton";
+            this.removeFeatButton.Size = new System.Drawing.Size(83, 33);
+            this.removeFeatButton.TabIndex = 15;
+            this.removeFeatButton.Text = "Remove";
+            this.removeFeatButton.UseVisualStyleBackColor = true;
+            this.removeFeatButton.Click += new System.EventHandler(this.removeFeatButton_Click);
             // 
             // Feat
             // 
@@ -377,11 +414,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(984, 611);
+            this.Controls.Add(this.removeFeatButton);
+            this.Controls.Add(this.learnFeatButton);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.removeFighterFeatButton);
+            this.Controls.Add(this.learnFighterFeatButton);
+            this.Controls.Add(this.learnMonkFeatButton);
+            this.Controls.Add(this.removeMonkFeatButton);
+            this.Controls.Add(this.knownFeatsGroupBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fighterBonusLabel);
-            this.Controls.Add(this.removeRankGroupBox);
-            this.Controls.Add(this.addRankGroupBox);
-            this.Controls.Add(this.isAcquiredGroupBox);
             this.Controls.Add(this.featsRemainingGroupBox);
             this.Controls.Add(this.bonusMonkFeatsMenuBox);
             this.Controls.Add(this.bonusFighterFeatsMenuBox);
@@ -395,10 +437,8 @@
             this.descriptionGroupBox.PerformLayout();
             this.featsRemainingGroupBox.ResumeLayout(false);
             this.featsRemainingGroupBox.PerformLayout();
-            this.isAcquiredGroupBox.ResumeLayout(false);
-            this.isAcquiredGroupBox.PerformLayout();
-            this.addRankGroupBox.ResumeLayout(false);
-            this.removeRankGroupBox.ResumeLayout(false);
+            this.knownFeatsGroupBox.ResumeLayout(false);
+            this.knownFeatsGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,13 +454,16 @@
         private System.Windows.Forms.ComboBox bonusMonkFeatsMenuBox;
         private System.Windows.Forms.GroupBox featsRemainingGroupBox;
         private System.Windows.Forms.TextBox featCountTextBox;
-        private System.Windows.Forms.GroupBox isAcquiredGroupBox;
-        private System.Windows.Forms.TextBox isAcquiredTextBox;
-        private System.Windows.Forms.GroupBox addRankGroupBox;
-        private System.Windows.Forms.Button learnFeatButton;
-        private System.Windows.Forms.GroupBox removeRankGroupBox;
-        private System.Windows.Forms.Button removeFeatButton;
+        private System.Windows.Forms.Button learnMonkFeatButton;
+        private System.Windows.Forms.Button removeMonkFeatButton;
         private System.Windows.Forms.Label fighterBonusLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox knownFeatsGroupBox;
+        private System.Windows.Forms.TextBox knownFeatsTextBox;
+        private System.Windows.Forms.Button learnFighterFeatButton;
+        private System.Windows.Forms.Button removeFighterFeatButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button learnFeatButton;
+        private System.Windows.Forms.Button removeFeatButton;
     }
 }

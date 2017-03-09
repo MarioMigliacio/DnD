@@ -1,4 +1,6 @@
-﻿using DnD.Classes.CharacterClasses;
+﻿using System.CodeDom;
+using System.Runtime.CompilerServices;
+using DnD.Classes.CharacterClasses;
 using DnD.Classes.Player;
 
 namespace DnD.Classes.HeroFeats
@@ -33,16 +35,27 @@ namespace DnD.Classes.HeroFeats
             }
             else
             {
-                foreach (BaseFeat feat in theFeat.FeatPrerequisites)
+                int success = 0;
+
+                foreach (var feat in theFeat.FeatPrerequisites)
                 {
-                    if (theDude.PlayerFeats.Contains(feat))
+                    foreach (var check in theDude.PlayerFeats)
+                    {
+                        if (check.FeatType == feat.FeatType && check.IsAcquired)
+                        {
+                            success++;
+                            break;
+                        }
+                    }
+
+                    if (success == theFeat.FeatPrerequisites.Count)
                     {
                         meetsFeatPrerequisites = true;
+                        break;
                     }
                     else
                     {
-                        meetsFeatPrerequisites = false;
-                        break;
+                        meetsStatPrerequisites = false;
                     }
                 }
             }
