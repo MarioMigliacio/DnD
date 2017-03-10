@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using DnD.Classes.CharacterClasses;
 using DnD.Classes.HeroFeats;
 using DnD.Classes.Player;
-using DnD.Enums.ClassTypes;
-using DnD.Enums.Races;
-using DnD.Enums.Stats;
 using HeroMaker.Enums;
 
 namespace HeroMaker.Forms
@@ -30,17 +26,17 @@ namespace HeroMaker.Forms
             PlayerFeats.PopulateContainer();
 
             // debugging purposes:
-            DesiredClassType.DesiredClass = ClassType.Fighter;
-            DesiredRaceType.DesiredRace = RaceType.Human;
-            PlayerStats.StatsContainer = new Dictionary<Stats, int>
-            {
-                {Stats.Charisma, 10},
-                {Stats.Constitution, 10},
-                {Stats.Dexterity, 10},
-                {Stats.Intellect, 10},
-                {Stats.Strength, 10},
-                {Stats.Wisdom, 10}
-            };
+            //DesiredClassType.DesiredClass = ClassType.Rogue;
+            //DesiredRaceType.DesiredRace = RaceType.Human;
+            //PlayerStats.StatsContainer = new Dictionary<Stats, int>
+            //{
+            //    {Stats.Charisma, 10},
+            //    {Stats.Constitution, 10},
+            //    {Stats.Dexterity, 10},
+            //    {Stats.Intellect, 13},
+            //    {Stats.Strength, 10},
+            //    {Stats.Wisdom, 10}
+            //};
 
             _thusFar = Hero.GetStageTwoHero(DesiredClassType.DesiredClass, DesiredRaceType.DesiredRace, PlayerStats.StatsContainer);
             featCountTextBox.Text = _thusFar.FeatsAvailable.ToString();
@@ -63,7 +59,8 @@ namespace HeroMaker.Forms
         /// </summary>
         private void saveChangesButton_Click(object sender, EventArgs e)
         {
-            FormControl.Gs = GameState.Final;
+            PlayerFeats.TrimContainer();
+            FormControl.Gs = GameState.Detail;
             this.Dispose();
         }
 
@@ -345,6 +342,7 @@ namespace HeroMaker.Forms
 
             foreach (BaseFeat bf in PlayerFeats.FeatsContainer)
             {
+
                 if (FeatInformation.GetEnumFromString(selectedFeat) == bf.FeatType)
                 {
                     if (bf.IsAcquired)
@@ -355,14 +353,29 @@ namespace HeroMaker.Forms
                             FeatRequirementCheck.RemoveTheFeat(bf);
                             learnFeatButton.Enabled = true;
                             removeFeatButton.Enabled = false;
-                            break;
                         }
-                        else if (!_thusFar.BonusFeatsAvailable)
+                        else
                         {
-                            _thusFar.BonusFeatsAvailable = true;
+                            _thusFar.FeatsAvailable++;
                             FeatRequirementCheck.RemoveTheFeat(bf);
-                            break;
+                            learnFeatButton.Enabled = true;
+                            removeFeatButton.Enabled = false;
                         }
+
+                        foreach (BaseFeat check in PlayerFeats.FeatsContainer)
+                        {
+                            FeatRequirementCheck.CheckIfFeatCanBeAcquired(_thusFar, check);
+
+                            if (check.IsAcquired && !check.CanAcquire)
+                            {
+                                _thusFar.BonusFeatsAvailable = true;
+                                FeatRequirementCheck.RemoveTheFeat(check);
+                                learnFeatButton.Enabled = false;
+                                removeFeatButton.Enabled = false;
+                            }
+                        }
+
+                        break;
                     }
                 }
             }
@@ -422,14 +435,29 @@ namespace HeroMaker.Forms
                             FeatRequirementCheck.RemoveTheFeat(bf);
                             learnFeatButton.Enabled = true;
                             removeFeatButton.Enabled = false;
-                            break;
                         }
-                        else if (!_thusFar.BonusFeatsAvailable)
+                        else
                         {
-                            _thusFar.BonusFeatsAvailable = true;
+                            _thusFar.FeatsAvailable++;
                             FeatRequirementCheck.RemoveTheFeat(bf);
-                            break;
+                            learnFeatButton.Enabled = true;
+                            removeFeatButton.Enabled = false;
                         }
+
+                        foreach (BaseFeat check in PlayerFeats.FeatsContainer)
+                        {
+                            FeatRequirementCheck.CheckIfFeatCanBeAcquired(_thusFar, check);
+
+                            if (check.IsAcquired && !check.CanAcquire)
+                            {
+                                _thusFar.BonusFeatsAvailable = true;
+                                FeatRequirementCheck.RemoveTheFeat(check);
+                                learnFeatButton.Enabled = false;
+                                removeFeatButton.Enabled = false;
+                            }
+                        }
+
+                        break;
                     }
                 }
             }

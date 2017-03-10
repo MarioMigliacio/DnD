@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using DnD.Classes.HeroSkills;
 using DnD.Classes.Player;
 using DnD.Enums.ClassSkills;
-using DnD.Enums.ClassTypes;
-using DnD.Enums.Races;
-using DnD.Enums.Stats;
 using DnD.UserStrings;
 using HeroMaker.Enums;
 

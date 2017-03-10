@@ -24,8 +24,7 @@ namespace HeroMaker.Forms
         /// </summary>
         private void create_Click(object sender, EventArgs e)
         {
-            //FormControl.Gs = FormControl.GetNextState();
-            FormControl.Gs = GameState.Feat;
+            FormControl.Gs = FormControl.GetNextState();
             this.Dispose();
         }
 
