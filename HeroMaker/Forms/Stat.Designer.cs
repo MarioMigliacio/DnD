@@ -30,10 +30,10 @@
         {
             this.saveChangesButton = new System.Windows.Forms.Button();
             this.rollStatButton = new System.Windows.Forms.Button();
-            this.rerollLastRollButton = new System.Windows.Forms.Button();
             this.rerollAllStatsButton = new System.Windows.Forms.Button();
             this.rerollsGroupBox = new System.Windows.Forms.GroupBox();
-            this.statRerollTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.statRollsTextBox = new System.Windows.Forms.TextBox();
             this.currentDiceRollTextBox = new System.Windows.Forms.TextBox();
             this.charismaGroupBox = new System.Windows.Forms.GroupBox();
             this.charismaLockInButton = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@
             this.saveChangesButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.saveChangesButton.Enabled = false;
             this.saveChangesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveChangesButton.Location = new System.Drawing.Point(735, 66);
+            this.saveChangesButton.Location = new System.Drawing.Point(735, 12);
             this.saveChangesButton.Name = "saveChangesButton";
             this.saveChangesButton.Size = new System.Drawing.Size(158, 48);
             this.saveChangesButton.TabIndex = 0;
@@ -90,25 +90,12 @@
             this.rollStatButton.UseVisualStyleBackColor = false;
             this.rollStatButton.Click += new System.EventHandler(this.rollStatButton_Click);
             // 
-            // rerollLastRollButton
-            // 
-            this.rerollLastRollButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rerollLastRollButton.Enabled = false;
-            this.rerollLastRollButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rerollLastRollButton.Location = new System.Drawing.Point(334, 12);
-            this.rerollLastRollButton.Name = "rerollLastRollButton";
-            this.rerollLastRollButton.Size = new System.Drawing.Size(316, 48);
-            this.rerollLastRollButton.TabIndex = 2;
-            this.rerollLastRollButton.Text = "Reroll Last Roll";
-            this.rerollLastRollButton.UseVisualStyleBackColor = false;
-            this.rerollLastRollButton.Click += new System.EventHandler(this.rerollLastRollButton_Click);
-            // 
             // rerollAllStatsButton
             // 
             this.rerollAllStatsButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rerollAllStatsButton.Enabled = false;
             this.rerollAllStatsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rerollAllStatsButton.Location = new System.Drawing.Point(656, 12);
+            this.rerollAllStatsButton.Location = new System.Drawing.Point(12, 61);
             this.rerollAllStatsButton.Name = "rerollAllStatsButton";
             this.rerollAllStatsButton.Size = new System.Drawing.Size(316, 48);
             this.rerollAllStatsButton.TabIndex = 3;
@@ -118,7 +105,8 @@
             // 
             // rerollsGroupBox
             // 
-            this.rerollsGroupBox.Controls.Add(this.statRerollTextBox);
+            this.rerollsGroupBox.Controls.Add(this.label1);
+            this.rerollsGroupBox.Controls.Add(this.statRollsTextBox);
             this.rerollsGroupBox.Controls.Add(this.currentDiceRollTextBox);
             this.rerollsGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rerollsGroupBox.Location = new System.Drawing.Point(334, 112);
@@ -126,17 +114,26 @@
             this.rerollsGroupBox.Size = new System.Drawing.Size(316, 487);
             this.rerollsGroupBox.TabIndex = 4;
             this.rerollsGroupBox.TabStop = false;
-            this.rerollsGroupBox.Text = "Current Dice Rolls";
+            this.rerollsGroupBox.Text = "Current Die To Be Placed";
             // 
-            // statRerollTextBox
+            // label1
             // 
-            this.statRerollTextBox.Enabled = false;
-            this.statRerollTextBox.Location = new System.Drawing.Point(7, 58);
-            this.statRerollTextBox.Multiline = true;
-            this.statRerollTextBox.Name = "statRerollTextBox";
-            this.statRerollTextBox.ReadOnly = true;
-            this.statRerollTextBox.Size = new System.Drawing.Size(303, 423);
-            this.statRerollTextBox.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "All Remaining Dice";
+            // 
+            // statRollsTextBox
+            // 
+            this.statRollsTextBox.Enabled = false;
+            this.statRollsTextBox.Location = new System.Drawing.Point(7, 108);
+            this.statRollsTextBox.Multiline = true;
+            this.statRollsTextBox.Name = "statRollsTextBox";
+            this.statRollsTextBox.ReadOnly = true;
+            this.statRollsTextBox.Size = new System.Drawing.Size(303, 373);
+            this.statRollsTextBox.TabIndex = 1;
             // 
             // currentDiceRollTextBox
             // 
@@ -343,7 +340,7 @@
             // 
             this.groupBox1.Controls.Add(this.rerollCountTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(415, 58);
+            this.groupBox1.Location = new System.Drawing.Point(414, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(152, 48);
             this.groupBox1.TabIndex = 7;
@@ -374,7 +371,6 @@
             this.Controls.Add(this.charismaGroupBox);
             this.Controls.Add(this.rerollsGroupBox);
             this.Controls.Add(this.rerollAllStatsButton);
-            this.Controls.Add(this.rerollLastRollButton);
             this.Controls.Add(this.rollStatButton);
             this.Controls.Add(this.saveChangesButton);
             this.Name = "Stat";
@@ -404,10 +400,9 @@
 
         private System.Windows.Forms.Button saveChangesButton;
         private System.Windows.Forms.Button rollStatButton;
-        private System.Windows.Forms.Button rerollLastRollButton;
         private System.Windows.Forms.Button rerollAllStatsButton;
         private System.Windows.Forms.GroupBox rerollsGroupBox;
-        private System.Windows.Forms.TextBox statRerollTextBox;
+        private System.Windows.Forms.TextBox statRollsTextBox;
         private System.Windows.Forms.TextBox currentDiceRollTextBox;
         private System.Windows.Forms.GroupBox charismaGroupBox;
         private System.Windows.Forms.GroupBox constitutionGroupBox;
@@ -429,5 +424,6 @@
         private System.Windows.Forms.TextBox wisdomValueTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox rerollCountTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }

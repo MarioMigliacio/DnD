@@ -13,7 +13,7 @@ namespace HeroMaker.Forms
     /// </summary>
     public partial class Stat : Form
     {
-        private bool _canRerollStats = true;
+        private Queue<int> _diceRolls;
         private int _rerollsRemaining = 3;
 
         #region Form Essentials
@@ -25,6 +25,7 @@ namespace HeroMaker.Forms
         {
             InitializeComponent();
             rerollCountTextBox.Text = _rerollsRemaining.ToString();
+            _diceRolls = new Queue<int>();
         }
 
         /// <summary>
@@ -55,15 +56,14 @@ namespace HeroMaker.Forms
         /// </summary>
         private void ButtonsOn()
         {
-            rerollLastRollButton.Enabled = _rerollsRemaining > 0;
             charismaLockInButton.Enabled = !PlayerStats.StatsContainer.ContainsKey(Stats.Charisma);
             constitutionLockInButton.Enabled = !PlayerStats.StatsContainer.ContainsKey(Stats.Constitution);
             dexterityLockInButton.Enabled = !PlayerStats.StatsContainer.ContainsKey(Stats.Dexterity);
             intellectLockInButton.Enabled = !PlayerStats.StatsContainer.ContainsKey(Stats.Intellect);
             strengthLockInButton.Enabled = !PlayerStats.StatsContainer.ContainsKey(Stats.Strength);
             wisdomLockInButton.Enabled = !PlayerStats.StatsContainer.ContainsKey(Stats.Wisdom);
-            rerollAllStatsButton.Enabled = PlayerStats.StatsContainer.Count == 6 && _canRerollStats;
             saveChangesButton.Enabled = PlayerStats.StatsContainer.Count == 6;
+            rerollAllStatsButton.Enabled = _rerollsRemaining > 0;
         }
 
         /// <summary>
@@ -77,10 +77,9 @@ namespace HeroMaker.Forms
             intellectLockInButton.Enabled = false;
             strengthLockInButton.Enabled = false;
             wisdomLockInButton.Enabled = false;
-            rerollLastRollButton.Enabled = false;
-            saveChangesButton.Enabled = PlayerStats.StatsContainer.Count == 6;
-            rollStatButton.Enabled = PlayerStats.StatsContainer.Count != 6;
-            rerollAllStatsButton.Enabled = PlayerStats.StatsContainer.Count == 6 && _canRerollStats;
+            rerollAllStatsButton.Enabled = false;
+            saveChangesButton.Enabled = false;
+            rollStatButton.Enabled = true;
         }
 
         #endregion
@@ -93,79 +92,58 @@ namespace HeroMaker.Forms
         /// </summary>
         private void rollStatButton_Click(object sender, EventArgs e)
         {
-            if (!rollStatButton.Enabled)
-            {
-                return;
-            }
-
             currentDiceRollTextBox.Clear();
-            statRerollTextBox.Clear();
+            statRollsTextBox.Clear();
 
             List<int> storage = new List<int>();
-            storage.Add(Dice.D6);
-            storage.Add(Dice.D6);
-            storage.Add(Dice.D6);
-            storage.Add(Dice.D6);
-            storage.Sort();
-
-            int sum = storage[3] + storage[2] + storage[1];
             StringBuilder sb = new StringBuilder();
+            int sum = 0;
 
-            sb.AppendLine("Roll1: " + storage[0]);
-            sb.AppendLine("Roll2: " + storage[1]);
-            sb.AppendLine("Roll3: " + storage[2]);
-            sb.AppendLine("Roll4: " + storage[3]);
-            sb.AppendLine("Highest total: " + sum);
+            sb.AppendLine("You rolled 6 sets of Dice, Your values are as follows:");
 
-            statRerollTextBox.Text = sb.ToString();
-            currentDiceRollTextBox.Text = sum.ToString();
+            for (int i = 1; i <= 6; i++)
+            {
+                storage.Clear();
+                storage.Add(Dice.D6);
+                storage.Add(Dice.D6);
+                storage.Add(Dice.D6);
+                storage.Add(Dice.D6);
+                storage.Sort();
+                sum = storage[3] + storage[2] + storage[1];
+                sb.AppendLine("Roll" + i + ": " + sum);
+
+                _diceRolls.Enqueue(sum);
+            }
+            
+            
+            statRollsTextBox.Text = sb.ToString();
+            currentDiceRollTextBox.Text = _diceRolls.Peek().ToString();
 
             rollStatButton.Enabled = false;
             ButtonsOn();
         }
-
+        
         /// <summary>
-        /// Allows the user to attempt to roll again rather than being forced to lock in the dice set rolls. Only available for use THREE times.
-        /// </summary>
-        private void rerollLastRollButton_Click(object sender, EventArgs e)
-        {
-            if (_rerollsRemaining == 0)
-            {
-                return;
-            }
-
-            currentDiceRollTextBox.Clear();
-            statRerollTextBox.Clear();
-            _rerollsRemaining--;
-            rerollCountTextBox.Text = _rerollsRemaining.ToString();
-            rollStatButton.Enabled = true;
-
-            ButtonsOff();
-        }
-
-        /// <summary>
-        /// Allows the user to reroll all character stats with this button click. Only available for use ONE time.
+        /// When the user hates RNG and wishes to try again, fire this event!
         /// </summary>
         private void rerollAllStatsButton_Click(object sender, EventArgs e)
         {
-            if (_canRerollStats)
-            {
-                PlayerStats.StatsContainer.Clear();
-                _rerollsRemaining = 3;
-                rollStatButton.Enabled = true;
-                rerollLastRollButton.Enabled = false;
-                _canRerollStats = false;
+            _rerollsRemaining--;
+            rerollCountTextBox.Text = _rerollsRemaining.ToString();
 
-                charismaValueTextBox.Clear();
-                constitutionValueTextBox.Clear();
-                dexterityValueTextBox.Clear();
-                intellectValueTextBox.Clear();
-                strengthValueTextBox.Clear();
-                wisdomValueTextBox.Clear();
-                rerollCountTextBox.Text = _rerollsRemaining.ToString();
-                statRerollTextBox.Clear();
-                currentDiceRollTextBox.Clear();
-            }
+            _diceRolls = new Queue<int>();
+            PlayerStats.StatsContainer = new Dictionary<Stats, int>();
+
+            charismaValueTextBox.Clear();
+            constitutionValueTextBox.Clear();
+            dexterityValueTextBox.Clear();
+            intellectValueTextBox.Clear();
+            strengthValueTextBox.Clear();
+            wisdomValueTextBox.Clear();
+            currentDiceRollTextBox.Clear();
+            statRollsTextBox.Clear();
+
+            ButtonsOff();
         }
 
         #endregion
@@ -177,10 +155,10 @@ namespace HeroMaker.Forms
         /// </summary>
         private void charismaLockInButton_Click(object sender, EventArgs e)
         {
-            PlayerStats.StatsContainer.Add(Stats.Charisma, int.Parse(currentDiceRollTextBox.Text));
-            charismaValueTextBox.Text = currentDiceRollTextBox.Text;
-            rollStatButton.Enabled = true;
-            ButtonsOff();
+            PlayerStats.StatsContainer.Add(Stats.Charisma, _diceRolls.Peek());
+            charismaValueTextBox.Text = _diceRolls.Dequeue().ToString();
+            currentDiceRollTextBox.Text = _diceRolls.Count > 0 ? _diceRolls.Peek().ToString() : null;
+            ButtonsOn();
         }
         
         /// <summary>
@@ -188,10 +166,10 @@ namespace HeroMaker.Forms
         /// </summary>
         private void constitutionLockInButton_Click(object sender, EventArgs e)
         {
-            PlayerStats.StatsContainer.Add(Stats.Constitution, int.Parse(currentDiceRollTextBox.Text));
-            constitutionValueTextBox.Text = currentDiceRollTextBox.Text;
-            rollStatButton.Enabled = true;
-            ButtonsOff();
+            PlayerStats.StatsContainer.Add(Stats.Constitution, _diceRolls.Peek());
+            constitutionValueTextBox.Text = _diceRolls.Dequeue().ToString();
+            currentDiceRollTextBox.Text = _diceRolls.Count > 0 ? _diceRolls.Peek().ToString() : null;
+            ButtonsOn();
         }
 
         /// <summary>
@@ -199,10 +177,10 @@ namespace HeroMaker.Forms
         /// </summary>
         private void dexterityLockInButton_Click(object sender, EventArgs e)
         {
-            PlayerStats.StatsContainer.Add(Stats.Dexterity, int.Parse(currentDiceRollTextBox.Text));
-            dexterityValueTextBox.Text = currentDiceRollTextBox.Text;
-            rollStatButton.Enabled = true;
-            ButtonsOff();
+            PlayerStats.StatsContainer.Add(Stats.Dexterity, _diceRolls.Peek());
+            dexterityValueTextBox.Text = _diceRolls.Dequeue().ToString();
+            currentDiceRollTextBox.Text = _diceRolls.Count > 0 ? _diceRolls.Peek().ToString() : null;
+            ButtonsOn();
         }
 
         /// <summary>
@@ -210,10 +188,10 @@ namespace HeroMaker.Forms
         /// </summary>
         private void intellectLockInButton_Click(object sender, EventArgs e)
         {
-            PlayerStats.StatsContainer.Add(Stats.Intellect, int.Parse(currentDiceRollTextBox.Text));
-            intellectValueTextBox.Text = currentDiceRollTextBox.Text;
-            rollStatButton.Enabled = true;
-            ButtonsOff();
+            PlayerStats.StatsContainer.Add(Stats.Intellect, _diceRolls.Peek());
+            intellectValueTextBox.Text = _diceRolls.Dequeue().ToString();
+            currentDiceRollTextBox.Text = _diceRolls.Count > 0 ? _diceRolls.Peek().ToString() : null;
+            ButtonsOn();
         }
 
         /// <summary>
@@ -221,10 +199,10 @@ namespace HeroMaker.Forms
         /// </summary>
         private void strengthLockInButton_Click(object sender, EventArgs e)
         {
-            PlayerStats.StatsContainer.Add(Stats.Strength, int.Parse(currentDiceRollTextBox.Text));
-            strengthValueTextBox.Text = currentDiceRollTextBox.Text;
-            rollStatButton.Enabled = true;
-            ButtonsOff();
+            PlayerStats.StatsContainer.Add(Stats.Strength, _diceRolls.Peek());
+            strengthValueTextBox.Text = _diceRolls.Dequeue().ToString();
+            currentDiceRollTextBox.Text = _diceRolls.Count > 0 ? _diceRolls.Peek().ToString() : null;
+            ButtonsOn();
         }
 
         /// <summary>
@@ -232,10 +210,10 @@ namespace HeroMaker.Forms
         /// </summary>
         private void wisdomLockInButton_Click(object sender, EventArgs e)
         {
-            PlayerStats.StatsContainer.Add(Stats.Wisdom, int.Parse(currentDiceRollTextBox.Text));
-            wisdomValueTextBox.Text = currentDiceRollTextBox.Text;
-            rollStatButton.Enabled = true;
-            ButtonsOff();
+            PlayerStats.StatsContainer.Add(Stats.Wisdom, _diceRolls.Peek());
+            wisdomValueTextBox.Text = _diceRolls.Dequeue().ToString();
+            currentDiceRollTextBox.Text = _diceRolls.Count > 0 ? _diceRolls.Peek().ToString() : null;
+            ButtonsOn();
         }
 
         #endregion

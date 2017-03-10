@@ -106,24 +106,9 @@ namespace DnD.Classes.Player
         [JsonIgnore]
         public int SkillCap => Level + 3;
 
-        #endregion 
+        #endregion
 
         #region Hero Containers
-        
-        /// <summary>
-        /// The hero's collection of Skills acquired.
-        /// </summary>
-        public List<BaseSkill> PlayerSkills { get; set; }
-
-        /// <summary>
-        /// The hero's collection of Specials acquired.
-        /// </summary>
-        public List<BaseSpecial> PlayerSpecials { get; set; }
-
-        /// <summary>
-        /// The hero's collection of Feats acquired.
-        /// </summary>
-        public List<BaseFeat> PlayerFeats { get; set; }
 
         /// <summary>
         /// The hero's collection of Stats and their values.
@@ -139,6 +124,21 @@ namespace DnD.Classes.Player
         /// The hero's collection of SavingThrows and their values.
         /// </summary>
         public Dictionary<SavingThrowType, int> PlayerSavingThrows { get; set; }
+
+        /// <summary>
+        /// The hero's collection of Specials acquired.
+        /// </summary>
+        public List<BaseSpecial> PlayerSpecials { get; set; }
+
+        /// <summary>
+        /// The hero's collection of Feats acquired.
+        /// </summary>
+        public List<BaseFeat> PlayerFeats { get; set; }
+
+        /// <summary>
+        /// The hero's collection of Skills acquired.
+        /// </summary>
+        public List<BaseSkill> PlayerSkills { get; set; }
 
         #endregion
         
