@@ -3,7 +3,6 @@ using System.Text;
 using System.Windows.Forms;
 using DnD.Classes.CharacterClasses;
 using DnD.Classes.HeroFeats;
-using DnD.Classes.Player;
 using HeroMaker.Enums;
 
 namespace HeroMaker.Forms
@@ -13,8 +12,6 @@ namespace HeroMaker.Forms
     /// </summary>
     public partial class Feat : Form
     {
-        private readonly Hero _thusFar;
-
         #region Form Essentials
 
         /// <summary>
@@ -24,24 +21,9 @@ namespace HeroMaker.Forms
         {
             InitializeComponent();
             PlayerFeats.PopulateContainer();
-
-            // debugging purposes:
-            //DesiredClassType.DesiredClass = ClassType.Rogue;
-            //DesiredRaceType.DesiredRace = RaceType.Human;
-            //PlayerStats.StatsContainer = new Dictionary<Stats, int>
-            //{
-            //    {Stats.Charisma, 10},
-            //    {Stats.Constitution, 10},
-            //    {Stats.Dexterity, 10},
-            //    {Stats.Intellect, 13},
-            //    {Stats.Strength, 10},
-            //    {Stats.Wisdom, 10}
-            //};
-
-            _thusFar = Hero.GetStageTwoHero(DesiredClassType.DesiredClass, DesiredRaceType.DesiredRace, PlayerStats.StatsContainer);
-            featCountTextBox.Text = _thusFar.FeatsAvailable.ToString();
-            bonusMonkFeatsMenuBox.Enabled = _thusFar.TypeOfCharacter is Monk;
-            bonusFighterFeatsMenuBox.Enabled = _thusFar.TypeOfCharacter is Fighter;
+            featCountTextBox.Text = Player.GetHero.FeatsAvailable.ToString();
+            bonusMonkFeatsMenuBox.Enabled = Player.GetHero.TypeOfCharacter is Monk;
+            bonusFighterFeatsMenuBox.Enabled = Player.GetHero.TypeOfCharacter is Fighter;
         }
 
         /// <summary>
@@ -92,8 +74,8 @@ namespace HeroMaker.Forms
                     descriptionTextBox.Text += FeatInformation.GetDescription(bf.FeatType);
                     descriptionTextBox.Text += "\r\n\r\n\r\nThis Feat Requires the following:\r\n";
                     descriptionTextBox.Text += FeatInformation.GetPrerequisitesString(bf.FeatType);
-                    FeatRequirementCheck.CheckIfFeatCanBeAcquired(_thusFar, bf);
-                    learnFighterFeatButton.Enabled = bf.CanAcquire && _thusFar.BonusFeatsAvailable;
+                    FeatRequirementCheck.CheckIfFeatCanBeAcquired(Player.GetHero, bf);
+                    learnFighterFeatButton.Enabled = bf.CanAcquire && Player.GetHero.BonusFeatsAvailable;
                     removeFighterFeatButton.Enabled = bf.IsAcquired;
                     break;
                 }
@@ -124,7 +106,7 @@ namespace HeroMaker.Forms
                     descriptionTextBox.Text += "\r\n\r\n\r\nThis Feat Requires the following:\r\n";
                     descriptionTextBox.Text += FeatInformation.GetPrerequisitesString(bf.FeatType);
                     bf.CanAcquire = !bf.IsAcquired;
-                    learnMonkFeatButton.Enabled = bf.CanAcquire && _thusFar.BonusFeatsAvailable;
+                    learnMonkFeatButton.Enabled = bf.CanAcquire && Player.GetHero.BonusFeatsAvailable;
                     removeMonkFeatButton.Enabled = bf.IsAcquired;
                     break;
                 }
@@ -154,8 +136,8 @@ namespace HeroMaker.Forms
                     descriptionTextBox.Text += FeatInformation.GetDescription(bf.FeatType);
                     descriptionTextBox.Text += "\r\n\r\n\r\nThis Feat Requires the following:\r\n";
                     descriptionTextBox.Text += FeatInformation.GetPrerequisitesString(bf.FeatType);
-                    FeatRequirementCheck.CheckIfFeatCanBeAcquired(_thusFar, bf);
-                    learnFeatButton.Enabled = bf.CanAcquire && _thusFar.FeatsAvailable > 0;
+                    FeatRequirementCheck.CheckIfFeatCanBeAcquired(Player.GetHero, bf);
+                    learnFeatButton.Enabled = bf.CanAcquire && Player.GetHero.FeatsAvailable > 0;
                     removeFeatButton.Enabled = bf.IsAcquired;
                     break;
                 }
@@ -172,7 +154,7 @@ namespace HeroMaker.Forms
         /// </summary>
         private void UpdateSaveButton()
         {
-            saveChangesButton.Enabled = !_thusFar.BonusFeatsAvailable && _thusFar.FeatsAvailable == 0;
+            saveChangesButton.Enabled = !Player.GetHero.BonusFeatsAvailable && Player.GetHero.FeatsAvailable == 0;
         }
 
         /// <summary>
@@ -193,7 +175,7 @@ namespace HeroMaker.Forms
                 }
             }
 
-            _thusFar.PlayerFeats = PlayerFeats.FeatsContainer;
+            Player.GetHero.PlayerFeats = PlayerFeats.FeatsContainer;
 
             knownFeatsTextBox.Clear();
             knownFeatsTextBox.Text = sb.ToString();
@@ -204,7 +186,7 @@ namespace HeroMaker.Forms
         /// </summary>
         private void learnFeatButton_Click(object sender, EventArgs e)
         {
-            if (_thusFar.FeatsAvailable > 0)
+            if (Player.GetHero.FeatsAvailable > 0)
             {
                 string selectedFeat = (string) featsMenuBox.SelectedItem;
 
@@ -212,10 +194,10 @@ namespace HeroMaker.Forms
                 {
                     if (FeatInformation.GetEnumFromString(selectedFeat) == bf.FeatType)
                     {
-                        FeatRequirementCheck.CheckIfFeatCanBeAcquired(_thusFar, bf);
+                        FeatRequirementCheck.CheckIfFeatCanBeAcquired(Player.GetHero, bf);
                         if (bf.CanAcquire && !bf.IsAcquired)
                         {
-                            _thusFar.FeatsAvailable--;
+                            Player.GetHero.FeatsAvailable--;
                             FeatRequirementCheck.AcquireTheFeat(bf);
                             learnFeatButton.Enabled = false;
                             removeFeatButton.Enabled = true;
@@ -226,7 +208,7 @@ namespace HeroMaker.Forms
             }
 
             UpdateSaveButton();
-            featCountTextBox.Text = _thusFar.FeatsAvailable.ToString();
+            featCountTextBox.Text = Player.GetHero.FeatsAvailable.ToString();
             UpdateFeatsBox();
         }
 
@@ -243,49 +225,49 @@ namespace HeroMaker.Forms
                 {
                     if (bf.IsAcquired)
                     {
-                        if (!_thusFar.BonusFeatsAvailable && (!(_thusFar.TypeOfCharacter is Monk) && !(_thusFar.TypeOfCharacter is Fighter)))
+                        if (!Player.GetHero.BonusFeatsAvailable && (!(Player.GetHero.TypeOfCharacter is Monk) && !(Player.GetHero.TypeOfCharacter is Fighter)))
                         {
-                            _thusFar.FeatsAvailable++;
+                            Player.GetHero.FeatsAvailable++;
                             FeatRequirementCheck.RemoveTheFeat(bf);
                             learnFeatButton.Enabled = true;
                             removeFeatButton.Enabled = false;
                         }
-                        else if (_thusFar.BonusFeatsAvailable && ((_thusFar.TypeOfCharacter is Monk) || (_thusFar.TypeOfCharacter is Fighter)))
+                        else if (Player.GetHero.BonusFeatsAvailable && ((Player.GetHero.TypeOfCharacter is Monk) || (Player.GetHero.TypeOfCharacter is Fighter)))
                         {
-                            _thusFar.FeatsAvailable++;
+                            Player.GetHero.FeatsAvailable++;
                             FeatRequirementCheck.RemoveTheFeat(bf);
                             learnFeatButton.Enabled = true;
                             removeFeatButton.Enabled = false;
                         }
                         else
                         {
-                            _thusFar.BonusFeatsAvailable = true;
+                            Player.GetHero.BonusFeatsAvailable = true;
                             FeatRequirementCheck.RemoveTheFeat(bf);
                         }
 
                         foreach (BaseFeat check in PlayerFeats.FeatsContainer)
                         {
-                            FeatRequirementCheck.CheckIfFeatCanBeAcquired(_thusFar, check);
+                            FeatRequirementCheck.CheckIfFeatCanBeAcquired(Player.GetHero, check);
 
                             if (check.IsAcquired && !check.CanAcquire)
                             {
-                                if (!_thusFar.BonusFeatsAvailable && (!(_thusFar.TypeOfCharacter is Monk) && !(_thusFar.TypeOfCharacter is Fighter)))
+                                if (!Player.GetHero.BonusFeatsAvailable && (!(Player.GetHero.TypeOfCharacter is Monk) && !(Player.GetHero.TypeOfCharacter is Fighter)))
                                 {
-                                    _thusFar.FeatsAvailable++;
+                                    Player.GetHero.FeatsAvailable++;
                                     FeatRequirementCheck.RemoveTheFeat(check);
                                     learnFeatButton.Enabled = false;
                                     removeFeatButton.Enabled = false;
                                 }
-                                else if (_thusFar.BonusFeatsAvailable && ((_thusFar.TypeOfCharacter is Monk) || (_thusFar.TypeOfCharacter is Fighter)))
+                                else if (Player.GetHero.BonusFeatsAvailable && ((Player.GetHero.TypeOfCharacter is Monk) || (Player.GetHero.TypeOfCharacter is Fighter)))
                                 {
-                                    _thusFar.FeatsAvailable++;
+                                    Player.GetHero.FeatsAvailable++;
                                     FeatRequirementCheck.RemoveTheFeat(check);
                                     learnFeatButton.Enabled = false;
                                     removeFeatButton.Enabled = false;
                                 }
                                 else
                                 {
-                                    _thusFar.BonusFeatsAvailable = true;
+                                    Player.GetHero.BonusFeatsAvailable = true;
                                     FeatRequirementCheck.RemoveTheFeat(check);
                                     learnFeatButton.Enabled = false;
                                     removeFeatButton.Enabled = false;
@@ -299,7 +281,7 @@ namespace HeroMaker.Forms
             }
 
             UpdateSaveButton();
-            featCountTextBox.Text = _thusFar.FeatsAvailable.ToString();
+            featCountTextBox.Text = Player.GetHero.FeatsAvailable.ToString();
             UpdateFeatsBox();
         }
 
@@ -308,7 +290,7 @@ namespace HeroMaker.Forms
         /// </summary>
         private void learnFighterFeatButton_Click(object sender, EventArgs e)
         {
-            if (_thusFar.BonusFeatsAvailable)
+            if (Player.GetHero.BonusFeatsAvailable)
             {
                 string selectedFeat = (string)bonusFighterFeatsMenuBox.SelectedItem;
 
@@ -316,10 +298,10 @@ namespace HeroMaker.Forms
                 {
                     if (FeatInformation.GetEnumFromString(selectedFeat) == bf.FeatType)
                     {
-                        FeatRequirementCheck.CheckIfFeatCanBeAcquired(_thusFar, bf);
+                        FeatRequirementCheck.CheckIfFeatCanBeAcquired(Player.GetHero, bf);
                         if (bf.CanAcquire && !bf.IsAcquired)
                         {
-                            _thusFar.BonusFeatsAvailable = false;
+                            Player.GetHero.BonusFeatsAvailable = false;
                             FeatRequirementCheck.AcquireTheFeat(bf);
                             learnFighterFeatButton.Enabled = false;
                             removeFighterFeatButton.Enabled = true;
@@ -329,7 +311,7 @@ namespace HeroMaker.Forms
             }
 
             UpdateSaveButton();
-            featCountTextBox.Text = _thusFar.FeatsAvailable.ToString();
+            featCountTextBox.Text = Player.GetHero.FeatsAvailable.ToString();
             UpdateFeatsBox();
         }
 
@@ -347,16 +329,16 @@ namespace HeroMaker.Forms
                 {
                     if (bf.IsAcquired)
                     {
-                        if (_thusFar.BonusFeatsAvailable && ((_thusFar.TypeOfCharacter is Monk) || (_thusFar.TypeOfCharacter is Fighter)))
+                        if (Player.GetHero.BonusFeatsAvailable && ((Player.GetHero.TypeOfCharacter is Monk) || (Player.GetHero.TypeOfCharacter is Fighter)))
                         {
-                            _thusFar.FeatsAvailable++;
+                            Player.GetHero.FeatsAvailable++;
                             FeatRequirementCheck.RemoveTheFeat(bf);
                             learnFeatButton.Enabled = true;
                             removeFeatButton.Enabled = false;
                         }
                         else
                         {
-                            _thusFar.FeatsAvailable++;
+                            Player.GetHero.FeatsAvailable++;
                             FeatRequirementCheck.RemoveTheFeat(bf);
                             learnFeatButton.Enabled = true;
                             removeFeatButton.Enabled = false;
@@ -364,11 +346,11 @@ namespace HeroMaker.Forms
 
                         foreach (BaseFeat check in PlayerFeats.FeatsContainer)
                         {
-                            FeatRequirementCheck.CheckIfFeatCanBeAcquired(_thusFar, check);
+                            FeatRequirementCheck.CheckIfFeatCanBeAcquired(Player.GetHero, check);
 
                             if (check.IsAcquired && !check.CanAcquire)
                             {
-                                _thusFar.BonusFeatsAvailable = true;
+                                Player.GetHero.BonusFeatsAvailable = true;
                                 FeatRequirementCheck.RemoveTheFeat(check);
                                 learnFeatButton.Enabled = false;
                                 removeFeatButton.Enabled = false;
@@ -381,7 +363,7 @@ namespace HeroMaker.Forms
             }
 
             UpdateSaveButton();
-            featCountTextBox.Text = _thusFar.FeatsAvailable.ToString();
+            featCountTextBox.Text = Player.GetHero.FeatsAvailable.ToString();
             UpdateFeatsBox();
         }
 
@@ -390,7 +372,7 @@ namespace HeroMaker.Forms
         /// </summary>
         private void learnMonkFeatButton_Click(object sender, EventArgs e)
         {
-            if (_thusFar.BonusFeatsAvailable)
+            if (Player.GetHero.BonusFeatsAvailable)
             {
                 string selectedFeat = (string)bonusMonkFeatsMenuBox.SelectedItem;
 
@@ -402,7 +384,7 @@ namespace HeroMaker.Forms
                         bf.CanAcquire = !bf.IsAcquired;
                         if (bf.CanAcquire && !bf.IsAcquired)
                         {
-                            _thusFar.BonusFeatsAvailable = false;
+                            Player.GetHero.BonusFeatsAvailable = false;
                             FeatRequirementCheck.AcquireTheFeat(bf);
                             learnMonkFeatButton.Enabled = false;
                             removeMonkFeatButton.Enabled = true;
@@ -412,7 +394,7 @@ namespace HeroMaker.Forms
             }
 
             UpdateSaveButton();
-            featCountTextBox.Text = _thusFar.FeatsAvailable.ToString();
+            featCountTextBox.Text = Player.GetHero.FeatsAvailable.ToString();
             UpdateFeatsBox();
         }
 
@@ -429,16 +411,16 @@ namespace HeroMaker.Forms
                 {
                     if (bf.IsAcquired)
                     {
-                        if (_thusFar.BonusFeatsAvailable && ((_thusFar.TypeOfCharacter is Monk) || (_thusFar.TypeOfCharacter is Fighter)))
+                        if (Player.GetHero.BonusFeatsAvailable && ((Player.GetHero.TypeOfCharacter is Monk) || (Player.GetHero.TypeOfCharacter is Fighter)))
                         {
-                            _thusFar.FeatsAvailable++;
+                            Player.GetHero.FeatsAvailable++;
                             FeatRequirementCheck.RemoveTheFeat(bf);
                             learnFeatButton.Enabled = true;
                             removeFeatButton.Enabled = false;
                         }
                         else
                         {
-                            _thusFar.FeatsAvailable++;
+                            Player.GetHero.FeatsAvailable++;
                             FeatRequirementCheck.RemoveTheFeat(bf);
                             learnFeatButton.Enabled = true;
                             removeFeatButton.Enabled = false;
@@ -446,11 +428,11 @@ namespace HeroMaker.Forms
 
                         foreach (BaseFeat check in PlayerFeats.FeatsContainer)
                         {
-                            FeatRequirementCheck.CheckIfFeatCanBeAcquired(_thusFar, check);
+                            FeatRequirementCheck.CheckIfFeatCanBeAcquired(Player.GetHero, check);
 
                             if (check.IsAcquired && !check.CanAcquire)
                             {
-                                _thusFar.BonusFeatsAvailable = true;
+                                Player.GetHero.BonusFeatsAvailable = true;
                                 FeatRequirementCheck.RemoveTheFeat(check);
                                 learnFeatButton.Enabled = false;
                                 removeFeatButton.Enabled = false;
@@ -463,7 +445,7 @@ namespace HeroMaker.Forms
             }
 
             UpdateSaveButton();
-            featCountTextBox.Text = _thusFar.FeatsAvailable.ToString();
+            featCountTextBox.Text = Player.GetHero.FeatsAvailable.ToString();
             UpdateFeatsBox();
         }
 

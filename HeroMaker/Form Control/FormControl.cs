@@ -27,6 +27,7 @@ namespace HeroMaker
                 case GameState.Stat: return new Stat();
                 case GameState.Skill: return new Skill();
                 case GameState.Feat: return new Feat();
+                case GameState.Detail: return new Detail();
                 default: return null;
             }
         }

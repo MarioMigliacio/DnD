@@ -12,7 +12,6 @@ namespace HeroMaker.Forms
     /// </summary>
     public partial class Skill : Form
     {
-        private readonly Hero _thusFar;
         private bool _canAdd = false;
         private bool _canRemove = false;
         private int _skillsRemaining;
@@ -27,8 +26,8 @@ namespace HeroMaker.Forms
             InitializeComponent();
             PlayerSkills.PopulateContainer();
 
-            _thusFar = Hero.GetStageTwoHero(DesiredClassType.DesiredClass, DesiredRaceType.DesiredRace, PlayerStats.StatsContainer);
-            _skillsRemaining = _thusFar.SkillRanksAvailable;
+            Player.GetHero = Hero.GetStageTwoHero(DesiredClassType.DesiredClass, DesiredRaceType.DesiredRace, PlayerStats.StatsContainer);
+            _skillsRemaining = Player.GetHero.SkillRanksAvailable;
             skillCountTextBox.Text = _skillsRemaining.ToString();
         }
 
@@ -72,222 +71,222 @@ namespace HeroMaker.Forms
                 case ClassSkills.Appraise:
                     descriptionTextBox.Text = SkillStrings.Appraise;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Appraise].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int) ClassSkills.Appraise].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int) ClassSkills.Appraise].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int) ClassSkills.Appraise].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Balance:
                     descriptionTextBox.Text = SkillStrings.Balance;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Balance].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Balance].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Balance].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Balance].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Bluff:
                     descriptionTextBox.Text = SkillStrings.Bluff;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Bluff].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Bluff].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Bluff].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Bluff].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Climb:
                     descriptionTextBox.Text = SkillStrings.Climb;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Climb].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Climb].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Climb].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Climb].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Concentration:
                     descriptionTextBox.Text = SkillStrings.Concentration;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Concentration].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Concentration].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Concentration].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Concentration].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Craft:
                     descriptionTextBox.Text = SkillStrings.Craft;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Craft].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Craft].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Craft].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Craft].NumberOfRanks > 0;
                     break;
                 case ClassSkills.DecipherScript:
                     descriptionTextBox.Text = SkillStrings.DecipherScript;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.DecipherScript].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.DecipherScript].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.DecipherScript].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.DecipherScript].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Diplomacy:
                     descriptionTextBox.Text = SkillStrings.Diplomacy;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Diplomacy].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Diplomacy].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Diplomacy].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Diplomacy].NumberOfRanks > 0;
                     break;
                 case ClassSkills.DisableDevice:
                     descriptionTextBox.Text = SkillStrings.DisableDevice;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.DisableDevice].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.DisableDevice].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.DisableDevice].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.DisableDevice].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Disguise:
                     descriptionTextBox.Text = SkillStrings.Disguise;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Disguise].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Disguise].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Disguise].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Disguise].NumberOfRanks > 0;
                     break;
                 case ClassSkills.EscapeArtist:
                     descriptionTextBox.Text = SkillStrings.EscapeArtist;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.EscapeArtist].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.EscapeArtist].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.EscapeArtist].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.EscapeArtist].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Forgery:
                     descriptionTextBox.Text = SkillStrings.Forgery;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Forgery].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Forgery].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Forgery].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Forgery].NumberOfRanks > 0;
                     break;
                 case ClassSkills.GatherInformation:
                     descriptionTextBox.Text = SkillStrings.GatherInformation;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.GatherInformation].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.GatherInformation].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.GatherInformation].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.GatherInformation].NumberOfRanks > 0;
                     break;
                 case ClassSkills.HandleAnimal:
                     descriptionTextBox.Text = SkillStrings.HandleAnimal;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.HandleAnimal].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.HandleAnimal].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.HandleAnimal].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.HandleAnimal].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Heal:
                     descriptionTextBox.Text = SkillStrings.Heal;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Heal].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Heal].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Heal].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Heal].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Hide:
                     descriptionTextBox.Text = SkillStrings.Hide;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Hide].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Hide].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Hide].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Hide].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Intimidate:
                     descriptionTextBox.Text = SkillStrings.Intimidate;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Intimidate].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Intimidate].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Intimidate].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Intimidate].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Jump:
                     descriptionTextBox.Text = SkillStrings.Jump;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Jump].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Jump].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Jump].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Jump].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Knowledge:
                     descriptionTextBox.Text = SkillStrings.Knowledge;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Knowledge].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Knowledge].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Knowledge].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Knowledge].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Listen:
                     descriptionTextBox.Text = SkillStrings.Listen;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Listen].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Listen].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Listen].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Listen].NumberOfRanks > 0;
                     break;
                 case ClassSkills.MoveSilently:
                     descriptionTextBox.Text = SkillStrings.MoveSilently;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.MoveSilently].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.MoveSilently].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.MoveSilently].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.MoveSilently].NumberOfRanks > 0;
                     break;
                 case ClassSkills.OpenLock:
                     descriptionTextBox.Text = SkillStrings.OpenLock;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.OpenLock].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.OpenLock].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.OpenLock].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.OpenLock].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Perform:
                     descriptionTextBox.Text = SkillStrings.Perform;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Perform].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Perform].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Perform].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Perform].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Profession:
                     descriptionTextBox.Text = SkillStrings.Profession;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Profession].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Profession].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Profession].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Profession].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Ride:
                     descriptionTextBox.Text = SkillStrings.Ride;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Ride].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Ride].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Ride].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Ride].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Search:
                     descriptionTextBox.Text = SkillStrings.Search;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Search].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Search].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Search].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Search].NumberOfRanks > 0;
                     break;
                 case ClassSkills.SenseMotive:
                     descriptionTextBox.Text = SkillStrings.SenseMotive;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.SenseMotive].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.SenseMotive].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.SenseMotive].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.SenseMotive].NumberOfRanks > 0;
                     break;
                 case ClassSkills.SleightOfHand:
                     descriptionTextBox.Text = SkillStrings.SleightOfHand;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.SleightOfHand].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.SleightOfHand].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.SleightOfHand].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.SleightOfHand].NumberOfRanks > 0;
                     break;
                 case ClassSkills.SpeakLanguage:
                     descriptionTextBox.Text = SkillStrings.SpeakLanguage;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.SpeakLanguage].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.SpeakLanguage].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.SpeakLanguage].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.SpeakLanguage].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Spellcraft:
                     descriptionTextBox.Text = SkillStrings.Spellcraft;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Spellcraft].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Spellcraft].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Spellcraft].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Spellcraft].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Spot:
                     descriptionTextBox.Text = SkillStrings.Spot;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Spot].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Spot].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Spot].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Spot].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Survival:
                     descriptionTextBox.Text = SkillStrings.Survival;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Survival].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Survival].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Survival].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Survival].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Swim:
                     descriptionTextBox.Text = SkillStrings.Swim;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Swim].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Swim].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Swim].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Swim].NumberOfRanks > 0;
                     break;
                 case ClassSkills.Tumble:
                     descriptionTextBox.Text = SkillStrings.Tumble;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.Tumble].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Tumble].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.Tumble].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.Tumble].NumberOfRanks > 0;
                     break;
                 case ClassSkills.UseMagicDevice:
                     descriptionTextBox.Text = SkillStrings.UseMagicDevice;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.UseMagicDevice].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.UseMagicDevice].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.UseMagicDevice].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.UseMagicDevice].NumberOfRanks > 0;
                     break;
                 case ClassSkills.UseRope:
                     descriptionTextBox.Text = SkillStrings.UseRope;
                     rankCountTextBox.Text = PlayerSkills.SkillsContainer[(int)ClassSkills.UseRope].NumberOfRanks.ToString();
-                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.UseRope].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                    _canAdd = PlayerSkills.SkillsContainer[(int)ClassSkills.UseRope].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                     _canRemove = PlayerSkills.SkillsContainer[(int)ClassSkills.UseRope].NumberOfRanks > 0;
                     break;
             }
 
-            rankCountTextBox.Text += "            /            " + _thusFar.SkillCap;
+            rankCountTextBox.Text += "            /            " + Player.GetHero.SkillCap;
             addRankButton.Enabled = _canAdd;
             removeRankButton.Enabled = _canRemove;
         }
@@ -308,14 +307,14 @@ namespace HeroMaker.Forms
                 PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks++;
                 _skillsRemaining--;
                 
-                _canAdd = PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                _canAdd = PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                 _canRemove = PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks > 0;
             }
 
             addRankButton.Enabled = _canAdd;
             removeRankButton.Enabled = _canRemove;
             rankCountTextBox.Text = PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks.ToString();
-            rankCountTextBox.Text += "            /            " + _thusFar.SkillCap;
+            rankCountTextBox.Text += "            /            " + Player.GetHero.SkillCap;
 
             skillCountTextBox.Text = _skillsRemaining.ToString();
             saveChangesButton.Enabled = _skillsRemaining == 0;
@@ -333,14 +332,14 @@ namespace HeroMaker.Forms
                 PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks--;
                 _skillsRemaining++;
 
-                _canAdd = PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks < _thusFar.SkillCap && _skillsRemaining > 0;
+                _canAdd = PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks < Player.GetHero.SkillCap && _skillsRemaining > 0;
                 _canRemove = PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks > 0;
             }
 
             removeRankButton.Enabled = _canRemove;
             addRankButton.Enabled = _canAdd;
             rankCountTextBox.Text = PlayerSkills.SkillsContainer[skillsMenuBox.FindStringExact(selectedSkill)].NumberOfRanks.ToString();
-            rankCountTextBox.Text += "            /            " + _thusFar.SkillCap;
+            rankCountTextBox.Text += "            /            " + Player.GetHero.SkillCap;
 
             skillCountTextBox.Text = _skillsRemaining.ToString();
             saveChangesButton.Enabled = _skillsRemaining == 0;

@@ -45,8 +45,7 @@ namespace HeroMaker.Forms
             FormControl.Gs = GameState.Final;
             this.Dispose();
         }
-
-
+        
         #endregion
 
         #region Button Helper Functions

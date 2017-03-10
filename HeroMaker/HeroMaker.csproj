@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Enums\GameState.cs" />
     <Compile Include="Form Control\FormControl.cs" />
+    <Compile Include="Forms\Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Detail.Designer.cs">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Feat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,10 +88,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Static Information Containers\DesiredClassType.cs" />
     <Compile Include="Static Information Containers\DesiredRaceType.cs" />
+    <Compile Include="Static Information Containers\Player.cs" />
     <Compile Include="Static Information Containers\PlayerFeats.cs" />
     <Compile Include="Static Information Containers\PlayerNameAndGender.cs" />
     <Compile Include="Static Information Containers\PlayerSkills.cs" />
     <Compile Include="Static Information Containers\PlayerStats.cs" />
+    <EmbeddedResource Include="Forms\Detail.resx">
+      <DependentUpon>Detail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Feat.resx">
       <DependentUpon>Feat.cs</DependentUpon>
     </EmbeddedResource>
