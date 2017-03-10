@@ -1,10 +1,19 @@
-﻿namespace DnD.Enums.Items
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Items
 {
     /// <summary>
     /// Represents the Trade goods of type Metal.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Metal
     {
+        /// <summary>
+        /// A default status.
+        /// </summary>
+        None,
+
         /// <summary>
         /// Represents an ore of type Copper.
         /// </summary>

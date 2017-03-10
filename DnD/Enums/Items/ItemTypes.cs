@@ -1,10 +1,19 @@
-﻿namespace DnD.Enums.Items
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Items
 {
     /// <summary>
     /// The Generic Type of supported Items.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ItemType
     {
+        /// <summary>
+        /// A default status.
+        /// </summary>
+        None,
+
         /// <summary>
         /// Represents items of type Weapon.
         /// </summary>

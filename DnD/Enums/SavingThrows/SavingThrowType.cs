@@ -1,4 +1,5 @@
-﻿using DnD.Enums.Stats;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace DnD.Enums.SavingThrows
 {
@@ -6,6 +7,7 @@ namespace DnD.Enums.SavingThrows
     /// There are times when additional checks need to be made against particular actions.
     /// Saving Throws in dungeons and dragons adds complexity to actions in many ways.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum SavingThrowType
     {
         /// <summary>

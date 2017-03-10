@@ -1,10 +1,19 @@
-﻿namespace DnD.Enums.Items
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Items
 {
     /// <summary>
     /// The range of supported types of Armors.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ArmorType
     {
+        /// <summary>
+        /// A default status.
+        /// </summary>
+        None,
+
         /// <summary>
         /// Represents the Armor type that is of type Belt.
         /// </summary>

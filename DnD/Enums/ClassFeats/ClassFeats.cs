@@ -1,8 +1,12 @@
-﻿namespace DnD.Enums.ClassFeats
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.ClassFeats
 {
     /// <summary>
     /// Feats are unique and boost character individuality, they bolster some aspect to a hero in various ways.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ClassFeats
     {
         /// <summary>

@@ -1,8 +1,12 @@
-﻿namespace DnD.Enums.Alignment
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Alignment
 {
     /// <summary>
     /// The various forms of character alignment in the standard v3.5 Dungeons and Dragons.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Alignment
     {
         /// <summary>

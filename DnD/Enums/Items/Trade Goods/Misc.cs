@@ -1,10 +1,19 @@
-﻿namespace DnD.Enums.Items
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Items
 {
     /// <summary>
     /// Represents the Trade goods of type miscellaneous.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Misc
     {
+        /// <summary>
+        /// A default status.
+        /// </summary>
+        None,
+
         /// <summary>
         /// Represents a Misc item of type SpellBook.
         /// </summary>

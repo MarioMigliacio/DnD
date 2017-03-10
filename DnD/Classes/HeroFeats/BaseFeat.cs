@@ -3,6 +3,7 @@ using DnD.Enums.Stats;
 using System.Collections.Generic;
 using System.Text;
 using DnD.Enums.ClassFeats;
+using Newtonsoft.Json;
 
 namespace DnD.Classes.HeroFeats
 {
@@ -16,27 +17,32 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns the value of required base attack that this particular feat requires.
         /// </summary>
+        [JsonIgnore]
         public abstract int AttackBonusPrerequisites { get; }
 
         /// <summary>
         /// Returns the associated List of required feats that this particular feat requires.
         /// Null if no required feat.
         /// </summary>
+        [JsonIgnore]
         public abstract List<BaseFeat> FeatPrerequisites { get; }
 
         /// <summary>
         /// Returns a Class type with a Level if there is a required Class restriction on this feat.
         /// </summary>
+        [JsonIgnore]
         public abstract BaseCharacterClass ClassLevelPrerequisites { get; }
 
         /// <summary>
         /// Returns a dictionary where KEY represents the required stat and VALUE = the value of that stat.
         /// </summary>
+        [JsonIgnore]
         public abstract Dictionary<Stats, int> MinimumRequiredStat { get; }
 
         /// <summary>
         /// The associated Description tag for the string, found within the respective UserStrings files.
         /// </summary>
+        [JsonIgnore]
         public abstract string Description { get; }
 
         /// <summary>
@@ -47,11 +53,13 @@ namespace DnD.Classes.HeroFeats
         /// <summary>
         /// Returns whether or not the Feat can be Acquired.
         /// </summary>
+        [JsonIgnore]
         public bool CanAcquire { get; set; } = false;
 
         /// <summary>
         /// Returns whether or not the Feat has been Acquired.
         /// </summary>
+        [JsonIgnore]
         public bool IsAcquired { get; set; } = false;
 
         /// <summary>

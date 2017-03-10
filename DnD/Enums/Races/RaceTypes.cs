@@ -1,8 +1,12 @@
-﻿namespace DnD.Enums.Races
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Races
 {
     /// <summary>
     /// The available types of races a character can be.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum RaceType
     {
         /// <summary>

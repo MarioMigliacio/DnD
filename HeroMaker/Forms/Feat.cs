@@ -24,6 +24,9 @@ namespace HeroMaker.Forms
             featCountTextBox.Text = Player.GetHero.FeatsAvailable.ToString();
             bonusMonkFeatsMenuBox.Enabled = Player.GetHero.TypeOfCharacter is Monk;
             bonusFighterFeatsMenuBox.Enabled = Player.GetHero.TypeOfCharacter is Fighter;
+            featsMenuBox.Text = "SELECT A FEAT!";
+            bonusMonkFeatsMenuBox.Text = bonusMonkFeatsMenuBox.Enabled ? "SELECT A FEAT!" : null;
+            bonusFighterFeatsMenuBox.Text = bonusFighterFeatsMenuBox.Enabled ? "SELECT A FEAT!" : null;
         }
 
         /// <summary>

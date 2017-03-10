@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using DnD.Classes.Player;
 using DnD.Enums.ClassSkills;
+using DnD.Enums.Stats;
 using DnD.UserStrings;
 using HeroMaker.Enums;
 
@@ -25,10 +26,11 @@ namespace HeroMaker.Forms
         {
             InitializeComponent();
             PlayerSkills.PopulateContainer();
-
             Player.GetHero = Hero.GetStageTwoHero(DesiredClassType.DesiredClass, DesiredRaceType.DesiredRace, PlayerStats.StatsContainer);
+            Player.GetHero.MaxHp += Player.GetHero.PlayerModifiers[Stats.Constitution];
             _skillsRemaining = Player.GetHero.SkillRanksAvailable;
             skillCountTextBox.Text = _skillsRemaining.ToString();
+            skillsMenuBox.Text = "SELECT YOUR SKILLS HERE!";
         }
 
         /// <summary>
@@ -48,6 +50,19 @@ namespace HeroMaker.Forms
         {
             PlayerSkills.TrimContainer();
             FormControl.Gs = FormControl.GetNextState();
+
+            // if the character has special skills from their race, we need to add that to the static PlayerSkills container now!
+            for (int i = 0; i < Player.GetHero.PlayerSkills.Count; i++)
+            {
+                for (int j = 0; j < PlayerSkills.SkillsContainer.Count; j++)
+                {
+                    if (PlayerSkills.SkillsContainer[j].SkillType == Player.GetHero.PlayerSkills[i].SkillType)
+                    {
+                        PlayerSkills.SkillsContainer[j].NumberOfRanks += Player.GetHero.PlayerSkills[i].NumberOfRanks;
+                    }
+                }
+            }
+
             this.Dispose();
         }
 

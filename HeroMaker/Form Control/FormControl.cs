@@ -46,7 +46,6 @@ namespace HeroMaker
                 case GameState.Skill: return GameState.Feat;
                 case GameState.Feat: return GameState.Detail;
                 case GameState.Detail: return GameState.Final;
-                case GameState.Final: return GameState.Final;
                 default: return GameState.Init;
             }
         }

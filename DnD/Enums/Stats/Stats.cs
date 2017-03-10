@@ -1,8 +1,12 @@
-﻿namespace DnD.Enums.Stats
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Stats
 {
     /// <summary>
     /// Represents the enumerable types of character stats available.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Stats
     {
         /// <summary>

@@ -46,6 +46,19 @@
             this.playerRaceLabel = new System.Windows.Forms.Label();
             this.playerRaceTextBox = new System.Windows.Forms.TextBox();
             this.playerClassTextBox = new System.Windows.Forms.TextBox();
+            this.alignmentGroupBox = new System.Windows.Forms.GroupBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.inputYourHeroAlignmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chaoticEvilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chaoticNeutralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chaoticGoodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.neutralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lawfulEvilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lawfulNeutralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lawfulGoodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rerunButton = new System.Windows.Forms.Button();
             this.playerStatsGroupBox.SuspendLayout();
             this.playerSpecialsGroupBox.SuspendLayout();
             this.playerSkillsGroupBox.SuspendLayout();
@@ -53,6 +66,8 @@
             this.playerNameGroupBox.SuspendLayout();
             this.playerGenderGroupBox.SuspendLayout();
             this.playerTypeGroupBox.SuspendLayout();
+            this.alignmentGroupBox.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // playerStatsGroupBox
@@ -68,7 +83,6 @@
             // 
             // playerStatsTextBox
             // 
-            this.playerStatsTextBox.Enabled = false;
             this.playerStatsTextBox.Location = new System.Drawing.Point(7, 26);
             this.playerStatsTextBox.Multiline = true;
             this.playerStatsTextBox.Name = "playerStatsTextBox";
@@ -89,7 +103,6 @@
             // 
             // playerSpecialTextBox
             // 
-            this.playerSpecialTextBox.Enabled = false;
             this.playerSpecialTextBox.Location = new System.Drawing.Point(7, 26);
             this.playerSpecialTextBox.Multiline = true;
             this.playerSpecialTextBox.Name = "playerSpecialTextBox";
@@ -110,11 +123,11 @@
             // 
             // playerSkillTextBox
             // 
-            this.playerSkillTextBox.Enabled = false;
             this.playerSkillTextBox.Location = new System.Drawing.Point(7, 26);
             this.playerSkillTextBox.Multiline = true;
             this.playerSkillTextBox.Name = "playerSkillTextBox";
             this.playerSkillTextBox.ReadOnly = true;
+            this.playerSkillTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.playerSkillTextBox.Size = new System.Drawing.Size(212, 325);
             this.playerSkillTextBox.TabIndex = 0;
             // 
@@ -131,7 +144,6 @@
             // 
             // playerFeatTextBox
             // 
-            this.playerFeatTextBox.Enabled = false;
             this.playerFeatTextBox.Location = new System.Drawing.Point(7, 26);
             this.playerFeatTextBox.Multiline = true;
             this.playerFeatTextBox.Name = "playerFeatTextBox";
@@ -141,12 +153,13 @@
             // 
             // saveStateButton
             // 
-            this.saveStateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveStateButton.Location = new System.Drawing.Point(857, 7);
+            this.saveStateButton.Enabled = false;
+            this.saveStateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveStateButton.Location = new System.Drawing.Point(818, 7);
             this.saveStateButton.Name = "saveStateButton";
-            this.saveStateButton.Size = new System.Drawing.Size(115, 31);
+            this.saveStateButton.Size = new System.Drawing.Size(154, 40);
             this.saveStateButton.TabIndex = 3;
-            this.saveStateButton.Text = "Conclude";
+            this.saveStateButton.Text = "Save This Hero!";
             this.saveStateButton.UseVisualStyleBackColor = true;
             this.saveStateButton.Click += new System.EventHandler(this.saveStateButton_Click);
             // 
@@ -242,12 +255,125 @@
             this.playerClassTextBox.Size = new System.Drawing.Size(212, 29);
             this.playerClassTextBox.TabIndex = 1;
             // 
+            // alignmentGroupBox
+            // 
+            this.alignmentGroupBox.Controls.Add(this.menuStrip1);
+            this.alignmentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alignmentGroupBox.Location = new System.Drawing.Point(255, 85);
+            this.alignmentGroupBox.Name = "alignmentGroupBox";
+            this.alignmentGroupBox.Size = new System.Drawing.Size(225, 74);
+            this.alignmentGroupBox.TabIndex = 8;
+            this.alignmentGroupBox.TabStop = false;
+            this.alignmentGroupBox.Text = "Alignment";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inputYourHeroAlignmentToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(3, 22);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(219, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // inputYourHeroAlignmentToolStripMenuItem
+            // 
+            this.inputYourHeroAlignmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chaoticEvilToolStripMenuItem,
+            this.chaoticNeutralToolStripMenuItem,
+            this.chaoticGoodToolStripMenuItem,
+            this.evilToolStripMenuItem,
+            this.neutralToolStripMenuItem,
+            this.goodToolStripMenuItem,
+            this.lawfulEvilToolStripMenuItem,
+            this.lawfulNeutralToolStripMenuItem,
+            this.lawfulGoodToolStripMenuItem});
+            this.inputYourHeroAlignmentToolStripMenuItem.Name = "inputYourHeroAlignmentToolStripMenuItem";
+            this.inputYourHeroAlignmentToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
+            this.inputYourHeroAlignmentToolStripMenuItem.Text = "Choose Alignment";
+            // 
+            // chaoticEvilToolStripMenuItem
+            // 
+            this.chaoticEvilToolStripMenuItem.Name = "chaoticEvilToolStripMenuItem";
+            this.chaoticEvilToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.chaoticEvilToolStripMenuItem.Text = "Chaotic Evil";
+            this.chaoticEvilToolStripMenuItem.Click += new System.EventHandler(this.chaoticEvilToolStripMenuItem_Click);
+            // 
+            // chaoticNeutralToolStripMenuItem
+            // 
+            this.chaoticNeutralToolStripMenuItem.Name = "chaoticNeutralToolStripMenuItem";
+            this.chaoticNeutralToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.chaoticNeutralToolStripMenuItem.Text = "Chaotic Neutral";
+            this.chaoticNeutralToolStripMenuItem.Click += new System.EventHandler(this.chaoticNeutralToolStripMenuItem_Click);
+            // 
+            // chaoticGoodToolStripMenuItem
+            // 
+            this.chaoticGoodToolStripMenuItem.Name = "chaoticGoodToolStripMenuItem";
+            this.chaoticGoodToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.chaoticGoodToolStripMenuItem.Text = "Chaotic Good";
+            this.chaoticGoodToolStripMenuItem.Click += new System.EventHandler(this.chaoticGoodToolStripMenuItem_Click);
+            // 
+            // evilToolStripMenuItem
+            // 
+            this.evilToolStripMenuItem.Name = "evilToolStripMenuItem";
+            this.evilToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.evilToolStripMenuItem.Text = "Evil";
+            this.evilToolStripMenuItem.Click += new System.EventHandler(this.evilToolStripMenuItem_Click);
+            // 
+            // neutralToolStripMenuItem
+            // 
+            this.neutralToolStripMenuItem.Name = "neutralToolStripMenuItem";
+            this.neutralToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.neutralToolStripMenuItem.Text = "Neutral";
+            this.neutralToolStripMenuItem.Click += new System.EventHandler(this.neutralToolStripMenuItem_Click);
+            // 
+            // goodToolStripMenuItem
+            // 
+            this.goodToolStripMenuItem.Name = "goodToolStripMenuItem";
+            this.goodToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.goodToolStripMenuItem.Text = "Good";
+            this.goodToolStripMenuItem.Click += new System.EventHandler(this.goodToolStripMenuItem_Click);
+            // 
+            // lawfulEvilToolStripMenuItem
+            // 
+            this.lawfulEvilToolStripMenuItem.Name = "lawfulEvilToolStripMenuItem";
+            this.lawfulEvilToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.lawfulEvilToolStripMenuItem.Text = "Lawful Evil";
+            this.lawfulEvilToolStripMenuItem.Click += new System.EventHandler(this.lawfulEvilToolStripMenuItem_Click);
+            // 
+            // lawfulNeutralToolStripMenuItem
+            // 
+            this.lawfulNeutralToolStripMenuItem.Name = "lawfulNeutralToolStripMenuItem";
+            this.lawfulNeutralToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.lawfulNeutralToolStripMenuItem.Text = "Lawful Neutral";
+            this.lawfulNeutralToolStripMenuItem.Click += new System.EventHandler(this.lawfulNeutralToolStripMenuItem_Click);
+            // 
+            // lawfulGoodToolStripMenuItem
+            // 
+            this.lawfulGoodToolStripMenuItem.Name = "lawfulGoodToolStripMenuItem";
+            this.lawfulGoodToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.lawfulGoodToolStripMenuItem.Text = "Lawful Good";
+            this.lawfulGoodToolStripMenuItem.Click += new System.EventHandler(this.lawfulGoodToolStripMenuItem_Click);
+            // 
+            // rerunButton
+            // 
+            this.rerunButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rerunButton.Location = new System.Drawing.Point(818, 107);
+            this.rerunButton.Name = "rerunButton";
+            this.rerunButton.Size = new System.Drawing.Size(154, 40);
+            this.rerunButton.TabIndex = 9;
+            this.rerunButton.Text = "Start Over";
+            this.rerunButton.UseVisualStyleBackColor = true;
+            this.rerunButton.Click += new System.EventHandler(this.rerunButton_Click);
+            // 
             // Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(984, 611);
+            this.Controls.Add(this.rerunButton);
+            this.Controls.Add(this.alignmentGroupBox);
             this.Controls.Add(this.playerTypeGroupBox);
             this.Controls.Add(this.playerGenderGroupBox);
             this.Controls.Add(this.playerNameGroupBox);
@@ -256,6 +382,7 @@
             this.Controls.Add(this.playerSkillsGroupBox);
             this.Controls.Add(this.playerSpecialsGroupBox);
             this.Controls.Add(this.playerStatsGroupBox);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Detail";
             this.Text = "Detail";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Detail_FormClosing);
@@ -273,6 +400,10 @@
             this.playerGenderGroupBox.PerformLayout();
             this.playerTypeGroupBox.ResumeLayout(false);
             this.playerTypeGroupBox.PerformLayout();
+            this.alignmentGroupBox.ResumeLayout(false);
+            this.alignmentGroupBox.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -296,5 +427,18 @@
         private System.Windows.Forms.Label playerRaceLabel;
         private System.Windows.Forms.TextBox playerRaceTextBox;
         private System.Windows.Forms.TextBox playerClassTextBox;
+        private System.Windows.Forms.GroupBox alignmentGroupBox;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem inputYourHeroAlignmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chaoticEvilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chaoticNeutralToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chaoticGoodToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem neutralToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goodToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lawfulEvilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lawfulNeutralToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lawfulGoodToolStripMenuItem;
+        private System.Windows.Forms.Button rerunButton;
     }
 }

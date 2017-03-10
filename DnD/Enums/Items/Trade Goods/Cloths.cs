@@ -1,10 +1,19 @@
-﻿namespace DnD.Enums.Items
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Items
 {
     /// <summary>
     /// Represents the Trade goods of type Cloth.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Cloth
     {
+        /// <summary>
+        /// A default status.
+        /// </summary>
+        None,
+
         /// <summary>
         /// Represents a Cloth of type Linen.
         /// </summary>

@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -89,10 +93,12 @@
     <Compile Include="Static Information Containers\DesiredClassType.cs" />
     <Compile Include="Static Information Containers\DesiredRaceType.cs" />
     <Compile Include="Static Information Containers\Player.cs" />
+    <Compile Include="Static Information Containers\DesiredAlignment.cs" />
     <Compile Include="Static Information Containers\PlayerFeats.cs" />
     <Compile Include="Static Information Containers\PlayerNameAndGender.cs" />
     <Compile Include="Static Information Containers\PlayerSkills.cs" />
     <Compile Include="Static Information Containers\PlayerStats.cs" />
+    <Compile Include="Static Information Containers\SaveLoadInfo.cs" />
     <EmbeddedResource Include="Forms\Detail.resx">
       <DependentUpon>Detail.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

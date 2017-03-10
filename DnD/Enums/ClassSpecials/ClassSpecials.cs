@@ -1,10 +1,14 @@
-﻿namespace DnD.Enums.ClassSpecials
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.ClassSpecials
 {
     /// <summary>
     /// Class Specials are unique to each Character class. Many classes have special fighting styles,
     /// favored enemies, or various enhancements that are similar to feats - but vary slightly enough to need 
     /// a new classification altogether.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ClassSpecial
     {
         // The Barbarian's specials:

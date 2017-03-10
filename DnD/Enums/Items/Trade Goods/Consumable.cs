@@ -1,10 +1,19 @@
-﻿namespace DnD.Enums.Items
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Items
 {
     /// <summary>
     /// Represents the Trade goods of type Consumable.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Consumable
     {
+        /// <summary>
+        /// A default status.
+        /// </summary>
+        None,
+
         /// <summary>
         /// Represents the Consumable of type Ale.
         /// </summary>

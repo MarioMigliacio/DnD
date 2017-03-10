@@ -1,8 +1,12 @@
-﻿namespace DnD.Enums.ClassTypes
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.ClassTypes
 {
     /// <summary>
     /// The various types of character Class Types available.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ClassType
     {
         /// <summary>

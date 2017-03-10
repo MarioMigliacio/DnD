@@ -88,7 +88,7 @@ namespace DnD.UserStrings {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Walking in two worlds but truly belonging to neither, half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves. Som e half-elves live among humans, set apart by their emotional and physical differences, watching friends and loved ones age while time barely touches them. Others live with the elves, growing restless as they reach adulthood in the timeless [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Walking in two worlds but truly belonging to neither, half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves. Some half-elves live among humans, set apart by their emotional and physical differences, watching friends and loved ones age while time barely touches them. Others live with the elves, growing restless as they reach adulthood in the timeless  [rest of string was truncated]&quot;;.
         /// </summary>
         public static string HalfElf {
             get {

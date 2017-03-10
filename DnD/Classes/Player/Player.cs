@@ -8,6 +8,7 @@ using DnD.Enums.Stats;
 using DnD.Enums.Alignment;
 using DnD.Enums.Races;
 using DnD.Enums.SavingThrows;
+using Newtonsoft.Json;
 
 namespace DnD.Classes.Player
 {
@@ -17,68 +18,6 @@ namespace DnD.Classes.Player
     public class Hero
     {
         #region Hero Properties
-
-        /// <summary>
-        /// As the character grows in strength, so to does their Level.
-        /// </summary>
-        public int Level { get; set; } = 0;
-
-        /// <summary>
-        /// HitDie governs how much health points maximum, a hero can earn upon leveling.
-        /// </summary>
-        public int HitDie { get; set; } = 0;
-
-        /// <summary>
-        /// The entire amount of health a hero has. Lose it all and die forever.
-        /// </summary>
-        public int MaxHp { get; set; } = 0;
-
-        /// <summary>
-        /// The current state of the hero's health bar. Cannot exceed MaxHp (unless special circumstances).
-        /// </summary>
-        public int CurrentHp { get; set; } = 0;
-
-        /// <summary>
-        /// The amount of extra attack given to the hero upon attack attempts. Governed by class and level.
-        /// </summary>
-        public int BaseAttackBonus { get; set; } = 0;
-
-        /// <summary>
-        /// The amount of available skill ranks a hero can place into the multitude of available skills. 
-        /// Normally governed by intellect and level.
-        /// </summary>
-        public int SkillRanksAvailable { get; set; } = 0;
-
-        /// <summary>
-        /// The amount of available Feats the player may choose from.
-        /// </summary>
-        public int FeatsAvailable { get; set; } = 0;
-
-        /// <summary>
-        /// The fact that a ton of bonus feats make the game more complex is both a good and bad thing.
-        /// This represents true if the Hero can acquire a certain bonus feat.
-        /// </summary>
-        public bool BonusFeatsAvailable { get; set; } = false;
-
-        /// <summary>
-        /// The amount of currency held by the hero.
-        /// </summary>
-        public int Currency { get; set; } = 0;
-
-        /// <summary>
-        /// Represents the Character Class for this hero.
-        /// </summary>
-        public BaseCharacterClass TypeOfCharacter { get; set; } = null;
-
-        /// <summary>
-        /// Represents how the player stands in regards to the law and respect towards others.
-        /// </summary>
-        public Alignment PlayerAlignment { get; set; } = Alignment.None;
-
-        /// <summary>
-        /// Represents the type of race the hero is.
-        /// </summary>
-        public RaceType PlayerRace { get; set; } = RaceType.None;
 
         /// <summary>
         /// The unique name for this hero.
@@ -91,8 +30,80 @@ namespace DnD.Classes.Player
         public string Gender { get; set; } = null;
 
         /// <summary>
+        /// As the character grows in strength, so to does their Level.
+        /// </summary>
+        public int Level { get; set; } = 0;
+
+        /// <summary>
+        /// The entire amount of health a hero has. Lose it all and die forever.
+        /// </summary>
+        public int MaxHp { get; set; } = 0;
+
+        /// <summary>
+        /// The current state of the hero's health bar. Cannot exceed MaxHp (unless special circumstances).
+        /// </summary>
+        public int CurrentHp { get; set; } = 0;
+
+        /// <summary>
+        /// HitDie governs how much health points maximum, a hero can earn upon leveling.
+        /// </summary>
+        public int HitDie { get; set; } = 0;
+        
+        /// <summary>
+        /// The amount of extra attack given to the hero upon attack attempts. Governed by class and level.
+        /// </summary>
+        public int BaseAttackBonus { get; set; } = 0;
+
+        /// <summary>
+        /// The amount of available skill ranks a hero can place into the multitude of available skills. 
+        /// Normally governed by intellect and level.
+        /// </summary>
+        [JsonIgnore]
+        public int SkillRanksAvailable { get; set; } = 0;
+
+        /// <summary>
+        /// The amount of available Feats the player may choose from.
+        /// </summary>
+        [JsonIgnore]
+        public int FeatsAvailable { get; set; } = 0;
+
+        /// <summary>
+        /// The fact that a ton of bonus feats make the game more complex is both a good and bad thing.
+        /// This represents true if the Hero can acquire a certain bonus feat.
+        /// </summary>
+        [JsonIgnore]
+        public bool BonusFeatsAvailable { get; set; } = false;
+
+        /// <summary>
+        /// Represents only the enumeration field type class for this hero.
+        /// </summary>
+        public ClassType CharacterClassType { get; set; } = ClassType.None;
+
+        /// <summary>
+        /// Represents the type of race the hero is.
+        /// </summary>
+        public RaceType PlayerRace { get; set; } = RaceType.None;
+
+        /// <summary>
+        /// Represents how the player stands in regards to the law and respect towards others.
+        /// </summary>
+        public Alignment PlayerAlignment { get; set; } = Alignment.None;
+        
+        /// <summary>
+        /// The amount of currency held by the hero.
+        /// </summary>
+        public int Currency { get; set; } = 0;
+
+        /// <summary>
+        /// Represents the Character Class for this hero.
+        /// </summary>
+        [JsonIgnore]
+        public BaseCharacterClass TypeOfCharacter { get; set; } = null;
+        
+        /// <summary>
         /// When placing skills, no skill may have more ranks then governed by SkillCap.
         /// </summary>
+        [JsonIgnore]
         public int SkillCap => Level + 3;
 
         #endregion 
@@ -143,6 +154,8 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 1;
             thisHero.Currency = Dice.Dice.D4 + Dice.Dice.D4;
             thisHero.TypeOfCharacter = new Barbarian();
+            thisHero.CharacterClassType = ClassType.Barbarian;
+            
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
@@ -163,6 +176,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 0;
             thisHero.Currency = Dice.Dice.D4 + Dice.Dice.D4;
             thisHero.TypeOfCharacter = new Bard();
+            thisHero.CharacterClassType = ClassType.Bard;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 0);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 2);
@@ -185,6 +199,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 0;
             thisHero.Currency = Dice.Dice.D4;
             thisHero.TypeOfCharacter = new Cleric();
+            thisHero.CharacterClassType = ClassType.Cleric;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
@@ -203,6 +218,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 0;
             thisHero.Currency = Dice.Dice.D6;
             thisHero.TypeOfCharacter = new Druid();
+            thisHero.CharacterClassType = ClassType.Druid;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
@@ -223,6 +239,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 1;
             thisHero.Currency = Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4;
             thisHero.TypeOfCharacter = new Fighter();
+            thisHero.CharacterClassType = ClassType.Fighter;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
@@ -241,6 +258,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 0;
             thisHero.Currency = Dice.Dice.D4 + Dice.Dice.D4;
             thisHero.TypeOfCharacter = new Monk();
+            thisHero.CharacterClassType = ClassType.Monk;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 2);
@@ -262,6 +280,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 1;
             thisHero.Currency = Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4;
             thisHero.TypeOfCharacter = new Paladin();
+            thisHero.CharacterClassType = ClassType.Paladin;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
@@ -282,6 +301,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 1;
             thisHero.Currency = Dice.Dice.D4 + Dice.Dice.D4;
             thisHero.TypeOfCharacter = new Ranger();
+            thisHero.CharacterClassType = ClassType.Ranger;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 2);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 2);
@@ -302,6 +322,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 0;
             thisHero.Currency = Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4;
             thisHero.TypeOfCharacter = new Rogue();
+            thisHero.CharacterClassType = ClassType.Rogue;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 0);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 2);
@@ -321,6 +342,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 0;
             thisHero.Currency = Dice.Dice.D4 + Dice.Dice.D4 + Dice.Dice.D4;
             thisHero.TypeOfCharacter = new Sorcerer();
+            thisHero.CharacterClassType = ClassType.Sorcerer;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 0);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
@@ -339,6 +361,7 @@ namespace DnD.Classes.Player
             thisHero.BaseAttackBonus = 0;
             thisHero.Currency = Dice.Dice.D6 + Dice.Dice.D6 + Dice.Dice.D6;
             thisHero.TypeOfCharacter = new Wizard();
+            thisHero.CharacterClassType = ClassType.Wizard;
 
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Fortitude, 0);
             thisHero.PlayerSavingThrows.Add(SavingThrowType.Reflex, 0);
@@ -634,14 +657,13 @@ namespace DnD.Classes.Player
                 case RaceType.Human: thisHero.PlayerRace = RaceType.Human; break;
                 default: break;
             }
-
-            thisHero.MaxHp = thisHero.HitDie;
-            thisHero.CurrentHp = thisHero.MaxHp;
             
             ApplyRacialBonus(thisHero);
             DetermineStatModifiers(thisHero);
             thisHero.SkillRanksAvailable += DetermineSkillRanks(thisHero);
             thisHero.FeatsAvailable += 1;
+            thisHero.MaxHp = thisHero.HitDie;
+            thisHero.CurrentHp = thisHero.MaxHp;
 
             return thisHero;
         }

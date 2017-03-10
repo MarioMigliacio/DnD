@@ -1,11 +1,20 @@
-﻿namespace DnD.Enums.Items
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Items
 {
     /// <summary>
     /// The range of supported types of Books.
     /// Relevant to Clerics/Sorcerors/Wizards/Druids
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Book
     {
+        /// <summary>
+        /// A default status.
+        /// </summary>
+        None,
+
         /// <summary>
         /// Represents a Book which teaches the FireBolt spell.
         /// </summary>

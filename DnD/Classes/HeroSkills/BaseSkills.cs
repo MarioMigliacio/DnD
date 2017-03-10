@@ -1,5 +1,6 @@
 ﻿using DnD.Enums.ClassSkills;
 using DnD.Enums.Stats;
+using Newtonsoft.Json;
 
 namespace DnD.Classes.HeroSkills
 {
@@ -21,7 +22,8 @@ namespace DnD.Classes.HeroSkills
 
         /// <summary>
         /// Returns the associated description tag for this particular skill.
-        /// </summary>  
+        /// </summary>
+        [JsonIgnore]
         public abstract string Description { get; }
 
         /// <summary>

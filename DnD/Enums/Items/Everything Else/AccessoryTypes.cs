@@ -1,10 +1,19 @@
-﻿namespace DnD.Enums.Items
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Items
 {
     /// <summary>
     /// The range of supported types of Accessoriess.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum AccessoryType
     {
+        /// <summary>
+        /// A default status.
+        /// </summary>
+        None,
+
         /// <summary>
         /// Represents an Amulet type accessory.
         /// </summary>

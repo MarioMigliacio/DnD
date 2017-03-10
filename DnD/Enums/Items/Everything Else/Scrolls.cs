@@ -1,12 +1,21 @@
-﻿namespace DnD.Enums.Items
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.Items
 {
     /// <summary>
     /// The range of supported types of Scrolls.
     /// Scrolls are usable spells by anyone who otherwise wouldn't normally be able to cast the spell.
     /// The user must be literate and completely able to comprehend the words encompassed in the scroll.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Scroll
     {
+        /// <summary>
+        /// A default status.
+        /// </summary>
+        None,
+
         /// <summary>
         /// Represents a Scroll which expends a FireBolt spell.
         /// </summary>

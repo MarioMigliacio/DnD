@@ -1,8 +1,12 @@
-﻿namespace DnD.Enums.ClassSkills
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace DnD.Enums.ClassSkills
 {
     /// <summary>
     /// The Skills in the game increase a players chance at success on certain roll checks.
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ClassSkills
     {
         /// <summary>
