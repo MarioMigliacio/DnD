@@ -221,6 +221,7 @@
             this.Controls.Add(this.descriptionGroupBox);
             this.Controls.Add(this.skillsMenuBox);
             this.Controls.Add(this.saveChangesButton);
+            this.MaximizeBox = false;
             this.Name = "Skill";
             this.Text = "Skill";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Skill_FormClosing);

@@ -383,6 +383,7 @@
             this.Controls.Add(this.playerSpecialsGroupBox);
             this.Controls.Add(this.playerStatsGroupBox);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Detail";
             this.Text = "Detail";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Detail_FormClosing);

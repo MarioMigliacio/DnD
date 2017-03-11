@@ -373,6 +373,7 @@
             this.Controls.Add(this.rerollAllStatsButton);
             this.Controls.Add(this.rollStatButton);
             this.Controls.Add(this.saveChangesButton);
+            this.MaximizeBox = false;
             this.Name = "Stat";
             this.Text = "Stat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Stat_FormClosing);

@@ -410,6 +410,7 @@
             this.Controls.Add(this.saveChangesButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "RaceAndClass";
             this.Text = "RaceAndClass";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RaceAndClass_FormClosing);

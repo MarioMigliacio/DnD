@@ -430,6 +430,7 @@
             this.Controls.Add(this.descriptionGroupBox);
             this.Controls.Add(this.featsMenuBox);
             this.Controls.Add(this.saveChangesButton);
+            this.MaximizeBox = false;
             this.Name = "Feat";
             this.Text = "Feat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Feat_FormClosing);
