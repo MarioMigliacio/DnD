@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum WeaponType
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents the Weapon type Axe.
         /// </summary>
         Axe,

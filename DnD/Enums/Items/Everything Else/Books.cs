@@ -11,11 +11,6 @@ namespace DnD.Enums.Items
     public enum Book
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents a Book which teaches the FireBolt spell.
         /// </summary>
         BookOfFireBolt,

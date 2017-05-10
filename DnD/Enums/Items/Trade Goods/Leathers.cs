@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum Leather
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents a leather of type LightLeather.
         /// </summary>
         LightLeather,

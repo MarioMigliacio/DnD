@@ -12,11 +12,6 @@ namespace DnD.Enums.Items
     public enum Scroll
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents a Scroll which expends a FireBolt spell.
         /// </summary>
         ScrollOfFireBolt,

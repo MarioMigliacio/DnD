@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum Herb
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents an Herb of type ShimmerLeaf.
         /// </summary>
         ShimmerLeaf,

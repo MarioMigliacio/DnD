@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum Misc
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents a Misc item of type SpellBook.
         /// </summary>
         SpellBook,

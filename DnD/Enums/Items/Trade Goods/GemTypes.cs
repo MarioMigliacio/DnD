@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum GemType
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents the Amethyst type gem.
         /// </summary>
         Amethyst,

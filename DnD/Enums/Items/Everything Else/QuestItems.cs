@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum QuestItem
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents the Quest item that is of type Cursed Necklace.
         /// </summary>
         CursedNecklace,

@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum ArmorType
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents the Armor type that is of type Belt.
         /// </summary>
         Belt,

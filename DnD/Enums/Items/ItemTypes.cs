@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum ItemType
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents items of type Weapon.
         /// </summary>
         Weapon,

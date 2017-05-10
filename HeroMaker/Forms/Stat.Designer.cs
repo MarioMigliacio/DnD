@@ -375,6 +375,7 @@
             this.Controls.Add(this.saveChangesButton);
             this.MaximizeBox = false;
             this.Name = "Stat";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Stat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Stat_FormClosing);
             this.rerollsGroupBox.ResumeLayout(false);

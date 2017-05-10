@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum Cloth
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents a Cloth of type Linen.
         /// </summary>
         Linen,

@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum Spice
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents a Spice of type Cinnamon.
         /// </summary>
         Cinnamon,

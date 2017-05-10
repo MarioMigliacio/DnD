@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum AccessoryType
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents an Amulet type accessory.
         /// </summary>
         Amulet,

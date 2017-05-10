@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum Consumable
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents the Consumable of type Ale.
         /// </summary>
         Ale,

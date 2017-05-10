@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum Potion
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents the Potion of type Health.
         /// </summary>
         Health,

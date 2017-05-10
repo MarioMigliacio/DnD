@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum Metal
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents an ore of type Copper.
         /// </summary>
         Copper,

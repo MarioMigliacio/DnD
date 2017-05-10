@@ -10,11 +10,6 @@ namespace DnD.Enums.Items
     public enum TradeGood
     {
         /// <summary>
-        /// A default status.
-        /// </summary>
-        None,
-
-        /// <summary>
         /// Represents trade goods of type Gem.
         /// </summary>
         Gem,
