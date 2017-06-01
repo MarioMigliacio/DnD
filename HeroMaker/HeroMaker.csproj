@@ -98,7 +98,6 @@
     <Compile Include="Static Information Containers\PlayerNameAndGender.cs" />
     <Compile Include="Static Information Containers\PlayerSkills.cs" />
     <Compile Include="Static Information Containers\PlayerStats.cs" />
-    <Compile Include="Static Information Containers\SaveLoadInfo.cs" />
     <EmbeddedResource Include="Forms\Detail.resx">
       <DependentUpon>Detail.cs</DependentUpon>
     </EmbeddedResource>

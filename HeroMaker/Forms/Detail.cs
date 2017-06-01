@@ -9,7 +9,10 @@ using DnD.Enums.ClassTypes;
 using DnD.Enums.Races;
 using DnD.Enums.Stats;
 using HeroMaker.Enums;
-using HeroMaker.Static_Information_Containers;
+using DnD.Enums.ClassSpecials;
+using DnD.Enums.ClassSkills;
+using DnD.Enums.ClassFeats;
+using DnD.Classes.Player;
 
 namespace HeroMaker.Forms
 {
@@ -33,6 +36,12 @@ namespace HeroMaker.Forms
             playerNameTextBox.Text = PlayerNameAndGender.Name;
             playerClassTextBox.Text = DesiredClassType.DesiredClass.ToString();
             playerRaceTextBox.Text = DesiredRaceType.DesiredRace.ToString();
+
+            // Since these complex entities are formed from abstract bases, JSON doesnt know how to make them. It does however,
+            // Understand how to use lists of enumerations thankfully. So we can populate the actual Hero fields later.
+            Player.GetHero.HeroesSpecials = new List<ClassSpecial>();
+            Player.GetHero.HeroesFeats = new List<ClassFeats>();
+            Player.GetHero.HeroesSkills = new Dictionary<ClassSkills, int>();
             
             foreach (var item in PlayerStats.StatsContainer)
             {
@@ -45,6 +54,8 @@ namespace HeroMaker.Forms
 
             foreach (var item in PlayerSkills.SkillsContainer)
             {
+                Player.GetHero.HeroesSkills.Add(item.SkillType, item.NumberOfRanks);
+
                 sb.AppendLine(item.SkillType + " : " + item.NumberOfRanks);
             }
 
@@ -54,6 +65,8 @@ namespace HeroMaker.Forms
 
             foreach (var item in PlayerFeats.FeatsContainer)
             {
+                Player.GetHero.HeroesFeats.Add(item.FeatType);
+
                 sb.AppendLine(item.FeatType.ToString());
             }
 
@@ -63,6 +76,8 @@ namespace HeroMaker.Forms
 
             foreach (var item in Player.GetHero.PlayerSpecials)
             {
+                Player.GetHero.HeroesSpecials.Add(item.SpecialType);
+
                 sb.AppendLine(item.SpecialType.ToString());
             }
 

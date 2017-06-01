@@ -9,6 +9,9 @@ using DnD.Enums.Alignment;
 using DnD.Enums.Races;
 using DnD.Enums.SavingThrows;
 using Newtonsoft.Json;
+using DnD.Enums.ClassSpecials;
+using DnD.Enums.ClassFeats;
+using DnD.Enums.ClassSkills;
 
 namespace DnD.Classes.Player
 {
@@ -127,18 +130,39 @@ namespace DnD.Classes.Player
 
         /// <summary>
         /// The hero's collection of Specials acquired.
+        /// Had to add JsonIgnore attribute because it was causing all sorts of crashes during deserialization. Cant make abstract base classes :(
         /// </summary>
+        [JsonIgnore]
         public List<BaseSpecial> PlayerSpecials { get; set; }
 
         /// <summary>
         /// The hero's collection of Feats acquired.
+        /// Had to add JsonIgnore attribute because it was causing all sorts of crashes during deserialization. Cant make abstract base classes :(
         /// </summary>
+        [JsonIgnore]
         public List<BaseFeat> PlayerFeats { get; set; }
 
         /// <summary>
         /// The hero's collection of Skills acquired.
+        /// Had to add JsonIgnore attribute because it was causing all sorts of crashes during deserialization. Cant make abstract base classes :(
         /// </summary>
+        [JsonIgnore]
         public List<BaseSkill> PlayerSkills { get; set; }
+        
+        /// <summary>
+        /// Needed because JSON cant create complex class entities from our Abstract base classes.
+        /// </summary>
+        public List<ClassSpecial> HeroesSpecials { get; set; }
+
+        /// <summary>
+        /// Needed because JSON cant create complex class entities from our Abstract base classes.
+        /// </summary>
+        public List<ClassFeats> HeroesFeats { get; set; }
+
+        /// <summary>
+        /// Needed because JSON cant create complex class entities from our Abstract base classes.
+        /// </summary>
+        public Dictionary<ClassSkills, int> HeroesSkills { get; set; }
 
         #endregion
         
@@ -666,6 +690,84 @@ namespace DnD.Classes.Player
             thisHero.CurrentHp = thisHero.MaxHp;
 
             return thisHero;
+        }
+
+        /// <summary>
+        /// This static method returns the Hero object which was serialized into a JSON object. After parsing the save file, the hero is restored,
+        /// except for a few properties which couldnt be serialized properly due to abstract base classes being to complex of an entity for JSON to do automatically.
+        /// Once this method is resolved, the Hero will properly contain all the special container information which was generated during creation.
+        /// </summary>
+        /// <param name="which">A reference to the Hero which will be passed in, and modified.</param>
+        /// <param name="theSpecials">A reference to the <see cref="HeroesSpecials"/> property which was correctly serialized.</param>
+        /// <param name="theFeats">A reference to the <see cref="HeroesFeats"/> property which was correctly serialized.</param>
+        /// <param name="theSkills">A reference to the <see cref="HeroesSkills"/> property which was correctly serialized.</param>
+        /// <param name="what">A reference to the <see cref="CharacterClassType"/> property which was correctly serialized.</param>
+        /// <returns>A new reference to the Hero object which is back to working order and can be used for gameplay.</returns>
+        public static Hero GetDeserializedHero(Hero which, List<ClassSpecial> theSpecials, List<ClassFeats> theFeats, Dictionary<ClassSkills, int> theSkills, ClassType what)
+        {
+            which.PlayerSpecials = new List<BaseSpecial>();
+            which.PlayerSkills = new List<BaseSkill>();
+            which.PlayerFeats = new List<BaseFeat>();
+
+            switch (what)
+            {
+                case ClassType.Barbarian: which.TypeOfCharacter = new Barbarian(); break;
+                case ClassType.Bard: which.TypeOfCharacter = new Bard(); break;
+                case ClassType.Cleric: which.TypeOfCharacter = new Cleric(); break;
+                case ClassType.Druid: which.TypeOfCharacter = new Druid(); break;
+                case ClassType.Fighter: which.TypeOfCharacter = new Fighter(); break;
+                case ClassType.Monk: which.TypeOfCharacter = new Monk(); break;
+                case ClassType.Paladin: which.TypeOfCharacter = new Paladin(); break;
+                case ClassType.Ranger: which.TypeOfCharacter = new Ranger(); break;
+                case ClassType.Rogue: which.TypeOfCharacter = new Rogue(); break;
+                case ClassType.Sorcerer: which.TypeOfCharacter = new Sorcerer(); break;
+                case ClassType.Wizard: which.TypeOfCharacter = new Wizard(); break;
+                default: break;
+            }
+
+            foreach (var spec in theSpecials)
+            {
+                which.PlayerSpecials.Add(SpecialFactory.Create(spec));
+
+                for (int i = 0; i < theSpecials.Count; i++)
+                {
+                    if (which.PlayerSpecials[i].SpecialType == spec)
+                    {
+                        which.PlayerSpecials[i].IsAcquired = true;
+                        break;
+                    }
+                }
+            }
+
+            foreach (var feat in theFeats)
+            {
+                which.PlayerFeats.Add(FeatFactory.Create(feat));
+
+                for (int i = 0; i < theFeats.Count; i++)
+                {
+                    if (which.PlayerFeats[i].FeatType == feat)
+                    {
+                        which.PlayerFeats[i].IsAcquired = true;
+                        break;
+                    }
+                }
+            }
+
+            foreach (var skill in theSkills)
+            {
+                which.PlayerSkills.Add(SkillFactory.Create(skill.Key));
+
+                for (int i = 0; i < theSkills.Count; i++)
+                {
+                    if (which.PlayerSkills[i].SkillType == skill.Key)
+                    {
+                        which.PlayerSkills[i].NumberOfRanks = skill.Value;
+                        break;
+                    }
+                }
+            }            
+
+            return which;
         }
 
         #endregion

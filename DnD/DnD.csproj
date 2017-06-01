@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -164,6 +165,7 @@
     <Compile Include="Classes\HeroFeats\FeatFactory.cs" />
     <Compile Include="Classes\HeroFeats\FeatInformation.cs" />
     <Compile Include="Classes\HeroFeats\FeatRequirementCheck.cs" />
+    <Compile Include="Classes\HeroSkills\SkillInformation.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\AbundantStep.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\AnimalCompanion.cs" />
     <Compile Include="Classes\HeroSpecials\All The Other Specials\AuraOfCourage.cs" />
@@ -286,6 +288,7 @@
     <Compile Include="Classes\HeroSkills\All The Other Skills\Disguise.cs" />
     <Compile Include="Classes\HeroSkills\SkillFactory.cs" />
     <Compile Include="Classes\HeroSkills\BaseSkills.cs" />
+    <Compile Include="Classes\Player\SaveLoadInfo.cs" />
     <Compile Include="Enums\NamesByRace\NamesDwarfFemale.cs" />
     <Compile Include="Enums\NamesByRace\NamesDwarfMale.cs" />
     <Compile Include="Enums\NamesByRace\NamesElfFemale.cs" />

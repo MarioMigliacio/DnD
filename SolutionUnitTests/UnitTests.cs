@@ -305,5 +305,18 @@ namespace SolutionUnitTests
 
             Hero me = Hero.GetStageTwoHero(thisdude, isaRaceType, stats);
         }
+
+        /// <summary>
+        /// This test is in place to ensure that deserialization correctly resolves to a working in memory Hero object.
+        /// </summary>
+        [TestMethod]
+        public void TestDeserialization()
+        {
+            string myFileList = @"C:\Users\Mario\Desktop\DnDSaves\Natasha.txt";
+
+            Hero myMan = SaveLoadInfo.Deserialize(myFileList);
+
+            myMan = Hero.GetDeserializedHero(myMan, myMan.HeroesSpecials, myMan.HeroesFeats, myMan.HeroesSkills, myMan.CharacterClassType);
+        }
     }
 }
