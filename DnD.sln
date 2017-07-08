@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolutionUnitTests", "Soluti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroMaker", "HeroMaker\HeroMaker.csproj", "{BE07F864-C7D5-4A6F-9C4C-E713F685CB8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterGenerator", "MonsterGenerator\MonsterGenerator.csproj", "{B068473C-AF4A-46AA-BBD7-EABF33966CCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BE07F864-C7D5-4A6F-9C4C-E713F685CB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE07F864-C7D5-4A6F-9C4C-E713F685CB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE07F864-C7D5-4A6F-9C4C-E713F685CB8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B068473C-AF4A-46AA-BBD7-EABF33966CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B068473C-AF4A-46AA-BBD7-EABF33966CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B068473C-AF4A-46AA-BBD7-EABF33966CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B068473C-AF4A-46AA-BBD7-EABF33966CCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

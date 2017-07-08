@@ -376,6 +376,7 @@
             this.MaximizeBox = false;
             this.Name = "Stat";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Stat_FormClosing);
             this.rerollsGroupBox.ResumeLayout(false);

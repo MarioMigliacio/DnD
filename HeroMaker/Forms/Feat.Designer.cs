@@ -432,6 +432,7 @@
             this.Controls.Add(this.saveChangesButton);
             this.MaximizeBox = false;
             this.Name = "Feat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Feat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Feat_FormClosing);
             this.descriptionGroupBox.ResumeLayout(false);

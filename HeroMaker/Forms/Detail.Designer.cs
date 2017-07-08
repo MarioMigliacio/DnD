@@ -385,6 +385,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Detail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detail";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Detail_FormClosing);
             this.playerStatsGroupBox.ResumeLayout(false);

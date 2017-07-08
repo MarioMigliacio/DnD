@@ -223,6 +223,7 @@
             this.Controls.Add(this.saveChangesButton);
             this.MaximizeBox = false;
             this.Name = "Skill";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skill";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Skill_FormClosing);
             this.descriptionGroupBox.ResumeLayout(false);

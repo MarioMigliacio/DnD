@@ -412,6 +412,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "RaceAndClass";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RaceAndClass";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RaceAndClass_FormClosing);
             this.suggestedNamesGroupBox.ResumeLayout(false);
