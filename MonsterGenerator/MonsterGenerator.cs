@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.FileIO;
 using System.Data.SqlClient;
+using System.Xml;
 
 namespace MonsterGenerator
 {
@@ -14,13 +15,16 @@ namespace MonsterGenerator
         public MonsterGenerator()
         {
             InitializeComponent();
+            
+            string filename = "MonsterData.xml";
+            List<SimpleMonster> monsterMash = new List<SimpleMonster>();
 
             try
             {
                 List<string> nameField = new List<string>();
                 List<float> crField = new List<float>();
                 List<string> typeField = new List<string>();
-
+                
                 using (TextFieldParser parser = new TextFieldParser(@"db_file.txt"))
                 {
                     parser.TextFieldType = FieldType.Delimited;
@@ -48,6 +52,8 @@ namespace MonsterGenerator
 
                         // the type field of the data.
                         typeField.Add(line[2]);
+
+                        monsterMash.Add(new SimpleMonster(line[0].Replace(" ", string.Empty), num, line[2]));
                     }
 
                     // kill whatever is in the current Database.
@@ -94,6 +100,31 @@ namespace MonsterGenerator
                             }
 
                             reader.Close();
+                        }
+
+                        XmlWriterSettings set = new XmlWriterSettings();
+                        set.Indent = true;
+                        set.IndentChars = "\t";
+                        set.NewLineChars = "\n";
+
+                        using (XmlWriter writer = XmlWriter.Create(filename, set))
+                        {                            
+                            writer.WriteStartDocument();
+                            writer.WriteStartElement("MonsterList");
+
+                            foreach (var m in monsterMash)
+                            {
+                                writer.WriteStartElement("Creature");
+
+                                writer.WriteElementString("Name", m.Name);
+                                writer.WriteElementString("Challenge", m.Challenge.ToString());
+                                writer.WriteElementString("Type", m.MonsterType);
+
+                                writer.WriteEndElement();
+                            }
+
+                            writer.WriteEndElement();
+                            writer.WriteEndDocument();
                         }
                     }
                 }

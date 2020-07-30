@@ -74,6 +74,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleMonster.cs" />
     <EmbeddedResource Include="MonsterGenerator.resx">
       <DependentUpon>MonsterGenerator.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +108,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MonsterData.xml" />
     <Content Include="MonsterDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
